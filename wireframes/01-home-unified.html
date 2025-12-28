@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>CIVIQ - Home</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .filter-slider {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 0;
+    }
+    .filter-slider label {
+      font-size: 11px;
+      color: var(--text-secondary);
+      width: 60px;
+    }
+    .filter-slider input[type="range"] {
+      flex: 1;
+      height: 4px;
+      -webkit-appearance: none;
+      background: var(--bg-tertiary);
+      border-radius: 2px;
+    }
+    .filter-slider input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--accent);
+      cursor: pointer;
+    }
+    .stream-item {
+      margin-bottom: 12px;
+    }
+    .stream-tag {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-bottom: 6px;
+    }
+    .stream-tag.news { background: #7C3AED20; color: #7C3AED; }
+    .stream-tag.election { background: #F59E0B20; color: #F59E0B; }
+    .stream-tag.stat { background: #3B82F620; color: #3B82F6; }
+    .countdown-mini {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      padding: 12px;
+      background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+      border-radius: var(--radius-md);
+      margin-bottom: 16px;
+    }
+    .countdown-mini-item {
+      text-align: center;
+    }
+    .countdown-mini-days {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .countdown-mini-label {
+      font-size: 9px;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body style="background: #1A1A1A;">
+  <div class="wireframe-label">01 - Home (Unified Omni-Stream)</div>
+
+  <div class="device-frame">
+    <div class="screen">
+      <!-- Status Bar -->
+      <div class="status-bar">
+        <span class="time">9:41</span>
+        <span class="icons">... .. ..</span>
+      </div>
+
+      <!-- Header -->
+      <div class="header">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <div class="header-title logo-gradient">CIVIQ</div>
+            <div class="header-subtitle">Your political intelligence</div>
+          </div>
+          <div style="display: flex; gap: 12px; align-items: center;">
+            <a href="17-search.html" style="font-size: 18px; text-decoration: none;">🔍</a>
+            <a href="09-profile.html" style="width: 32px; height: 32px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; color: white; text-decoration: none;">JK</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter Controls - Weight Sliders -->
+      <div style="padding: 8px 20px 12px; background: var(--bg-secondary); border-bottom: 1px solid var(--border);">
+        <div style="display: flex; gap: 6px; margin-bottom: 8px;">
+          <span class="btn btn-secondary" style="padding: 6px 12px; font-size: 11px; flex: 1; text-align: center;">All</span>
+          <span class="btn btn-outline" style="padding: 6px 12px; font-size: 11px; flex: 1; text-align: center;">News</span>
+          <span class="btn btn-outline" style="padding: 6px 12px; font-size: 11px; flex: 1; text-align: center;">Elections</span>
+          <span class="btn btn-outline" style="padding: 6px 12px; font-size: 11px; flex: 1; text-align: center;">Stats</span>
+        </div>
+        <div style="display: flex; gap: 8px; font-size: 10px; color: var(--text-tertiary);">
+          <span style="padding: 4px 8px; background: var(--bg-tertiary); border-radius: 12px;">Federal</span>
+          <span style="padding: 4px 8px; background: var(--bg-tertiary); border-radius: 12px;">State</span>
+          <span style="padding: 4px 8px; background: var(--accent); color: white; border-radius: 12px;">Local ✓</span>
+        </div>
+      </div>
+
+      <!-- Content - Unified Stream -->
+      <div class="content">
+        <!-- Mini Countdown Bar (always visible) -->
+        <div class="countdown-mini">
+          <div class="countdown-mini-item">
+            <div class="countdown-mini-days" style="color: #F59E0B;">144</div>
+            <div class="countdown-mini-label">Primary</div>
+          </div>
+          <div style="width: 1px; background: var(--border);"></div>
+          <div class="countdown-mini-item">
+            <div class="countdown-mini-days" style="color: #8B5CF6;">687</div>
+            <div class="countdown-mini-label">Governor</div>
+          </div>
+          <div style="width: 1px; background: var(--border);"></div>
+          <div class="countdown-mini-item">
+            <div class="countdown-mini-days" style="color: #3B82F6;">687</div>
+            <div class="countdown-mini-label">Federal</div>
+          </div>
+        </div>
+
+        <!-- Stream Item 1: Election (High Priority - Closest) -->
+        <div class="stream-item">
+          <span class="stream-tag election">Election · 144 days</span>
+          <div class="accordion open" style="border-left: 3px solid #F59E0B;">
+            <div class="accordion-header">
+              <div style="flex: 1;">
+                <div class="accordion-title">WB City Council - District A</div>
+                <div class="accordion-subtitle">Primary: May 20, 2025 · 3 candidates</div>
+              </div>
+              <span class="accordion-chevron">^</span>
+            </div>
+            <div class="accordion-content" style="display: block;">
+              <a href="04-leader-profile.html" style="display: flex; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); text-decoration: none; color: inherit;">
+                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #1D4ED8, #3B82F6); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: white;">JM</div>
+                <div style="flex: 1;">
+                  <div style="font-size: 13px; font-weight: 600;">John Murphy</div>
+                  <div style="font-size: 10px; color: var(--text-tertiary);">Former Council Member</div>
+                </div>
+                <span class="rep-party dem">D</span>
+              </a>
+              <a href="04-leader-profile.html" style="display: flex; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); text-decoration: none; color: inherit;">
+                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #1D4ED8, #3B82F6); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: white;">MR</div>
+                <div style="flex: 1;">
+                  <div style="font-size: 13px; font-weight: 600;">Maria Rodriguez</div>
+                  <div style="font-size: 10px; color: var(--text-tertiary);">Community Organizer</div>
+                </div>
+                <span class="rep-party dem">D</span>
+              </a>
+              <a href="04-leader-profile.html" style="display: flex; gap: 10px; align-items: center; padding: 8px 0; text-decoration: none; color: inherit;">
+                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #1D4ED8, #3B82F6); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: white;">TK</div>
+                <div style="flex: 1;">
+                  <div style="font-size: 13px; font-weight: 600;">Thomas Kelly</div>
+                  <div style="font-size: 10px; color: var(--text-tertiary);">Small Business Owner</div>
+                </div>
+                <span class="rep-party dem">D</span>
+              </a>
+              <a href="19-candidate-compare.html" class="btn btn-secondary btn-full" style="margin-top: 10px; font-size: 11px;">Compare Candidates</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stream Item 2: News Story -->
+        <div class="stream-item">
+          <span class="stream-tag news">News · 12 sources</span>
+          <div class="accordion">
+            <div class="accordion-header">
+              <div>
+                <div class="accordion-title">Senate Passes Infrastructure Bill</div>
+                <div class="accordion-subtitle" style="display: flex; gap: 8px; align-items: center; margin-top: 4px;">
+                  <span class="bias-label lean-left" style="font-size: 9px; padding: 2px 6px;">Lean Left</span>
+                  <span style="font-size: 11px; color: var(--text-tertiary);">High Factuality</span>
+                </div>
+              </div>
+              <span class="accordion-chevron">v</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stream Item 3: Stat Card -->
+        <div class="stream-item">
+          <span class="stream-tag stat">Your Stats</span>
+          <div class="card" style="padding: 12px;">
+            <div style="font-size: 12px; font-weight: 600; margin-bottom: 8px;">Reading Balance This Week</div>
+            <div style="height: 16px; border-radius: 8px; overflow: hidden; display: flex;">
+              <div style="width: 35%; background: #DC2626;"></div>
+              <div style="width: 20%; background: #8B5CF6;"></div>
+              <div style="width: 45%; background: #2563EB;"></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-top: 6px; font-size: 10px;">
+              <span style="color: #DC2626;">Left: 35%</span>
+              <span style="color: #8B5CF6;">Center: 20%</span>
+              <span style="color: #2563EB;">Right: 45%</span>
+            </div>
+            <a href="15-rebalance.html" style="display: block; text-align: center; font-size: 11px; color: var(--accent); margin-top: 8px; text-decoration: none;">Rebalance →</a>
+          </div>
+        </div>
+
+        <!-- Stream Item 4: News Story -->
+        <div class="stream-item">
+          <span class="stream-tag news">News · 8 sources</span>
+          <div class="accordion">
+            <div class="accordion-header">
+              <div>
+                <div class="accordion-title">Governor Signs Education Reform</div>
+                <div class="accordion-subtitle" style="display: flex; gap: 8px; align-items: center; margin-top: 4px;">
+                  <span class="bias-label center" style="font-size: 9px; padding: 2px 6px;">Center</span>
+                  <span style="font-size: 11px; color: var(--text-tertiary);">Mixed Factuality</span>
+                </div>
+              </div>
+              <span class="accordion-chevron">v</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stream Item 5: Election -->
+        <div class="stream-item">
+          <span class="stream-tag election">Election · 144 days</span>
+          <div class="accordion" style="border-left: 3px solid #F59E0B;">
+            <div class="accordion-header">
+              <div style="flex: 1;">
+                <div class="accordion-title">WB Area School Board</div>
+                <div class="accordion-subtitle">Primary: May 20, 2025 · 5 candidates</div>
+              </div>
+              <span class="accordion-chevron">v</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stream Item 6: Bill Update -->
+        <div class="stream-item">
+          <span class="stream-tag news">Bill Update</span>
+          <a href="14-bill-detail.html" class="card" style="display: block; text-decoration: none; color: inherit; padding: 12px; border-left: 3px solid var(--success);">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+              <div>
+                <div style="font-size: 13px; font-weight: 600;">Infrastructure Investment Act</div>
+                <div style="font-size: 11px; color: var(--text-tertiary); margin-top: 2px;">HR 3684 · Passed Senate</div>
+              </div>
+              <div style="font-size: 10px; color: var(--success); font-weight: 600;">PASSED</div>
+            </div>
+            <div style="font-size: 11px; color: var(--text-secondary); margin-top: 8px;">
+              <strong>Cartwright:</strong> Voted Yes · <strong>Fetterman:</strong> Voted Yes
+            </div>
+          </a>
+        </div>
+
+        <!-- Stream Item 7: Election - State -->
+        <div class="stream-item">
+          <span class="stream-tag election">Election · 687 days</span>
+          <div class="accordion" style="border-left: 3px solid #8B5CF6;">
+            <div class="accordion-header">
+              <div style="flex: 1;">
+                <div class="accordion-title">PA Governor 2026</div>
+                <div class="accordion-subtitle">Current: Josh Shapiro (D) · Candidates TBD</div>
+              </div>
+              <span class="accordion-chevron">v</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stream Item 8: News - Local -->
+        <div class="stream-item">
+          <span class="stream-tag news">Local News · 3 sources</span>
+          <div class="accordion">
+            <div class="accordion-header">
+              <div>
+                <div class="accordion-title">City Council Approves Zoning Change</div>
+                <div class="accordion-subtitle" style="display: flex; gap: 8px; align-items: center; margin-top: 4px;">
+                  <span class="bias-label center" style="font-size: 9px; padding: 2px 6px;">Center</span>
+                  <span style="font-size: 11px; color: var(--text-tertiary);">Citizens' Voice</span>
+                </div>
+              </div>
+              <span class="accordion-chevron">v</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stream Item 9: Stat - Streak -->
+        <div class="stream-item">
+          <span class="stream-tag stat">Achievement</span>
+          <div class="card" style="padding: 12px; background: linear-gradient(135deg, #F59E0B20, var(--bg-secondary)); border: 1px solid #F59E0B40;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div style="font-size: 32px;">🔥</div>
+              <div>
+                <div style="font-size: 14px; font-weight: 700;">7 Day Streak!</div>
+                <div style="font-size: 11px; color: var(--text-secondary);">You've been civically engaged all week</div>
+              </div>
+              <div style="margin-left: auto; text-align: right;">
+                <div style="font-size: 16px; font-weight: 700; color: var(--xp-gold);">+50</div>
+                <div style="font-size: 9px; color: var(--text-tertiary);">XP</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stream Item 10: Election - Federal -->
+        <div class="stream-item">
+          <span class="stream-tag election">Election · 687 days</span>
+          <div class="accordion" style="border-left: 3px solid #3B82F6;">
+            <div class="accordion-header">
+              <div style="flex: 1;">
+                <div class="accordion-title">U.S. House - PA-8</div>
+                <div class="accordion-subtitle">Current: Matt Cartwright (D) · 6 terms</div>
+              </div>
+              <span class="accordion-chevron">v</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="height: 80px;"></div>
+      </div>
+
+      <!-- Voter Card FAB -->
+      <a href="10-voter-card.html" class="voter-card-fab">ID</a>
+
+      <!-- Bottom Nav -->
+      <nav class="bottom-nav">
+        <a href="01-home-unified.html" class="nav-item active">
+          <span class="nav-icon">[]</span>
+          Home
+        </a>
+        <a href="03-leaders.html" class="nav-item">
+          <span class="nav-icon">@</span>
+          Leaders
+        </a>
+        <a href="05-voices.html" class="nav-item">
+          <span class="nav-icon">))</span>
+          Voices
+        </a>
+        <a href="07-learn.html" class="nav-item">
+          <span class="nav-icon">?</span>
+          Learn
+        </a>
+      </nav>
+    </div>
+  </div>
+<script src="app.js"></script>
+</body>
+</html>

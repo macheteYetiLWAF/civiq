@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CIVIQ Wireframes - Navigation</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background: #1A1A1A;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+    h1 {
+      color: white;
+      font-size: 32px;
+      margin-bottom: 8px;
+      letter-spacing: -1px;
+    }
+    .subtitle {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
+    .version {
+      background: #2563EB;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-left: 12px;
+    }
+    .screens-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 1200px;
+      width: 100%;
+    }
+    .screen-link {
+      background: #2A2A2A;
+      border-radius: 16px;
+      padding: 24px;
+      text-decoration: none;
+      transition: all 0.2s;
+      border: 1px solid #333;
+    }
+    .screen-link:hover {
+      background: #333;
+      transform: translateY(-2px);
+    }
+    .screen-name {
+      color: white;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .screen-desc {
+      color: #888;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .screen-number {
+      display: inline-block;
+      background: #2563EB;
+      color: white;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 24px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-right: 8px;
+    }
+    .screen-number.auth {
+      background: #22C55E;
+    }
+    .nav-section {
+      margin-top: 40px;
+      padding-top: 40px;
+      border-top: 1px solid #333;
+      width: 100%;
+      max-width: 1200px;
+    }
+    .nav-section h2 {
+      color: #666;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+    .section-header {
+      color: #666;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 40px 0 16px;
+      width: 100%;
+      max-width: 1200px;
+    }
+    .nepa-badge {
+      background: linear-gradient(135deg, #3B82F6, #8B5CF6);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+      margin-left: 8px;
+    }
+  </style>
+  <style>
+    .logo-gradient {
+      background: linear-gradient(135deg, #DC2626, #2563EB);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .logo-gradient.flipped {
+      background: linear-gradient(135deg, #2563EB, #DC2626);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (Math.random() < 0.5) {
+        document.querySelectorAll('.logo-gradient').forEach(el => el.classList.add('flipped'));
+      }
+    });
+  </script>
+</head>
+<body>
+  <h1><span class="logo-gradient">CIVIQ</span> Wireframes <span class="version">v0.9</span></h1>
+  <p class="subtitle">Mobile-First Design System <span class="nepa-badge">NEPA Edition - Luzerne County</span></p>
+
+  <div class="section-header">Authentication Flow</div>
+  <div class="screens-grid">
+    <a href="00-login.html" class="screen-link">
+      <div class="screen-name"><span class="screen-number auth">0</span>Login</div>
+      <div class="screen-desc">Email/password, social login (Google, Apple, X). Entry point for returning users.</div>
+    </a>
+
+    <a href="00a-register.html" class="screen-link">
+      <div class="screen-name"><span class="screen-number auth">0a</span>Register</div>
+      <div class="screen-desc">Basic info collection. Name, email, phone, address for district lookup.</div>
+    </a>
+
+    <a href="00b-verify.html" class="screen-link">
+      <div class="screen-name"><span class="screen-number auth">0b</span>Identity Verification</div>
+      <div class="screen-desc">Multiple verification options: PA Voter Reg, Photo ID, SSN+DOB, Voter Card, Knowledge Questions.</div>
+    </a>
+
+    <a href="00c-setup.html" class="screen-link">
+      <div class="screen-name"><span class="screen-number auth">0c</span>Setup Complete</div>
+      <div class="screen-desc">Welcome screen with district info, representatives preview, next election.</div>
+    </a>
+
+    <a href="00d-engagement.html" class="screen-link">
+      <div class="screen-name"><span class="screen-number auth">0d</span>Engagement Quiz</div>
+      <div class="screen-desc">Personalization quiz: Casual/Engaged/Power User. Topic preferences, notification settings.</div>
+    </a>
+  </div>
+
+  <div class="section-header">Core Screens</div>
+  <div class="screens-grid">
+    <a href="01-home-unified.html" class="screen-link">
+      <div class="screen-name"><span class="screen-number">1</span>Home - Unified Stream</div>
+      <div class="screen-desc">Omni-stream mixing News + Elections + Stats with filter controls. Countdown bar, weighted content based on proximity and relevance.</div>
+    </a>
+
+    <a href="01a-home-dashboard.html" class="screen-link">
+      <div class="screen-name"><span class="screen-number">1a</span>Home - Dashboard View</div>
+      <div class="screen-desc">Alternative view with large countdown circles and election blocks. More visual/gamified dashboard approach.</div>
+    </a>
+
+    <a href="01-home-news.html" class="screen-link">
+      <div class="screen-name"><span class="screen-number">1b</span>Home - News Only</div>
+      <div class="screen-desc">News-focused view with story accordions, bias ratings, source distribution. For users who want news-first experience.</div>
+    </a>
+
+    <a href="03-leaders.html" class="screen-link">
+      <div class="screen-name"><span class="screen-number">3</span>Leaders</div>
+      <div class="screen-desc">Browse representatives and candidates. Funding transparency, voting record, response capability. NEPA reps included.</div>
+    </a>
+
+    <a href="04-leader-profile.html" class="screen-link">
+      <div class="screen-name"><span class="screen-number">4</span>Leader Profile</div>
+      <div class="screen-desc">Individual candidate/representative view with platform, funding sources, voting record, and article responses.</div>
+    </a>
+
+    <a href="05-voices.html" class="screen-link">
+      <div class="screen-name"><span class="screen-number">5</span>Voices</div>
+      <div class="screen-desc">Community evaluators. Browse by level, follow, see their ratings. "Become a Voice" CTA.</div>
+    </a>
+
+    <a href="06-voice-profile.html" class="screen-link">
+      <div class="screen-name"><span class="screen-number">6</span>Voice Profile</div>
+      <div class="screen-desc">Individual Voice with their evaluation history, level progression, and follower count.</div>
+    </a>
+
+    <a href="07-learn.html" class="screen-link">
+      <div class="screen-name"><span class="screen-number">7</span>Learn</div>
+      <div class="screen-desc">Civic education hub. Quizzes, XP progression, streaks. Constitution, government structure, your representatives.</div>
+    </a>
+
+    <a href="08-article.html" class="screen-link">
+      <div class="screen-name"><span class="screen-number">8</span>Article View</div>
+      <div class="screen-desc">Individual article with multi-dimensional bias scoring, factuality rating, source analysis, and Voice evaluations.</div>
+    </a>
+
+    <a href="09-profile.html" class="screen-link">
+      <div class="screen-name"><span class="screen-number">9</span>User Profile</div>
+      <div class="screen-desc">Bias consumption chart, badges, voting record, XP/level, streak. Settings and Voice nomination.</div>
+    </a>
+
+    <a href="10-voter-card.html" class="screen-link">
+      <div class="screen-name"><span class="screen-number">10</span>Voter Card Popup</div>
+      <div class="screen-desc">Overlay accessible from any screen. Precinct (Ward 15), NEPA reps, next election at St. Aloysius, badges.</div>
+    </a>
+  </div>
+
+  <div class="section-header">Extended Features</div>
+  <div class="screens-grid">
+    <a href="11-settings.html" class="screen-link">
+      <div class="screen-name"><span class="screen-number">11</span>Settings</div>
+      <div class="screen-desc">Account, content preferences, notifications, privacy controls, engagement level toggle.</div>
+    </a>
+
+    <a href="12-notifications.html" class="screen-link">
+      <div class="screen-name"><span class="screen-number">12</span>Notifications</div>
+      <div class="screen-desc">Activity feed: bill updates, election reminders, leader votes, Voice ratings, streak rewards.</div>
+    </a>
+
+    <a href="13-bills.html" class="screen-link">
+      <div class="screen-name"><span class="screen-number">13</span>Bill Tracker</div>
+      <div class="screen-desc">Track legislation. Federal, state, local bills with progress indicators and your rep's position.</div>
+    </a>
+
+    <a href="14-bill-detail.html" class="screen-link">
+      <div class="screen-name"><span class="screen-number">14</span>Bill Detail</div>
+      <div class="screen-desc">Full bill analysis: summary, vote history, PA delegation breakdown, related coverage, sponsor info.</div>
+    </a>
+
+    <a href="15-rebalance.html" class="screen-link">
+      <div class="screen-name"><span class="screen-number">15</span>Bias Rebalancing</div>
+      <div class="screen-desc">Reading analysis with suggestions for diverse perspectives. 7-day balance challenge with XP rewards.</div>
+    </a>
+
+    <a href="16-ghost-advisor.html" class="screen-link">
+      <div class="screen-name"><span class="screen-number">16</span>Ghost Advisory Panel</div>
+      <div class="screen-desc">Chat with historical figures (Lincoln, Jefferson, etc.) about current events. AI-powered perspective.</div>
+    </a>
+
+    <a href="17-search.html" class="screen-link">
+      <div class="screen-name"><span class="screen-number">17</span>Search & Filter</div>
+      <div class="screen-desc">Universal search: news, leaders, bills, elections. Filter by bias, date, level, topic.</div>
+    </a>
+
+    <a href="18-election-detail.html" class="screen-link">
+      <div class="screen-name"><span class="screen-number">18</span>Election Detail</div>
+      <div class="screen-desc">Individual election view with countdown, polling place, races on ballot, key dates, candidates.</div>
+    </a>
+
+    <a href="19-candidate-compare.html" class="screen-link">
+      <div class="screen-name"><span class="screen-number">19</span>Candidate Comparison</div>
+      <div class="screen-desc">Side-by-side comparison: positions, experience, endorsements, funding, coverage.</div>
+    </a>
+
+    <a href="20-source-compare.html" class="screen-link">
+      <div class="screen-name"><span class="screen-number">20</span>Source Comparison</div>
+      <div class="screen-desc">Same story from multiple sources. Bias distribution, framing differences, key quotes.</div>
+    </a>
+
+    <a href="21-quiz.html" class="screen-link">
+      <div class="screen-name"><span class="screen-number">21</span>Quiz Gameplay</div>
+      <div class="screen-desc">Daily challenge interface: questions, progress, XP earning, streak tracking, hints.</div>
+    </a>
+  </div>
+
+  <div class="nav-section">
+    <h2>Bottom Navigation Structure</h2>
+    <div class="screens-grid">
+      <div class="screen-link" style="cursor: default;">
+        <div class="screen-name">Home</div>
+        <div class="screen-desc">Unified omni-stream. News + Elections + Stats weighted by filters. No separate tabs.</div>
+      </div>
+      <div class="screen-link" style="cursor: default;">
+        <div class="screen-name">Leaders</div>
+        <div class="screen-desc">Representatives and candidates directory.</div>
+      </div>
+      <div class="screen-link" style="cursor: default;">
+        <div class="screen-name">Voices</div>
+        <div class="screen-desc">Community evaluators and ratings.</div>
+      </div>
+      <div class="screen-link" style="cursor: default;">
+        <div class="screen-name">Learn</div>
+        <div class="screen-desc">Civic education with gamification.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-section">
+    <h2>NEPA District Data (Luzerne County)</h2>
+    <div class="screens-grid">
+      <div class="screen-link" style="cursor: default;">
+        <div class="screen-name">Federal</div>
+        <div class="screen-desc">PA-8: Matt Cartwright (D)<br>Senators: Fetterman (D), McCormick (R)</div>
+      </div>
+      <div class="screen-link" style="cursor: default;">
+        <div class="screen-name">State</div>
+        <div class="screen-desc">Governor: Josh Shapiro (D)<br>Senate District 22<br>House District 121</div>
+      </div>
+      <div class="screen-link" style="cursor: default;">
+        <div class="screen-name">Local</div>
+        <div class="screen-desc">Wilkes-Barre City<br>City Council District A<br>School: Wilkes-Barre Area</div>
+      </div>
+      <div class="screen-link" style="cursor: default;">
+        <div class="screen-name">Voting</div>
+        <div class="screen-desc">Precinct: Ward 15<br>Polling: St. Aloysius Parish Hall</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

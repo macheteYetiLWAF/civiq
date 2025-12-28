@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>CIVIQ - Home (News Mode)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background: #1A1A1A;">
+  <div class="wireframe-label">01 - Home (News Mode)</div>
+
+  <div class="device-frame">
+    <div class="screen">
+      <!-- Status Bar -->
+      <div class="status-bar">
+        <span class="time">9:41</span>
+        <span class="icons">... .. ..</span>
+      </div>
+
+      <!-- Header -->
+      <div class="header">
+        <div class="header-title logo-gradient">CIVIQ</div>
+        <div class="header-subtitle">Your political intelligence</div>
+      </div>
+
+      <!-- Toggle -->
+      <div class="toggle-container">
+        <div class="toggle-option active">News</div>
+        <a href="01-home-unified.html" class="toggle-option">Elections</a>
+      </div>
+
+      <!-- Filter chips -->
+      <div style="padding: 0 20px 12px; display: flex; gap: 8px; overflow-x: auto;">
+        <span class="btn btn-secondary" style="padding: 8px 14px; font-size: 12px; white-space: nowrap;">All</span>
+        <span class="btn btn-outline" style="padding: 8px 14px; font-size: 12px; white-space: nowrap;">Federal</span>
+        <span class="btn btn-outline" style="padding: 8px 14px; font-size: 12px; white-space: nowrap;">State</span>
+        <span class="btn btn-outline" style="padding: 8px 14px; font-size: 12px; white-space: nowrap;">Local</span>
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+        <!-- Story 1 - Expanded -->
+        <div class="accordion open">
+          <div class="accordion-header">
+            <div>
+              <div class="accordion-title">Senate Passes Infrastructure Bill</div>
+              <div class="accordion-subtitle">12 sources reporting</div>
+            </div>
+            <span class="accordion-chevron">^</span>
+          </div>
+          <div class="accordion-content" style="display: block;">
+            <!-- Bias bar -->
+            <div style="margin-bottom: 12px;">
+              <div style="display: flex; justify-content: space-between; font-size: 11px; color: var(--text-tertiary); margin-bottom: 4px;">
+                <span>Left</span>
+                <span>Center</span>
+                <span>Right</span>
+              </div>
+              <div class="bias-bar">
+                <div class="bias-marker" style="left: 35%;"></div>
+              </div>
+              <div style="display: flex; gap: 8px; margin-top: 8px;">
+                <span class="bias-label lean-left">Lean Left</span>
+                <div class="factuality-score">
+                  <div class="factuality-dots">
+                    <div class="factuality-dot filled"></div>
+                    <div class="factuality-dot filled"></div>
+                    <div class="factuality-dot filled"></div>
+                    <div class="factuality-dot filled"></div>
+                    <div class="factuality-dot"></div>
+                  </div>
+                  <span>High Factuality</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Election relevance -->
+            <div style="background: var(--accent-light); border-radius: var(--radius-sm); padding: 10px; margin-bottom: 12px; font-size: 13px;">
+              <div style="font-weight: 600; color: var(--accent);">Related Election</div>
+              <div style="color: var(--text-secondary);">OH Senate Race - Nov 2026</div>
+            </div>
+
+            <!-- Source breakdown -->
+            <div style="font-size: 12px; color: var(--text-secondary); margin-bottom: 8px;">Sources by perspective:</div>
+            <div style="display: flex; gap: 4px; margin-bottom: 12px;">
+              <div style="flex: 3; background: var(--bias-left); height: 24px; border-radius: 4px 0 0 4px; display: flex; align-items: center; justify-content: center; color: white; font-size: 11px;">3</div>
+              <div style="flex: 5; background: var(--bias-center); height: 24px; display: flex; align-items: center; justify-content: center; color: white; font-size: 11px;">5</div>
+              <div style="flex: 4; background: var(--bias-right); height: 24px; border-radius: 0 4px 4px 0; display: flex; align-items: center; justify-content: center; color: white; font-size: 11px;">4</div>
+            </div>
+
+            <a href="08-article.html" class="btn btn-secondary btn-full" style="font-size: 13px;">View Full Analysis</a>
+          </div>
+        </div>
+
+        <!-- Story 2 - Collapsed -->
+        <div class="accordion">
+          <div class="accordion-header">
+            <div>
+              <div class="accordion-title">Governor Signs Education Reform</div>
+              <div class="accordion-subtitle">8 sources reporting</div>
+            </div>
+            <span class="accordion-chevron">v</span>
+          </div>
+        </div>
+
+        <!-- Story 3 - Collapsed -->
+        <div class="accordion">
+          <div class="accordion-header">
+            <div>
+              <div class="accordion-title">City Council Approves Zoning Change</div>
+              <div class="accordion-subtitle">3 sources reporting</div>
+            </div>
+            <span class="accordion-chevron">v</span>
+          </div>
+        </div>
+
+        <!-- Story 4 - Collapsed -->
+        <div class="accordion">
+          <div class="accordion-header">
+            <div>
+              <div class="accordion-title">School Board Meeting: Budget Vote</div>
+              <div class="accordion-subtitle">2 sources reporting</div>
+            </div>
+            <span class="accordion-chevron">v</span>
+          </div>
+        </div>
+
+        <!-- Story 5 - Collapsed -->
+        <div class="accordion">
+          <div class="accordion-header">
+            <div>
+              <div class="accordion-title">Supreme Court to Hear Tax Case</div>
+              <div class="accordion-subtitle">15 sources reporting</div>
+            </div>
+            <span class="accordion-chevron">v</span>
+          </div>
+        </div>
+
+        <!-- Your Reading Balance -->
+        <div style="margin-top: 20px;">
+          <div style="font-size: 12px; font-weight: 600; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Your Reading Balance</div>
+          <div class="card" style="padding: 12px;">
+            <div style="height: 20px; border-radius: 10px; overflow: hidden; display: flex;">
+              <div style="width: 35%; background: #DC2626;" title="Left 35%"></div>
+              <div style="width: 20%; background: #8B5CF6;" title="Center 20%"></div>
+              <div style="width: 45%; background: #2563EB;" title="Right 45%"></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-top: 6px; font-size: 10px;">
+              <span style="color: #DC2626; font-weight: 600;">Left: 35%</span>
+              <span style="color: #8B5CF6; font-weight: 600;">Center: 20%</span>
+              <span style="color: #2563EB; font-weight: 600;">Right: 45%</span>
+            </div>
+            <div style="font-size: 10px; color: var(--text-tertiary); margin-top: 8px; text-align: center;">Based on your last 50 articles</div>
+          </div>
+        </div>
+
+        <div style="height: 20px;"></div>
+      </div>
+
+      <!-- Voter Card FAB -->
+      <a href="10-voter-card.html" class="voter-card-fab">ID</a>
+
+      <!-- Bottom Nav -->
+      <nav class="bottom-nav">
+        <a href="01-home-unified.html" class="nav-item active">
+          <span class="nav-icon">[]</span>
+          Home
+        </a>
+        <a href="03-leaders.html" class="nav-item">
+          <span class="nav-icon">@</span>
+          Leaders
+        </a>
+        <a href="05-voices.html" class="nav-item">
+          <span class="nav-icon">))</span>
+          Voices
+        </a>
+        <a href="07-learn.html" class="nav-item">
+          <span class="nav-icon">?</span>
+          Learn
+        </a>
+      </nav>
+    </div>
+  </div>
+<script src="app.js"></script>
+</body>
+</html>

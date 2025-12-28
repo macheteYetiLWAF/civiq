@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>CIVIQ - Notifications</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background: #1A1A1A;">
+  <div class="wireframe-label">12 - Notifications</div>
+
+  <div class="device-frame">
+    <div class="screen">
+      <!-- Status Bar -->
+      <div class="status-bar">
+        <span class="time">9:41</span>
+        <span class="icons">... .. ..</span>
+      </div>
+
+      <!-- Header -->
+      <div style="padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; background: var(--bg-secondary); border-bottom: 1px solid var(--border);">
+        <span style="font-size: 16px; font-weight: 600;">Notifications</span>
+        <a href="#" style="font-size: 13px; color: var(--accent); text-decoration: none;">Mark all read</a>
+      </div>
+
+      <!-- Filter tabs -->
+      <div style="padding: 12px 20px; display: flex; gap: 8px; background: var(--bg-secondary); border-bottom: 1px solid var(--border);">
+        <span class="btn btn-secondary" style="padding: 6px 12px; font-size: 12px;">All</span>
+        <span class="btn btn-outline" style="padding: 6px 12px; font-size: 12px;">Elections</span>
+        <span class="btn btn-outline" style="padding: 6px 12px; font-size: 12px;">Bills</span>
+        <span class="btn btn-outline" style="padding: 6px 12px; font-size: 12px;">News</span>
+      </div>
+
+      <!-- Content -->
+      <div class="content" style="padding: 0;">
+        <!-- Today -->
+        <div style="padding: 12px 20px; font-size: 12px; font-weight: 600; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.5px; background: var(--bg-tertiary);">Today</div>
+
+        <!-- Notification 1 - Unread -->
+        <a href="13-bills.html" style="display: block; text-decoration: none; color: inherit; padding: 16px 20px; border-bottom: 1px solid var(--border); background: var(--accent-light);">
+          <div style="display: flex; gap: 12px;">
+            <div style="width: 40px; height: 40px; background: #3B82F6; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;">📜</div>
+            <div style="flex: 1;">
+              <div style="font-size: 14px; font-weight: 600; color: var(--text-primary);">Bill Update: H.R. 4521</div>
+              <div style="font-size: 13px; color: var(--text-secondary); margin-top: 2px;">The Infrastructure Investment Act moved to Senate committee</div>
+              <div style="font-size: 11px; color: var(--text-tertiary); margin-top: 6px;">2 hours ago</div>
+            </div>
+            <div style="width: 8px; height: 8px; background: var(--accent); border-radius: 50%; flex-shrink: 0; margin-top: 6px;"></div>
+          </div>
+        </a>
+
+        <!-- Notification 2 - Unread -->
+        <a href="08-article.html" style="display: block; text-decoration: none; color: inherit; padding: 16px 20px; border-bottom: 1px solid var(--border); background: var(--accent-light);">
+          <div style="display: flex; gap: 12px;">
+            <div style="width: 40px; height: 40px; background: #F59E0B; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;">⚡</div>
+            <div style="flex: 1;">
+              <div style="font-size: 14px; font-weight: 600; color: var(--text-primary);">Breaking: Supreme Court Ruling</div>
+              <div style="font-size: 13px; color: var(--text-secondary); margin-top: 2px;">Major decision on federal regulatory authority - 15 sources covering</div>
+              <div style="font-size: 11px; color: var(--text-tertiary); margin-top: 6px;">4 hours ago</div>
+            </div>
+            <div style="width: 8px; height: 8px; background: var(--accent); border-radius: 50%; flex-shrink: 0; margin-top: 6px;"></div>
+          </div>
+        </a>
+
+        <!-- Notification 3 - Read -->
+        <a href="04-leader-profile.html" style="display: block; text-decoration: none; color: inherit; padding: 16px 20px; border-bottom: 1px solid var(--border);">
+          <div style="display: flex; gap: 12px;">
+            <div style="width: 40px; height: 40px; background: var(--bg-tertiary); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0;">MC</div>
+            <div style="flex: 1;">
+              <div style="font-size: 14px; font-weight: 500; color: var(--text-primary);">Rep. Cartwright voted on H.R. 8932</div>
+              <div style="font-size: 13px; color: var(--text-secondary); margin-top: 2px;">Voted YEA on the CHIPS and Science Act</div>
+              <div style="font-size: 11px; color: var(--text-tertiary); margin-top: 6px;">6 hours ago</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Yesterday -->
+        <div style="padding: 12px 20px; font-size: 12px; font-weight: 600; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.5px; background: var(--bg-tertiary);">Yesterday</div>
+
+        <!-- Notification 4 -->
+        <a href="15-rebalance.html" style="display: block; text-decoration: none; color: inherit; padding: 16px 20px; border-bottom: 1px solid var(--border);">
+          <div style="display: flex; gap: 12px;">
+            <div style="width: 40px; height: 40px; background: linear-gradient(135deg, var(--bias-left), var(--bias-right)); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;">⚖️</div>
+            <div style="flex: 1;">
+              <div style="font-size: 14px; font-weight: 500; color: var(--text-primary);">Weekly Balance Report</div>
+              <div style="font-size: 13px; color: var(--text-secondary); margin-top: 2px;">You've been reading 65% right-leaning sources. See suggestions.</div>
+              <div style="font-size: 11px; color: var(--text-tertiary); margin-top: 6px;">Yesterday at 9:00 AM</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Notification 5 -->
+        <a href="02-home-elections.html" style="display: block; text-decoration: none; color: inherit; padding: 16px 20px; border-bottom: 1px solid var(--border);">
+          <div style="display: flex; gap: 12px;">
+            <div style="width: 40px; height: 40px; background: #22C55E; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;">🗳️</div>
+            <div style="flex: 1;">
+              <div style="font-size: 14px; font-weight: 500; color: var(--text-primary);">Election Reminder: 143 days</div>
+              <div style="font-size: 13px; color: var(--text-secondary); margin-top: 2px;">PA Primary is approaching. Check your registration status.</div>
+              <div style="font-size: 11px; color: var(--text-tertiary); margin-top: 6px;">Yesterday at 8:00 AM</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- This Week -->
+        <div style="padding: 12px 20px; font-size: 12px; font-weight: 600; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.5px; background: var(--bg-tertiary);">This Week</div>
+
+        <!-- Notification 6 -->
+        <a href="07-learn.html" style="display: block; text-decoration: none; color: inherit; padding: 16px 20px; border-bottom: 1px solid var(--border);">
+          <div style="display: flex; gap: 12px;">
+            <div style="width: 40px; height: 40px; background: var(--xp-gold); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;">🔥</div>
+            <div style="flex: 1;">
+              <div style="font-size: 14px; font-weight: 500; color: var(--text-primary);">7-Day Streak!</div>
+              <div style="font-size: 13px; color: var(--text-secondary); margin-top: 2px;">You've been learning for 7 days straight. +100 XP bonus!</div>
+              <div style="font-size: 11px; color: var(--text-tertiary); margin-top: 6px;">3 days ago</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Notification 7 -->
+        <a href="06-voice-profile.html" style="display: block; text-decoration: none; color: inherit; padding: 16px 20px; border-bottom: 1px solid var(--border);">
+          <div style="display: flex; gap: 12px;">
+            <div style="width: 40px; height: 40px; background: var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; flex-shrink: 0;">JW</div>
+            <div style="flex: 1;">
+              <div style="font-size: 14px; font-weight: 500; color: var(--text-primary);">Jessica Williams rated a story</div>
+              <div style="font-size: 13px; color: var(--text-secondary); margin-top: 2px;">A Voice you follow evaluated "Senate Budget Deal"</div>
+              <div style="font-size: 11px; color: var(--text-tertiary); margin-top: 6px;">4 days ago</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Notification 8 -->
+        <a href="13-bills.html" style="display: block; text-decoration: none; color: inherit; padding: 16px 20px; border-bottom: 1px solid var(--border);">
+          <div style="display: flex; gap: 12px;">
+            <div style="width: 40px; height: 40px; background: #8B5CF6; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;">📜</div>
+            <div style="flex: 1;">
+              <div style="font-size: 14px; font-weight: 500; color: var(--text-primary);">New Bill Introduced</div>
+              <div style="font-size: 13px; color: var(--text-secondary); margin-top: 2px;">Rep. Cartwright introduced H.R. 9234 - NEPA Infrastructure Act</div>
+              <div style="font-size: 11px; color: var(--text-tertiary); margin-top: 6px;">5 days ago</div>
+            </div>
+          </div>
+        </a>
+
+        <div style="height: 100px;"></div>
+      </div>
+
+      <!-- Voter Card FAB -->
+      <a href="10-voter-card.html" class="voter-card-fab">ID</a>
+
+      <!-- Bottom Nav -->
+      <nav class="bottom-nav">
+        <a href="01-home-unified.html" class="nav-item">
+          <span class="nav-icon">[]</span>
+          Home
+        </a>
+        <a href="03-leaders.html" class="nav-item">
+          <span class="nav-icon">@</span>
+          Leaders
+        </a>
+        <a href="05-voices.html" class="nav-item">
+          <span class="nav-icon">))</span>
+          Voices
+        </a>
+        <a href="07-learn.html" class="nav-item">
+          <span class="nav-icon">?</span>
+          Learn
+        </a>
+      </nav>
+    </div>
+  </div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>CIVIQ - Daily Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background: #1A1A1A;">
+  <div class="wireframe-label">21 - Quiz Gameplay</div>
+
+  <div class="device-frame">
+    <div class="screen" style="padding-bottom: 0;">
+      <!-- Status Bar -->
+      <div class="status-bar">
+        <span class="time">9:41</span>
+        <span class="icons">... .. ..</span>
+      </div>
+
+      <!-- Quiz Header -->
+      <div style="padding: 12px 20px; background: linear-gradient(135deg, var(--accent), #7C3AED); display: flex; justify-content: space-between; align-items: center;">
+        <a href="07-learn.html" style="font-size: 20px; text-decoration: none; color: white;">&lt;</a>
+        <div style="text-align: center;">
+          <div style="font-size: 12px; color: rgba(255,255,255,0.8);">DAILY CHALLENGE</div>
+          <div style="font-size: 16px; font-weight: 700; color: white;">Constitution Basics</div>
+        </div>
+        <div style="text-align: right;">
+          <div style="font-size: 18px; font-weight: 700; color: white;">Q3/5</div>
+        </div>
+      </div>
+
+      <!-- Progress Bar -->
+      <div style="height: 4px; background: rgba(255,255,255,0.2);">
+        <div style="width: 60%; height: 100%; background: white; border-radius: 0 2px 2px 0;"></div>
+      </div>
+
+      <!-- Stats Bar -->
+      <div style="display: flex; justify-content: space-around; padding: 12px 20px; background: var(--bg-secondary); border-bottom: 1px solid var(--border);">
+        <div style="text-align: center;">
+          <div style="font-size: 18px; font-weight: 700; color: var(--success);">2</div>
+          <div style="font-size: 10px; color: var(--text-tertiary);">CORRECT</div>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 18px; font-weight: 700; color: var(--xp-gold);">+40</div>
+          <div style="font-size: 10px; color: var(--text-tertiary);">XP EARNED</div>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 18px; font-weight: 700; color: var(--streak-orange);">7</div>
+          <div style="font-size: 10px; color: var(--text-tertiary);">DAY STREAK</div>
+        </div>
+      </div>
+
+      <!-- Question -->
+      <div class="content" style="display: flex; flex-direction: column;">
+        <div style="flex: 1;">
+          <!-- Question Card -->
+          <div class="card" style="background: var(--bg-secondary); border: none; text-align: center; padding: 24px 20px;">
+            <div style="font-size: 18px; font-weight: 600; line-height: 1.5;">
+              How many amendments are in the Bill of Rights?
+            </div>
+          </div>
+
+          <!-- Answer Options -->
+          <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 16px;">
+            <button style="background: var(--bg-secondary); border: 2px solid var(--border); border-radius: var(--radius-md); padding: 16px 20px; text-align: left; font-size: 16px; color: var(--text-primary); cursor: pointer; display: flex; align-items: center; gap: 12px;">
+              <span style="width: 28px; height: 28px; background: var(--bg-tertiary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600;">A</span>
+              <span>5 amendments</span>
+            </button>
+
+            <button style="background: var(--accent-light); border: 2px solid var(--accent); border-radius: var(--radius-md); padding: 16px 20px; text-align: left; font-size: 16px; color: var(--text-primary); cursor: pointer; display: flex; align-items: center; gap: 12px;">
+              <span style="width: 28px; height: 28px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600;">B</span>
+              <span style="font-weight: 600;">10 amendments</span>
+            </button>
+
+            <button style="background: var(--bg-secondary); border: 2px solid var(--border); border-radius: var(--radius-md); padding: 16px 20px; text-align: left; font-size: 16px; color: var(--text-primary); cursor: pointer; display: flex; align-items: center; gap: 12px;">
+              <span style="width: 28px; height: 28px; background: var(--bg-tertiary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600;">C</span>
+              <span>15 amendments</span>
+            </button>
+
+            <button style="background: var(--bg-secondary); border: 2px solid var(--border); border-radius: var(--radius-md); padding: 16px 20px; text-align: left; font-size: 16px; color: var(--text-primary); cursor: pointer; display: flex; align-items: center; gap: 12px;">
+              <span style="width: 28px; height: 28px; background: var(--bg-tertiary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600;">D</span>
+              <span>27 amendments</span>
+            </button>
+          </div>
+
+          <!-- Hint -->
+          <div style="text-align: center; margin-top: 16px;">
+            <a href="#" style="font-size: 13px; color: var(--text-tertiary); text-decoration: none;">💡 Use a hint (-5 XP)</a>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div style="padding: 20px 0;">
+          <button class="btn btn-primary btn-full" style="padding: 16px; font-size: 16px;">
+            Submit Answer
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="app.js"></script>
+</body>
+</html>

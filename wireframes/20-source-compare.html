@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>CIVIQ - Compare Sources</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background: #1A1A1A;">
+  <div class="wireframe-label">20 - Source Comparison</div>
+
+  <div class="device-frame">
+    <div class="screen">
+      <!-- Status Bar -->
+      <div class="status-bar">
+        <span class="time">9:41</span>
+        <span class="icons">... .. ..</span>
+      </div>
+
+      <!-- Header -->
+      <div style="padding: 12px 20px; display: flex; align-items: center; gap: 12px; background: var(--bg-secondary); border-bottom: 1px solid var(--border);">
+        <a href="08-article.html" style="font-size: 20px; text-decoration: none; color: var(--text-primary);">&lt;</a>
+        <span style="font-size: 16px; font-weight: 600;">Compare Coverage</span>
+      </div>
+
+      <!-- Story Title -->
+      <div style="padding: 16px 20px; background: var(--bg-secondary); border-bottom: 1px solid var(--border);">
+        <div style="font-size: 16px; font-weight: 700;">Senate Passes Infrastructure Bill</div>
+        <div style="font-size: 12px; color: var(--text-tertiary); margin-top: 4px;">12 sources covering this story</div>
+      </div>
+
+      <!-- Source Distribution -->
+      <div style="padding: 16px 20px; background: var(--bg-tertiary);">
+        <div style="font-size: 11px; color: var(--text-tertiary); margin-bottom: 8px;">SOURCE DISTRIBUTION</div>
+        <div style="display: flex; gap: 4px; margin-bottom: 8px;">
+          <div style="flex: 3; background: var(--bias-left); height: 32px; border-radius: 4px 0 0 4px; display: flex; align-items: center; justify-content: center; color: white; font-size: 13px; font-weight: 600;">3</div>
+          <div style="flex: 5; background: var(--bias-center); height: 32px; display: flex; align-items: center; justify-content: center; color: white; font-size: 13px; font-weight: 600;">5</div>
+          <div style="flex: 4; background: var(--bias-right); height: 32px; border-radius: 0 4px 4px 0; display: flex; align-items: center; justify-content: center; color: white; font-size: 13px; font-weight: 600;">4</div>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 11px; color: var(--text-secondary);">
+          <span>Left</span>
+          <span>Center</span>
+          <span>Right</span>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+        <!-- Left Sources -->
+        <div style="font-size: 11px; font-weight: 600; color: var(--bias-left); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; display: flex; align-items: center; gap: 6px;">
+          <div style="width: 3px; height: 12px; background: var(--bias-left); border-radius: 2px;"></div>
+          Left-Leaning (3)
+        </div>
+
+        <a href="08-article.html" class="card" style="display: block; text-decoration: none; color: inherit; padding: 12px; border-left: 3px solid var(--bias-left);">
+          <div style="display: flex; justify-content: space-between; align-items: start;">
+            <div style="flex: 1;">
+              <div style="font-size: 14px; font-weight: 600;">"Historic Win for Biden's Agenda"</div>
+              <div style="font-size: 12px; color: var(--text-secondary); margin-top: 2px;">MSNBC</div>
+            </div>
+            <span class="bias-label left" style="font-size: 9px; padding: 2px 6px;">Left</span>
+          </div>
+          <div style="font-size: 12px; color: var(--text-tertiary); margin-top: 8px; font-style: italic;">"A landmark achievement that will reshape American infrastructure for generations..."</div>
+        </a>
+
+        <a href="08-article.html" class="card" style="display: block; text-decoration: none; color: inherit; padding: 12px; border-left: 3px solid var(--bias-left);">
+          <div style="display: flex; justify-content: space-between; align-items: start;">
+            <div style="flex: 1;">
+              <div style="font-size: 14px; font-weight: 600;">"Infrastructure Bill Passes with Climate Provisions"</div>
+              <div style="font-size: 12px; color: var(--text-secondary); margin-top: 2px;">CNN</div>
+            </div>
+            <span class="bias-label lean-left" style="font-size: 9px; padding: 2px 6px;">Lean Left</span>
+          </div>
+          <div style="font-size: 12px; color: var(--text-tertiary); margin-top: 8px; font-style: italic;">"The bill includes major investments in clean energy and electric vehicles..."</div>
+        </a>
+
+        <!-- Center Sources -->
+        <div style="font-size: 11px; font-weight: 600; color: var(--bias-center); text-transform: uppercase; letter-spacing: 0.5px; margin: 16px 0 10px; display: flex; align-items: center; gap: 6px;">
+          <div style="width: 3px; height: 12px; background: var(--bias-center); border-radius: 2px;"></div>
+          Center (5)
+        </div>
+
+        <a href="08-article.html" class="card" style="display: block; text-decoration: none; color: inherit; padding: 12px; border-left: 3px solid var(--bias-center);">
+          <div style="display: flex; justify-content: space-between; align-items: start;">
+            <div style="flex: 1;">
+              <div style="font-size: 14px; font-weight: 600;">"Senate Passes $1.2T Infrastructure Package"</div>
+              <div style="font-size: 12px; color: var(--text-secondary); margin-top: 2px;">AP News</div>
+            </div>
+            <span class="bias-label center" style="font-size: 9px; padding: 2px 6px;">Center</span>
+          </div>
+          <div style="font-size: 12px; color: var(--text-tertiary); margin-top: 8px; font-style: italic;">"The legislation includes funding for roads, bridges, and broadband..."</div>
+        </a>
+
+        <a href="08-article.html" class="card" style="display: block; text-decoration: none; color: inherit; padding: 12px; border-left: 3px solid var(--bias-center);">
+          <div style="display: flex; justify-content: space-between; align-items: start;">
+            <div style="flex: 1;">
+              <div style="font-size: 14px; font-weight: 600;">"Infrastructure Bill Advances to House"</div>
+              <div style="font-size: 12px; color: var(--text-secondary); margin-top: 2px;">Reuters</div>
+            </div>
+            <span class="bias-label center" style="font-size: 9px; padding: 2px 6px;">Center</span>
+          </div>
+          <div style="font-size: 12px; color: var(--text-tertiary); margin-top: 8px; font-style: italic;">"Bipartisan support emerged for the spending package..."</div>
+        </a>
+
+        <!-- Right Sources -->
+        <div style="font-size: 11px; font-weight: 600; color: var(--bias-right); text-transform: uppercase; letter-spacing: 0.5px; margin: 16px 0 10px; display: flex; align-items: center; gap: 6px;">
+          <div style="width: 3px; height: 12px; background: var(--bias-right); border-radius: 2px;"></div>
+          Right-Leaning (4)
+        </div>
+
+        <a href="08-article.html" class="card" style="display: block; text-decoration: none; color: inherit; padding: 12px; border-left: 3px solid var(--bias-right);">
+          <div style="display: flex; justify-content: space-between; align-items: start;">
+            <div style="flex: 1;">
+              <div style="font-size: 14px; font-weight: 600;">"Massive Spending Bill Raises Deficit Concerns"</div>
+              <div style="font-size: 12px; color: var(--text-secondary); margin-top: 2px;">Fox News</div>
+            </div>
+            <span class="bias-label lean-right" style="font-size: 9px; padding: 2px 6px;">Lean Right</span>
+          </div>
+          <div style="font-size: 12px; color: var(--text-tertiary); margin-top: 8px; font-style: italic;">"Critics warn of inflation and ballooning national debt..."</div>
+        </a>
+
+        <a href="08-article.html" class="card" style="display: block; text-decoration: none; color: inherit; padding: 12px; border-left: 3px solid var(--bias-right);">
+          <div style="display: flex; justify-content: space-between; align-items: start;">
+            <div style="flex: 1;">
+              <div style="font-size: 14px; font-weight: 600;">"19 Senate Republicans Break Ranks on Spending"</div>
+              <div style="font-size: 12px; color: var(--text-secondary); margin-top: 2px;">Washington Examiner</div>
+            </div>
+            <span class="bias-label right" style="font-size: 9px; padding: 2px 6px;">Right</span>
+          </div>
+          <div style="font-size: 12px; color: var(--text-tertiary); margin-top: 8px; font-style: italic;">"Conservative groups criticize Republican senators who voted for the bill..."</div>
+        </a>
+
+        <!-- Key Differences -->
+        <div class="card" style="background: var(--accent-light); border: 1px solid var(--accent); margin-top: 16px;">
+          <div style="font-size: 12px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px;">Key Framing Differences</div>
+          <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.6;">
+            <div style="margin-bottom: 8px;">• <strong>Left:</strong> Emphasizes climate provisions and "historic" nature</div>
+            <div style="margin-bottom: 8px;">• <strong>Center:</strong> Focuses on bipartisan process and specific funding</div>
+            <div>• <strong>Right:</strong> Highlights cost, deficit, and GOP dissent</div>
+          </div>
+        </div>
+
+        <div style="height: 20px;"></div>
+      </div>
+
+      <!-- Voter Card FAB -->
+      <a href="10-voter-card.html" class="voter-card-fab">ID</a>
+
+      <!-- Bottom Nav -->
+      <nav class="bottom-nav">
+        <a href="01-home-unified.html" class="nav-item">
+          <span class="nav-icon">[]</span>
+          Home
+        </a>
+        <a href="03-leaders.html" class="nav-item">
+          <span class="nav-icon">@</span>
+          Leaders
+        </a>
+        <a href="05-voices.html" class="nav-item">
+          <span class="nav-icon">))</span>
+          Voices
+        </a>
+        <a href="07-learn.html" class="nav-item">
+          <span class="nav-icon">?</span>
+          Learn
+        </a>
+      </nav>
+    </div>
+  </div>
+<script src="app.js"></script>
+</body>
+</html>

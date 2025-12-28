@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>CIVIQ - Profile</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background: #1A1A1A;">
+  <div class="wireframe-label">09 - User Profile</div>
+
+  <div class="device-frame">
+    <div class="screen">
+      <!-- Status Bar -->
+      <div class="status-bar">
+        <span class="time">9:41</span>
+        <span class="icons">... .. ..</span>
+      </div>
+
+      <!-- Header -->
+      <div style="padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; background: var(--bg-secondary); border-bottom: 1px solid var(--border);">
+        <span style="font-size: 16px; font-weight: 600;">Profile</span>
+        <span style="font-size: 20px; color: var(--text-tertiary);">=</span>
+      </div>
+
+      <!-- Content -->
+      <div class="content" style="padding-top: 0;">
+        <!-- Profile header -->
+        <div class="profile-header" style="background: var(--bg-secondary); margin: 0 -20px; padding: 24px 20px;">
+          <div class="profile-avatar">YD</div>
+          <div class="profile-name">Yeti Decker</div>
+          <div class="profile-handle">@yeti</div>
+
+          <!-- Level and streak -->
+          <div style="display: flex; justify-content: center; gap: 12px; margin-top: 12px;">
+            <div class="level-badge">Level 4</div>
+            <div class="streak-badge" style="padding: 4px 10px; font-size: 12px;">7 day streak</div>
+          </div>
+
+          <!-- Stats -->
+          <div class="stats-row" style="margin: 20px 0 0; padding: 16px 0; border-bottom: none;">
+            <div class="stat-item">
+              <div class="stat-value">1,240</div>
+              <div class="stat-label">XP</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">47</div>
+              <div class="stat-label">Articles</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">12</div>
+              <div class="stat-label">Quizzes</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bias Consumption Chart -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Your Bias Consumption</div>
+            <span style="font-size: 11px; color: var(--text-tertiary);">Last 30 days</span>
+          </div>
+
+          <div class="consumption-chart" style="background: transparent; padding: 0; margin-top: 12px;">
+            <div class="consumption-bar">
+              <div class="consumption-segment left" style="flex: 18;">18%</div>
+              <div class="consumption-segment center" style="flex: 45;">45%</div>
+              <div class="consumption-segment right" style="flex: 37;">37%</div>
+            </div>
+            <div class="consumption-legend">
+              <span>Left</span>
+              <span>Center</span>
+              <span>Right</span>
+            </div>
+          </div>
+
+          <!-- Rebalancing nudge -->
+          <div style="background: var(--accent-light); border-radius: var(--radius-sm); padding: 12px; margin-top: 12px;">
+            <div style="font-size: 13px; font-weight: 600; color: var(--accent);">Rebalance Suggestion</div>
+            <div style="font-size: 12px; color: var(--text-secondary); margin-top: 4px;">
+              You're reading slightly more right-leaning sources. Try these center-left perspectives for balance.
+            </div>
+            <a href="#" style="display: inline-block; margin-top: 8px; font-size: 12px; color: var(--accent); text-decoration: none;">View Suggestions &gt;</a>
+          </div>
+        </div>
+
+        <!-- Voting Record -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Voting Record</div>
+            <span style="font-size: 11px; color: var(--success); font-weight: 600;">Verified</span>
+          </div>
+
+          <div style="margin-top: 12px;">
+            <!-- Election history -->
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border);">
+              <div>
+                <div style="font-size: 14px; font-weight: 500;">2024 General</div>
+                <div style="font-size: 11px; color: var(--text-tertiary);">Nov 5, 2024</div>
+              </div>
+              <div style="background: var(--success); color: white; padding: 4px 10px; border-radius: var(--radius-full); font-size: 11px; font-weight: 600;">Voted</div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border);">
+              <div>
+                <div style="font-size: 14px; font-weight: 500;">2024 Primary</div>
+                <div style="font-size: 11px; color: var(--text-tertiary);">Mar 19, 2024</div>
+              </div>
+              <div style="background: var(--success); color: white; padding: 4px 10px; border-radius: var(--radius-full); font-size: 11px; font-weight: 600;">Voted</div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border);">
+              <div>
+                <div style="font-size: 14px; font-weight: 500;">2023 Municipal</div>
+                <div style="font-size: 11px; color: var(--text-tertiary);">Nov 7, 2023</div>
+              </div>
+              <div style="background: var(--success); color: white; padding: 4px 10px; border-radius: var(--radius-full); font-size: 11px; font-weight: 600;">Voted</div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0;">
+              <div>
+                <div style="font-size: 14px; font-weight: 500;">2022 General</div>
+                <div style="font-size: 11px; color: var(--text-tertiary);">Nov 8, 2022</div>
+              </div>
+              <div style="background: var(--border); color: var(--text-tertiary); padding: 4px 10px; border-radius: var(--radius-full); font-size: 11px; font-weight: 600;">No Record</div>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 12px;">
+            <span style="font-size: 24px; font-weight: 700; color: var(--success);">75%</span>
+            <div style="font-size: 12px; color: var(--text-secondary);">Participation Rate</div>
+          </div>
+        </div>
+
+        <!-- Badges -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Badges Earned</div>
+            <span style="font-size: 11px; color: var(--text-tertiary);">8 of 24</span>
+          </div>
+
+          <div class="badges-row" style="margin-top: 12px;">
+            <div class="badge earned" title="First Vote">V</div>
+            <div class="badge earned" title="7-Day Streak">7</div>
+            <div class="badge earned" title="Quiz Master">?</div>
+            <div class="badge earned" title="Balanced Reader">~</div>
+            <div class="badge earned" title="Constitution Scholar">C</div>
+            <div class="badge earned" title="Local Expert">L</div>
+            <div class="badge earned" title="Bias Aware">%</div>
+            <div class="badge earned" title="Early Adopter">*</div>
+          </div>
+
+          <a href="#" style="display: block; text-align: center; font-size: 13px; color: var(--accent); padding: 12px 0 4px; text-decoration: none;">View All Badges</a>
+        </div>
+
+        <!-- Become a Voice CTA -->
+        <div class="card" style="background: linear-gradient(135deg, var(--accent), #7C3AED); color: white;">
+          <div style="font-size: 16px; font-weight: 700; margin-bottom: 4px;">Become a Voice</div>
+          <div style="font-size: 13px; opacity: 0.9;">Join our community of trusted evaluators</div>
+          <a href="#" class="btn" style="background: white; color: var(--accent); margin-top: 12px; padding: 10px 20px;">Apply Now</a>
+        </div>
+
+        <!-- Menu items -->
+        <div class="card" style="padding: 0;">
+          <a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--border); text-decoration: none; color: var(--text-primary);">
+            <span style="font-size: 14px;">Notification Settings</span>
+            <span style="color: var(--text-tertiary);">&gt;</span>
+          </a>
+          <a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--border); text-decoration: none; color: var(--text-primary);">
+            <span style="font-size: 14px;">Privacy & Data</span>
+            <span style="color: var(--text-tertiary);">&gt;</span>
+          </a>
+          <a href="10-voter-card.html" style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--border); text-decoration: none; color: var(--text-primary);">
+            <span style="font-size: 14px;">Voter Card</span>
+            <span style="color: var(--text-tertiary);">&gt;</span>
+          </a>
+          <a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; text-decoration: none; color: var(--text-primary);">
+            <span style="font-size: 14px;">Help & Feedback</span>
+            <span style="color: var(--text-tertiary);">&gt;</span>
+          </a>
+        </div>
+
+        <div style="height: 20px;"></div>
+      </div>
+
+      <!-- Voter Card FAB -->
+      <a href="10-voter-card.html" class="voter-card-fab">ID</a>
+
+      <!-- Bottom Nav (no active state - accessed via FAB or menu) -->
+      <nav class="bottom-nav">
+        <a href="01-home-unified.html" class="nav-item">
+          <span class="nav-icon">[]</span>
+          Home
+        </a>
+        <a href="03-leaders.html" class="nav-item">
+          <span class="nav-icon">@</span>
+          Leaders
+        </a>
+        <a href="05-voices.html" class="nav-item">
+          <span class="nav-icon">))</span>
+          Voices
+        </a>
+        <a href="07-learn.html" class="nav-item">
+          <span class="nav-icon">?</span>
+          Learn
+        </a>
+      </nav>
+    </div>
+  </div>
+<script src="app.js"></script>
+</body>
+</html>

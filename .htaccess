@@ -1,0 +1,11 @@
+Options +Indexes
+Require all granted
+
+# Allow framing and CORS for Claude Desktop
+<IfModule mod_headers.c>
+    Header unset X-Frame-Options
+    Header always unset X-Frame-Options
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type"
+</IfModule>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>CIVIQ - Verify Identity</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background: #1A1A1A;">
+  <div class="wireframe-label">00b - Identity Verification</div>
+
+  <div class="device-frame">
+    <div class="screen" style="padding-bottom: 0;">
+      <!-- Status Bar -->
+      <div class="status-bar">
+        <span class="time">9:41</span>
+        <span class="icons">... .. ..</span>
+      </div>
+
+      <!-- Back header -->
+      <div style="padding: 12px 20px; display: flex; align-items: center; gap: 12px;">
+        <a href="00a-register.html" style="font-size: 20px; text-decoration: none; color: var(--text-primary);">&lt;</a>
+        <span style="font-size: 16px; font-weight: 600;">Verify Identity</span>
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+        <!-- Progress indicator -->
+        <div style="display: flex; gap: 8px; margin-bottom: 24px;">
+          <div style="flex: 1; height: 4px; background: var(--accent); border-radius: 2px;"></div>
+          <div style="flex: 1; height: 4px; background: var(--accent); border-radius: 2px;"></div>
+          <div style="flex: 1; height: 4px; background: var(--border); border-radius: 2px;"></div>
+        </div>
+
+        <!-- District confirmed banner -->
+        <div style="background: linear-gradient(135deg, var(--success)20, var(--success)10); border: 1px solid var(--success); border-radius: var(--radius-sm); padding: 12px; margin-bottom: 20px;">
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+            <span style="color: var(--success); font-size: 16px;">✓</span>
+            <span style="font-size: 13px; font-weight: 600; color: var(--success);">District Found: PA-8, Senate 22, House 121</span>
+          </div>
+          <div style="font-size: 11px; color: var(--text-secondary);">Based on ZIP 18701. Verify to confirm exact precinct.</div>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+          <div style="font-size: 20px; font-weight: 700;">Confirm Your Identity</div>
+          <div style="font-size: 13px; color: var(--text-secondary); margin-top: 4px;">Optional - unlocks full features</div>
+        </div>
+
+        <!-- Verification Options - Ordered by UX ease -->
+        <div style="font-size: 11px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; display: flex; align-items: center; gap: 6px;">
+          <span style="width: 3px; height: 12px; background: var(--accent); border-radius: 2px;"></span>
+          Easiest
+        </div>
+
+        <!-- Option 1: Voter Registration Number (least PII) -->
+        <a href="00c-setup.html" class="card" style="display: block; text-decoration: none; color: inherit; border: 2px solid var(--accent); margin-bottom: 10px;">
+          <div style="display: flex; gap: 12px; align-items: center;">
+            <div style="width: 44px; height: 44px; background: var(--accent-light); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 20px;">🗳️</div>
+            <div style="flex: 1;">
+              <div style="font-size: 14px; font-weight: 600;">Voter Registration Number</div>
+              <div style="font-size: 11px; color: var(--text-secondary);">Found on your voter card or at vote.pa.gov</div>
+              <div style="display: flex; gap: 6px; margin-top: 5px;">
+                <span style="background: var(--success); color: white; padding: 2px 6px; border-radius: var(--radius-full); font-size: 9px; font-weight: 600;">Instant</span>
+                <span style="background: var(--accent-light); color: var(--accent); padding: 2px 6px; border-radius: var(--radius-full); font-size: 9px; font-weight: 600;">Most Private</span>
+              </div>
+            </div>
+            <span style="color: var(--accent); font-size: 18px;">›</span>
+          </div>
+        </a>
+
+        <!-- Option 2: PA Voter Lookup -->
+        <a href="00c-setup.html" class="card" style="display: block; text-decoration: none; color: inherit; margin-bottom: 10px;">
+          <div style="display: flex; gap: 12px; align-items: center;">
+            <div style="width: 44px; height: 44px; background: var(--bg-tertiary); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700; color: var(--accent);">PA</div>
+            <div style="flex: 1;">
+              <div style="font-size: 14px; font-weight: 600;">PA Voter Lookup</div>
+              <div style="font-size: 11px; color: var(--text-secondary);">Name + DOB + last 4 SSN</div>
+              <div style="display: flex; gap: 6px; margin-top: 5px;">
+                <span style="background: var(--bg-tertiary); color: var(--text-secondary); padding: 2px 6px; border-radius: var(--radius-full); font-size: 9px; font-weight: 600;">Instant</span>
+              </div>
+            </div>
+            <span style="color: var(--text-tertiary); font-size: 18px;">›</span>
+          </div>
+        </a>
+
+        <div style="font-size: 11px; font-weight: 600; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.5px; margin: 16px 0 10px;">Other Methods</div>
+
+        <!-- Option 3: Photo ID -->
+        <a href="00c-setup.html" class="card" style="display: block; text-decoration: none; color: inherit; margin-bottom: 10px;">
+          <div style="display: flex; gap: 12px; align-items: center;">
+            <div style="width: 44px; height: 44px; background: var(--bg-tertiary); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 18px;">📸</div>
+            <div style="flex: 1;">
+              <div style="font-size: 14px; font-weight: 600;">Photo ID</div>
+              <div style="font-size: 11px; color: var(--text-secondary);">Scan driver's license or state ID</div>
+              <div style="display: flex; gap: 6px; margin-top: 5px;">
+                <span style="background: var(--bg-tertiary); color: var(--text-secondary); padding: 2px 6px; border-radius: var(--radius-full); font-size: 9px; font-weight: 600;">1-2 min</span>
+              </div>
+            </div>
+            <span style="color: var(--text-tertiary); font-size: 18px;">›</span>
+          </div>
+        </a>
+
+        <!-- Option 4: Voter Card Photo -->
+        <a href="00c-setup.html" class="card" style="display: block; text-decoration: none; color: inherit; margin-bottom: 10px;">
+          <div style="display: flex; gap: 12px; align-items: center;">
+            <div style="width: 44px; height: 44px; background: var(--bg-tertiary); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 18px;">📄</div>
+            <div style="flex: 1;">
+              <div style="font-size: 14px; font-weight: 600;">Voter Card Photo</div>
+              <div style="font-size: 11px; color: var(--text-secondary);">Photo of your voter registration card</div>
+              <div style="display: flex; gap: 6px; margin-top: 5px;">
+                <span style="background: var(--bg-tertiary); color: var(--text-secondary); padding: 2px 6px; border-radius: var(--radius-full); font-size: 9px; font-weight: 600;">Manual Review</span>
+              </div>
+            </div>
+            <span style="color: var(--text-tertiary); font-size: 18px;">›</span>
+          </div>
+        </a>
+
+        <!-- Option 5: Manual Selection -->
+        <a href="00c-setup.html" class="card" style="display: block; text-decoration: none; color: inherit; margin-bottom: 10px;">
+          <div style="display: flex; gap: 12px; align-items: center;">
+            <div style="width: 44px; height: 44px; background: var(--bg-tertiary); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 18px;">📍</div>
+            <div style="flex: 1;">
+              <div style="font-size: 14px; font-weight: 600;">Manual Entry</div>
+              <div style="font-size: 11px; color: var(--text-secondary);">Enter your address for exact precinct</div>
+              <div style="display: flex; gap: 6px; margin-top: 5px;">
+                <span style="background: var(--bg-tertiary); color: var(--text-secondary); padding: 2px 6px; border-radius: var(--radius-full); font-size: 9px; font-weight: 600;">Unverified</span>
+              </div>
+            </div>
+            <span style="color: var(--text-tertiary); font-size: 18px;">›</span>
+          </div>
+        </a>
+
+        <!-- Skip verification -->
+        <a href="00c-setup.html" style="display: block; text-align: center; font-size: 13px; color: var(--text-tertiary); text-decoration: none; margin-top: 16px; padding: 12px; border: 1px dashed var(--border); border-radius: var(--radius-sm);">
+          Continue without verifying
+          <div style="font-size: 10px; margin-top: 2px; opacity: 0.7;">District based on ZIP only</div>
+        </a>
+
+        <!-- Privacy note -->
+        <div style="background: var(--bg-tertiary); border-radius: var(--radius-sm); padding: 12px; margin-top: 16px;">
+          <div style="font-size: 12px; font-weight: 600; margin-bottom: 6px;">🔒 Privacy First</div>
+          <div style="font-size: 11px; color: var(--text-secondary); line-height: 1.5;">
+            Verification data is used once and immediately discarded. We never store SSN, ID photos, or sensitive info.
+          </div>
+        </div>
+
+        <div style="height: 20px;"></div>
+      </div>
+    </div>
+  </div>
+<script src="app.js"></script>
+</body>
+</html>

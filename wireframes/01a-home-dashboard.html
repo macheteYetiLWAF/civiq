@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>CIVIQ - Home Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .election-circle {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .election-circle svg {
+      transform: rotate(-90deg);
+    }
+    .election-circle-label {
+      position: absolute;
+      text-align: center;
+    }
+    .election-circle-days {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .election-circle-unit {
+      font-size: 10px;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .election-circle-title {
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 8px;
+      text-align: center;
+    }
+    .election-circle-date {
+      font-size: 10px;
+      color: var(--text-tertiary);
+      text-align: center;
+      margin-top: 2px;
+    }
+    .election-grid {
+      display: flex;
+      justify-content: space-around;
+      gap: 8px;
+    }
+    .election-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    </style>
+</head>
+<body style="background: #1A1A1A;">
+  <div class="wireframe-label">01a - Home (Elections + Dashboard)</div>
+
+  <div class="device-frame">
+    <div class="screen">
+      <!-- Status Bar -->
+      <div class="status-bar">
+        <span class="time">9:41</span>
+        <span class="icons">... .. ..</span>
+      </div>
+
+      <!-- Header -->
+      <div class="header">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <div class="header-title logo-gradient">CIVIQ</div>
+            <div class="header-subtitle">Your political intelligence</div>
+          </div>
+          <a href="09-profile.html" style="width: 36px; height: 36px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; color: white; text-decoration: none;">JK</a>
+        </div>
+      </div>
+
+      <!-- View Toggle -->
+      <div style="padding: 0 20px 16px; background: var(--bg-secondary); border-bottom: 1px solid var(--border);">
+        <div class="toggle-container">
+          <a href="01-home-news.html" class="toggle-option">News</a>
+          <div class="toggle-option active">Elections</div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+        <!-- Election Countdown Header -->
+        <div style="font-size: 12px; font-weight: 600; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px; text-align: center;">Upcoming Elections</div>
+
+        <!-- Three Election Countdown Circles -->
+        <div class="election-grid">
+          <!-- Federal Election -->
+          <div class="election-item">
+            <div class="election-circle" style="width: 95px; height: 95px;">
+              <svg width="95" height="95" viewBox="0 0 95 95">
+                <!-- Background circle -->
+                <circle cx="47.5" cy="47.5" r="40" fill="none" stroke="#333333" stroke-width="8"/>
+                <!-- Progress arc - 687 days until Nov 2026, ~47% of 4-year cycle remaining -->
+                <circle cx="47.5" cy="47.5" r="40" fill="none" stroke="#3B82F6" stroke-width="8"
+                  stroke-dasharray="251" stroke-dashoffset="133" stroke-linecap="round"/>
+              </svg>
+              <div class="election-circle-label">
+                <div class="election-circle-days">687</div>
+                <div class="election-circle-unit">days</div>
+              </div>
+            </div>
+            <div class="election-circle-title" style="color: #3B82F6;">Federal</div>
+            <div class="election-circle-date">Nov 3, 2026</div>
+            <div style="font-size: 9px; color: var(--text-tertiary); margin-top: 2px;">U.S. House</div>
+          </div>
+
+          <!-- State Election -->
+          <div class="election-item">
+            <div class="election-circle" style="width: 95px; height: 95px;">
+              <svg width="95" height="95" viewBox="0 0 95 95">
+                <!-- Background circle -->
+                <circle cx="47.5" cy="47.5" r="40" fill="none" stroke="#333333" stroke-width="8"/>
+                <!-- Progress arc - 687 days until Nov 2026 Governor race, ~47% remaining -->
+                <circle cx="47.5" cy="47.5" r="40" fill="none" stroke="#8B5CF6" stroke-width="8"
+                  stroke-dasharray="251" stroke-dashoffset="133" stroke-linecap="round"/>
+              </svg>
+              <div class="election-circle-label">
+                <div class="election-circle-days">687</div>
+                <div class="election-circle-unit">days</div>
+              </div>
+            </div>
+            <div class="election-circle-title" style="color: #8B5CF6;">State</div>
+            <div class="election-circle-date">Nov 3, 2026</div>
+            <div style="font-size: 9px; color: var(--text-tertiary); margin-top: 2px;">Governor</div>
+          </div>
+
+          <!-- Local Election -->
+          <div class="election-item">
+            <div class="election-circle" style="width: 95px; height: 95px;">
+              <svg width="95" height="95" viewBox="0 0 95 95">
+                <!-- Background circle -->
+                <circle cx="47.5" cy="47.5" r="40" fill="none" stroke="#333333" stroke-width="8"/>
+                <!-- Progress arc - 144 days until May 2025 Primary, ~80% filled (closer) -->
+                <circle cx="47.5" cy="47.5" r="40" fill="none" stroke="#F59E0B" stroke-width="8"
+                  stroke-dasharray="251" stroke-dashoffset="50" stroke-linecap="round"/>
+              </svg>
+              <div class="election-circle-label">
+                <div class="election-circle-days">144</div>
+                <div class="election-circle-unit">days</div>
+              </div>
+            </div>
+            <div class="election-circle-title" style="color: #F59E0B;">Local</div>
+            <div class="election-circle-date">May 20, 2025</div>
+            <div style="font-size: 9px; color: var(--text-tertiary); margin-top: 2px;">Primary</div>
+          </div>
+        </div>
+
+        <!-- Next Election Card -->
+        <div class="card" style="margin-top: 20px; background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary)); border: 1px solid #F59E0B40;">
+          <div style="display: flex; justify-content: space-between; align-items: start;">
+            <div>
+              <div style="font-size: 11px; color: #F59E0B; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Next Up</div>
+              <div style="font-size: 16px; font-weight: 700; margin-top: 4px;">PA Primary Election</div>
+              <div style="font-size: 12px; color: var(--text-secondary); margin-top: 2px;">May 20, 2025</div>
+            </div>
+            <div style="text-align: right;">
+              <div style="font-size: 24px; font-weight: 700; color: #F59E0B;">144</div>
+              <div style="font-size: 10px; color: var(--text-tertiary);">DAYS</div>
+            </div>
+          </div>
+          <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border);">
+            <div style="font-size: 11px; color: var(--text-secondary);">
+              <strong>Your polling place:</strong> St. Aloysius Parish Hall
+            </div>
+            <div style="font-size: 11px; color: var(--text-tertiary); margin-top: 4px;">Ward 15 · Wilkes-Barre</div>
+          </div>
+        </div>
+
+        <!-- State Party Affiliation -->
+        <div style="margin-top: 16px;">
+          <div style="font-size: 12px; font-weight: 600; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">PA Voter Registration</div>
+          <div class="card" style="padding: 12px;">
+            <!-- Party breakdown bar -->
+            <div style="height: 16px; border-radius: 8px; overflow: hidden; display: flex;">
+              <div style="width: 44%; background: #2563EB;" title="Democrat 44%"></div>
+              <div style="width: 39%; background: #DC2626;" title="Republican 39%"></div>
+              <div style="width: 17%; background: #6B7280;" title="Other/Ind 17%"></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-top: 6px; font-size: 10px;">
+              <span style="color: #2563EB; font-weight: 600;">D: 44%</span>
+              <span style="color: #DC2626; font-weight: 600;">R: 39%</span>
+              <span style="color: #6B7280; font-weight: 600;">Other: 17%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Upcoming Elections - Expandable -->
+        <div style="margin-top: 20px;">
+          <div style="font-size: 12px; font-weight: 600; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Your Upcoming Elections</div>
+
+          <!-- Local Election - City Council (Closest - Expanded) -->
+          <div class="accordion open" style="border-left: 3px solid #F59E0B;">
+            <div class="accordion-header">
+              <div style="flex: 1;">
+                <div class="accordion-title">WB City Council - District A</div>
+                <div class="accordion-subtitle">Primary: May 20, 2025</div>
+              </div>
+              <div style="text-align: right; margin-right: 12px;">
+                <div style="font-size: 16px; font-weight: 700; color: #F59E0B;">144</div>
+                <div style="font-size: 9px; color: var(--text-tertiary);">DAYS</div>
+              </div>
+              <span class="accordion-chevron">^</span>
+            </div>
+            <div class="accordion-content" style="display: block;">
+              <div style="font-size: 11px; color: var(--text-tertiary); margin-bottom: 8px;">3 Candidates Running</div>
+              <a href="04-leader-profile.html" style="display: flex; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); text-decoration: none; color: inherit;">
+                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #1D4ED8, #3B82F6); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: white;">JM</div>
+                <div style="flex: 1;">
+                  <div style="font-size: 13px; font-weight: 600;">John Murphy</div>
+                  <div style="font-size: 10px; color: var(--text-tertiary);">Former Council Member</div>
+                </div>
+                <span class="rep-party dem">D</span>
+              </a>
+              <a href="04-leader-profile.html" style="display: flex; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); text-decoration: none; color: inherit;">
+                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #1D4ED8, #3B82F6); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: white;">MR</div>
+                <div style="flex: 1;">
+                  <div style="font-size: 13px; font-weight: 600;">Maria Rodriguez</div>
+                  <div style="font-size: 10px; color: var(--text-tertiary);">Community Organizer</div>
+                </div>
+                <span class="rep-party dem">D</span>
+              </a>
+              <a href="04-leader-profile.html" style="display: flex; gap: 10px; align-items: center; padding: 8px 0; text-decoration: none; color: inherit;">
+                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #1D4ED8, #3B82F6); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: white;">TK</div>
+                <div style="flex: 1;">
+                  <div style="font-size: 13px; font-weight: 600;">Thomas Kelly</div>
+                  <div style="font-size: 10px; color: var(--text-tertiary);">Small Business Owner</div>
+                </div>
+                <span class="rep-party dem">D</span>
+              </a>
+              <a href="19-candidate-compare.html" class="btn btn-secondary btn-full" style="margin-top: 10px; font-size: 11px;">Compare Candidates</a>
+            </div>
+          </div>
+
+          <!-- Local Election - School Board -->
+          <div class="accordion" style="border-left: 3px solid #F59E0B;">
+            <div class="accordion-header">
+              <div style="flex: 1;">
+                <div class="accordion-title">WB Area School Board</div>
+                <div class="accordion-subtitle">Primary: May 20, 2025</div>
+              </div>
+              <div style="text-align: right; margin-right: 12px;">
+                <div style="font-size: 16px; font-weight: 700; color: #F59E0B;">144</div>
+                <div style="font-size: 9px; color: var(--text-tertiary);">DAYS</div>
+              </div>
+              <span class="accordion-chevron">v</span>
+            </div>
+          </div>
+
+          <!-- State Election - PA Governor 2026 -->
+          <div class="accordion" style="border-left: 3px solid #8B5CF6;">
+            <div class="accordion-header">
+              <div style="flex: 1;">
+                <div class="accordion-title">PA Governor</div>
+                <div class="accordion-subtitle">General: Nov 3, 2026</div>
+              </div>
+              <div style="text-align: right; margin-right: 12px;">
+                <div style="font-size: 16px; font-weight: 700; color: #8B5CF6;">687</div>
+                <div style="font-size: 9px; color: var(--text-tertiary);">DAYS</div>
+              </div>
+              <span class="accordion-chevron">v</span>
+            </div>
+          </div>
+
+          <!-- Federal Election - U.S. House PA-8 -->
+          <div class="accordion" style="border-left: 3px solid #3B82F6;">
+            <div class="accordion-header">
+              <div style="flex: 1;">
+                <div class="accordion-title">U.S. House - PA-8</div>
+                <div class="accordion-subtitle">General: Nov 3, 2026</div>
+              </div>
+              <div style="text-align: right; margin-right: 12px;">
+                <div style="font-size: 16px; font-weight: 700; color: #3B82F6;">687</div>
+                <div style="font-size: 9px; color: var(--text-tertiary);">DAYS</div>
+              </div>
+              <span class="accordion-chevron">v</span>
+            </div>
+          </div>
+
+          <!-- State Senate District 22 -->
+          <div class="accordion" style="border-left: 3px solid #8B5CF6;">
+            <div class="accordion-header">
+              <div style="flex: 1;">
+                <div class="accordion-title">PA State Senate - District 22</div>
+                <div class="accordion-subtitle">General: Nov 3, 2026</div>
+              </div>
+              <div style="text-align: right; margin-right: 12px;">
+                <div style="font-size: 16px; font-weight: 700; color: #8B5CF6;">687</div>
+                <div style="font-size: 9px; color: var(--text-tertiary);">DAYS</div>
+              </div>
+              <span class="accordion-chevron">v</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div style="margin-top: 16px;">
+          <div style="display: flex; gap: 8px;">
+            <a href="07-learn.html" class="btn btn-secondary" style="flex: 1; font-size: 11px; padding: 10px;">Daily Quiz</a>
+            <a href="01-home-news.html" class="btn btn-secondary" style="flex: 1; font-size: 11px; padding: 10px;">Latest News</a>
+            <a href="03-leaders.html" class="btn btn-secondary" style="flex: 1; font-size: 11px; padding: 10px;">My Reps</a>
+          </div>
+        </div>
+
+        <div style="height: 80px;"></div>
+      </div>
+
+      <!-- Voter Card FAB (right side bubble) -->
+      <a href="10-voter-card.html" class="voter-card-fab">ID</a>
+
+      <!-- Bottom Nav -->
+      <nav class="bottom-nav">
+        <a href="01-home-unified.html" class="nav-item active">
+          <span class="nav-icon">[]</span>
+          Home
+        </a>
+        <a href="03-leaders.html" class="nav-item">
+          <span class="nav-icon">@</span>
+          Leaders
+        </a>
+        <a href="05-voices.html" class="nav-item">
+          <span class="nav-icon">))</span>
+          Voices
+        </a>
+        <a href="07-learn.html" class="nav-item">
+          <span class="nav-icon">?</span>
+          Learn
+        </a>
+      </nav>
+    </div>
+  </div>
+<script src="app.js"></script>
+</body>
+</html>

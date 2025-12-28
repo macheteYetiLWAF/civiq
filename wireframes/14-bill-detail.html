@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>CIVIQ - Bill Detail</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background: #1A1A1A;">
+  <div class="wireframe-label">14 - Bill Detail</div>
+
+  <div class="device-frame">
+    <div class="screen">
+      <!-- Status Bar -->
+      <div class="status-bar">
+        <span class="time">9:41</span>
+        <span class="icons">... .. ..</span>
+      </div>
+
+      <!-- Header -->
+      <div style="padding: 12px 20px; display: flex; align-items: center; gap: 12px; background: var(--bg-secondary); border-bottom: 1px solid var(--border);">
+        <a href="13-bills.html" style="font-size: 20px; text-decoration: none; color: var(--text-primary);">&lt;</a>
+        <span style="font-size: 16px; font-weight: 600;">Bill Details</span>
+        <span style="margin-left: auto; font-size: 20px;">⭐</span>
+      </div>
+
+      <!-- Content -->
+      <div class="content" style="padding-top: 0;">
+        <!-- Bill header -->
+        <div style="background: var(--bg-secondary); margin: 0 -20px; padding: 20px;">
+          <div style="font-size: 11px; color: #F59E0B; font-weight: 600; text-transform: uppercase;">In Senate Committee</div>
+          <h1 style="font-size: 20px; font-weight: 700; margin: 8px 0;">H.R. 4521</h1>
+          <div style="font-size: 16px; color: var(--text-secondary);">Infrastructure Investment and Jobs Act</div>
+
+          <!-- Progress tracker -->
+          <div style="margin-top: 16px;">
+            <div style="display: flex; align-items: center; gap: 4px; margin-bottom: 6px;">
+              <div style="flex: 1; height: 6px; background: var(--success); border-radius: 3px;"></div>
+              <div style="flex: 1; height: 6px; background: var(--success); border-radius: 3px;"></div>
+              <div style="flex: 1; height: 6px; background: #F59E0B; border-radius: 3px;"></div>
+              <div style="flex: 1; height: 6px; background: var(--border); border-radius: 3px;"></div>
+              <div style="flex: 1; height: 6px; background: var(--border); border-radius: 3px;"></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 10px; color: var(--text-tertiary);">
+              <span>Introduced</span>
+              <span>House</span>
+              <span style="color: #F59E0B; font-weight: 600;">Senate</span>
+              <span>Conference</span>
+              <span>Signed</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick facts -->
+        <div class="card">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div>
+              <div style="font-size: 11px; color: var(--text-tertiary);">Introduced</div>
+              <div style="font-size: 14px; font-weight: 600;">Jun 4, 2024</div>
+            </div>
+            <div>
+              <div style="font-size: 11px; color: var(--text-tertiary);">Last Action</div>
+              <div style="font-size: 14px; font-weight: 600;">Dec 26, 2024</div>
+            </div>
+            <div>
+              <div style="font-size: 11px; color: var(--text-tertiary);">Sponsor</div>
+              <div style="font-size: 14px; font-weight: 600;">Rep. DeFazio (D-OR)</div>
+            </div>
+            <div>
+              <div style="font-size: 11px; color: var(--text-tertiary);">Cosponsors</div>
+              <div style="font-size: 14px; font-weight: 600;">78 (D: 52, R: 26)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Your Rep's Position -->
+        <div class="card" style="border: 1px solid var(--accent);">
+          <div style="font-size: 12px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px;">Your Representative</div>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 48px; height: 48px; background: var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px;">MC</div>
+            <div style="flex: 1;">
+              <div style="font-size: 15px; font-weight: 600;">Matt Cartwright</div>
+              <div style="font-size: 12px; color: var(--text-secondary);">PA-8 · Democrat</div>
+            </div>
+            <div style="text-align: right;">
+              <div style="background: #DCFCE7; color: #16A34A; padding: 4px 10px; border-radius: var(--radius-full); font-size: 12px; font-weight: 600;">COSPONSOR</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Summary</div>
+          </div>
+          <div style="font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-top: 8px;">
+            This bill provides $1.2 trillion in funding for infrastructure improvements including:
+            <ul style="margin: 12px 0; padding-left: 20px;">
+              <li style="margin-bottom: 6px;">$550B for transportation (roads, bridges, rail)</li>
+              <li style="margin-bottom: 6px;">$65B for broadband internet expansion</li>
+              <li style="margin-bottom: 6px;">$55B for clean water infrastructure</li>
+              <li style="margin-bottom: 6px;">$7.5B for electric vehicle charging</li>
+              <li>$21B for environmental remediation</li>
+            </ul>
+          </div>
+          <a href="#" style="font-size: 13px; color: var(--accent); text-decoration: none;">Read full text →</a>
+        </div>
+
+        <!-- Vote History -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Vote History</div>
+          </div>
+
+          <div style="margin-top: 12px;">
+            <!-- House Vote -->
+            <div style="border-bottom: 1px solid var(--border); padding-bottom: 12px; margin-bottom: 12px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <span style="font-size: 14px; font-weight: 600;">House Vote</span>
+                <span style="background: #DCFCE7; color: #16A34A; padding: 3px 8px; border-radius: var(--radius-full); font-size: 11px; font-weight: 600;">PASSED</span>
+              </div>
+              <div style="display: flex; gap: 4px; margin-bottom: 6px;">
+                <div style="flex: 228; background: #22C55E; height: 20px; border-radius: 4px 0 0 4px; display: flex; align-items: center; justify-content: center; color: white; font-size: 11px;">228 Yea</div>
+                <div style="flex: 206; background: #EF4444; height: 20px; border-radius: 0 4px 4px 0; display: flex; align-items: center; justify-content: center; color: white; font-size: 11px;">206 Nay</div>
+              </div>
+              <div style="font-size: 11px; color: var(--text-tertiary);">Nov 5, 2024 • D: 215-6 | R: 13-200</div>
+            </div>
+
+            <!-- Senate Vote -->
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <span style="font-size: 14px; font-weight: 600;">Senate Committee</span>
+                <span style="background: #FEF3C7; color: #92400E; padding: 3px 8px; border-radius: var(--radius-full); font-size: 11px; font-weight: 600;">PENDING</span>
+              </div>
+              <div style="font-size: 12px; color: var(--text-secondary);">Committee on Environment and Public Works</div>
+              <div style="font-size: 11px; color: var(--text-tertiary); margin-top: 4px;">Hearing scheduled: Jan 8, 2025</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PA Delegation Breakdown -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">PA Delegation Votes</div>
+          </div>
+
+          <div style="margin-top: 12px;">
+            <div style="font-size: 12px; font-weight: 600; margin-bottom: 8px;">House (17 members)</div>
+            <div style="display: flex; gap: 4px; margin-bottom: 12px;">
+              <div style="flex: 9; background: #22C55E; height: 20px; border-radius: 4px 0 0 4px; display: flex; align-items: center; justify-content: center; color: white; font-size: 11px;">9 Yea</div>
+              <div style="flex: 8; background: #EF4444; height: 20px; border-radius: 0 4px 4px 0; display: flex; align-items: center; justify-content: center; color: white; font-size: 11px;">8 Nay</div>
+            </div>
+
+            <div style="font-size: 12px;">
+              <div style="display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid var(--border);">
+                <span>Matt Cartwright (D-8)</span>
+                <span style="color: var(--success); font-weight: 600;">YEA</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid var(--border);">
+                <span>Dan Meuser (R-9)</span>
+                <span style="color: var(--danger); font-weight: 600;">NAY</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; padding: 6px 0;">
+                <span>Susan Wild (D-7)</span>
+                <span style="color: var(--success); font-weight: 600;">YEA</span>
+              </div>
+            </div>
+            <a href="#" style="display: block; text-align: center; font-size: 12px; color: var(--accent); padding-top: 8px; text-decoration: none;">See all PA votes →</a>
+          </div>
+        </div>
+
+        <!-- Related Coverage -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Related Coverage</div>
+            <span style="font-size: 11px; color: var(--text-tertiary);">23 articles</span>
+          </div>
+
+          <a href="08-article.html" style="display: block; text-decoration: none; color: inherit; border-bottom: 1px solid var(--border); padding: 12px 0;">
+            <div style="font-size: 13px; font-weight: 500; color: var(--text-primary);">"Infrastructure Bill Advances with Bipartisan Support"</div>
+            <div style="display: flex; gap: 8px; align-items: center; margin-top: 4px;">
+              <span class="bias-label center" style="font-size: 9px; padding: 2px 6px;">Center</span>
+              <span style="font-size: 11px; color: var(--text-tertiary);">AP News - 2d ago</span>
+            </div>
+          </a>
+
+          <a href="08-article.html" style="display: block; text-decoration: none; color: inherit; border-bottom: 1px solid var(--border); padding: 12px 0;">
+            <div style="font-size: 13px; font-weight: 500; color: var(--text-primary);">"What the Infrastructure Bill Means for NEPA"</div>
+            <div style="display: flex; gap: 8px; align-items: center; margin-top: 4px;">
+              <span class="bias-label lean-left" style="font-size: 9px; padding: 2px 6px;">Lean Left</span>
+              <span style="font-size: 11px; color: var(--text-tertiary);">Times Leader - 3d ago</span>
+            </div>
+          </a>
+
+          <a href="#" style="display: block; text-align: center; font-size: 13px; color: var(--accent); padding: 8px 0; text-decoration: none;">View All Coverage</a>
+        </div>
+
+        <!-- Actions -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px;">
+          <a href="#" class="btn btn-secondary" style="font-size: 13px;">Contact Rep</a>
+          <a href="#" class="btn btn-secondary" style="font-size: 13px;">Share Bill</a>
+        </div>
+
+        <div style="height: 20px;"></div>
+      </div>
+
+      <!-- Voter Card FAB -->
+      <a href="10-voter-card.html" class="voter-card-fab">ID</a>
+
+      <!-- Bottom Nav -->
+      <nav class="bottom-nav">
+        <a href="01-home-unified.html" class="nav-item">
+          <span class="nav-icon">[]</span>
+          Home
+        </a>
+        <a href="03-leaders.html" class="nav-item">
+          <span class="nav-icon">@</span>
+          Leaders
+        </a>
+        <a href="05-voices.html" class="nav-item">
+          <span class="nav-icon">))</span>
+          Voices
+        </a>
+        <a href="07-learn.html" class="nav-item">
+          <span class="nav-icon">?</span>
+          Learn
+        </a>
+      </nav>
+    </div>
+  </div>
+<script src="app.js"></script>
+</body>
+</html>

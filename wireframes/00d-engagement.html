@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>CIVIQ - Engagement Level</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background: #1A1A1A;">
+  <div class="wireframe-label">00d - Engagement Quiz</div>
+
+  <div class="device-frame">
+    <div class="screen" style="padding-bottom: 0;">
+      <!-- Status Bar -->
+      <div class="status-bar">
+        <span class="time">9:41</span>
+        <span class="icons">... .. ..</span>
+      </div>
+
+      <!-- Back header -->
+      <div style="padding: 12px 20px; display: flex; align-items: center; gap: 12px;">
+        <a href="00c-setup.html" style="font-size: 20px; text-decoration: none; color: var(--text-primary);">&lt;</a>
+        <span style="font-size: 16px; font-weight: 600;">Personalize Your Experience</span>
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+        <!-- Progress indicator -->
+        <div style="display: flex; gap: 8px; margin-bottom: 24px;">
+          <div style="flex: 1; height: 4px; background: var(--accent); border-radius: 2px;"></div>
+          <div style="flex: 1; height: 4px; background: var(--accent); border-radius: 2px;"></div>
+          <div style="flex: 1; height: 4px; background: var(--accent); border-radius: 2px;"></div>
+          <div style="flex: 1; height: 4px; background: var(--accent); border-radius: 2px;"></div>
+        </div>
+
+        <div style="margin-bottom: 24px;">
+          <div style="font-size: 22px; font-weight: 700;">How politically engaged are you?</div>
+          <div style="font-size: 14px; color: var(--text-secondary); margin-top: 4px;">We'll tailor content density to match your style</div>
+        </div>
+
+        <!-- Engagement Level Options -->
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+
+          <!-- Casual -->
+          <a href="01-home-unified.html" class="card" style="display: block; text-decoration: none; color: inherit; border: 2px solid transparent; transition: border-color 0.2s;">
+            <div style="display: flex; gap: 14px; align-items: start;">
+              <div style="width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0;">☕</div>
+              <div style="flex: 1;">
+                <div style="font-size: 16px; font-weight: 600;">Casual Observer</div>
+                <div style="font-size: 13px; color: var(--text-secondary); margin-top: 4px; line-height: 1.5;">
+                  I check in occasionally. Give me headlines and key takeaways without overwhelming detail.
+                </div>
+                <div style="display: flex; gap: 6px; margin-top: 8px;">
+                  <span style="background: var(--bg-tertiary); color: var(--text-secondary); padding: 3px 8px; border-radius: var(--radius-full); font-size: 10px;">Daily digest</span>
+                  <span style="background: var(--bg-tertiary); color: var(--text-secondary); padding: 3px 8px; border-radius: var(--radius-full); font-size: 10px;">Simplified UI</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Engaged -->
+          <a href="01-home-unified.html" class="card" style="display: block; text-decoration: none; color: inherit; border: 2px solid var(--accent);">
+            <div style="display: flex; gap: 14px; align-items: start;">
+              <div style="width: 48px; height: 48px; background: var(--accent-light); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0;">📊</div>
+              <div style="flex: 1;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="font-size: 16px; font-weight: 600;">Engaged Citizen</span>
+                  <span style="background: var(--accent); color: white; padding: 2px 6px; border-radius: var(--radius-full); font-size: 9px; font-weight: 600;">RECOMMENDED</span>
+                </div>
+                <div style="font-size: 13px; color: var(--text-secondary); margin-top: 4px; line-height: 1.5;">
+                  I follow politics regularly. Show me bias breakdowns, source analysis, and election updates.
+                </div>
+                <div style="display: flex; gap: 6px; margin-top: 8px;">
+                  <span style="background: var(--accent-light); color: var(--accent); padding: 3px 8px; border-radius: var(--radius-full); font-size: 10px;">Full analysis</span>
+                  <span style="background: var(--accent-light); color: var(--accent); padding: 3px 8px; border-radius: var(--radius-full); font-size: 10px;">Rebalancing nudges</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Power User -->
+          <a href="01-home-unified.html" class="card" style="display: block; text-decoration: none; color: inherit; border: 2px solid transparent;">
+            <div style="display: flex; gap: 14px; align-items: start;">
+              <div style="width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0;">🔬</div>
+              <div style="flex: 1;">
+                <div style="font-size: 16px; font-weight: 600;">Power User</div>
+                <div style="font-size: 13px; color: var(--text-secondary); margin-top: 4px; line-height: 1.5;">
+                  I'm a political junkie. Give me everything: multi-dimensional bias, bill tracking, voting records, source comparisons.
+                </div>
+                <div style="display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap;">
+                  <span style="background: var(--bg-tertiary); color: var(--text-secondary); padding: 3px 8px; border-radius: var(--radius-full); font-size: 10px;">Bill tracking</span>
+                  <span style="background: var(--bg-tertiary); color: var(--text-secondary); padding: 3px 8px; border-radius: var(--radius-full); font-size: 10px;">Voting records</span>
+                  <span style="background: var(--bg-tertiary); color: var(--text-secondary); padding: 3px 8px; border-radius: var(--radius-full); font-size: 10px;">Ghost advisors</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- Topic interests -->
+        <div style="margin-top: 28px;">
+          <div style="font-size: 14px; font-weight: 600; margin-bottom: 12px;">What topics interest you most?</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <span class="btn btn-secondary" style="padding: 8px 14px; font-size: 12px;">Healthcare</span>
+            <span class="btn btn-outline" style="padding: 8px 14px; font-size: 12px;">Economy</span>
+            <span class="btn btn-outline" style="padding: 8px 14px; font-size: 12px;">Education</span>
+            <span class="btn btn-secondary" style="padding: 8px 14px; font-size: 12px;">Environment</span>
+            <span class="btn btn-outline" style="padding: 8px 14px; font-size: 12px;">Immigration</span>
+            <span class="btn btn-outline" style="padding: 8px 14px; font-size: 12px;">Criminal Justice</span>
+            <span class="btn btn-secondary" style="padding: 8px 14px; font-size: 12px;">Local Issues</span>
+            <span class="btn btn-outline" style="padding: 8px 14px; font-size: 12px;">Foreign Policy</span>
+          </div>
+        </div>
+
+        <!-- Notification preference -->
+        <div style="margin-top: 24px;">
+          <div style="font-size: 14px; font-weight: 600; margin-bottom: 12px;">How should we notify you?</div>
+          <div class="card" style="padding: 0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--border);">
+              <div>
+                <div style="font-size: 14px; font-weight: 500;">Breaking news</div>
+                <div style="font-size: 11px; color: var(--text-tertiary);">Major political events</div>
+              </div>
+              <div style="width: 44px; height: 24px; background: var(--accent); border-radius: 12px; position: relative;">
+                <div style="width: 20px; height: 20px; background: white; border-radius: 50%; position: absolute; right: 2px; top: 2px;"></div>
+              </div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--border);">
+              <div>
+                <div style="font-size: 14px; font-weight: 500;">Election reminders</div>
+                <div style="font-size: 11px; color: var(--text-tertiary);">Upcoming votes and deadlines</div>
+              </div>
+              <div style="width: 44px; height: 24px; background: var(--accent); border-radius: 12px; position: relative;">
+                <div style="width: 20px; height: 20px; background: white; border-radius: 50%; position: absolute; right: 2px; top: 2px;"></div>
+              </div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px;">
+              <div>
+                <div style="font-size: 14px; font-weight: 500;">Daily digest</div>
+                <div style="font-size: 11px; color: var(--text-tertiary);">Morning summary of key stories</div>
+              </div>
+              <div style="width: 44px; height: 24px; background: var(--border); border-radius: 12px; position: relative;">
+                <div style="width: 20px; height: 20px; background: white; border-radius: 50%; position: absolute; left: 2px; top: 2px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="01-home-unified.html" class="btn btn-gradient btn-full" style="padding: 14px; margin-top: 24px;">
+          Start Exploring
+        </a>
+
+        <div style="height: 20px;"></div>
+      </div>
+    </div>
+  </div>
+<script src="app.js"></script>
+</body>
+</html>
