@@ -365,3 +365,14 @@ Article-level analysis:
 ---
 
 *Team: Josh (Marketing/Ops) & Yeti (Technical)*
+
+---
+
+## Git Workflow
+
+**Claude manages the repo.** User doesn't need to remember git commands.
+
+- **Branches:** `main` (stable) and `dev` (active development)
+- **Current branch:** `dev`
+- **Commit protocol:** Claude proposes commits when changes are meaningful, user confirms with "yes" or "commit"
+- **No remote configured yet** (local only)
