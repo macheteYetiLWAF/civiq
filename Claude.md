@@ -373,6 +373,83 @@ Article-level analysis:
 **Claude manages the repo.** User doesn't need to remember git commands.
 
 - **Branches:** `main` (stable) and `dev` (active development)
-- **Current branch:** `dev`
+- **Current branch:** `main`
 - **Commit protocol:** Claude proposes commits when changes are meaningful, user confirms with "yes" or "commit"
 - **No remote configured yet** (local only)
+
+---
+
+## Meeting 6 Key Insights (Jan 4, 2026)
+
+### Navigation Architecture Revision
+
+**Bottom Nav (4 items):**
+1. Home (Dashboard)
+2. Leaders
+3. Media (renamed from Voices)
+4. Learn
+
+**Home Screen - 3 tabs:**
+- **Voices** = LOCAL content only (your district, your reps) - renamed from News
+- **Elections** = your upcoming elections
+- **Bills** = bills affecting you
+
+### Media Screen Structure
+
+**Two dimensions:**
+- **Stories** (top stories across sources)
+- **Sources** (browse by publication)
+
+**Categories:**
+- Networks (TV)
+- Newspapers
+- Magazines (gloss publications)
+- Podcasts / Influencers
+- Official Documents (whitehouse.gov, declassified docs, etc.)
+- Scientific Journals (funding transparency)
+
+**Source Profile popup:**
+- Logo
+- Tenure / Ownership history / Shareholders
+- Top Advertisers
+- % Opinion score (algorithmic)
+
+### Leaders Page Enhancement
+- US Map visualization
+- Click state → see districts (red/blue heat map)
+- District type dropdown: Congressional, Senate, House, City, School
+- Flows to candidate comparison
+
+### Learn Screen
+- Ghost Panel moved here (from standalone)
+- Types of Badges
+- Types of Publications education
+- Future: AI "podcast" with historical figures commenting on news
+
+### Bias/Opinion Scoring
+- Algorithmic (Claude-powered), not manual human rating
+- Sentence-level analysis for factuality vs opinion
+- Fine-tuning phase later in development
+
+### Voices (Community Evaluators)
+- Community-driven nominations
+- Mini-elections within districts
+- Follower/engagement based credibility
+- Top-down push from politicians using platform
+
+### Data Sourcing Strategy
+- No APIs exist for local data - must build our own
+- Claude does targeted research per locale
+- Catalog: local newspapers, government sites, RSS feeds
+- Build mesh of publicly available sources
+- Eastern PA is pilot region
+
+### Future Features (Post-V1)
+- Delegate/Politician interface (separate wireframe)
+- Real-time constituent sentiment on bills
+- Messaging system for politicians
+- Scientific journal funding transparency deep-dive
+
+### Related Files
+- `/uploads/meeting6.txt` - Full meeting transcript
+- `/uploads/PXL_*.jpg` - Josh's whiteboard sketches

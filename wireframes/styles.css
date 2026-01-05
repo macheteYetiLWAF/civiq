@@ -837,6 +837,12 @@ body {
   border-radius: var(--radius-sm);
   font-size: 16px;
   background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.input-field::placeholder {
+  color: var(--text-tertiary);
+  opacity: 1;
 }
 
 .input-field:focus {

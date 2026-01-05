@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>CIVIQ - Media</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .source-card {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      padding: 12px;
+      background: var(--bg-secondary);
+      border-radius: var(--radius-md);
+      margin-bottom: 8px;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid var(--border);
+    }
+    .source-logo {
+      width: 48px;
+      height: 48px;
+      background: var(--bg-tertiary);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .source-bias {
+      display: inline-block;
+      font-size: 9px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 12px;
+    }
+    .category-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body style="background: #1A1A1A;">
+  <div class="wireframe-label">05 - Media (Sources & Stories)</div>
+
+  <div class="device-frame">
+    <div class="screen">
+      <!-- Status Bar -->
+      <div class="status-bar">
+        <span class="time">9:41</span>
+        <span class="icons">... .. ..</span>
+      </div>
+
+      <!-- Header -->
+      <div class="header">
+        <div class="header-title">Media</div>
+        <div class="header-subtitle">News sources & top stories</div>
+      </div>
+
+      <!-- Toggle: Sources vs Stories -->
+      <div style="padding: 0 20px 16px;">
+        <div class="toggle-container">
+          <div class="toggle-option active">Sources</div>
+          <div class="toggle-option">Stories</div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+        <!-- Category: Networks -->
+        <div class="category-header">
+          <div class="category-icon" style="background: linear-gradient(135deg, #DC2626, #EF4444);">📺</div>
+          <div>
+            <div style="font-size: 14px; font-weight: 600;">Networks</div>
+            <div style="font-size: 11px; color: var(--text-tertiary);">Television & cable news</div>
+          </div>
+        </div>
+
+        <a href="3b-source-profile.html" class="source-card">
+          <div class="source-logo">CNN</div>
+          <div style="flex: 1;">
+            <div style="font-size: 14px; font-weight: 600;">CNN</div>
+            <div style="display: flex; gap: 8px; align-items: center; margin-top: 4px;">
+              <span class="source-bias" style="background: #2563EB20; color: #2563EB;">Lean Left</span>
+              <span style="font-size: 10px; color: var(--text-tertiary);">Warner Bros Discovery</span>
+            </div>
+          </div>
+          <span style="color: var(--text-tertiary);">›</span>
+        </a>
+
+        <a href="3b-source-profile.html" class="source-card">
+          <div class="source-logo">FOX</div>
+          <div style="flex: 1;">
+            <div style="font-size: 14px; font-weight: 600;">Fox News</div>
+            <div style="display: flex; gap: 8px; align-items: center; margin-top: 4px;">
+              <span class="source-bias" style="background: #DC262620; color: #DC2626;">Lean Right</span>
+              <span style="font-size: 10px; color: var(--text-tertiary);">Fox Corporation</span>
+            </div>
+          </div>
+          <span style="color: var(--text-tertiary);">›</span>
+        </a>
+
+        <a href="3b-source-profile.html" class="source-card">
+          <div class="source-logo">NBC</div>
+          <div style="flex: 1;">
+            <div style="font-size: 14px; font-weight: 600;">MSNBC</div>
+            <div style="display: flex; gap: 8px; align-items: center; margin-top: 4px;">
+              <span class="source-bias" style="background: #1D4ED820; color: #1D4ED8;">Left</span>
+              <span style="font-size: 10px; color: var(--text-tertiary);">Comcast / NBCUniversal</span>
+            </div>
+          </div>
+          <span style="color: var(--text-tertiary);">›</span>
+        </a>
+
+        <!-- Category: Newspapers -->
+        <div class="category-header" style="margin-top: 16px;">
+          <div class="category-icon" style="background: linear-gradient(135deg, #6B7280, #4B5563);">📰</div>
+          <div>
+            <div style="font-size: 14px; font-weight: 600;">Newspapers</div>
+            <div style="font-size: 11px; color: var(--text-tertiary);">Print & digital publications</div>
+          </div>
+        </div>
+
+        <a href="3b-source-profile.html" class="source-card">
+          <div class="source-logo">NYT</div>
+          <div style="flex: 1;">
+            <div style="font-size: 14px; font-weight: 600;">New York Times</div>
+            <div style="display: flex; gap: 8px; align-items: center; margin-top: 4px;">
+              <span class="source-bias" style="background: #2563EB20; color: #2563EB;">Lean Left</span>
+              <span style="font-size: 10px; color: var(--text-tertiary);">NYT Company</span>
+            </div>
+          </div>
+          <span style="color: var(--text-tertiary);">›</span>
+        </a>
+
+        <a href="3b-source-profile.html" class="source-card">
+          <div class="source-logo">WSJ</div>
+          <div style="flex: 1;">
+            <div style="font-size: 14px; font-weight: 600;">Wall Street Journal</div>
+            <div style="display: flex; gap: 8px; align-items: center; margin-top: 4px;">
+              <span class="source-bias" style="background: #8B5CF620; color: #8B5CF6;">Center</span>
+              <span style="font-size: 10px; color: var(--text-tertiary);">News Corp</span>
+            </div>
+          </div>
+          <span style="color: var(--text-tertiary);">›</span>
+        </a>
+
+        <a href="3b-source-profile.html" class="source-card" style="border-left: 3px solid #F59E0B;">
+          <div class="source-logo">CV</div>
+          <div style="flex: 1;">
+            <div style="font-size: 14px; font-weight: 600;">Citizens' Voice</div>
+            <div style="display: flex; gap: 8px; align-items: center; margin-top: 4px;">
+              <span class="source-bias" style="background: #8B5CF620; color: #8B5CF6;">Center</span>
+              <span style="font-size: 10px; color: #F59E0B;">Local · Wilkes-Barre</span>
+            </div>
+          </div>
+          <span style="color: var(--text-tertiary);">›</span>
+        </a>
+
+        <a href="3b-source-profile.html" class="source-card" style="border-left: 3px solid #F59E0B;">
+          <div class="source-logo">TL</div>
+          <div style="flex: 1;">
+            <div style="font-size: 14px; font-weight: 600;">Times Leader</div>
+            <div style="display: flex; gap: 8px; align-items: center; margin-top: 4px;">
+              <span class="source-bias" style="background: #8B5CF620; color: #8B5CF6;">Center</span>
+              <span style="font-size: 10px; color: #F59E0B;">Local · Wilkes-Barre</span>
+            </div>
+          </div>
+          <span style="color: var(--text-tertiary);">›</span>
+        </a>
+
+        <!-- Category: Podcasts / Influencers -->
+        <div class="category-header" style="margin-top: 16px;">
+          <div class="category-icon" style="background: linear-gradient(135deg, #8B5CF6, #7C3AED);">🎙️</div>
+          <div>
+            <div style="font-size: 14px; font-weight: 600;">Podcasts & Influencers</div>
+            <div style="font-size: 11px; color: var(--text-tertiary);">Independent voices</div>
+          </div>
+        </div>
+
+        <a href="3b-source-profile.html" class="source-card">
+          <div class="source-logo">🎧</div>
+          <div style="flex: 1;">
+            <div style="font-size: 14px; font-weight: 600;">Breaking Points</div>
+            <div style="display: flex; gap: 8px; align-items: center; margin-top: 4px;">
+              <span class="source-bias" style="background: #8B5CF620; color: #8B5CF6;">Center</span>
+              <span style="font-size: 10px; color: var(--text-tertiary);">Independent</span>
+            </div>
+          </div>
+          <span style="color: var(--text-tertiary);">›</span>
+        </a>
+
+        <a href="3b-source-profile.html" class="source-card">
+          <div class="source-logo">🎤</div>
+          <div style="flex: 1;">
+            <div style="font-size: 14px; font-weight: 600;">Joe Rogan Experience</div>
+            <div style="display: flex; gap: 8px; align-items: center; margin-top: 4px;">
+              <span class="source-bias" style="background: #DC262620; color: #DC2626;">Lean Right</span>
+              <span style="font-size: 10px; color: var(--text-tertiary);">Spotify Exclusive</span>
+            </div>
+          </div>
+          <span style="color: var(--text-tertiary);">›</span>
+        </a>
+
+        <!-- Category: Official Documents -->
+        <div class="category-header" style="margin-top: 16px;">
+          <div class="category-icon" style="background: linear-gradient(135deg, #22C55E, #16A34A);">📋</div>
+          <div>
+            <div style="font-size: 14px; font-weight: 600;">Official Documents</div>
+            <div style="font-size: 11px; color: var(--text-tertiary);">Government & public records</div>
+          </div>
+        </div>
+
+        <a href="3b-source-profile.html" class="source-card">
+          <div class="source-logo">🏛️</div>
+          <div style="flex: 1;">
+            <div style="font-size: 14px; font-weight: 600;">WhiteHouse.gov</div>
+            <div style="display: flex; gap: 8px; align-items: center; margin-top: 4px;">
+              <span class="source-bias" style="background: #22C55E20; color: #22C55E;">Official</span>
+              <span style="font-size: 10px; color: var(--text-tertiary);">Executive Branch</span>
+            </div>
+          </div>
+          <span style="color: var(--text-tertiary);">›</span>
+        </a>
+
+        <a href="3b-source-profile.html" class="source-card">
+          <div class="source-logo">📜</div>
+          <div style="flex: 1;">
+            <div style="font-size: 14px; font-weight: 600;">Congress.gov</div>
+            <div style="display: flex; gap: 8px; align-items: center; margin-top: 4px;">
+              <span class="source-bias" style="background: #22C55E20; color: #22C55E;">Official</span>
+              <span style="font-size: 10px; color: var(--text-tertiary);">Legislative Branch</span>
+            </div>
+          </div>
+          <span style="color: var(--text-tertiary);">›</span>
+        </a>
+
+        <a href="3b-source-profile.html" class="source-card" style="border-left: 3px solid #F59E0B;">
+          <div class="source-logo">🏠</div>
+          <div style="flex: 1;">
+            <div style="font-size: 14px; font-weight: 600;">PA General Assembly</div>
+            <div style="display: flex; gap: 8px; align-items: center; margin-top: 4px;">
+              <span class="source-bias" style="background: #22C55E20; color: #22C55E;">Official</span>
+              <span style="font-size: 10px; color: #F59E0B;">State · Pennsylvania</span>
+            </div>
+          </div>
+          <span style="color: var(--text-tertiary);">›</span>
+        </a>
+
+        <!-- Category: Scientific Journals -->
+        <div class="category-header" style="margin-top: 16px;">
+          <div class="category-icon" style="background: linear-gradient(135deg, #3B82F6, #1D4ED8);">🔬</div>
+          <div>
+            <div style="font-size: 14px; font-weight: 600;">Scientific Journals</div>
+            <div style="font-size: 11px; color: var(--text-tertiary);">Research & academic sources</div>
+          </div>
+        </div>
+
+        <a href="3b-source-profile.html" class="source-card">
+          <div class="source-logo">🧬</div>
+          <div style="flex: 1;">
+            <div style="font-size: 14px; font-weight: 600;">Nature</div>
+            <div style="display: flex; gap: 8px; align-items: center; margin-top: 4px;">
+              <span class="source-bias" style="background: #3B82F620; color: #3B82F6;">Peer Reviewed</span>
+              <span style="font-size: 10px; color: var(--text-tertiary);">Springer Nature</span>
+            </div>
+          </div>
+          <span style="color: var(--text-tertiary);">›</span>
+        </a>
+
+        <a href="3b-source-profile.html" class="source-card">
+          <div class="source-logo">⚕️</div>
+          <div style="flex: 1;">
+            <div style="font-size: 14px; font-weight: 600;">NEJM</div>
+            <div style="display: flex; gap: 8px; align-items: center; margin-top: 4px;">
+              <span class="source-bias" style="background: #3B82F620; color: #3B82F6;">Peer Reviewed</span>
+              <span style="font-size: 10px; color: var(--text-tertiary);">Mass Medical Society</span>
+            </div>
+          </div>
+          <span style="color: var(--text-tertiary);">›</span>
+        </a>
+
+        <div style="height: 80px;"></div>
+      </div>
+
+      <!-- Voter Card FAB -->
+      <a href="9b-voter-card.html" class="voter-card-fab">ID</a>
+
+      <!-- Bottom Nav -->
+      <nav class="bottom-nav">
+        <a href="1a-home-voices.html" class="nav-item">
+          <span class="nav-icon">[]</span>
+          Home
+        </a>
+        <a href="2a-leaders.html" class="nav-item">
+          <span class="nav-icon">@</span>
+          Leaders
+        </a>
+        <a href="3a-media.html" class="nav-item active">
+          <span class="nav-icon">))</span>
+          Media
+        </a>
+        <a href="4a-learn.html" class="nav-item">
+          <span class="nav-icon">?</span>
+          Learn
+        </a>
+      </nav>
+    </div>
+  </div>
+<script src="app.js"></script>
+</body>
+</html>

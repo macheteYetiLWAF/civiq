@@ -72,7 +72,7 @@
   </style>
 </head>
 <body style="background: #1A1A1A;">
-  <div class="wireframe-label">01 - Home (Unified Omni-Stream)</div>
+  <div class="wireframe-label">01 - Home (Voices | Elections | Bills)</div>
 
   <div class="device-frame">
     <div class="screen">
@@ -90,24 +90,18 @@
             <div class="header-subtitle">Your political intelligence</div>
           </div>
           <div style="display: flex; gap: 12px; align-items: center;">
-            <a href="17-search.html" style="font-size: 18px; text-decoration: none;">🔍</a>
-            <a href="09-profile.html" style="width: 32px; height: 32px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; color: white; text-decoration: none;">JK</a>
+            <a href="9e-search.html" style="font-size: 18px; text-decoration: none;">🔍</a>
+            <a href="9a-profile.html" style="width: 32px; height: 32px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; color: white; text-decoration: none;">JK</a>
           </div>
         </div>
       </div>
 
-      <!-- Filter Controls - Weight Sliders -->
+      <!-- Main Tabs: Voices | Elections | Bills -->
       <div style="padding: 8px 20px 12px; background: var(--bg-secondary); border-bottom: 1px solid var(--border);">
-        <div style="display: flex; gap: 6px; margin-bottom: 8px;">
-          <span class="btn btn-secondary" style="padding: 6px 12px; font-size: 11px; flex: 1; text-align: center;">All</span>
-          <span class="btn btn-outline" style="padding: 6px 12px; font-size: 11px; flex: 1; text-align: center;">News</span>
-          <span class="btn btn-outline" style="padding: 6px 12px; font-size: 11px; flex: 1; text-align: center;">Elections</span>
-          <span class="btn btn-outline" style="padding: 6px 12px; font-size: 11px; flex: 1; text-align: center;">Stats</span>
-        </div>
-        <div style="display: flex; gap: 8px; font-size: 10px; color: var(--text-tertiary);">
-          <span style="padding: 4px 8px; background: var(--bg-tertiary); border-radius: 12px;">Federal</span>
-          <span style="padding: 4px 8px; background: var(--bg-tertiary); border-radius: 12px;">State</span>
-          <span style="padding: 4px 8px; background: var(--accent); color: white; border-radius: 12px;">Local ✓</span>
+        <div class="toggle-container" style="margin-bottom: 0;">
+          <div class="toggle-option active">Voices</div>
+          <a href="1d-home-elections.html" class="toggle-option">Elections</a>
+          <a href="1e-home-bills.html" class="toggle-option">Bills</a>
         </div>
       </div>
 
@@ -143,7 +137,7 @@
               <span class="accordion-chevron">^</span>
             </div>
             <div class="accordion-content" style="display: block;">
-              <a href="04-leader-profile.html" style="display: flex; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); text-decoration: none; color: inherit;">
+              <a href="2b-leader-profile.html" style="display: flex; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); text-decoration: none; color: inherit;">
                 <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #1D4ED8, #3B82F6); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: white;">JM</div>
                 <div style="flex: 1;">
                   <div style="font-size: 13px; font-weight: 600;">John Murphy</div>
@@ -151,7 +145,7 @@
                 </div>
                 <span class="rep-party dem">D</span>
               </a>
-              <a href="04-leader-profile.html" style="display: flex; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); text-decoration: none; color: inherit;">
+              <a href="2b-leader-profile.html" style="display: flex; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); text-decoration: none; color: inherit;">
                 <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #1D4ED8, #3B82F6); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: white;">MR</div>
                 <div style="flex: 1;">
                   <div style="font-size: 13px; font-weight: 600;">Maria Rodriguez</div>
@@ -159,7 +153,7 @@
                 </div>
                 <span class="rep-party dem">D</span>
               </a>
-              <a href="04-leader-profile.html" style="display: flex; gap: 10px; align-items: center; padding: 8px 0; text-decoration: none; color: inherit;">
+              <a href="2b-leader-profile.html" style="display: flex; gap: 10px; align-items: center; padding: 8px 0; text-decoration: none; color: inherit;">
                 <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #1D4ED8, #3B82F6); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: white;">TK</div>
                 <div style="flex: 1;">
                   <div style="font-size: 13px; font-weight: 600;">Thomas Kelly</div>
@@ -167,7 +161,7 @@
                 </div>
                 <span class="rep-party dem">D</span>
               </a>
-              <a href="19-candidate-compare.html" class="btn btn-secondary btn-full" style="margin-top: 10px; font-size: 11px;">Compare Candidates</a>
+              <a href="2c-candidate-compare.html" class="btn btn-secondary btn-full" style="margin-top: 10px; font-size: 11px;">Compare Candidates</a>
             </div>
           </div>
         </div>
@@ -204,7 +198,7 @@
               <span style="color: #8B5CF6;">Center: 20%</span>
               <span style="color: #2563EB;">Right: 45%</span>
             </div>
-            <a href="15-rebalance.html" style="display: block; text-align: center; font-size: 11px; color: var(--accent); margin-top: 8px; text-decoration: none;">Rebalance →</a>
+            <a href="9f-rebalance.html" style="display: block; text-align: center; font-size: 11px; color: var(--accent); margin-top: 8px; text-decoration: none;">Rebalance →</a>
           </div>
         </div>
 
@@ -242,7 +236,7 @@
         <!-- Stream Item 6: Bill Update -->
         <div class="stream-item">
           <span class="stream-tag news">Bill Update</span>
-          <a href="14-bill-detail.html" class="card" style="display: block; text-decoration: none; color: inherit; padding: 12px; border-left: 3px solid var(--success);">
+          <a href="1f-bill-detail.html" class="card" style="display: block; text-decoration: none; color: inherit; padding: 12px; border-left: 3px solid var(--success);">
             <div style="display: flex; justify-content: space-between; align-items: start;">
               <div>
                 <div style="font-size: 13px; font-weight: 600;">Infrastructure Investment Act</div>
@@ -323,23 +317,23 @@
       </div>
 
       <!-- Voter Card FAB -->
-      <a href="10-voter-card.html" class="voter-card-fab">ID</a>
+      <a href="9b-voter-card.html" class="voter-card-fab">ID</a>
 
       <!-- Bottom Nav -->
       <nav class="bottom-nav">
-        <a href="01-home-unified.html" class="nav-item active">
+        <a href="1a-home-voices.html" class="nav-item active">
           <span class="nav-icon">[]</span>
           Home
         </a>
-        <a href="03-leaders.html" class="nav-item">
+        <a href="2a-leaders.html" class="nav-item">
           <span class="nav-icon">@</span>
           Leaders
         </a>
-        <a href="05-voices.html" class="nav-item">
+        <a href="3a-media.html" class="nav-item">
           <span class="nav-icon">))</span>
-          Voices
+          Media
         </a>
-        <a href="07-learn.html" class="nav-item">
+        <a href="4a-learn.html" class="nav-item">
           <span class="nav-icon">?</span>
           Learn
         </a>
