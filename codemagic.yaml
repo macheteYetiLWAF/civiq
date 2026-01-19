@@ -3,6 +3,7 @@ workflows:
     name: iOS Capacitor Build
     max_build_duration: 60
     instance_type: mac_mini_m2
+    working_directory: app
     environment:
       xcode: latest
       node: 20
@@ -30,7 +31,7 @@ workflows:
             -derivedDataPath build \
             CODE_SIGNING_ALLOWED=NO
     artifacts:
-      - ios/App/build/**/*.app
+      - app/ios/App/build/**/*.app
     publishing:
       email:
         recipients:
