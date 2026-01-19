@@ -1,0 +1,381 @@
+/* LeadersScreen Styles */
+
+/* Pennsylvania State Banner */
+.leaders-banner {
+  position: relative;
+  height: 100px;
+  background: linear-gradient(135deg, #0A1628 0%, #1A2D4A 30%, #002868 60%, #0A1628 100%);
+  overflow: hidden;
+  border-bottom: 3px solid #BF9D3B;
+  margin-bottom: 16px;
+  border-radius: var(--radius-lg);
+}
+
+.leaders-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(191,157,59,0.08) 0%, transparent 70%);
+}
+
+.leaders-banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(191,157,59,0.5), transparent);
+}
+
+.leaders-banner-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.leaders-banner-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.leaders-banner-keystone {
+  filter: drop-shadow(0 2px 12px rgba(191,157,59,0.4));
+}
+
+.leaders-banner-state-name {
+  font-size: 20px;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: 4px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.leaders-banner-motto {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.leaders-banner-motto-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.leaders-banner-motto-item i {
+  font-size: 10px;
+  color: #BF9D3B;
+}
+
+.leaders-banner-motto-item span {
+  font-size: 11px;
+  font-weight: 700;
+  color: #BF9D3B;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.leaders-banner-motto-dot {
+  width: 4px;
+  height: 4px;
+  background: #BF9D3B;
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+/* Inner border accent - rounded to match outer border */
+.leaders-banner-inner-border {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 9px;
+  border: 2px solid rgba(191,157,59,0.4);
+  border-radius: calc(var(--radius-lg) - 4px);
+  pointer-events: none;
+}
+
+/* Section Headers */
+.leaders-section-header {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.leaders-section-header--federal {
+  color: #64748B;
+}
+
+.leaders-section-header--state {
+  color: #8B5CF6;
+}
+
+.leaders-section-header--local {
+  color: #F59E0B;
+}
+
+.leaders-section-accent {
+  width: 4px;
+  height: 16px;
+  border-radius: 2px;
+}
+
+.leaders-section-accent--federal {
+  background: #64748B;
+}
+
+.leaders-section-accent--state {
+  background: #8B5CF6;
+}
+
+.leaders-section-accent--local {
+  background: #F59E0B;
+}
+
+/* Leader Cards */
+.leaders-section {
+  margin-bottom: 24px;
+}
+
+.leaders-section:last-child {
+  margin-bottom: 0;
+}
+
+.leaders-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.leader-card {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 12px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.leader-card:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.leader-card--federal {
+  border-left: 3px solid #64748B;
+}
+
+.leader-card--state {
+  border-left: 3px solid #8B5CF6;
+}
+
+.leader-card--local {
+  border-left: 3px solid #F59E0B;
+}
+
+/* Leader Avatar */
+.leader-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+  flex-shrink: 0;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.leader-avatar--democrat {
+  background: linear-gradient(135deg, #1D4ED8, #3B82F6);
+  border-color: #60A5FA;
+}
+
+.leader-avatar--republican {
+  background: linear-gradient(135deg, #DC2626, #EF4444);
+  border-color: #F87171;
+}
+
+.leader-avatar--independent {
+  background: linear-gradient(135deg, #7C3AED, #A78BFA);
+  border-color: #C4B5FD;
+}
+
+.leader-avatar--placeholder {
+  background: linear-gradient(135deg, rgba(245,158,11,0.125), rgba(217,119,6,0.125));
+  border: 1px solid rgba(245,158,11,0.25);
+  color: #F59E0B;
+}
+
+/* Leader Info */
+.leader-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.leader-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.leader-role {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin: 2px 0 0 0;
+}
+
+.leader-badges {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+  align-items: center;
+}
+
+/* Party Badge */
+.leader-party-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  color: white;
+}
+
+.leader-party-badge--D {
+  background: #2563EB;
+}
+
+.leader-party-badge--R {
+  background: #DC2626;
+}
+
+.leader-party-badge--I {
+  background: #8B5CF6;
+}
+
+/* Tenure Badge */
+.leader-tenure-badge {
+  font-size: 10px;
+  color: var(--text-tertiary);
+}
+
+/* Stats */
+.leader-stats {
+  text-align: right;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.leader-stat {
+  display: block;
+}
+
+.leader-stat-label {
+  color: var(--text-tertiary);
+}
+
+.leader-stat-value {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.leader-stat-value--success {
+  color: var(--success);
+}
+
+/* Election Indicator - positioned upper right */
+.leader-election-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #F59E0B;
+}
+
+.leader-election-badge i {
+  font-size: 8px;
+}
+
+/* Chevron */
+.leader-chevron {
+  font-size: 14px;
+  color: var(--text-tertiary);
+}
+
+/* Placeholder cards */
+.leader-placeholder-count {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Collapsible Section */
+.leaders-section--collapsible {
+  margin-bottom: 24px;
+}
+
+.leaders-section-header--clickable {
+  width: 100%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.leaders-section-header--clickable:hover {
+  background: var(--bg-tertiary);
+}
+
+.leaders-section-count {
+  color: var(--text-tertiary);
+  font-weight: 500;
+  margin-left: 4px;
+}
+
+.leaders-section-chevron {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--text-tertiary);
+  transition: transform 0.2s ease;
+}
+
+.leaders-section--collapsible .leaders-cards {
+  margin-top: 8px;
+}

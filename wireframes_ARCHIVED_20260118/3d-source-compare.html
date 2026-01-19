@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>CIVIQ - Compare Sources</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body style="background: #1A1A1A;">
+  <div class="wireframe-label">3d - Source Compare</div>
+
+  <div class="device-frame">
+    <div class="screen">
+      <!-- Status Bar -->
+      <div class="status-bar">
+        <span class="time">9:41</span>
+        <span class="icons">... .. ..</span>
+      </div>
+
+      <!-- Header - Locked Design -->
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: linear-gradient(180deg, #1E1E2E 0%, #0F172A 100%); border-bottom: 1px solid rgba(139, 92, 246, 0.2);">
+        <!-- Left: Back + Logo + Divider + Title -->
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <a href="javascript:history.back()" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; text-decoration: none; margin-right: 4px;">
+            <i class="fas fa-chevron-left" style="font-size: 16px; color: rgba(255,255,255,0.6);"></i>
+          </a>
+          <div class="logo-gradient" style="font-size: 18px; font-weight: 800; letter-spacing: -0.5px;">CIVIQ</div>
+          <div style="width: 1px; height: 20px; background: rgba(255,255,255,0.2);"></div>
+          <div>
+            <div style="font-size: 15px; font-weight: 600; color: white;">Compare</div>
+            <div style="font-size: 10px; color: rgba(255,255,255,0.5);">Sources</div>
+          </div>
+        </div>
+        <!-- Right: Search + Avatar -->
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <a href="9e-search.html" style="width: 36px; height: 36px; background: rgba(255,255,255,0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none;">
+            <i class="fas fa-search" style="font-size: 14px; color: rgba(255,255,255,0.6);"></i>
+          </a>
+          <div style="width: 36px; height: 36px; background: linear-gradient(135deg, #1D4ED8, #3B82F6); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: white; border: 2px solid rgba(96, 165, 250, 0.5);">JK</div>
+        </div>
+      </div>
+
+      <!-- Story Title -->
+      <div style="padding: 16px 20px; background: var(--bg-secondary); border-bottom: 1px solid var(--border);">
+        <div style="font-size: 16px; font-weight: 700;">Senate Passes Infrastructure Bill</div>
+        <div style="font-size: 12px; color: var(--text-tertiary); margin-top: 4px;">12 sources covering this story</div>
+      </div>
+
+      <!-- Source Distribution -->
+      <div style="padding: 16px 20px; background: var(--bg-tertiary);">
+        <div style="font-size: 11px; color: var(--text-tertiary); margin-bottom: 8px;">SOURCE DISTRIBUTION</div>
+        <div style="display: flex; gap: 4px; margin-bottom: 8px;">
+          <div style="flex: 3; background: var(--bias-left); height: 32px; border-radius: 4px 0 0 4px; display: flex; align-items: center; justify-content: center; color: white; font-size: 13px; font-weight: 600;">3</div>
+          <div style="flex: 5; background: var(--bias-center); height: 32px; display: flex; align-items: center; justify-content: center; color: white; font-size: 13px; font-weight: 600;">5</div>
+          <div style="flex: 4; background: var(--bias-right); height: 32px; border-radius: 0 4px 4px 0; display: flex; align-items: center; justify-content: center; color: white; font-size: 13px; font-weight: 600;">4</div>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 11px; color: var(--text-secondary);">
+          <span>Left</span>
+          <span>Center</span>
+          <span>Right</span>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+        <!-- Left Sources -->
+        <div style="font-size: 11px; font-weight: 600; color: var(--bias-left); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; display: flex; align-items: center; gap: 6px;">
+          <div style="width: 3px; height: 12px; background: var(--bias-left); border-radius: 2px;"></div>
+          Left-Leaning (3)
+        </div>
+
+        <a href="3c-article.html" class="card" style="display: block; text-decoration: none; color: inherit; padding: 12px; border-left: 3px solid var(--bias-left);">
+          <div style="display: flex; justify-content: space-between; align-items: start;">
+            <div style="flex: 1;">
+              <div style="font-size: 14px; font-weight: 600;">"Historic Win for Biden's Agenda"</div>
+              <div style="font-size: 12px; color: var(--text-secondary); margin-top: 2px;">MSNBC</div>
+            </div>
+            <span class="bias-label left" style="font-size: 9px; padding: 2px 6px;">Left</span>
+          </div>
+          <div style="font-size: 12px; color: var(--text-tertiary); margin-top: 8px; font-style: italic;">"A landmark achievement that will reshape American infrastructure for generations..."</div>
+        </a>
+
+        <a href="3c-article.html" class="card" style="display: block; text-decoration: none; color: inherit; padding: 12px; border-left: 3px solid var(--bias-left);">
+          <div style="display: flex; justify-content: space-between; align-items: start;">
+            <div style="flex: 1;">
+              <div style="font-size: 14px; font-weight: 600;">"Infrastructure Bill Passes with Climate Provisions"</div>
+              <div style="font-size: 12px; color: var(--text-secondary); margin-top: 2px;">CNN</div>
+            </div>
+            <span class="bias-label lean-left" style="font-size: 9px; padding: 2px 6px;">Lean Left</span>
+          </div>
+          <div style="font-size: 12px; color: var(--text-tertiary); margin-top: 8px; font-style: italic;">"The bill includes major investments in clean energy and electric vehicles..."</div>
+        </a>
+
+        <!-- Center Sources -->
+        <div style="font-size: 11px; font-weight: 600; color: var(--bias-center); text-transform: uppercase; letter-spacing: 0.5px; margin: 16px 0 10px; display: flex; align-items: center; gap: 6px;">
+          <div style="width: 3px; height: 12px; background: var(--bias-center); border-radius: 2px;"></div>
+          Center (5)
+        </div>
+
+        <a href="3c-article.html" class="card" style="display: block; text-decoration: none; color: inherit; padding: 12px; border-left: 3px solid var(--bias-center);">
+          <div style="display: flex; justify-content: space-between; align-items: start;">
+            <div style="flex: 1;">
+              <div style="font-size: 14px; font-weight: 600;">"Senate Passes $1.2T Infrastructure Package"</div>
+              <div style="font-size: 12px; color: var(--text-secondary); margin-top: 2px;">AP News</div>
+            </div>
+            <span class="bias-label center" style="font-size: 9px; padding: 2px 6px;">Center</span>
+          </div>
+          <div style="font-size: 12px; color: var(--text-tertiary); margin-top: 8px; font-style: italic;">"The legislation includes funding for roads, bridges, and broadband..."</div>
+        </a>
+
+        <a href="3c-article.html" class="card" style="display: block; text-decoration: none; color: inherit; padding: 12px; border-left: 3px solid var(--bias-center);">
+          <div style="display: flex; justify-content: space-between; align-items: start;">
+            <div style="flex: 1;">
+              <div style="font-size: 14px; font-weight: 600;">"Infrastructure Bill Advances to House"</div>
+              <div style="font-size: 12px; color: var(--text-secondary); margin-top: 2px;">Reuters</div>
+            </div>
+            <span class="bias-label center" style="font-size: 9px; padding: 2px 6px;">Center</span>
+          </div>
+          <div style="font-size: 12px; color: var(--text-tertiary); margin-top: 8px; font-style: italic;">"Bipartisan support emerged for the spending package..."</div>
+        </a>
+
+        <!-- Right Sources -->
+        <div style="font-size: 11px; font-weight: 600; color: var(--bias-right); text-transform: uppercase; letter-spacing: 0.5px; margin: 16px 0 10px; display: flex; align-items: center; gap: 6px;">
+          <div style="width: 3px; height: 12px; background: var(--bias-right); border-radius: 2px;"></div>
+          Right-Leaning (4)
+        </div>
+
+        <a href="3c-article.html" class="card" style="display: block; text-decoration: none; color: inherit; padding: 12px; border-left: 3px solid var(--bias-right);">
+          <div style="display: flex; justify-content: space-between; align-items: start;">
+            <div style="flex: 1;">
+              <div style="font-size: 14px; font-weight: 600;">"Massive Spending Bill Raises Deficit Concerns"</div>
+              <div style="font-size: 12px; color: var(--text-secondary); margin-top: 2px;">Fox News</div>
+            </div>
+            <span class="bias-label lean-right" style="font-size: 9px; padding: 2px 6px;">Lean Right</span>
+          </div>
+          <div style="font-size: 12px; color: var(--text-tertiary); margin-top: 8px; font-style: italic;">"Critics warn of inflation and ballooning national debt..."</div>
+        </a>
+
+        <a href="3c-article.html" class="card" style="display: block; text-decoration: none; color: inherit; padding: 12px; border-left: 3px solid var(--bias-right);">
+          <div style="display: flex; justify-content: space-between; align-items: start;">
+            <div style="flex: 1;">
+              <div style="font-size: 14px; font-weight: 600;">"19 Senate Republicans Break Ranks on Spending"</div>
+              <div style="font-size: 12px; color: var(--text-secondary); margin-top: 2px;">Washington Examiner</div>
+            </div>
+            <span class="bias-label right" style="font-size: 9px; padding: 2px 6px;">Right</span>
+          </div>
+          <div style="font-size: 12px; color: var(--text-tertiary); margin-top: 8px; font-style: italic;">"Conservative groups criticize Republican senators who voted for the bill..."</div>
+        </a>
+
+        <!-- Key Differences -->
+        <div class="card" style="background: var(--accent-light); border: 1px solid var(--accent); margin-top: 16px;">
+          <div style="font-size: 12px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px;">Key Framing Differences</div>
+          <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.6;">
+            <div style="margin-bottom: 8px;">• <strong>Left:</strong> Emphasizes climate provisions and "historic" nature</div>
+            <div style="margin-bottom: 8px;">• <strong>Center:</strong> Focuses on bipartisan process and specific funding</div>
+            <div>• <strong>Right:</strong> Highlights cost, deficit, and GOP dissent</div>
+          </div>
+        </div>
+
+        <div style="height: 20px;"></div>
+      </div>
+
+      <!-- Voter Card FAB -->
+      <a href="9b-voter-card.html" class="voter-card-fab">ID</a>
+
+      <!-- Bottom Nav -->
+      <nav class="bottom-nav">
+        <a href="1a-home-voices.html" class="nav-item">
+          <span class="nav-icon"><i class="fa-solid fa-layer-group"></i></span>
+          Stack
+        </a>
+        <a href="2a-leaders.html" class="nav-item">
+          <span class="nav-icon"><i class="fa-solid fa-landmark"></i></span>
+          Leaders
+        </a>
+        <a href="3a-media.html" class="nav-item">
+          <span class="nav-icon"><i class="fa-solid fa-file-lines"></i></span>
+          Media
+        </a>
+        <a href="4a-learn.html" class="nav-item">
+          <span class="nav-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+          Learn
+        </a>
+      </nav>
+    </div>
+  </div>
+<script src="app.js"></script>
+</body>
+</html>

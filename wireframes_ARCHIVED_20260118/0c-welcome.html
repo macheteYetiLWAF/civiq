@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>CIVIQ - Welcome</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body style="background: #1A1A1A;">
+  <div class="wireframe-label">0c - Welcome (Step 2 of 3)</div>
+
+  <div class="device-frame">
+    <div class="screen" style="padding-bottom: 0;">
+      <!-- Status Bar -->
+      <div class="status-bar">
+        <span class="time">9:41</span>
+        <span class="icons">... .. ..</span>
+      </div>
+
+      <!-- Content -->
+      <div class="content" style="display: flex; flex-direction: column; align-items: center; padding-top: 20px;">
+        <!-- Progress indicator (3 steps - second active) -->
+        <div style="display: flex; gap: 8px; margin-bottom: 32px; width: 100%;">
+          <div style="flex: 1; height: 4px; background: var(--accent); border-radius: 2px;"></div>
+          <div style="flex: 1; height: 4px; background: var(--accent); border-radius: 2px;"></div>
+          <div style="flex: 1; height: 4px; background: var(--border); border-radius: 2px;"></div>
+        </div>
+
+        <!-- State Flag -->
+        <div style="width: 160px; height: 107px; border-radius: var(--radius-md); overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.4); margin-bottom: 24px; border: 2px solid var(--border);">
+          <img src="../assets/flags/PA.svg" alt="Pennsylvania Flag" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+
+        <!-- Welcome Message -->
+        <div style="text-align: center; margin-bottom: 24px;">
+          <div style="font-size: 28px; font-weight: 700; margin-bottom: 8px;">Welcome, Pennsylvanian!</div>
+          <div style="font-size: 14px; color: var(--text-secondary);">You've joined 12,847 constituents in your state</div>
+        </div>
+
+        <!-- District Info Card -->
+        <div class="card" style="width: 100%; background: var(--bg-tertiary); border: 1px solid var(--border);">
+          <div style="font-size: 12px; font-weight: 600; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 14px;">
+            <i class="fa-solid fa-map-location-dot" style="margin-right: 6px;"></i>
+            Your Districts
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <!-- Federal -->
+            <div style="background: var(--bg-secondary); padding: 12px; border-radius: var(--radius-sm); border-left: 3px solid #64748B;">
+              <div style="font-size: 10px; color: #64748B; font-weight: 600; text-transform: uppercase; margin-bottom: 4px;">Federal</div>
+              <div style="font-size: 13px; font-weight: 600;">PA-8</div>
+              <div style="font-size: 11px; color: var(--text-tertiary);">Congressional</div>
+            </div>
+
+            <!-- State (now green) -->
+            <div style="background: var(--bg-secondary); padding: 12px; border-radius: var(--radius-sm); border-left: 3px solid #10B981;">
+              <div style="font-size: 10px; color: #10B981; font-weight: 600; text-transform: uppercase; margin-bottom: 4px;">State</div>
+              <div style="font-size: 13px; font-weight: 600;">Senate 22</div>
+              <div style="font-size: 11px; color: var(--text-tertiary);">House 121</div>
+            </div>
+
+            <!-- County (local - amber) -->
+            <div style="background: var(--bg-secondary); padding: 12px; border-radius: var(--radius-sm); border-left: 3px solid #F59E0B;">
+              <div style="font-size: 10px; color: #F59E0B; font-weight: 600; text-transform: uppercase; margin-bottom: 4px;">County</div>
+              <div style="font-size: 13px; font-weight: 600;">Luzerne</div>
+              <div style="font-size: 11px; color: var(--text-tertiary);">NEPA Region</div>
+            </div>
+
+            <!-- Municipality (local - amber) -->
+            <div style="background: var(--bg-secondary); padding: 12px; border-radius: var(--radius-sm); border-left: 3px solid #F59E0B;">
+              <div style="font-size: 10px; color: #F59E0B; font-weight: 600; text-transform: uppercase; margin-bottom: 4px;">Local</div>
+              <div style="font-size: 13px; font-weight: 600;">Wilkes-Barre</div>
+              <div style="font-size: 11px; color: var(--text-tertiary);">Ward 15</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Your Representatives -->
+        <div class="card" style="width: 100%; margin-top: 12px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <div style="font-size: 12px; font-weight: 600; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.5px;">
+              <i class="fa-solid fa-user-tie" style="margin-right: 6px;"></i>
+              Your Representatives
+            </div>
+            <span style="font-size: 11px; color: var(--text-tertiary);">8 total</span>
+          </div>
+
+          <!-- Federal Reps (slate border) -->
+          <div style="font-size: 10px; color: #64748B; font-weight: 600; text-transform: uppercase; margin-bottom: 6px;">Federal</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px;">
+            <!-- U.S. Rep -->
+            <a href="2b-leader-profile.html" style="display: flex; align-items: center; gap: 6px; background: var(--bg-tertiary); padding: 6px 10px; border-radius: var(--radius-full); text-decoration: none; color: inherit; border: 1px solid transparent;" onmouseover="this.style.borderColor='#64748B'" onmouseout="this.style.borderColor='transparent'">
+              <div style="width: 20px; height: 20px; background: #3B82F6; border-radius: 50%; font-size: 8px; color: white; display: flex; align-items: center; justify-content: center; font-weight: 600;">MC</div>
+              <span style="font-size: 11px;">M. Cartwright</span>
+              <span style="font-size: 9px; color: #3B82F6; font-weight: 600;">D</span>
+            </a>
+            <!-- U.S. Senator 1 -->
+            <a href="2b-leader-profile.html" style="display: flex; align-items: center; gap: 6px; background: var(--bg-tertiary); padding: 6px 10px; border-radius: var(--radius-full); text-decoration: none; color: inherit; border: 1px solid transparent;" onmouseover="this.style.borderColor='#64748B'" onmouseout="this.style.borderColor='transparent'">
+              <div style="width: 20px; height: 20px; background: #3B82F6; border-radius: 50%; font-size: 8px; color: white; display: flex; align-items: center; justify-content: center; font-weight: 600;">JF</div>
+              <span style="font-size: 11px;">J. Fetterman</span>
+              <span style="font-size: 9px; color: #3B82F6; font-weight: 600;">D</span>
+            </a>
+            <!-- U.S. Senator 2 -->
+            <a href="2b-leader-profile.html" style="display: flex; align-items: center; gap: 6px; background: var(--bg-tertiary); padding: 6px 10px; border-radius: var(--radius-full); text-decoration: none; color: inherit; border: 1px solid transparent;" onmouseover="this.style.borderColor='#64748B'" onmouseout="this.style.borderColor='transparent'">
+              <div style="width: 20px; height: 20px; background: #DC2626; border-radius: 50%; font-size: 8px; color: white; display: flex; align-items: center; justify-content: center; font-weight: 600;">DM</div>
+              <span style="font-size: 11px;">D. McCormick</span>
+              <span style="font-size: 9px; color: #DC2626; font-weight: 600;">R</span>
+            </a>
+          </div>
+
+          <!-- State Reps (green border) -->
+          <div style="font-size: 10px; color: #10B981; font-weight: 600; text-transform: uppercase; margin-bottom: 6px;">State</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px;">
+            <!-- State Senator -->
+            <a href="2b-leader-profile.html" style="display: flex; align-items: center; gap: 6px; background: var(--bg-tertiary); padding: 6px 10px; border-radius: var(--radius-full); text-decoration: none; color: inherit; border: 1px solid transparent;" onmouseover="this.style.borderColor='#10B981'" onmouseout="this.style.borderColor='transparent'">
+              <div style="width: 20px; height: 20px; background: #DC2626; border-radius: 50%; font-size: 8px; color: white; display: flex; align-items: center; justify-content: center; font-weight: 600;">JY</div>
+              <span style="font-size: 11px;">J. Yudichak</span>
+              <span style="font-size: 9px; color: #DC2626; font-weight: 600;">R</span>
+            </a>
+            <!-- State Rep -->
+            <a href="2b-leader-profile.html" style="display: flex; align-items: center; gap: 6px; background: var(--bg-tertiary); padding: 6px 10px; border-radius: var(--radius-full); text-decoration: none; color: inherit; border: 1px solid transparent;" onmouseover="this.style.borderColor='#10B981'" onmouseout="this.style.borderColor='transparent'">
+              <div style="width: 20px; height: 20px; background: #3B82F6; border-radius: 50%; font-size: 8px; color: white; display: flex; align-items: center; justify-content: center; font-weight: 600;">EP</div>
+              <span style="font-size: 11px;">E. Pashinski</span>
+              <span style="font-size: 9px; color: #3B82F6; font-weight: 600;">D</span>
+            </a>
+            <!-- Governor -->
+            <a href="2b-leader-profile.html" style="display: flex; align-items: center; gap: 6px; background: var(--bg-tertiary); padding: 6px 10px; border-radius: var(--radius-full); text-decoration: none; color: inherit; border: 1px solid transparent;" onmouseover="this.style.borderColor='#10B981'" onmouseout="this.style.borderColor='transparent'">
+              <div style="width: 20px; height: 20px; background: #3B82F6; border-radius: 50%; font-size: 8px; color: white; display: flex; align-items: center; justify-content: center; font-weight: 600;">JS</div>
+              <span style="font-size: 11px;">Gov. Shapiro</span>
+              <span style="font-size: 9px; color: #3B82F6; font-weight: 600;">D</span>
+            </a>
+          </div>
+
+          <!-- Local Reps (amber border) -->
+          <div style="font-size: 10px; color: #F59E0B; font-weight: 600; text-transform: uppercase; margin-bottom: 6px;">Local</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+            <!-- County Manager -->
+            <a href="2b-leader-profile.html" style="display: flex; align-items: center; gap: 6px; background: var(--bg-tertiary); padding: 6px 10px; border-radius: var(--radius-full); text-decoration: none; color: inherit; border: 1px solid transparent;" onmouseover="this.style.borderColor='#F59E0B'" onmouseout="this.style.borderColor='transparent'">
+              <div style="width: 20px; height: 20px; background: #64748B; border-radius: 50%; font-size: 8px; color: white; display: flex; align-items: center; justify-content: center; font-weight: 600;">RM</div>
+              <span style="font-size: 11px;">R. Marchetti</span>
+              <span style="font-size: 9px; color: #64748B; font-weight: 600;">I</span>
+            </a>
+            <!-- Mayor -->
+            <a href="2b-leader-profile.html" style="display: flex; align-items: center; gap: 6px; background: var(--bg-tertiary); padding: 6px 10px; border-radius: var(--radius-full); text-decoration: none; color: inherit; border: 1px solid transparent;" onmouseover="this.style.borderColor='#F59E0B'" onmouseout="this.style.borderColor='transparent'">
+              <div style="width: 20px; height: 20px; background: #3B82F6; border-radius: 50%; font-size: 8px; color: white; display: flex; align-items: center; justify-content: center; font-weight: 600;">GB</div>
+              <span style="font-size: 11px;">Mayor Brown</span>
+              <span style="font-size: 9px; color: #3B82F6; font-weight: 600;">D</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <a href="0e-engagement.html" class="btn btn-gradient btn-full" style="padding: 14px; margin-top: 20px;">
+          Personalize My Experience
+        </a>
+
+        <div style="font-size: 12px; color: var(--text-tertiary); text-align: center; margin-top: 12px;">
+          Step 3: Choose your content preferences
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="app.js"></script>
+</body>
+</html>

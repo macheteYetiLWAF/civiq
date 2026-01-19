@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIVIQ / PoliticIQ - Expense Ledger</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #e5e5e5;
+            padding: 24px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 8px;
+            background: linear-gradient(90deg, #2563EB 0%, #8B5CF6 50%, #DC2626 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle { color: #6b7280; font-size: 14px; margin-bottom: 24px; }
+
+        /* Summary Cards */
+        .summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        .summary-card {
+            background: #141414;
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            padding: 16px;
+        }
+        .summary-card .label { font-size: 11px; color: #6b7280; text-transform: uppercase; }
+        .summary-card .value { font-size: 24px; font-weight: 700; margin-top: 4px; }
+        .summary-card .value.green { color: #22c55e; }
+        .summary-card .value.yellow { color: #f59e0b; }
+        .summary-card .value.purple { color: #8b5cf6; }
+
+        /* Add Form */
+        .add-form {
+            background: #141414;
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+        .add-form h3 { font-size: 14px; margin-bottom: 12px; color: #8b5cf6; }
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        .form-group { display: flex; flex-direction: column; gap: 4px; }
+        .form-group label { font-size: 11px; color: #9ca3af; text-transform: uppercase; }
+        .form-group input, .form-group select, .form-group textarea {
+            background: #1f1f1f;
+            border: 1px solid #333;
+            border-radius: 6px;
+            padding: 10px 12px;
+            color: #e5e5e5;
+            font-size: 14px;
+        }
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: #8b5cf6;
+        }
+        .btn {
+            background: #8b5cf6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .btn:hover { background: #7c3aed; }
+        .btn-sm { padding: 6px 12px; font-size: 12px; }
+        .btn-danger { background: #dc2626; }
+        .btn-danger:hover { background: #b91c1c; }
+
+        /* Ledger Table */
+        .ledger {
+            background: #141414;
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .ledger h3 {
+            font-size: 14px;
+            padding: 12px 16px;
+            border-bottom: 1px solid #2a2a2a;
+            color: #8b5cf6;
+        }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 12px 16px; text-align: left; }
+        th {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #6b7280;
+            border-bottom: 1px solid #2a2a2a;
+        }
+        tr:not(:last-child) td { border-bottom: 1px solid #1f1f1f; }
+        tr:hover td { background: #1a1a1a; }
+        .amount { font-family: 'SF Mono', monospace; font-weight: 600; }
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .tag-domain { background: #1e3a5f; color: #60a5fa; }
+        .tag-software { background: #3b1f5c; color: #a78bfa; }
+        .tag-service { background: #1f3d1f; color: #4ade80; }
+        .tag-other { background: #3d3d1f; color: #fcd34d; }
+        .recurring-monthly { color: #f59e0b; }
+        .recurring-yearly { color: #22c55e; }
+        .recurring-one-time { color: #6b7280; }
+        .notes { font-size: 12px; color: #6b7280; font-style: italic; }
+        .actions { text-align: right; }
+
+        @media (max-width: 768px) {
+            .form-row { grid-template-columns: 1fr; }
+            th, td { padding: 8px 12px; font-size: 13px; }
+        }
+    </style>
+</head>
+<body>
+    <h1>CIVIQ / PoliticIQ</h1>
+    <div class="subtitle">Business Expense Ledger</div>
+
+    <!-- Summary -->
+    <div class="summary">
+        <div class="summary-card">
+            <div class="label">Total Spent</div>
+            <div class="value purple" id="total">$0.00</div>
+        </div>
+        <div class="summary-card">
+            <div class="label">Monthly Recurring</div>
+            <div class="value yellow" id="monthly">$0.00</div>
+        </div>
+        <div class="summary-card">
+            <div class="label">Yearly Recurring</div>
+            <div class="value green" id="yearly">$0.00</div>
+        </div>
+        <div class="summary-card">
+            <div class="label">Entries</div>
+            <div class="value" id="count">0</div>
+        </div>
+    </div>
+
+    <!-- Add Form -->
+    <div class="add-form">
+        <h3>Add Expense</h3>
+        <form id="expenseForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Date</label>
+                    <input type="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <select name="category">
+                        <option value="Domain">Domain</option>
+                        <option value="Software">Software</option>
+                        <option value="Service">Service</option>
+                        <option value="Hosting">Hosting</option>
+                        <option value="API">API</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Vendor</label>
+                    <input type="text" name="vendor" placeholder="e.g. Namecheap">
+                </div>
+                <div class="form-group">
+                    <label>Amount ($)</label>
+                    <input type="number" name="amount" step="0.01" min="0" required>
+                </div>
+                <div class="form-group">
+                    <label>Recurring</label>
+                    <select name="recurring">
+                        <option value="one-time">One-time</option>
+                        <option value="monthly">Monthly</option>
+                        <option value="yearly">Yearly</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group" style="flex: 2;">
+                    <label>Description</label>
+                    <input type="text" name="description" placeholder="What was this for?" required>
+                </div>
+                <div class="form-group">
+                    <label>Notes (optional)</label>
+                    <input type="text" name="notes" placeholder="Additional context">
+                </div>
+            </div>
+            <button type="submit" class="btn">Add Expense</button>
+        </form>
+    </div>
+
+    <!-- Ledger -->
+    <div class="ledger">
+        <h3>Expense Ledger</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Vendor</th>
+                    <th>Recurring</th>
+                    <th>Amount</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="ledgerBody">
+                <tr><td colspan="7" style="text-align:center;color:#6b7280;">Loading...</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const API = 'api.php';
+
+        // Set today's date as default
+        document.querySelector('input[name="date"]').valueAsDate = new Date();
+
+        // Load expenses
+        async function loadExpenses() {
+            const res = await fetch(`${API}?action=list`);
+            const data = await res.json();
+
+            // Update summary
+            document.getElementById('total').textContent = `$${Math.round(data.summary.total)}`;
+            document.getElementById('monthly').textContent = `$${Math.round(data.summary.monthly_recurring)}/mo`;
+            document.getElementById('yearly').textContent = `$${Math.round(data.summary.yearly_recurring)}/yr`;
+            document.getElementById('count').textContent = data.summary.count;
+
+            // Update ledger
+            const tbody = document.getElementById('ledgerBody');
+            if (data.expenses.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;color:#6b7280;">No expenses logged yet</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = data.expenses.map(exp => `
+                <tr>
+                    <td>${exp.date}</td>
+                    <td><span class="tag tag-${exp.category.toLowerCase()}">${exp.category}</span></td>
+                    <td>
+                        ${exp.description}
+                        ${exp.notes ? `<div class="notes">${exp.notes}</div>` : ''}
+                    </td>
+                    <td>${exp.vendor || '-'}</td>
+                    <td class="recurring-${exp.recurring}">${exp.recurring}</td>
+                    <td class="amount">$${parseFloat(exp.amount).toFixed(2)}</td>
+                    <td class="actions">
+                        <button class="btn btn-sm btn-danger" onclick="deleteExpense(${exp.id})">×</button>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        // Add expense
+        document.getElementById('expenseForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const form = e.target;
+            const data = Object.fromEntries(new FormData(form));
+
+            await fetch(`${API}?action=add`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+
+            form.reset();
+            document.querySelector('input[name="date"]').valueAsDate = new Date();
+            loadExpenses();
+        });
+
+        // Delete expense
+        async function deleteExpense(id) {
+            if (!confirm('Delete this expense?')) return;
+            await fetch(`${API}?action=delete&id=${id}`, { method: 'POST' });
+            loadExpenses();
+        }
+
+        // Initial load
+        loadExpenses();
+    </script>
+</body>
+</html>

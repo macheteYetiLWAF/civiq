@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CIVIQ API Setup Guide</title>
+  <style>
+    :root {
+      --bg: #0f0f1a;
+      --card: #1a1a2e;
+      --border: #2d2d3d;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --purple: #8b5cf6;
+      --green: #22c55e;
+      --orange: #f59e0b;
+      --red: #ef4444;
+      --blue: #3b82f6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+      background: linear-gradient(90deg, #2563EB, #8B5CF6, #DC2626);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle { color: var(--muted); margin-bottom: 32px; }
+    .section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .section h2 {
+      font-size: 18px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .badge {
+      font-size: 10px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .badge.required { background: var(--red); color: white; }
+    .badge.recommended { background: var(--green); color: white; }
+    .badge.optional { background: var(--muted); color: var(--bg); }
+    .badge.done { background: var(--green); color: white; }
+    .badge.pending { background: var(--orange); color: var(--bg); }
+    .steps { counter-reset: step; }
+    .step {
+      position: relative;
+      padding-left: 40px;
+      margin-bottom: 20px;
+    }
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 28px;
+      height: 28px;
+      background: var(--purple);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .step h3 { font-size: 15px; margin-bottom: 6px; }
+    .step p { font-size: 14px; color: var(--muted); }
+    a { color: var(--blue); }
+    code {
+      background: #000;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-family: 'SF Mono', Monaco, monospace;
+    }
+    pre {
+      background: #000;
+      padding: 16px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 13px;
+      margin: 12px 0;
+    }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+    .card {
+      background: rgba(0,0,0,0.3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .card h4 { font-size: 14px; margin-bottom: 8px; }
+    .card p { font-size: 12px; color: var(--muted); }
+    .highlight { border-left: 3px solid var(--purple); padding-left: 16px; margin: 16px 0; }
+    .status-table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+    .status-table th, .status-table td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+      font-size: 13px;
+    }
+    .status-table th { color: var(--muted); font-weight: 500; }
+    .icon { font-size: 18px; }
+  </style>
+</head>
+<body>
+
+<h1>CIVIQ API Setup Guide</h1>
+<p class="subtitle">External API registrations and configurations needed</p>
+
+<!-- Status Overview -->
+<div class="section">
+  <h2>Current Status</h2>
+  <table class="status-table">
+    <tr>
+      <th>API</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+    <tr>
+      <td>Google Maps/Geocoding</td>
+      <td><span class="badge done">Configured</span></td>
+      <td>None needed</td>
+    </tr>
+    <tr>
+      <td>Mapbox</td>
+      <td><span class="badge done">Configured</span></td>
+      <td>None needed</td>
+    </tr>
+    <tr>
+      <td>Google Civic (Divisions)</td>
+      <td><span class="badge done">Configured</span></td>
+      <td>None needed</td>
+    </tr>
+    <tr>
+      <td>Congress.gov</td>
+      <td><span class="badge done">Configured</span></td>
+      <td>Verify key works</td>
+    </tr>
+    <tr>
+      <td>OpenFEC</td>
+      <td><span class="badge pending">Needs Cron</span></td>
+      <td>Set up sync cron job</td>
+    </tr>
+    <tr>
+      <td>Open States (Plural)</td>
+      <td><span class="badge required">Not Set Up</span></td>
+      <td>Register + build client</td>
+    </tr>
+    <tr>
+      <td>Codemagic (iOS builds)</td>
+      <td><span class="badge required">Not Set Up</span></td>
+      <td>Create account + connect repo</td>
+    </tr>
+  </table>
+</div>
+
+<!-- Open States Setup -->
+<div class="section">
+  <h2><span class="icon">📜</span> Open States API (State Legislation) <span class="badge required">Required</span></h2>
+
+  <div class="highlight">
+    <strong>Why Open States over LegiScan?</strong><br>
+    Free tier (5K/day), modern REST API, actively maintained by Plural. LegiScan is mature but the signup process is clunky and it's overkill for our PA-focused needs.
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <h3>Register for API Key</h3>
+      <p>Go to <a href="https://openstates.org/accounts/signup/" target="_blank">openstates.org/accounts/signup</a> and create an account. Confirm email.</p>
+    </div>
+    <div class="step">
+      <h3>Get Your API Key</h3>
+      <p>After login, visit <a href="https://openstates.org/accounts/profile/" target="_blank">openstates.org/accounts/profile</a> to view your API key.</p>
+    </div>
+    <div class="step">
+      <h3>Save Key to Database</h3>
+      <p>Run this SQL (replace YOUR_KEY):</p>
+      <pre>INSERT INTO claude_credentials
+(service_name, credential_type, credential_key, credential_value, projects_using)
+VALUES ('openstates', 'api_key', 'api_key', 'YOUR_KEY_HERE', '["civiq"]');</pre>
+    </div>
+    <div class="step">
+      <h3>Tell Claude to Build the Client</h3>
+      <p>Say: "Build OpenStatesClient.php following the existing client pattern, then create a bills sync script"</p>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h4>Rate Limits</h4>
+      <p>40 requests/minute<br>5,000 requests/day<br>Plenty for our needs</p>
+    </div>
+    <div class="card">
+      <h4>Coverage</h4>
+      <p>All 50 states + DC + PR<br>Bills, votes, legislators<br>PA fully supported</p>
+    </div>
+  </div>
+</div>
+
+<!-- OpenFEC Cron Setup -->
+<div class="section">
+  <h2><span class="icon">💰</span> OpenFEC Sync (Campaign Finance) <span class="badge recommended">Recommended</span></h2>
+
+  <p style="margin-bottom: 16px; color: var(--muted);">Client already built. Just needs a cron job to sync data automatically.</p>
+
+  <div class="steps">
+    <div class="step">
+      <h3>Add Cron Job</h3>
+      <p>In cPanel or via SSH, add this cron (runs daily at 4 AM):</p>
+      <pre>0 4 * * * curl -s "https://app.politiciq.com/api/finance/sync.php" > /dev/null</pre>
+    </div>
+    <div class="step">
+      <h3>Test Sync Manually</h3>
+      <p>Run once to verify: <code>curl https://app.politiciq.com/api/finance/sync.php</code></p>
+    </div>
+  </div>
+</div>
+
+<!-- Codemagic Setup -->
+<div class="section">
+  <h2><span class="icon">🍎</span> Codemagic (iOS Cloud Builds) <span class="badge required">Required for iOS</span></h2>
+
+  <div class="highlight">
+    <strong>Why Codemagic?</strong><br>
+    500 FREE build minutes/month on Apple M2. Handles iOS code signing automatically. No Mac required.
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <h3>Create Codemagic Account</h3>
+      <p>Go to <a href="https://codemagic.io/signup" target="_blank">codemagic.io/signup</a> - sign up with GitHub for easiest integration.</p>
+    </div>
+    <div class="step">
+      <h3>Connect Repository</h3>
+      <p>After signup, click "Add application" and select your CIVIQ GitHub repo.</p>
+    </div>
+    <div class="step">
+      <h3>Add codemagic.yaml</h3>
+      <p>Tell Claude: "Create codemagic.yaml for Capacitor iOS builds" - or use this starter:</p>
+      <pre>workflows:
+  ios-capacitor:
+    name: iOS Build
+    max_build_duration: 60
+    environment:
+      xcode: latest
+      node: 20
+    scripts:
+      - name: Install dependencies
+        script: npm ci
+      - name: Build web assets
+        script: npm run build
+      - name: Sync Capacitor
+        script: npx cap sync ios
+      - name: Build iOS
+        script: |
+          cd ios/App
+          xcodebuild -workspace App.xcworkspace \
+            -scheme App -configuration Release \
+            -archivePath build/App.xcarchive archive
+    artifacts:
+      - ios/App/build/**/*.ipa</pre>
+    </div>
+    <div class="step">
+      <h3>Configure Code Signing</h3>
+      <p>In Codemagic dashboard: Settings → Code signing → iOS. Upload your Apple Developer certificates or use Codemagic's automatic signing.</p>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h4>Free Tier</h4>
+      <p>500 build minutes/month<br>Apple M2 machines<br>Automatic code signing</p>
+    </div>
+    <div class="card">
+      <h4>Prerequisite</h4>
+      <p>Apple Developer account ($99/yr)<br>Required for App Store<br>Not needed for dev builds</p>
+    </div>
+  </div>
+</div>
+
+<!-- Congress.gov Verification -->
+<div class="section">
+  <h2><span class="icon">🏛️</span> Congress.gov API (Federal Bills) <span class="badge optional">Verify Only</span></h2>
+
+  <p style="margin-bottom: 16px; color: var(--muted);">Should already be configured via data.gov key. Quick verification:</p>
+
+  <div class="steps">
+    <div class="step">
+      <h3>Test the Endpoint</h3>
+      <p>Try: <code>curl "https://app.politiciq.com/api/congress/member.php?state=PA"</code></p>
+      <p>If it returns data, you're good. If it errors, the key needs to be added.</p>
+    </div>
+  </div>
+
+  <p style="margin-top: 16px; font-size: 13px; color: var(--muted);">
+    If key is missing, register at <a href="https://api.data.gov/signup/" target="_blank">api.data.gov/signup</a> (instant, free) and save to <code>claude_credentials</code>.
+  </p>
+</div>
+
+<!-- Quick Reference -->
+<div class="section">
+  <h2>Quick Reference</h2>
+  <table class="status-table">
+    <tr>
+      <th>API</th>
+      <th>Base URL</th>
+      <th>Auth Method</th>
+    </tr>
+    <tr>
+      <td>Open States v3</td>
+      <td><code>https://v3.openstates.org/</code></td>
+      <td>Header: <code>X-API-KEY</code></td>
+    </tr>
+    <tr>
+      <td>Congress.gov</td>
+      <td><code>https://api.congress.gov/v3/</code></td>
+      <td>Query: <code>api_key=</code></td>
+    </tr>
+    <tr>
+      <td>OpenFEC</td>
+      <td><code>https://api.open.fec.gov/v1/</code></td>
+      <td>Query: <code>api_key=</code></td>
+    </tr>
+  </table>
+</div>
+
+<p style="text-align: center; color: var(--muted); margin-top: 32px; font-size: 12px;">
+  Generated Jan 19, 2026 &middot; CIVIQ Project
+</p>
+
+</body>
+</html>

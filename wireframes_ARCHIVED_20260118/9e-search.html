@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>CIVIQ - Search</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body style="background: #1A1A1A;">
+  <div class="wireframe-label">9e - Search</div>
+
+  <div class="device-frame">
+    <div class="screen">
+      <!-- Status Bar -->
+      <div class="status-bar">
+        <span class="time">9:41</span>
+        <span class="icons">... .. ..</span>
+      </div>
+
+      <!-- Header - Locked Design (no search icon needed, this IS the search screen) -->
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: linear-gradient(180deg, #1E1E2E 0%, #0F172A 100%); border-bottom: 1px solid rgba(139, 92, 246, 0.2);">
+        <!-- Left: Back + Logo + Divider + Title -->
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <a href="javascript:history.back()" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; text-decoration: none; margin-right: 4px;">
+            <i class="fas fa-chevron-left" style="font-size: 16px; color: rgba(255,255,255,0.6);"></i>
+          </a>
+          <div class="logo-gradient" style="font-size: 18px; font-weight: 800; letter-spacing: -0.5px;">CIVIQ</div>
+          <div style="width: 1px; height: 20px; background: rgba(255,255,255,0.2);"></div>
+          <div>
+            <div style="font-size: 15px; font-weight: 600; color: white;">Search</div>
+            <div style="font-size: 10px; color: rgba(255,255,255,0.5);">Find anything</div>
+          </div>
+        </div>
+        <!-- Right: Avatar only -->
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <div style="width: 36px; height: 36px; background: linear-gradient(135deg, #1D4ED8, #3B82F6); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: white; border: 2px solid rgba(96, 165, 250, 0.5);">JK</div>
+        </div>
+      </div>
+
+      <!-- Search Input -->
+      <div style="padding: 12px 20px; background: var(--bg-secondary); border-bottom: 1px solid var(--border);">
+        <div style="position: relative;">
+          <input type="text" class="input-field" placeholder="Search news, leaders, bills..." style="padding: 10px 14px 10px 36px; font-size: 14px;" value="infrastructure">
+          <span style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-size: 16px; color: var(--text-tertiary);">🔍</span>
+        </div>
+      </div>
+
+      <!-- Filter Pills -->
+      <div style="padding: 12px 20px; display: flex; gap: 8px; overflow-x: auto; background: var(--bg-secondary);">
+        <span class="btn btn-secondary" style="padding: 6px 12px; font-size: 12px;">All</span>
+        <span class="btn btn-outline" style="padding: 6px 12px; font-size: 12px;">News</span>
+        <span class="btn btn-outline" style="padding: 6px 12px; font-size: 12px;">Leaders</span>
+        <span class="btn btn-outline" style="padding: 6px 12px; font-size: 12px;">Bills</span>
+        <span class="btn btn-outline" style="padding: 6px 12px; font-size: 12px;">Elections</span>
+      </div>
+
+      <!-- Advanced Filters -->
+      <div style="padding: 12px 20px; background: var(--bg-tertiary); border-bottom: 1px solid var(--border);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+          <span style="font-size: 12px; font-weight: 600; color: var(--text-tertiary);">FILTERS</span>
+          <a href="#" style="font-size: 12px; color: var(--accent); text-decoration: none;">Reset</a>
+        </div>
+
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <!-- Bias filter -->
+          <div style="background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-full); padding: 6px 12px; font-size: 12px; display: flex; align-items: center; gap: 6px;">
+            <span style="color: var(--text-secondary);">Bias:</span>
+            <span style="color: var(--text-primary); font-weight: 500;">All</span>
+            <span style="color: var(--text-tertiary);">▼</span>
+          </div>
+
+          <!-- Date filter -->
+          <div style="background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-full); padding: 6px 12px; font-size: 12px; display: flex; align-items: center; gap: 6px;">
+            <span style="color: var(--text-secondary);">Date:</span>
+            <span style="color: var(--text-primary); font-weight: 500;">Past week</span>
+            <span style="color: var(--text-tertiary);">▼</span>
+          </div>
+
+          <!-- Level filter -->
+          <div style="background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-full); padding: 6px 12px; font-size: 12px; display: flex; align-items: center; gap: 6px;">
+            <span style="color: var(--text-secondary);">Level:</span>
+            <span style="color: var(--text-primary); font-weight: 500;">All</span>
+            <span style="color: var(--text-tertiary);">▼</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div class="content" style="padding-top: 12px;">
+        <div style="font-size: 12px; color: var(--text-tertiary); margin-bottom: 12px;">47 results for "infrastructure"</div>
+
+        <!-- Result Category: News -->
+        <div style="font-size: 11px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px;">News Stories (23)</div>
+
+        <a href="3c-article.html" class="card" style="display: block; text-decoration: none; color: inherit; padding: 12px;">
+          <div style="font-size: 14px; font-weight: 600; margin-bottom: 4px;">Senate Passes Major <mark style="background: var(--accent-light); color: var(--accent); padding: 0 2px;">Infrastructure</mark> Bill</div>
+          <div style="font-size: 12px; color: var(--text-secondary); margin-bottom: 8px;">$1.2 trillion spending bill advances to President's desk</div>
+          <div style="display: flex; gap: 8px; align-items: center;">
+            <span class="bias-label lean-left" style="font-size: 9px; padding: 2px 6px;">Lean Left</span>
+            <span style="font-size: 11px; color: var(--text-tertiary);">CNN - 2h ago</span>
+          </div>
+        </a>
+
+        <a href="3c-article.html" class="card" style="display: block; text-decoration: none; color: inherit; padding: 12px;">
+          <div style="font-size: 14px; font-weight: 600; margin-bottom: 4px;">What the <mark style="background: var(--accent-light); color: var(--accent); padding: 0 2px;">Infrastructure</mark> Bill Means for PA</div>
+          <div style="font-size: 12px; color: var(--text-secondary); margin-bottom: 8px;">Breakdown of funding coming to Pennsylvania districts</div>
+          <div style="display: flex; gap: 8px; align-items: center;">
+            <span class="bias-label center" style="font-size: 9px; padding: 2px 6px;">Center</span>
+            <span style="font-size: 11px; color: var(--text-tertiary);">AP News - 5h ago</span>
+          </div>
+        </a>
+
+        <!-- Result Category: Bills -->
+        <div style="font-size: 11px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.5px; margin: 16px 0 10px;">Legislation (8)</div>
+
+        <a href="1f-bill-detail.html" class="card" style="display: block; text-decoration: none; color: inherit; padding: 12px;">
+          <div style="display: flex; justify-content: space-between; align-items: start;">
+            <div>
+              <div style="font-size: 14px; font-weight: 600;">H.R. 4521 - <mark style="background: var(--accent-light); color: var(--accent); padding: 0 2px;">Infrastructure</mark> Investment Act</div>
+              <div style="font-size: 12px; color: var(--text-secondary); margin-top: 2px;">$1.2 trillion for roads, bridges, broadband</div>
+            </div>
+            <span style="font-size: 10px; color: #F59E0B; font-weight: 600;">IN SENATE</span>
+          </div>
+        </a>
+
+        <a href="1f-bill-detail.html" class="card" style="display: block; text-decoration: none; color: inherit; padding: 12px;">
+          <div style="display: flex; justify-content: space-between; align-items: start;">
+            <div>
+              <div style="font-size: 14px; font-weight: 600;">H.R. 9234 - NEPA <mark style="background: var(--accent-light); color: var(--accent); padding: 0 2px;">Infrastructure</mark> Act</div>
+              <div style="font-size: 12px; color: var(--text-secondary); margin-top: 2px;">$450M for Northeastern PA projects</div>
+            </div>
+            <span style="font-size: 10px; color: #F59E0B; font-weight: 600;">HOUSE</span>
+          </div>
+        </a>
+
+        <!-- Result Category: Leaders -->
+        <div style="font-size: 11px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.5px; margin: 16px 0 10px;">Leaders (5)</div>
+
+        <a href="2b-leader-profile.html" class="card" style="display: block; text-decoration: none; color: inherit; padding: 12px;">
+          <div style="display: flex; gap: 12px; align-items: center;">
+            <div style="width: 44px; height: 44px; background: var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px;">MC</div>
+            <div style="flex: 1;">
+              <div style="font-size: 14px; font-weight: 600;">Matt Cartwright</div>
+              <div style="font-size: 12px; color: var(--text-secondary);">Sponsored NEPA <mark style="background: var(--accent-light); color: var(--accent); padding: 0 2px;">Infrastructure</mark> Act</div>
+            </div>
+            <span class="rep-party dem">D</span>
+          </div>
+        </a>
+
+        <a href="2b-leader-profile.html" class="card" style="display: block; text-decoration: none; color: inherit; padding: 12px;">
+          <div style="display: flex; gap: 12px; align-items: center;">
+            <div style="width: 44px; height: 44px; background: var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px;">PD</div>
+            <div style="flex: 1;">
+              <div style="font-size: 14px; font-weight: 600;">Peter DeFazio</div>
+              <div style="font-size: 12px; color: var(--text-secondary);">Author of <mark style="background: var(--accent-light); color: var(--accent); padding: 0 2px;">Infrastructure</mark> Investment Act</div>
+            </div>
+            <span class="rep-party dem">D</span>
+          </div>
+        </a>
+
+        <!-- Recent Searches -->
+        <div style="margin-top: 20px;">
+          <div style="font-size: 12px; font-weight: 600; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px;">Recent Searches</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <span style="background: var(--bg-tertiary); padding: 6px 12px; border-radius: var(--radius-full); font-size: 12px; color: var(--text-secondary);">Matt Cartwright</span>
+            <span style="background: var(--bg-tertiary); padding: 6px 12px; border-radius: var(--radius-full); font-size: 12px; color: var(--text-secondary);">PA primary</span>
+            <span style="background: var(--bg-tertiary); padding: 6px 12px; border-radius: var(--radius-full); font-size: 12px; color: var(--text-secondary);">school funding</span>
+          </div>
+        </div>
+
+        <div style="height: 20px;"></div>
+      </div>
+
+      <!-- Voter Card FAB -->
+      <a href="9b-voter-card.html" class="voter-card-fab">ID</a>
+
+      <!-- Bottom Nav -->
+      <nav class="bottom-nav">
+        <a href="1a-home-voices.html" class="nav-item">
+          <span class="nav-icon"><i class="fa-solid fa-layer-group"></i></span>
+          Stack
+        </a>
+        <a href="2a-leaders.html" class="nav-item">
+          <span class="nav-icon"><i class="fa-solid fa-landmark"></i></span>
+          Leaders
+        </a>
+        <a href="3a-media.html" class="nav-item">
+          <span class="nav-icon"><i class="fa-solid fa-file-lines"></i></span>
+          Media
+        </a>
+        <a href="4a-learn.html" class="nav-item">
+          <span class="nav-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+          Learn
+        </a>
+      </nav>
+    </div>
+  </div>
+<script src="app.js"></script>
+</body>
+</html>

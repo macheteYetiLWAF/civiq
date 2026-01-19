@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>CIVIQ - Ghost Advisor</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body style="background: #1A1A1A;">
+  <div class="wireframe-label">4c - Ghost Panel</div>
+
+  <div class="device-frame">
+    <div class="screen">
+      <!-- Status Bar -->
+      <div class="status-bar">
+        <span class="time">9:41</span>
+        <span class="icons">... .. ..</span>
+      </div>
+
+      <!-- Header - Locked Design (NO SEARCH, with back button) -->
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: linear-gradient(180deg, #1E1E2E 0%, #0F172A 100%); border-bottom: 1px solid rgba(139, 92, 246, 0.2);">
+        <!-- Left: Back + Logo + Divider + Title -->
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <a href="javascript:history.back()" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; text-decoration: none; margin-right: 4px;">
+            <i class="fas fa-chevron-left" style="font-size: 16px; color: rgba(255,255,255,0.6);"></i>
+          </a>
+          <div class="logo-gradient" style="font-size: 18px; font-weight: 800; letter-spacing: -0.5px;">CIVIQ</div>
+          <div style="width: 1px; height: 20px; background: rgba(255,255,255,0.2);"></div>
+          <div>
+            <div style="font-size: 15px; font-weight: 600; color: white;">Ghost Panel</div>
+            <div style="font-size: 10px; color: rgba(255,255,255,0.5);">Historical advisors</div>
+          </div>
+        </div>
+        <!-- Right: Avatar only (no search per user request) -->
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <div style="width: 36px; height: 36px; background: linear-gradient(135deg, #1D4ED8, #3B82F6); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: white; border: 2px solid rgba(96, 165, 250, 0.5);">JK</div>
+        </div>
+      </div>
+
+      <!-- Context Card -->
+      <div style="padding: 12px 20px; background: var(--bg-secondary); border-bottom: 1px solid var(--border);">
+        <div style="font-size: 11px; color: var(--text-tertiary); margin-bottom: 4px;">DISCUSSING</div>
+        <div style="font-size: 14px; font-weight: 600;">Senate Passes Major Infrastructure Bill</div>
+        <div style="font-size: 12px; color: var(--text-secondary);">$1.2 trillion spending bill advances</div>
+      </div>
+
+      <!-- Advisor Selection -->
+      <div style="padding: 12px 20px; display: flex; gap: 12px; overflow-x: auto; background: var(--bg-tertiary);">
+        <div style="text-align: center; flex-shrink: 0;">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #1E3A5F, #2D5A87); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; border: 3px solid var(--accent);">🎩</div>
+          <div style="font-size: 10px; color: var(--accent); margin-top: 4px; font-weight: 600;">Lincoln</div>
+        </div>
+        <div style="text-align: center; flex-shrink: 0;">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #4A5568, #2D3748); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;">📜</div>
+          <div style="font-size: 10px; color: var(--text-tertiary); margin-top: 4px;">Jefferson</div>
+        </div>
+        <div style="text-align: center; flex-shrink: 0;">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #4A5568, #2D3748); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;">🔔</div>
+          <div style="font-size: 10px; color: var(--text-tertiary); margin-top: 4px;">Franklin</div>
+        </div>
+        <div style="text-align: center; flex-shrink: 0;">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #4A5568, #2D3748); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;">🌹</div>
+          <div style="font-size: 10px; color: var(--text-tertiary); margin-top: 4px;">Roosevelt</div>
+        </div>
+        <div style="text-align: center; flex-shrink: 0;">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #4A5568, #2D3748); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;">⚖️</div>
+          <div style="font-size: 10px; color: var(--text-tertiary); margin-top: 4px;">MLK Jr.</div>
+        </div>
+      </div>
+
+      <!-- Chat Area -->
+      <div class="content" style="background: var(--bg-primary);">
+        <!-- Advisor intro -->
+        <div style="display: flex; gap: 12px; margin-bottom: 16px;">
+          <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #1E3A5F, #2D5A87); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;">🎩</div>
+          <div style="flex: 1; background: var(--bg-secondary); border-radius: var(--radius-md); padding: 12px; border: 1px solid var(--border);">
+            <div style="font-size: 12px; font-weight: 600; color: var(--accent); margin-bottom: 6px;">Abraham Lincoln</div>
+            <div style="font-size: 14px; color: var(--text-primary); line-height: 1.5;">
+              A nation that invests in its roads and rails invests in its unity. In my time, we built the transcontinental railroad during war itself. Infrastructure binds states together as surely as law does.
+            </div>
+            <div style="font-size: 11px; color: var(--text-tertiary); margin-top: 8px; font-style: italic;">
+              "The legitimate object of government is to do for a community of people whatever they need to have done." — 1854
+            </div>
+          </div>
+        </div>
+
+        <!-- User question -->
+        <div style="display: flex; gap: 12px; margin-bottom: 16px; justify-content: flex-end;">
+          <div style="background: var(--accent); border-radius: var(--radius-md); padding: 12px; max-width: 80%;">
+            <div style="font-size: 14px; color: white;">
+              But what about the federal debt? Is this spending justified?
+            </div>
+          </div>
+        </div>
+
+        <!-- Advisor response -->
+        <div style="display: flex; gap: 12px; margin-bottom: 16px;">
+          <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #1E3A5F, #2D5A87); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;">🎩</div>
+          <div style="flex: 1; background: var(--bg-secondary); border-radius: var(--radius-md); padding: 12px; border: 1px solid var(--border);">
+            <div style="font-size: 14px; color: var(--text-primary); line-height: 1.5;">
+              I, too, faced such questions. The Pacific Railroad cost tens of millions in wartime — critics called it reckless. Yet it opened commerce and unified our continent.
+              <br><br>
+              The question is not merely "can we afford it" but "can we afford not to?" Crumbling bridges cost lives and commerce. But I would counsel scrutiny of every dollar — accountability in spending was sacred to my administration.
+            </div>
+          </div>
+        </div>
+
+        <!-- Historical context card -->
+        <div class="card" style="background: var(--accent-light); border: 1px solid var(--accent);">
+          <div style="font-size: 11px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Historical Context</div>
+          <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">
+            The Pacific Railroad Acts (1862-1864) authorized $65 million in bonds and 100 million acres of land grants — approximately $1.5 billion in today's dollars.
+          </div>
+          <a href="4a-learn.html" style="display: inline-block; margin-top: 8px; font-size: 12px; color: var(--accent); text-decoration: none;">Learn more about infrastructure history →</a>
+        </div>
+
+        <!-- Suggested questions -->
+        <div style="margin-top: 16px;">
+          <div style="font-size: 11px; color: var(--text-tertiary); margin-bottom: 8px;">SUGGESTED QUESTIONS</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <span style="background: var(--bg-secondary); border: 1px solid var(--border); padding: 8px 12px; border-radius: var(--radius-full); font-size: 12px; color: var(--text-secondary);">What would Hamilton say?</span>
+            <span style="background: var(--bg-secondary); border: 1px solid var(--border); padding: 8px 12px; border-radius: var(--radius-full); font-size: 12px; color: var(--text-secondary);">Bipartisan lessons?</span>
+            <span style="background: var(--bg-secondary); border: 1px solid var(--border); padding: 8px 12px; border-radius: var(--radius-full); font-size: 12px; color: var(--text-secondary);">State vs. federal role?</span>
+          </div>
+        </div>
+
+        <div style="height: 80px;"></div>
+      </div>
+
+      <!-- Input Area -->
+      <div style="position: absolute; bottom: 80px; left: 0; right: 0; padding: 12px 20px; background: var(--bg-secondary); border-top: 1px solid var(--border);">
+        <div style="display: flex; gap: 12px; align-items: center;">
+          <input type="text" class="input-field" placeholder="Ask Lincoln..." style="flex: 1; padding: 10px 14px; font-size: 14px;">
+          <button style="width: 40px; height: 40px; background: var(--accent); border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 18px;">→</button>
+        </div>
+      </div>
+
+      <!-- Bottom Nav -->
+      <nav class="bottom-nav">
+        <a href="1a-home-voices.html" class="nav-item">
+          <span class="nav-icon"><i class="fa-solid fa-layer-group"></i></span>
+          Stack
+        </a>
+        <a href="2a-leaders.html" class="nav-item">
+          <span class="nav-icon"><i class="fa-solid fa-landmark"></i></span>
+          Leaders
+        </a>
+        <a href="3a-media.html" class="nav-item">
+          <span class="nav-icon"><i class="fa-solid fa-file-lines"></i></span>
+          Media
+        </a>
+        <a href="4a-learn.html" class="nav-item">
+          <span class="nav-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+          Learn
+        </a>
+      </nav>
+    </div>
+  </div>
+<script src="app.js"></script>
+</body>
+</html>

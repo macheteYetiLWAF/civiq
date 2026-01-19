@@ -1,0 +1,38 @@
+.card {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  border-left: 3px solid transparent;
+}
+
+.card-padding-normal {
+  padding: 16px;
+}
+
+.card-padding-compact {
+  padding: 12px;
+}
+
+.card-padding-none {
+  padding: 0;
+}
+
+.card-gradient {
+  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+  border-image: linear-gradient(90deg, var(--gradient-start), var(--accent), var(--gradient-end)) 1;
+  border-image-slice: 1;
+}
+
+.card-clickable {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.card-clickable:hover {
+  background: var(--bg-tertiary);
+  box-shadow: var(--shadow-sm);
+}
+
+.card-clickable:active {
+  transform: scale(0.99);
+}

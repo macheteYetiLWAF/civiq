@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">CIVIQ</string>
+    <string name="title_activity_main">CIVIQ</string>
+    <string name="package_name">com.politiciq.civiq</string>
+    <string name="custom_url_scheme">com.politiciq.civiq</string>
+</resources>

@@ -1,0 +1,353 @@
+/* Profile Screen Styles */
+
+/* Avatar Section */
+.profile-avatar-section {
+  text-align: center;
+  padding: 24px 0;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
+  margin: 0 auto 16px;
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
+}
+
+.profile-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.profile-email {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.profile-location {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.profile-location i {
+  color: var(--accent-blue);
+}
+
+.profile-member-since {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  margin-top: 8px;
+}
+
+/* Stats Grid */
+.profile-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.profile-stat-item {
+  text-align: center;
+  padding: 12px 8px;
+}
+
+.profile-stat-value {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.profile-stat-value.streak {
+  color: #F59E0B;
+}
+
+.profile-stat-value.xp {
+  color: var(--accent-blue);
+}
+
+.profile-stat-value.level {
+  color: var(--accent-purple);
+}
+
+.profile-stat-value.balance {
+  color: #10B981;
+}
+
+.profile-stat-label {
+  font-size: 10px;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Reading Balance */
+.reading-balance-section {
+  margin-bottom: 20px;
+}
+
+.reading-balance-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.reading-balance-bar {
+  height: 12px;
+  border-radius: 6px;
+  display: flex;
+  overflow: hidden;
+  background: var(--bg-tertiary);
+}
+
+.balance-segment {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.3s ease;
+}
+
+.balance-segment.left {
+  background: linear-gradient(90deg, #3B82F6, #60A5FA);
+}
+
+.balance-segment.center {
+  background: linear-gradient(90deg, #8B5CF6, #A78BFA);
+}
+
+.balance-segment.right {
+  background: linear-gradient(90deg, #EF4444, #F87171);
+}
+
+.reading-balance-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 10px;
+}
+
+.balance-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-tertiary);
+}
+
+.balance-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.balance-dot.left {
+  background: #3B82F6;
+}
+
+.balance-dot.center {
+  background: #8B5CF6;
+}
+
+.balance-dot.right {
+  background: #EF4444;
+}
+
+/* Voter Registration Card */
+.voter-registration-card {
+  margin-bottom: 20px;
+}
+
+.voter-reg-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.voter-reg-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.voter-reg-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.voter-reg-status.registered {
+  color: #10B981;
+}
+
+.voter-reg-status.not-registered {
+  color: #F59E0B;
+}
+
+.voter-reg-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.voter-reg-item {
+  padding: 10px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+}
+
+.voter-reg-item-label {
+  font-size: 10px;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.voter-reg-item-value {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.voter-card-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(59, 130, 246, 0.1));
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.voter-card-link:hover {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(59, 130, 246, 0.15));
+}
+
+.voter-card-link-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-purple);
+}
+
+.voter-card-link i.fa-chevron-right {
+  color: var(--text-tertiary);
+}
+
+/* Settings Menu */
+.settings-menu {
+  margin-bottom: 20px;
+}
+
+.settings-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.settings-item:last-child {
+  border-bottom: none;
+}
+
+.settings-item:hover {
+  opacity: 0.8;
+}
+
+.settings-item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.settings-item-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.settings-item-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.settings-item i.fa-chevron-right {
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+/* Logout Button */
+.logout-section {
+  padding-top: 8px;
+}
+
+.btn-logout {
+  background: rgba(239, 68, 68, 0.1);
+  color: #EF4444;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.btn-logout:hover:not(:disabled) {
+  background: rgba(239, 68, 68, 0.2);
+}
+
+/* Section Headers for Profile */
+.profile-section-header {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-tertiary);
+  margin: 20px 0 12px;
+  padding-left: 4px;
+}
+
+/* Level Badge Display */
+.level-badge-display {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.level-badge-display i {
+  font-size: 10px;
+}

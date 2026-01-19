@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CIVIQ - Source Catalog Dashboard</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+      min-height: 100vh;
+      padding: 40px;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #DC2626, #2563EB);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle { color: #666; margin-bottom: 32px; }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    .stat-card {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .stat-number {
+      font-size: 36px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .stat-label { color: #888; font-size: 14px; margin-top: 4px; }
+    .section { margin-bottom: 40px; }
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: #fff;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #1a1a1a;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid #2a2a2a;
+    }
+    th {
+      background: #222;
+      font-weight: 600;
+      color: #888;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    td { font-size: 14px; }
+    tr:hover td { background: #222; }
+    .badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .badge-daily { background: #22C55E20; color: #22C55E; }
+    .badge-weekly { background: #3B82F620; color: #3B82F6; }
+    .badge-tv { background: #F59E0B20; color: #F59E0B; }
+    .badge-online { background: #8B5CF620; color: #8B5CF6; }
+    .badge-radio { background: #EC489920; color: #EC4899; }
+    .badge-public { background: #06B6D420; color: #06B6D4; }
+    .badge-nonprofit { background: #10B98120; color: #10B981; }
+    .badge-free { background: #22C55E20; color: #22C55E; }
+    .badge-metered { background: #F59E0B20; color: #F59E0B; }
+    .badge-hard { background: #EF444420; color: #EF4444; }
+    .owner-hedge { color: #EF4444; }
+    .owner-local { color: #22C55E; }
+    .owner-public { color: #3B82F6; }
+    a { color: #3B82F6; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .bar-chart {
+      display: flex;
+      gap: 8px;
+      align-items: flex-end;
+      height: 120px;
+      padding: 16px;
+      background: #1a1a1a;
+      border-radius: 12px;
+      border: 1px solid #333;
+    }
+    .bar {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .bar-fill {
+      width: 100%;
+      border-radius: 4px 4px 0 0;
+      min-height: 4px;
+    }
+    .bar-label { font-size: 10px; color: #888; text-align: center; }
+    .bar-value { font-size: 12px; font-weight: 600; }
+    .ownership-chart {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+    }
+    .ownership-card {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .ownership-name { font-weight: 600; margin-bottom: 8px; }
+    .ownership-properties { font-size: 12px; color: #888; line-height: 1.6; }
+    .coverage-map {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+    .county-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 16px;
+    }
+    .county-chip {
+      background: #2a2a2a;
+      border: 1px solid #444;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+    }
+    .county-chip.primary { border-color: #3B82F6; background: #3B82F620; }
+    .loading { color: #666; font-style: italic; }
+    #sources-table, #govt-table { display: none; }
+  </style>
+</head>
+<body>
+  <h1>CIVIQ Source Catalog</h1>
+  <p class="subtitle">Eastern Pennsylvania News Sources Database</p>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-number" id="total-sources">--</div>
+      <div class="stat-label">News Sources</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number" id="total-govt">--</div>
+      <div class="stat-label">Government Sources</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number" id="total-rss">--</div>
+      <div class="stat-label">RSS Feeds Available</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number" id="total-counties">5</div>
+      <div class="stat-label">Counties Covered</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Sources by Type</div>
+    <div class="bar-chart" id="type-chart">
+      <div class="loading">Loading...</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Ownership Landscape</div>
+    <div class="ownership-chart">
+      <div class="ownership-card">
+        <div class="ownership-name owner-hedge">Alden Global Capital</div>
+        <div class="ownership-properties">
+          Citizens' Voice, Times-Tribune, Standard-Speaker, Morning Call<br>
+          <em>4 dailies via MediaNews Group & Tribune Publishing</em>
+        </div>
+      </div>
+      <div class="ownership-card">
+        <div class="ownership-name owner-local">Avant Publications</div>
+        <div class="ownership-properties">
+          Times Leader, Sunday Dispatch, Weekender, Abington Journal<br>
+          <em>Locally owned since 2019</em>
+        </div>
+      </div>
+      <div class="ownership-card">
+        <div class="ownership-name owner-public">TEGNA / Nexstar</div>
+        <div class="ownership-properties">
+          WNEP (ABC), WBRE (NBC), WYOU (CBS)<br>
+          <em>Dominant TV coverage in market</em>
+        </div>
+      </div>
+      <div class="ownership-card">
+        <div class="ownership-name owner-local">Independent / Nonprofit</div>
+        <div class="ownership-properties">
+          WFMZ-TV, WVIA, Spotlight PA, Pocono Times, various online<br>
+          <em>Locally owned or nonprofit</em>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Coverage Area</div>
+    <div class="coverage-map">
+      <div style="color: #888; margin-bottom: 8px;">Eastern Pennsylvania Pilot Region</div>
+      <div class="county-grid">
+        <span class="county-chip primary">Luzerne (Primary)</span>
+        <span class="county-chip">Lackawanna</span>
+        <span class="county-chip">Monroe</span>
+        <span class="county-chip">Lehigh</span>
+        <span class="county-chip">Northampton</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">All News Sources</div>
+    <table id="sources-table">
+      <thead>
+        <tr>
+          <th>Source</th>
+          <th>Type</th>
+          <th>Owner</th>
+          <th>Paywall</th>
+          <th>RSS</th>
+        </tr>
+      </thead>
+      <tbody id="sources-body"></tbody>
+    </table>
+    <p class="loading" id="sources-loading">Loading sources from database...</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Government Data Sources</div>
+    <table id="govt-table">
+      <thead>
+        <tr>
+          <th>Source</th>
+          <th>Type</th>
+          <th>Jurisdiction</th>
+          <th>Agendas</th>
+          <th>Videos</th>
+        </tr>
+      </thead>
+      <tbody id="govt-body"></tbody>
+    </table>
+    <p class="loading" id="govt-loading">Loading government sources...</p>
+  </div>
+
+  <div class="section" style="margin-top: 60px; padding-top: 40px; border-top: 1px solid #333;">
+    <div class="section-title">Article Volume Projections</div>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number">~800</div>
+        <div class="stat-label">Est. Articles/Day (All Sources)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">~300</div>
+        <div class="stat-label">Est. Ingestible/Day (RSS Available)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">~24K</div>
+        <div class="stat-label">30-Day Article Volume</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">~5MB</div>
+        <div class="stat-label">Est. Monthly Storage</div>
+      </div>
+    </div>
+    <p style="color: #666; font-size: 13px; margin-top: 16px;">
+      Note: Article ingestion requires RSS feeds. Only 5 sources currently have confirmed RSS endpoints.
+      Most paywalled sources limit RSS to headlines only.
+    </p>
+  </div>
+
+  <script>
+    // Fetch data from PHP API
+    async function loadData() {
+      try {
+        const response = await fetch('api/sources.php');
+        const data = await response.json();
+
+        // Update stats
+        document.getElementById('total-sources').textContent = data.stats.total_sources;
+        document.getElementById('total-govt').textContent = data.stats.total_govt;
+        document.getElementById('total-rss').textContent = data.stats.total_rss;
+
+        // Render type chart
+        renderTypeChart(data.by_type);
+
+        // Render sources table
+        renderSourcesTable(data.sources);
+
+        // Render govt table
+        renderGovtTable(data.govt_sources);
+
+      } catch (e) {
+        console.error('Failed to load data:', e);
+        // Show static fallback data
+        document.getElementById('total-sources').textContent = '28';
+        document.getElementById('total-govt').textContent = '19';
+        document.getElementById('total-rss').textContent = '5';
+        renderTypeChart([
+          {type: 'newspaper_daily', count: 6},
+          {type: 'newspaper_weekly', count: 6},
+          {type: 'online_only', count: 5},
+          {type: 'tv_station', count: 5},
+          {type: 'public_media', count: 2},
+          {type: 'radio_station', count: 2},
+          {type: 'nonprofit_news', count: 2}
+        ]);
+        document.getElementById('sources-loading').textContent = 'API not available - showing static data';
+        document.getElementById('govt-loading').textContent = 'API not available - showing static data';
+      }
+    }
+
+    function renderTypeChart(byType) {
+      const chart = document.getElementById('type-chart');
+      const maxCount = Math.max(...byType.map(t => t.count));
+      const colors = {
+        newspaper_daily: '#22C55E',
+        newspaper_weekly: '#3B82F6',
+        tv_station: '#F59E0B',
+        online_only: '#8B5CF6',
+        radio_station: '#EC4899',
+        public_media: '#06B6D4',
+        nonprofit_news: '#10B981'
+      };
+      const labels = {
+        newspaper_daily: 'Daily Papers',
+        newspaper_weekly: 'Weeklies',
+        tv_station: 'TV Stations',
+        online_only: 'Online Only',
+        radio_station: 'Radio',
+        public_media: 'Public Media',
+        nonprofit_news: 'Nonprofit'
+      };
+
+      chart.innerHTML = byType.map(t => `
+        <div class="bar">
+          <div class="bar-value">${t.count}</div>
+          <div class="bar-fill" style="height: ${(t.count / maxCount) * 80}px; background: ${colors[t.type] || '#666'}"></div>
+          <div class="bar-label">${labels[t.type] || t.type}</div>
+        </div>
+      `).join('');
+    }
+
+    function renderSourcesTable(sources) {
+      if (!sources || !sources.length) return;
+
+      const tbody = document.getElementById('sources-body');
+      const typeLabels = {
+        newspaper_daily: ['Daily', 'badge-daily'],
+        newspaper_weekly: ['Weekly', 'badge-weekly'],
+        tv_station: ['TV', 'badge-tv'],
+        online_only: ['Online', 'badge-online'],
+        radio_station: ['Radio', 'badge-radio'],
+        public_media: ['Public', 'badge-public'],
+        nonprofit_news: ['Nonprofit', 'badge-nonprofit']
+      };
+      const paywallLabels = {
+        free: ['Free', 'badge-free'],
+        metered: ['Metered', 'badge-metered'],
+        hard_paywall: ['Hard', 'badge-hard'],
+        freemium: ['Freemium', 'badge-metered']
+      };
+
+      tbody.innerHTML = sources.map(s => {
+        const [typeLabel, typeBadge] = typeLabels[s.type] || [s.type, ''];
+        const [payLabel, payBadge] = paywallLabels[s.paywall_status] || [s.paywall_status, ''];
+        const ownerClass = s.ownership_type === 'hedge_fund' ? 'owner-hedge' :
+                          s.is_locally_owned ? 'owner-local' :
+                          s.ownership_type === 'nonprofit' ? 'owner-public' : '';
+        const ownerDisplay = s.owner_name || (s.is_locally_owned ? 'Independent/Local' : '-');
+        const localBadge = s.is_locally_owned ? '<span style="color:#22C55E;font-size:10px;margin-left:4px;">●</span>' : '';
+
+        return `<tr>
+          <td><a href="${s.url}" target="_blank">${s.name}</a></td>
+          <td><span class="badge ${typeBadge}">${typeLabel}</span></td>
+          <td class="${ownerClass}">${ownerDisplay}${localBadge}</td>
+          <td><span class="badge ${payBadge}">${payLabel}</span></td>
+          <td>${s.rss_count > 0 ? '&#10003;' : '-'}</td>
+        </tr>`;
+      }).join('');
+
+      document.getElementById('sources-table').style.display = 'table';
+      document.getElementById('sources-loading').style.display = 'none';
+    }
+
+    function renderGovtTable(sources) {
+      if (!sources || !sources.length) return;
+
+      const tbody = document.getElementById('govt-body');
+      tbody.innerHTML = sources.map(s => `<tr>
+        <td><a href="${s.url}" target="_blank">${s.name}</a></td>
+        <td>${s.type}</td>
+        <td>${s.jurisdiction}</td>
+        <td>${s.has_agenda_portal ? '&#10003;' : '-'}</td>
+        <td>${s.has_meeting_videos ? '&#10003;' : '-'}</td>
+      </tr>`).join('');
+
+      document.getElementById('govt-table').style.display = 'table';
+      document.getElementById('govt-loading').style.display = 'none';
+    }
+
+    loadData();
+  </script>
+</body>
+</html>

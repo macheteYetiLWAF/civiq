@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIVIQ - Brand Guide (Living Document)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #0A0A0A;
+            color: #E5E5E5;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            padding: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+            background: linear-gradient(90deg, #2563EB 0%, #8B5CF6 50%, #DC2626 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle { font-size: 14px; color: #6B7280; margin-bottom: 32px; }
+        .last-updated { font-size: 11px; color: #4B5563; margin-bottom: 24px; }
+
+        h2 {
+            font-size: 18px;
+            color: #8B5CF6;
+            margin: 32px 0 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #333;
+        }
+        h3 {
+            font-size: 14px;
+            color: #9CA3AF;
+            margin: 20px 0 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section { background: #111; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+        @media (max-width: 768px) {
+            .grid-2, .grid-3 { grid-template-columns: 1fr; }
+        }
+
+        /* Color Swatches */
+        .swatch-row { display: flex; gap: 12px; flex-wrap: wrap; margin: 12px 0; }
+        .swatch {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+        .swatch-box {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+        .swatch span { font-size: 10px; color: #9CA3AF; text-align: center; }
+        .swatch code { font-size: 9px; color: #6B7280; }
+
+        /* Icon Display */
+        .icon-row { display: flex; gap: 16px; flex-wrap: wrap; margin: 12px 0; }
+        .icon-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            padding: 16px;
+            background: #1A1A1A;
+            border-radius: 10px;
+            min-width: 80px;
+        }
+        .icon-box i { font-size: 28px; color: #FFFFFF; }
+        .icon-box .label { font-size: 11px; color: #E5E5E5; font-weight: 600; }
+        .icon-box .class { font-size: 9px; color: #6B7280; font-family: monospace; }
+        .icon-box.confirmed { border: 2px solid #22C55E; }
+        .icon-box.rejected { border: 2px solid #DC2626; opacity: 0.5; }
+
+        /* Nav Preview */
+        .nav-preview {
+            display: flex;
+            justify-content: space-around;
+            background: #111;
+            padding: 12px;
+            border-radius: 12px;
+            margin: 16px 0;
+        }
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+        .nav-item i { font-size: 20px; color: #6B7280; }
+        .nav-item span { font-size: 10px; color: #6B7280; }
+        .nav-item.active i { color: #8B5CF6; }
+        .nav-item.active span { color: #8B5CF6; }
+
+        /* Tables */
+        table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+        th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #2A2A2A; }
+        th { color: #9CA3AF; font-weight: 600; font-size: 11px; text-transform: uppercase; }
+        td { color: #E5E5E5; }
+        td code { background: #1A1A1A; padding: 2px 6px; border-radius: 4px; font-size: 11px; }
+
+        /* Status Badges */
+        .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: 600; }
+        .badge-confirmed { background: #22C55E20; color: #22C55E; }
+        .badge-rejected { background: #DC262620; color: #DC2626; }
+        .badge-considering { background: #F59E0B20; color: #F59E0B; }
+
+        /* Notes */
+        .note { background: #1A1A1A; border-left: 3px solid #8B5CF6; padding: 12px 16px; margin: 12px 0; font-size: 13px; }
+        .note.warning { border-left-color: #F59E0B; }
+        .note.critical { border-left-color: #DC2626; }
+
+        /* Code blocks */
+        pre {
+            background: #1A1A1A;
+            padding: 16px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        code { font-family: 'SF Mono', Monaco, 'Courier New', monospace; }
+
+        /* Collapsible sections for rejected options */
+        details { margin: 12px 0; }
+        summary {
+            cursor: pointer;
+            color: #6B7280;
+            font-size: 12px;
+            padding: 8px;
+            background: #1A1A1A;
+            border-radius: 6px;
+        }
+        details[open] summary { border-radius: 6px 6px 0 0; }
+        .details-content {
+            background: #151515;
+            padding: 16px;
+            border-radius: 0 0 6px 6px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CIVIQ Brand Guide</h1>
+    <div class="subtitle">Living Document - Design System & Technical Reference</div>
+    <div class="last-updated">Last Updated: January 4, 2026 | Session: Icon Finalization & React Planning</div>
+
+    <!-- ==================== COLORS ==================== -->
+    <h2>1. Color System</h2>
+
+    <div class="section">
+        <h3>Primary Gradient (Impartiality)</h3>
+        <div class="note critical">
+            <strong>CRITICAL RULE:</strong> Blue must ALWAYS appear on the LEFT, Red on the RIGHT. This applies to logo, buttons, progress bars, any political spectrum visualization.
+        </div>
+        <div class="swatch-row">
+            <div class="swatch">
+                <div class="swatch-box" style="background: linear-gradient(90deg, #2563EB 0%, #8B5CF6 50%, #DC2626 100%);"></div>
+                <span>Full Gradient</span>
+                <code>Blue → Purple → Red</code>
+            </div>
+            <div class="swatch">
+                <div class="swatch-box" style="background: linear-gradient(90deg, #2563EB 40%, #DC2626 60%);"></div>
+                <span>Logo Gradient</span>
+                <code>Blue 40% → Red 60%</code>
+            </div>
+        </div>
+        <pre><code>/* Logo Gradient */
+background: linear-gradient(90deg, #2563EB 40%, #DC2626 60%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+/* Button Gradient (full spectrum) */
+background: linear-gradient(90deg, #2563EB 0%, #8B5CF6 50%, #DC2626 100%);</code></pre>
+    </div>
+
+    <div class="section">
+        <h3>Active State Color</h3>
+        <div class="note">
+            <strong>Decision (Jan 4, 2026):</strong> Active/selected states use Purple (#8B5CF6) - NOT blue or red alone. Purple represents the blend of both sides, politically neutral.
+        </div>
+        <div class="swatch-row">
+            <div class="swatch">
+                <div class="swatch-box" style="background: #8B5CF6;"></div>
+                <span>Active/Selected</span>
+                <code>#8B5CF6</code>
+            </div>
+            <div class="swatch">
+                <div class="swatch-box" style="background: #6B7280;"></div>
+                <span>Inactive</span>
+                <code>#6B7280</code>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Government Level Colors</h3>
+        <div class="swatch-row">
+            <div class="swatch">
+                <div class="swatch-box" style="background: #F59E0B;"></div>
+                <span>Local</span>
+                <code>#F59E0B</code>
+            </div>
+            <div class="swatch">
+                <div class="swatch-box" style="background: #10B981;"></div>
+                <span>State</span>
+                <code>#10B981</code>
+            </div>
+            <div class="swatch">
+                <div class="swatch-box" style="background: #3B82F6;"></div>
+                <span>Federal</span>
+                <code>#3B82F6</code>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Semantic Colors</h3>
+        <div class="swatch-row">
+            <div class="swatch">
+                <div class="swatch-box" style="background: #22C55E;"></div>
+                <span>Success</span>
+                <code>#22C55E</code>
+            </div>
+            <div class="swatch">
+                <div class="swatch-box" style="background: #F59E0B;"></div>
+                <span>Warning</span>
+                <code>#F59E0B</code>
+            </div>
+            <div class="swatch">
+                <div class="swatch-box" style="background: #DC2626;"></div>
+                <span>Danger</span>
+                <code>#DC2626</code>
+            </div>
+            <div class="swatch">
+                <div class="swatch-box" style="background: #FFD700;"></div>
+                <span>XP Gold</span>
+                <code>#FFD700</code>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== ICONS ==================== -->
+    <h2>2. Navigation Icons</h2>
+
+    <div class="section">
+        <h3>Final Selections <span class="badge badge-confirmed">CONFIRMED Jan 4, 2026</span></h3>
+        <div class="icon-row">
+            <div class="icon-box confirmed">
+                <i class="fa-solid fa-layer-group"></i>
+                <span class="label">Home</span>
+                <span class="class">fa-layer-group</span>
+            </div>
+            <div class="icon-box confirmed">
+                <i class="fa-solid fa-landmark"></i>
+                <span class="label">Leaders</span>
+                <span class="class">fa-landmark</span>
+            </div>
+            <div class="icon-box confirmed">
+                <i class="fa-solid fa-file-lines"></i>
+                <span class="label">Media</span>
+                <span class="class">fa-file-lines</span>
+            </div>
+            <div class="icon-box confirmed">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span class="label">Learn</span>
+                <span class="class">fa-graduation-cap</span>
+            </div>
+        </div>
+
+        <h3>Nav Bar Preview (with Purple Active State)</h3>
+        <div class="nav-preview">
+            <div class="nav-item active">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Home</span>
+            </div>
+            <div class="nav-item">
+                <i class="fa-solid fa-landmark"></i>
+                <span>Leaders</span>
+            </div>
+            <div class="nav-item">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Media</span>
+            </div>
+            <div class="nav-item">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Learn</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Media Source Category Icons</h3>
+        <div class="icon-row">
+            <div class="icon-box">
+                <i class="fa-solid fa-tv"></i>
+                <span class="label">Networks</span>
+                <span class="class">fa-tv</span>
+            </div>
+            <div class="icon-box">
+                <i class="fa-solid fa-newspaper"></i>
+                <span class="label">Newspapers</span>
+                <span class="class">fa-newspaper</span>
+            </div>
+            <div class="icon-box">
+                <i class="fa-solid fa-book-open"></i>
+                <span class="label">Magazines</span>
+                <span class="class">fa-book-open</span>
+            </div>
+            <div class="icon-box">
+                <i class="fa-solid fa-microphone"></i>
+                <span class="label">Podcasts</span>
+                <span class="class">fa-microphone</span>
+            </div>
+            <div class="icon-box">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <span class="label">Official Docs</span>
+                <span class="class">fa-clipboard-list</span>
+            </div>
+            <div class="icon-box">
+                <i class="fa-solid fa-microscope"></i>
+                <span class="label">Scientific</span>
+                <span class="class">fa-microscope</span>
+            </div>
+        </div>
+        <div class="note">
+            <strong>Individual Sources:</strong> Pull actual favicons from source URLs for recognizable branding.
+        </div>
+    </div>
+
+    <details>
+        <summary>View Rejected Icon Options (Click to expand)</summary>
+        <div class="details-content">
+            <h3>HOME - Rejected Options</h3>
+            <div class="icon-row">
+                <div class="icon-box rejected"><i class="fa-solid fa-house"></i><span class="label">House</span></div>
+                <div class="icon-box rejected"><i class="fa-solid fa-stream"></i><span class="label">Stream</span></div>
+                <div class="icon-box rejected"><i class="fa-solid fa-inbox"></i><span class="label">Inbox</span></div>
+            </div>
+            <p style="font-size: 12px; color: #6B7280; margin-top: 12px;">Stack (layer-group) chosen for representing layered content feed.</p>
+
+            <h3>LEADERS - Rejected Options</h3>
+            <div class="icon-row">
+                <div class="icon-box rejected"><i class="fa-solid fa-building-columns"></i><span class="label">Columns</span></div>
+                <div class="icon-box rejected"><i class="fa-solid fa-gavel"></i><span class="label">Gavel</span></div>
+                <div class="icon-box rejected"><i class="fa-solid fa-users"></i><span class="label">Users</span></div>
+            </div>
+            <p style="font-size: 12px; color: #6B7280; margin-top: 12px;">Capitol (landmark) chosen - clear government association. "Capitol dome looked like a condom" - user feedback on building-columns.</p>
+
+            <h3>MEDIA - Rejected Options</h3>
+            <div class="icon-row">
+                <div class="icon-box rejected"><i class="fa-solid fa-tower-broadcast"></i><span class="label">Broadcast</span></div>
+                <div class="icon-box rejected"><i class="fa-solid fa-newspaper"></i><span class="label">Newspaper</span></div>
+                <div class="icon-box rejected"><i class="fa-solid fa-signal"></i><span class="label">Signal</span></div>
+                <div class="icon-box rejected"><i class="fa-solid fa-bullhorn"></i><span class="label">Bullhorn</span></div>
+                <div class="icon-box rejected"><i class="fa-solid fa-globe"></i><span class="label">Globe</span></div>
+                <div class="icon-box rejected"><i class="fa-solid fa-comments"></i><span class="label">Comments</span></div>
+            </div>
+            <p style="font-size: 12px; color: #6B7280; margin-top: 12px;">Article (file-lines) chosen - represents content/stories. Custom chevron feed also rejected. Many options explored but none felt right until Article.</p>
+
+            <h3>LEARN - Rejected Options</h3>
+            <div class="icon-row">
+                <div class="icon-box rejected"><i class="fa-solid fa-lightbulb"></i><span class="label">Lightbulb</span></div>
+                <div class="icon-box rejected"><i class="fa-solid fa-play"></i><span class="label">Play</span></div>
+                <div class="icon-box rejected"><i class="fa-solid fa-brain"></i><span class="label">Brain</span></div>
+                <div class="icon-box rejected"><i class="fa-solid fa-book-open"></i><span class="label">Book</span></div>
+            </div>
+            <p style="font-size: 12px; color: #6B7280; margin-top: 12px;">Grad Cap chosen - represents achievement through education. "Brain looked like broccoli" - user feedback. Lightbulb = inspiration, Grad Cap = actual learning.</p>
+
+            <h3>Custom SVG Icons - All Rejected</h3>
+            <p style="font-size: 12px; color: #6B7280;">Line-based custom icons were created but rejected: "The horses look like shit" / "stick figure icons" - user feedback. Decision made to use Font Awesome exclusively.</p>
+        </div>
+    </details>
+
+    <!-- ==================== TYPOGRAPHY ==================== -->
+    <h2>3. Typography</h2>
+
+    <div class="section">
+        <h3>Font Stack</h3>
+        <pre><code>font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;</code></pre>
+
+        <h3>Type Scale</h3>
+        <table>
+            <tr><th>Element</th><th>Size</th><th>Weight</th><th>Usage</th></tr>
+            <tr><td>Logo</td><td>48px</td><td>800</td><td>CIVIQ branding</td></tr>
+            <tr><td>Page Title</td><td>22px</td><td>700</td><td>Screen headers</td></tr>
+            <tr><td>Section Header</td><td>16px</td><td>600</td><td>Card titles, nav labels</td></tr>
+            <tr><td>Body</td><td>14px</td><td>400</td><td>General content</td></tr>
+            <tr><td>Secondary</td><td>13px</td><td>400</td><td>Subtitles, metadata</td></tr>
+            <tr><td>Caption</td><td>11px</td><td>400</td><td>Timestamps, badges</td></tr>
+            <tr><td>Micro</td><td>9-10px</td><td>600</td><td>Tags, labels</td></tr>
+        </table>
+    </div>
+
+    <!-- ==================== COMPONENTS ==================== -->
+    <h2>4. Component Patterns</h2>
+
+    <div class="section">
+        <h3>Buttons</h3>
+        <table>
+            <tr><th>Type</th><th>Use Case</th><th>Style</th></tr>
+            <tr>
+                <td>Primary (Gradient)</td>
+                <td>Main CTAs: Sign In, Continue, Start Exploring</td>
+                <td><code>background: linear-gradient(90deg, #2563EB 0%, #8B5CF6 50%, #DC2626 100%)</code></td>
+            </tr>
+            <tr>
+                <td>Secondary</td>
+                <td>Active filter state, selected tabs</td>
+                <td><code>background: var(--bg-tertiary)</code></td>
+            </tr>
+            <tr>
+                <td>Outline</td>
+                <td>Secondary actions, inactive filters</td>
+                <td><code>border: 1px solid var(--border)</code></td>
+            </tr>
+        </table>
+        <div class="note warning">
+            <strong>NO solid blue or red buttons.</strong> Any button that could appear "political" must use the gradient.
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Toggle Switches</h3>
+        <p>Active toggle background: <code>#8B5CF6</code> (Purple)</p>
+        <p>Inactive toggle background: <code>var(--border)</code></p>
+    </div>
+
+    <!-- ==================== LAYOUT ==================== -->
+    <h2>5. Layout Rules</h2>
+
+    <div class="section">
+        <h3>Content Ordering</h3>
+        <div class="note">
+            <strong>Local First:</strong> All lists default to Local → State → Federal ordering. Users see their mayor before the President.
+        </div>
+        <table>
+            <tr><th>Section</th><th>Default Order</th></tr>
+            <tr><td>Home Feed</td><td>Local (orange) → State (purple) → Federal (blue)</td></tr>
+            <tr><td>Leaders</td><td>Mayor, City Council → Governor, State Reps → US House, Senate</td></tr>
+            <tr><td>Elections</td><td>Local primaries → State elections → Federal races</td></tr>
+        </table>
+    </div>
+
+    <!-- ==================== SCREENS ==================== -->
+    <h2>6. Screen Architecture</h2>
+
+    <div class="section">
+        <h3>Onboarding Flow (3 Steps)</h3>
+        <table>
+            <tr><th>Step</th><th>Progress</th><th>Screen</th><th>CTA</th></tr>
+            <tr><td>1</td><td>|===-------|</td><td>Register: Email + Password + ZIP + Map Pin</td><td>"Continue" / "Continue without verifying"</td></tr>
+            <tr><td>2</td><td>|======----|</td><td>Welcome Constituent (state flag icon)</td><td>"Set up profile"</td></tr>
+            <tr><td>3</td><td>|==========|</td><td>Personalize your experience</td><td>"Start exploring" → Home</td></tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h3>Home Tabs</h3>
+        <table>
+            <tr><th>Tab</th><th>Content</th></tr>
+            <tr><td>Voices (default)</td><td>Local content stream - news, elections, bills for YOUR district</td></tr>
+            <tr><td>Elections</td><td>Upcoming elections with countdown circles</td></tr>
+            <tr><td>Bills</td><td>Bills you're tracking + suggestions</td></tr>
+        </table>
+        <div class="note">
+            <strong>Bias Rebalance REMOVED from Home.</strong> Moved to Media section (3a) with reading stats and streak.
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Media Section (3a)</h3>
+        <p>Top area includes:</p>
+        <ul style="margin-left: 20px; font-size: 13px;">
+            <li>Articles read (time periods: today, week, month)</li>
+            <li>Reading streak</li>
+            <li>"Bias Rebalance" button/dropdown - suggests articles to balance reading</li>
+        </ul>
+    </div>
+
+    <!-- ==================== TECHNICAL ==================== -->
+    <h2>7. Technical Reference</h2>
+
+    <div class="section">
+        <h3>CSS Variables (styles.css)</h3>
+        <pre><code>:root {
+  --bg-primary: #0F0F0F;
+  --bg-secondary: #1A1A1A;
+  --bg-tertiary: #2A2A2A;
+  --text-primary: #FFFFFF;
+  --text-secondary: #9CA3AF;
+  --text-tertiary: #6B7280;
+  --border: #333333;
+  --accent: #3B82F6;         /* Use sparingly - prefer purple */
+  --accent-purple: #8B5CF6;  /* Primary accent color */
+  --success: #22C55E;
+  --warning: #F59E0B;
+  --danger: #DC2626;
+  --xp-gold: #FFD700;
+  --gradient-start: #2563EB;
+  --gradient-end: #DC2626;
+}</code></pre>
+    </div>
+
+    <div class="section">
+        <h3>Font Awesome CDN</h3>
+        <pre><code>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"&gt;</code></pre>
+    </div>
+
+    <div class="section">
+        <h3>React Project Structure (Planned)</h3>
+        <pre><code>/civiq/app/
+├── src/
+│   ├── components/
+│   │   ├── layout/
+│   │   │   ├── StatusBar.jsx
+│   │   │   ├── Header.jsx
+│   │   │   └── BottomNav.jsx
+│   │   ├── ui/
+│   │   │   ├── Button.jsx
+│   │   │   ├── Card.jsx
+│   │   │   ├── Accordion.jsx
+│   │   │   └── Toggle.jsx
+│   │   └── features/
+│   │       ├── BiasBar.jsx
+│   │       ├── VoterCard.jsx
+│   │       └── ReadingStats.jsx
+│   ├── screens/
+│   │   ├── onboarding/
+│   │   ├── home/
+│   │   ├── leaders/
+│   │   ├── media/
+│   │   └── learn/
+│   ├── styles/
+│   │   └── variables.css
+│   └── App.jsx
+├── package.json
+└── vite.config.js</code></pre>
+    </div>
+
+    <!-- ==================== DECISIONS LOG ==================== -->
+    <h2>8. Decision Log</h2>
+
+    <div class="section">
+        <table>
+            <tr><th>Date</th><th>Decision</th><th>Rationale</th></tr>
+            <tr>
+                <td>Jan 4, 2026</td>
+                <td>Active state = Purple (#8B5CF6)</td>
+                <td>Cannot use solid blue or red - politically charged. Purple is the blend.</td>
+            </tr>
+            <tr>
+                <td>Jan 4, 2026</td>
+                <td>Media icon = Article (fa-file-lines)</td>
+                <td>After exploring 35+ options, Article best represents content consumption.</td>
+            </tr>
+            <tr>
+                <td>Jan 4, 2026</td>
+                <td>Font Awesome only - no custom SVGs</td>
+                <td>Custom line icons looked "like stick figures". FA is professional and consistent.</td>
+            </tr>
+            <tr>
+                <td>Jan 4, 2026</td>
+                <td>Bias Rebalance moved to Media</td>
+                <td>Keep Home feed clean. Bias tracking belongs with reading/sources context.</td>
+            </tr>
+            <tr>
+                <td>Jan 4, 2026</td>
+                <td>3-step onboarding (not 4)</td>
+                <td>Simplified flow: Register → Welcome → Personalize → Home</td>
+            </tr>
+            <tr>
+                <td>Jan 4, 2026</td>
+                <td>Logout button uses full gradient</td>
+                <td>No solid red - any "action" button that could seem political uses gradient.</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="note" style="margin-top: 32px;">
+        <strong>This is a living document.</strong> Update as decisions are made. Keep rejected options documented for context.
+    </div>
+
+</body>
+</html>

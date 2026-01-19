@@ -1,0 +1,298 @@
+/* Candidate Compare Screen Styles */
+
+/* Race Header */
+.compare-race-header {
+  padding: 12px 20px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+}
+
+.compare-race-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.compare-race-meta {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin-top: 2px;
+}
+
+/* Candidate Header (Sticky) */
+.compare-candidate-header-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border);
+}
+
+.compare-candidate-header-scroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+}
+
+.compare-candidate-header-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.compare-candidate-header-item {
+  min-width: 160px;
+  flex: 0 0 160px;
+  text-align: center;
+  padding: 16px 8px;
+  scroll-snap-align: start;
+}
+
+.compare-candidate-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  margin: 0 auto 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+}
+
+.compare-candidate-avatar--dem {
+  background: linear-gradient(135deg, #1D4ED8, #3B82F6);
+  border: 2px solid #60A5FA;
+}
+
+.compare-candidate-avatar--rep {
+  background: linear-gradient(135deg, #B91C1C, #EF4444);
+  border: 2px solid #F87171;
+}
+
+.compare-candidate-avatar--ind {
+  background: linear-gradient(135deg, #7C3AED, #A78BFA);
+  border: 2px solid #C4B5FD;
+}
+
+.compare-candidate-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.compare-party-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  color: white;
+}
+
+.compare-party-badge--D {
+  background: #2563EB;
+}
+
+.compare-party-badge--R {
+  background: #DC2626;
+}
+
+.compare-party-badge--I {
+  background: #8B5CF6;
+}
+
+/* Pagination Dots */
+.compare-pagination-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 0 4px;
+  background: var(--bg-tertiary);
+}
+
+.compare-pagination-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  transition: background 0.2s, width 0.2s;
+  cursor: pointer;
+}
+
+.compare-pagination-dot.active {
+  background: var(--accent-purple);
+  width: 16px;
+  border-radius: 4px;
+}
+
+.compare-scroll-hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 10px;
+  color: var(--text-tertiary);
+  padding-bottom: 8px;
+  background: var(--bg-tertiary);
+}
+
+/* Issue Sections */
+.compare-issue-section {
+  margin: 12px 16px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.compare-issue-header {
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border);
+}
+
+.compare-issue-scroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.compare-issue-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Policy Boxes */
+.compare-policy-box {
+  min-width: 160px;
+  flex: 0 0 160px;
+  padding: 12px;
+  border-right: 1px solid var(--border);
+  scroll-snap-align: start;
+  min-height: 90px;
+}
+
+.compare-policy-box:last-child {
+  border-right: none;
+}
+
+.compare-policy-label {
+  font-size: 10px;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.compare-policy-headline {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.compare-policy-text {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.compare-policy-detail {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  margin-top: 4px;
+}
+
+/* Endorsements */
+.compare-endorsement-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.compare-endorsement-icon {
+  width: 20px;
+  height: 20px;
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.compare-endorsement-name {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+/* Funding */
+.compare-funding-amount {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent-purple);
+  margin-bottom: 4px;
+}
+
+.compare-funding-breakdown {
+  font-size: 10px;
+  color: var(--text-tertiary);
+  line-height: 1.5;
+  margin-top: 8px;
+}
+
+/* Coverage */
+.compare-coverage-card {
+  margin: 12px 16px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+
+.compare-coverage-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.compare-coverage-item {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.compare-coverage-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.compare-coverage-headline {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.compare-coverage-meta {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  margin-top: 2px;
+}

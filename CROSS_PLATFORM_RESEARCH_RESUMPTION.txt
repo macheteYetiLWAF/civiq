@@ -1,0 +1,88 @@
+================================================================================
+iOS BUILD STRATEGY FOR CIVIQ - DECISION FROM DATACORE
+================================================================================
+
+YOUR CURRENT STACK IS CORRECT. Don't change frameworks.
+
+## What You Have:
+- React 19 + Vite + Capacitor 8
+- Single codebase serving web, Android, iOS
+- Android debug APK already built and working
+- iOS project scaffolded, ready for build
+
+## The Problem:
+Josh's Mac OS can't run Xcode. You need iOS builds without local Mac.
+
+## THE SOLUTION: Capacitor + Codemagic
+
+**Codemagic** is the recommended cloud build service for Capacitor projects.
+- 500 FREE build minutes/month on Apple M2 machines
+- Handles iOS code signing automatically
+- No Mac required on your end
+- Pay-as-you-go after free tier ($0.02-0.10/min)
+
+**Setup steps:**
+1. Create Codemagic account (free): https://codemagic.io
+2. Connect your GitHub/GitLab repo
+3. Add codemagic.yaml to project root (config below)
+4. Push code - Codemagic builds iOS automatically
+
+## Codemagic Config for Capacitor:
+
+Create `/civiq/app/codemagic.yaml`:
+
+```yaml
+workflows:
+  ios-capacitor:
+    name: iOS Capacitor Build
+    max_build_duration: 60
+    instance_type: mac_mini_m2
+    environment:
+      node: 18
+      xcode: latest
+      cocoapods: default
+      vars:
+        APP_ID: com.politiciq.civiq
+    scripts:
+      - name: Install dependencies
+        script: npm install
+      - name: Build web assets
+        script: npm run build
+      - name: Sync Capacitor
+        script: npx cap sync ios
+      - name: Install CocoaPods
+        script: cd ios/App && pod install
+      - name: Build iOS
+        script: |
+          xcodebuild -workspace ios/App/App.xcworkspace \
+            -scheme App \
+            -configuration Release \
+            -archivePath build/App.xcarchive \
+            archive
+    artifacts:
+      - build/**/*.ipa
+      - build/**/*.xcarchive
+```
+
+## What NOT To Do:
+- Don't switch to Expo (you'd have to rewrite)
+- Don't switch to Flutter (completely different language)
+- Don't buy Mac hardware yet (cloud builds are free/cheap)
+
+## If Free Tier Runs Out:
+- Codemagic pay-as-you-go: ~$0.05/min = ~$3-5 per build
+- Or rent MacinCloud at $25/month for unlimited local builds
+
+## Database Reference:
+73 detailed learnings logged to project 'civiq' with pricing comparisons,
+framework analysis, and testing strategies. Query if needed:
+
+```sql
+SELECT title, content FROM claude_learnings
+WHERE project = 'civiq' AND category = 'research'
+ORDER BY created_at DESC;
+```
+
+================================================================================
+END - Your stack is fine. Just add Codemagic for iOS builds.
+================================================================================

@@ -1,0 +1,286 @@
+/* CIVIQ App Styles - Mobile First, Fully Responsive */
+
+:root {
+  /* Dark mode */
+  --bg-primary: #0A0A0A;
+  --bg-secondary: #141414;
+  --bg-tertiary: #1F1F1F;
+  --text-primary: #FAFAFA;
+  --text-secondary: #A1A1A1;
+  --text-tertiary: #6B6B6B;
+  --border: #2A2A2A;
+  --accent: #8B5CF6;
+  --accent-light: #1E1B2E;
+  --success: #22C55E;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+
+  /* Political gradient - Blue LEFT, Red RIGHT */
+  --gradient-start: #2563EB;
+  --gradient-end: #DC2626;
+
+  /* Bias spectrum */
+  --bias-left: #3B82F6;
+  --bias-center: #8B5CF6;
+  --bias-right: #EF4444;
+
+  /* Government Levels - Neutral, non-partisan colors */
+  --gov-federal: #64748B;  /* Slate - authoritative, neutral */
+  --gov-state: #10B981;    /* Green - growth, state level */
+  --gov-local: #F59E0B;    /* Amber - warm, community */
+
+  /* Gamification */
+  --xp-gold: #F59E0B;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* App container - full screen, no frame */
+.app-container {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-primary);
+}
+
+/* Content area */
+.content {
+  flex: 1;
+  padding: 0 16px 16px;
+  overflow-y: auto;
+}
+
+/* Logo gradient */
+.logo-gradient {
+  background: linear-gradient(90deg, var(--gradient-start) 0%, var(--accent) 50%, var(--gradient-end) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Cards */
+.card {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  margin-bottom: 12px;
+  border: 1px solid var(--border);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+
+.btn-gradient {
+  background: linear-gradient(90deg, var(--gradient-start) 0%, var(--accent) 50%, var(--gradient-end) 100%);
+  color: white;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+}
+
+.btn-secondary {
+  background: var(--accent);
+  color: white;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+/* Input fields */
+.input-group {
+  margin-bottom: 16px;
+}
+
+.input-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 14px 16px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 16px;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.input-field::placeholder {
+  color: var(--text-tertiary);
+}
+
+/* Progress bar */
+.progress-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.progress-step {
+  flex: 1;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--border);
+}
+
+.progress-step.active {
+  background: var(--accent);
+}
+
+/* Back header */
+.back-header {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--bg-primary);
+}
+
+.back-button {
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--text-primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.header-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Bottom Navigation - fixed to bottom */
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 16px;
+  padding-bottom: max(12px, env(safe-area-inset-bottom));
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  position: sticky;
+  bottom: 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  color: var(--text-tertiary);
+  font-size: 11px;
+  transition: color 0.2s;
+  padding: 4px 12px;
+}
+
+.nav-item.active {
+  color: var(--accent);
+}
+
+.nav-icon {
+  font-size: 20px;
+}
+
+/* Toggle/Tab container */
+.toggle-container {
+  display: flex;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  padding: 4px;
+}
+
+.toggle-option {
+  flex: 1;
+  padding: 10px 12px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle-option.active {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+/* Government level badges */
+.badge-federal {
+  background: var(--gov-federal);
+  color: white;
+}
+
+.badge-state {
+  background: var(--gov-state);
+  color: white;
+}
+
+.badge-local {
+  background: var(--gov-local);
+  color: white;
+}
+
+/* Safe area for notched phones */
+@supports (padding: env(safe-area-inset-top)) {
+  .app-container {
+    padding-top: env(safe-area-inset-top);
+  }
+}

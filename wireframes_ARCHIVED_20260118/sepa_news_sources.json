@@ -1,0 +1,1259 @@
+{
+  "metadata": {
+    "generated": "2026-01-04",
+    "region": "Southeastern Pennsylvania",
+    "description": "Catalog of reputable news sources from Lehigh Valley to DE/NJ/MD borders",
+    "target_counties": [
+      "Bucks County",
+      "Montgomery County",
+      "Philadelphia County",
+      "Delaware County",
+      "Chester County",
+      "Berks County",
+      "Lancaster County",
+      "York County",
+      "Carbon County",
+      "Schuylkill County"
+    ]
+  },
+  "news_sources": [
+    {
+      "id": "philadelphia_inquirer",
+      "name": "The Philadelphia Inquirer",
+      "url": "https://www.inquirer.com",
+      "coverage_area": ["Philadelphia County", "Bucks County", "Montgomery County", "Delaware County", "Chester County", "South Jersey"],
+      "type": "newspaper",
+      "format": "daily",
+      "ownership": {
+        "parent": "The Philadelphia Inquirer, LLC",
+        "ultimate_owner": "Lenfest Institute for Journalism (nonprofit)",
+        "notes": "Owned by The Philadelphia Foundation, a nonprofit organization"
+      },
+      "rss_feeds": [
+        {"category": "news", "url": "https://www.inquirer.com/arcio/rss/"},
+        {"category": "sports", "url": "https://www.inquirer.com/arcio/rss/category/sports/"}
+      ],
+      "social_media": {
+        "twitter": "@PhillyInquirer",
+        "facebook": "philadelphiainquirer"
+      },
+      "publication_frequency": "daily",
+      "paywall_status": "metered",
+      "government_sources": ["Philadelphia City Council", "PA State Legislature", "County Commissioners"],
+      "notes": "Largest newspaper in PA, Daily News merged into Inquirer in 2019"
+    },
+    {
+      "id": "philadelphia_tribune",
+      "name": "The Philadelphia Tribune",
+      "url": "https://www.phillytrib.com",
+      "coverage_area": ["Philadelphia County", "Delaware County", "Montgomery County"],
+      "type": "newspaper",
+      "format": "print_and_digital",
+      "ownership": {
+        "parent": "Philadelphia Tribune Company",
+        "ultimate_owner": "Independent (Robert W. Bogle, President)",
+        "notes": "Oldest continually publishing African-American newspaper in the US, founded 1884"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@PhillyTrib",
+        "facebook": "PhiladelphiaTribune"
+      },
+      "publication_frequency": "5 days per week",
+      "paywall_status": "free",
+      "government_sources": ["Philadelphia City Council", "School District of Philadelphia"],
+      "notes": "Founded by Christopher James Perry Sr. in 1884"
+    },
+    {
+      "id": "philly_voice",
+      "name": "PhillyVoice",
+      "url": "https://www.phillyvoice.com",
+      "coverage_area": ["Philadelphia County", "South Jersey", "Delaware Valley"],
+      "type": "online_only",
+      "format": "digital",
+      "ownership": {
+        "parent": "Vocal Media",
+        "ultimate_owner": "Vocal Media",
+        "notes": "Digital media publisher"
+      },
+      "rss_feeds": [
+        {"category": "all", "url": "https://www.phillyvoice.com/feed/"}
+      ],
+      "social_media": {
+        "twitter": "@PhillyVoice",
+        "facebook": "PhillyVoice"
+      },
+      "publication_frequency": "continuous",
+      "paywall_status": "free",
+      "government_sources": ["Philadelphia City Council", "PA State Government"],
+      "notes": "Digital-first news publication covering Philadelphia region"
+    },
+    {
+      "id": "billy_penn",
+      "name": "Billy Penn",
+      "url": "https://billypenn.com",
+      "coverage_area": ["Philadelphia County"],
+      "type": "online_only",
+      "format": "digital",
+      "ownership": {
+        "parent": "WHYY",
+        "ultimate_owner": "WHYY (public media)",
+        "notes": "Reader-powered nonprofit newsroom"
+      },
+      "rss_feeds": [
+        {"category": "all", "url": "https://billypenn.com/feed/"}
+      ],
+      "social_media": {
+        "twitter": "@billy_penn",
+        "facebook": "BillyPennNews"
+      },
+      "publication_frequency": "continuous",
+      "paywall_status": "free",
+      "government_sources": ["Philadelphia City Council", "Philadelphia Mayor's Office"],
+      "notes": "Original local reporting with daily newsletter"
+    },
+    {
+      "id": "whyy",
+      "name": "WHYY",
+      "url": "https://whyy.org",
+      "coverage_area": ["Philadelphia County", "Delaware", "South Jersey", "Pennsylvania"],
+      "type": "public_media",
+      "format": "radio_tv_digital",
+      "ownership": {
+        "parent": "WHYY Inc.",
+        "ultimate_owner": "Nonprofit public media",
+        "notes": "Leading public media organization in Philadelphia region"
+      },
+      "rss_feeds": [
+        {"category": "news", "url": "https://whyy.org/feed/"}
+      ],
+      "social_media": {
+        "twitter": "@WHYYNews",
+        "facebook": "whyynews"
+      },
+      "publication_frequency": "continuous",
+      "paywall_status": "free",
+      "government_sources": ["PA State Legislature", "Philadelphia City Government", "Delaware State Government"],
+      "notes": "NPR/PBS affiliate serving tri-state area"
+    },
+    {
+      "id": "bucks_county_courier_times",
+      "name": "Bucks County Courier Times",
+      "url": "https://www.buckscountycouriertimes.com",
+      "coverage_area": ["Bucks County"],
+      "type": "newspaper",
+      "format": "daily",
+      "ownership": {
+        "parent": "Gannett",
+        "ultimate_owner": "Gannett Co. Inc.",
+        "notes": "Sold by Calkins Media in 2017; 75%+ staff cuts since sale"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@CourierTimes",
+        "facebook": "BucksCountyCourierTimes"
+      },
+      "publication_frequency": "daily (no Monday print)",
+      "paywall_status": "metered",
+      "government_sources": ["Bucks County Commissioners", "Local township supervisors"],
+      "notes": "Serves lower and central Bucks County"
+    },
+    {
+      "id": "the_intelligencer",
+      "name": "The Intelligencer",
+      "url": "https://www.theintell.com",
+      "coverage_area": ["Bucks County", "Montgomery County (eastern)"],
+      "type": "newspaper",
+      "format": "daily",
+      "ownership": {
+        "parent": "Gannett",
+        "ultimate_owner": "Gannett Co. Inc.",
+        "notes": "Previously owned by Calkins Media, sold 2017"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@TheIntellNews",
+        "facebook": "TheIntelligencer"
+      },
+      "publication_frequency": "6 days/week",
+      "paywall_status": "metered",
+      "government_sources": ["Bucks County Commissioners", "Doylestown Borough Council"],
+      "notes": "Serves central and upper Bucks County, based in Langhorne"
+    },
+    {
+      "id": "bucks_county_herald",
+      "name": "Bucks County Herald",
+      "url": "https://www.buckscountyherald.com",
+      "coverage_area": ["Bucks County"],
+      "type": "newspaper",
+      "format": "weekly",
+      "ownership": {
+        "parent": "Independent",
+        "ultimate_owner": "Locally owned",
+        "notes": "Independent community newspaper"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@BCHerald",
+        "facebook": "buckscountyherald"
+      },
+      "publication_frequency": "weekly",
+      "paywall_status": "free online",
+      "government_sources": ["Bucks County government", "Local municipalities"],
+      "notes": "Community newspaper covering Bucks County"
+    },
+    {
+      "id": "levittown_now",
+      "name": "LevittownNow.com",
+      "url": "https://levittownnow.com",
+      "coverage_area": ["Bucks County (lower)"],
+      "type": "online_only",
+      "format": "digital",
+      "ownership": {
+        "parent": "Independent",
+        "ultimate_owner": "Locally owned",
+        "notes": "Founded 2013, hyperlocal digital news"
+      },
+      "rss_feeds": [
+        {"category": "all", "url": "https://levittownnow.com/feed/"}
+      ],
+      "social_media": {
+        "twitter": "@levittownnow",
+        "facebook": "LevittownNow"
+      },
+      "publication_frequency": "continuous",
+      "paywall_status": "free",
+      "government_sources": ["Lower Bucks townships", "School boards"],
+      "notes": "Reaches 82% of adults in coverage area; highest reach in Bucks County"
+    },
+    {
+      "id": "bucksco_today",
+      "name": "BUCKSCO Today",
+      "url": "https://bucksco.today",
+      "coverage_area": ["Bucks County"],
+      "type": "online_only",
+      "format": "digital",
+      "ownership": {
+        "parent": "American Community Journals",
+        "ultimate_owner": "American Community Journals (Ken Knickerbocker)",
+        "notes": "Part of ACJ network, launched 2020"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@BUCKSCOToday",
+        "facebook": "BUCKSCOToday"
+      },
+      "publication_frequency": "continuous",
+      "paywall_status": "free",
+      "government_sources": ["Bucks County government"],
+      "notes": "Focuses on positive, upbeat local news"
+    },
+    {
+      "id": "times_herald",
+      "name": "The Times Herald",
+      "url": "https://www.timesherald.com",
+      "coverage_area": ["Montgomery County"],
+      "type": "newspaper",
+      "format": "daily",
+      "ownership": {
+        "parent": "MediaNews Group",
+        "ultimate_owner": "Alden Global Capital",
+        "notes": "13th oldest newspaper in the nation, sold to Journal Register Co. in 1993"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@timaborgerTH",
+        "facebook": "timesherald"
+      },
+      "publication_frequency": "daily",
+      "paywall_status": "metered",
+      "government_sources": ["Montgomery County Commissioners", "Norristown Council"],
+      "notes": "Based in Norristown, PA"
+    },
+    {
+      "id": "montco_today",
+      "name": "MONTCO Today",
+      "url": "https://montco.today",
+      "coverage_area": ["Montgomery County"],
+      "type": "online_only",
+      "format": "digital",
+      "ownership": {
+        "parent": "American Community Journals",
+        "ultimate_owner": "American Community Journals (Ken Knickerbocker)",
+        "notes": "Part of ACJ network, launched 2016"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@MONTCOToday",
+        "facebook": "MONTCOToday"
+      },
+      "publication_frequency": "continuous",
+      "paywall_status": "free",
+      "government_sources": ["Montgomery County government"],
+      "notes": "Positive local news focus"
+    },
+    {
+      "id": "pottstown_mercury",
+      "name": "The Pottstown Mercury",
+      "url": "https://www.pottsmerc.com",
+      "coverage_area": ["Montgomery County (western)", "Berks County (eastern)", "Chester County (northern)"],
+      "type": "newspaper",
+      "format": "daily",
+      "ownership": {
+        "parent": "MediaNews Group",
+        "ultimate_owner": "Alden Global Capital",
+        "notes": "Two Pulitzer Prize winners on staff"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@MercuryX",
+        "facebook": "pottstownmercury"
+      },
+      "publication_frequency": "daily",
+      "paywall_status": "metered",
+      "government_sources": ["Pottstown Borough Council", "Montgomery County"],
+      "notes": "Daily circulation of 27,500"
+    },
+    {
+      "id": "main_line_media_news",
+      "name": "Main Line Media News",
+      "url": "https://www.mainlinemedianews.com",
+      "coverage_area": ["Montgomery County (Main Line)", "Delaware County (northern)"],
+      "type": "newspaper",
+      "format": "weekly",
+      "ownership": {
+        "parent": "Digital First Media",
+        "ultimate_owner": "Alden Global Capital",
+        "notes": "Includes Main Line Times, Suburban Life, King of Prussia Courier"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@MainLineNews",
+        "facebook": "MainLineMediaNews"
+      },
+      "publication_frequency": "weekly",
+      "paywall_status": "free",
+      "government_sources": ["Main Line municipalities", "School districts"],
+      "notes": "Serves Bala Cynwyd to Malvern corridor"
+    },
+    {
+      "id": "delaware_county_daily_times",
+      "name": "Delaware County Daily Times",
+      "url": "https://www.delcotimes.com",
+      "coverage_area": ["Delaware County"],
+      "type": "newspaper",
+      "format": "daily",
+      "ownership": {
+        "parent": "MediaNews Group",
+        "ultimate_owner": "Alden Global Capital (via Digital First Media)",
+        "notes": "Founded 1876, only PA newspaper branded with county name"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@delabornerTH",
+        "facebook": "delcotimes"
+      },
+      "publication_frequency": "daily",
+      "paywall_status": "metered",
+      "government_sources": ["Delaware County Council", "Chester City Council"],
+      "notes": "Largest circulation suburban paper in Philadelphia area"
+    },
+    {
+      "id": "delco_today",
+      "name": "DELCO Today",
+      "url": "https://delco.today",
+      "coverage_area": ["Delaware County"],
+      "type": "online_only",
+      "format": "digital",
+      "ownership": {
+        "parent": "American Community Journals",
+        "ultimate_owner": "American Community Journals (Ken Knickerbocker)",
+        "notes": "Part of ACJ network, launched 2016"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@DELCOToday",
+        "facebook": "DELCOToday"
+      },
+      "publication_frequency": "continuous",
+      "paywall_status": "free",
+      "government_sources": ["Delaware County government"],
+      "notes": "Positive community news focus"
+    },
+    {
+      "id": "daily_local_news",
+      "name": "Daily Local News",
+      "url": "https://www.dailylocal.com",
+      "coverage_area": ["Chester County", "Lancaster County (partial)", "Delaware County (partial)"],
+      "type": "newspaper",
+      "format": "daily",
+      "ownership": {
+        "parent": "MediaNews Group",
+        "ultimate_owner": "Alden Global Capital",
+        "notes": "Based in West Chester"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@Daily_Local",
+        "facebook": "DailyLocalNews"
+      },
+      "publication_frequency": "daily",
+      "paywall_status": "metered",
+      "government_sources": ["Chester County Commissioners", "West Chester Borough Council"],
+      "notes": "Primary newspaper for Chester County"
+    },
+    {
+      "id": "vista_today",
+      "name": "VISTA Today",
+      "url": "https://vista.today",
+      "coverage_area": ["Chester County"],
+      "type": "online_only",
+      "format": "digital",
+      "ownership": {
+        "parent": "American Community Journals",
+        "ultimate_owner": "American Community Journals (Ken Knickerbocker)",
+        "notes": "First ACJ publication, launched 2014"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@VISTAToday",
+        "facebook": "VISTAToday"
+      },
+      "publication_frequency": "continuous",
+      "paywall_status": "free",
+      "government_sources": ["Chester County government", "Local municipalities"],
+      "notes": "Covers West Chester, Coatesville, Phoenixville, Kennett Square"
+    },
+    {
+      "id": "chester_county_press",
+      "name": "Chester County Press",
+      "url": "https://www.chestercounty.com",
+      "coverage_area": ["Chester County (southern)"],
+      "type": "newspaper",
+      "format": "weekly",
+      "ownership": {
+        "parent": "Ad Pro Inc.",
+        "ultimate_owner": "Locally owned",
+        "notes": "Founded 1866, oldest weekly in Chester County"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "facebook": "ChesterCountyPress"
+      },
+      "publication_frequency": "weekly",
+      "paywall_status": "free",
+      "government_sources": ["Southern Chester County municipalities"],
+      "notes": "Based in Oxford, serves Kennett Square, West Grove, Avondale"
+    },
+    {
+      "id": "mychesco",
+      "name": "MyChesCo",
+      "url": "https://www.mychesco.com",
+      "coverage_area": ["Chester County"],
+      "type": "online_only",
+      "format": "digital",
+      "ownership": {
+        "parent": "Independent",
+        "ultimate_owner": "Locally owned",
+        "notes": "Community news website"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "facebook": "MyChesCo"
+      },
+      "publication_frequency": "continuous",
+      "paywall_status": "free",
+      "government_sources": ["Chester County government"],
+      "notes": "Daily local news and community website"
+    },
+    {
+      "id": "reading_eagle",
+      "name": "Reading Eagle",
+      "url": "https://www.readingeagle.com",
+      "coverage_area": ["Berks County"],
+      "type": "newspaper",
+      "format": "daily",
+      "ownership": {
+        "parent": "MediaNews Group",
+        "ultimate_owner": "Alden Global Capital",
+        "notes": "Founded 1867, sold after bankruptcy in 2019 after 150+ years family ownership"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@readabornerTH",
+        "facebook": "readingeagle"
+      },
+      "publication_frequency": "daily",
+      "paywall_status": "metered",
+      "government_sources": ["Berks County Commissioners", "Reading City Council"],
+      "notes": "Primary newspaper for Berks County/Reading area"
+    },
+    {
+      "id": "berks_weekly",
+      "name": "Berks Weekly",
+      "url": "https://berksweekly.com",
+      "coverage_area": ["Berks County"],
+      "type": "online_only",
+      "format": "digital",
+      "ownership": {
+        "parent": "Independent",
+        "ultimate_owner": "Locally owned",
+        "notes": "Independent digital news outlet"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@berksweekly",
+        "facebook": "BerksWeekly"
+      },
+      "publication_frequency": "continuous",
+      "paywall_status": "free",
+      "government_sources": ["Berks County government", "Reading City"],
+      "notes": "Also has mobile app and new monthly print edition"
+    },
+    {
+      "id": "lnp_lancaster_online",
+      "name": "LNP | LancasterOnline",
+      "url": "https://lancasteronline.com",
+      "coverage_area": ["Lancaster County"],
+      "type": "newspaper",
+      "format": "daily",
+      "ownership": {
+        "parent": "Always Lancaster (nonprofit)",
+        "ultimate_owner": "Always Lancaster (David Greene, CEO)",
+        "notes": "Transferred from Pennon/WITF in Dec 2025; formerly Steinman Communications"
+      },
+      "rss_feeds": [
+        {"category": "news", "url": "https://lancasteronline.com/search/?f=rss"}
+      ],
+      "social_media": {
+        "twitter": "@LancasterOnline",
+        "facebook": "lancabornerTH"
+      },
+      "publication_frequency": "daily (7 days)",
+      "paywall_status": "metered",
+      "government_sources": ["Lancaster County Commissioners", "Lancaster City Council"],
+      "notes": "Staff unionized Feb 2025; nonprofit ownership as of Dec 2025"
+    },
+    {
+      "id": "york_daily_record",
+      "name": "York Daily Record",
+      "url": "https://www.ydr.com",
+      "coverage_area": ["York County"],
+      "type": "newspaper",
+      "format": "daily",
+      "ownership": {
+        "parent": "Gannett",
+        "ultimate_owner": "Gannett Co. Inc.",
+        "notes": "Acquired by Gannett 2015; merging with York Dispatch in 2026"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@yabornerTHkdailyrecord",
+        "facebook": "yorkdailyrecord"
+      },
+      "publication_frequency": "daily",
+      "paywall_status": "metered",
+      "government_sources": ["York County Commissioners", "York City Council"],
+      "notes": "Primary newspaper for York County"
+    },
+    {
+      "id": "york_dispatch",
+      "name": "The York Dispatch",
+      "url": "https://www.yorkdispatch.com",
+      "coverage_area": ["York County"],
+      "type": "newspaper",
+      "format": "daily",
+      "ownership": {
+        "parent": "Gannett",
+        "ultimate_owner": "Gannett Co. Inc.",
+        "notes": "Founded 1876; oldest newspaper in York County; merging with YDR in 2026"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@yorkdispatch",
+        "facebook": "yorkdispatch"
+      },
+      "publication_frequency": "weekdays",
+      "paywall_status": "metered",
+      "government_sources": ["York County government"],
+      "notes": "Operating under joint agreement with YDR since 1990"
+    },
+    {
+      "id": "republican_herald",
+      "name": "Republican Herald",
+      "url": "https://www.republicanherald.com",
+      "coverage_area": ["Schuylkill County", "Carbon County (partial)"],
+      "type": "newspaper",
+      "format": "daily",
+      "ownership": {
+        "parent": "MediaNews Group",
+        "ultimate_owner": "Alden Global Capital",
+        "notes": "Founded 1884"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@republicanherld",
+        "facebook": "republicanherald"
+      },
+      "publication_frequency": "daily",
+      "paywall_status": "metered",
+      "government_sources": ["Schuylkill County Commissioners", "Pottsville City"],
+      "notes": "Based in Pottsville, serves Coal Region"
+    },
+    {
+      "id": "times_news_carbon",
+      "name": "Times News",
+      "url": "https://www.tnonline.com",
+      "coverage_area": ["Carbon County"],
+      "type": "newspaper",
+      "format": "daily",
+      "ownership": {
+        "parent": "Times News Media Group LLC",
+        "ultimate_owner": "Pencor Services",
+        "notes": "Long history of mergers and name changes"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "facebook": "TimesNewsOnline"
+      },
+      "publication_frequency": "daily",
+      "paywall_status": "metered",
+      "government_sources": ["Carbon County Commissioners", "Jim Thorpe Borough"],
+      "notes": "Based in Lehighton, serves Jim Thorpe area"
+    },
+    {
+      "id": "morning_call",
+      "name": "The Morning Call",
+      "url": "https://www.mcall.com",
+      "coverage_area": ["Lehigh County", "Northampton County", "Carbon County (partial)", "Berks County (partial)"],
+      "type": "newspaper",
+      "format": "daily",
+      "ownership": {
+        "parent": "Tribune Publishing",
+        "ultimate_owner": "Alden Global Capital",
+        "notes": "Founded 1883; acquired by Alden May 2021"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@mcall",
+        "facebook": "themorningcall"
+      },
+      "publication_frequency": "daily",
+      "paywall_status": "metered",
+      "government_sources": ["Lehigh County Commissioners", "Allentown City Council"],
+      "notes": "Lehigh Valley's primary newspaper; moved content behind paywall 2024"
+    },
+    {
+      "id": "express_times",
+      "name": "The Express-Times",
+      "url": "https://www.lehighvalleylive.com",
+      "coverage_area": ["Northampton County", "Lehigh County", "Warren County NJ"],
+      "type": "online_only",
+      "format": "digital",
+      "ownership": {
+        "parent": "Advance Local",
+        "ultimate_owner": "Advance Publications (Newhouse family)",
+        "notes": "Print edition ended February 2025 after 170 years"
+      },
+      "rss_feeds": [
+        {"category": "news", "url": "https://www.lehighvalleylive.com/arc/outboundfeeds/rss/"}
+      ],
+      "social_media": {
+        "twitter": "@ExpressTimeaborner",
+        "facebook": "expresstimes"
+      },
+      "publication_frequency": "continuous",
+      "paywall_status": "free",
+      "government_sources": ["Northampton County", "Easton City"],
+      "notes": "Now digital-only at lehighvalleylive.com"
+    },
+    {
+      "id": "lehigh_valley_news",
+      "name": "LehighValleyNews.com",
+      "url": "https://www.lehighvalleynews.com",
+      "coverage_area": ["Lehigh County", "Northampton County"],
+      "type": "online_only",
+      "format": "digital",
+      "ownership": {
+        "parent": "Independent",
+        "ultimate_owner": "Locally owned",
+        "notes": "Digital news site"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "facebook": "LehighValleyNews"
+      },
+      "publication_frequency": "continuous",
+      "paywall_status": "free",
+      "government_sources": ["Lehigh Valley municipalities"],
+      "notes": "Hyperlocal coverage for Allentown, Bethlehem, Easton"
+    },
+    {
+      "id": "philadelphia_business_journal",
+      "name": "Philadelphia Business Journal",
+      "url": "https://www.bizjournals.com/philadelphia",
+      "coverage_area": ["Philadelphia County", "Bucks County", "Montgomery County", "Delaware County", "Chester County", "South Jersey"],
+      "type": "newspaper",
+      "format": "weekly",
+      "ownership": {
+        "parent": "American City Business Journals",
+        "ultimate_owner": "Advance Publications",
+        "notes": "Part of 44-market Business Journals network"
+      },
+      "rss_feeds": [
+        {"category": "news", "url": "https://www.bizjournals.com/philadelphia/feed/"}
+      ],
+      "social_media": {
+        "twitter": "@PhlBizJournal",
+        "facebook": "PhilaBizJournal"
+      },
+      "publication_frequency": "weekly print, daily online",
+      "paywall_status": "metered",
+      "government_sources": ["Regional economic development agencies"],
+      "notes": "Business-focused coverage"
+    },
+    {
+      "id": "al_dia",
+      "name": "AL DIA News",
+      "url": "https://www.aldianews.com",
+      "coverage_area": ["Philadelphia County", "South Jersey", "Delaware Valley"],
+      "type": "newspaper",
+      "format": "print_and_digital",
+      "ownership": {
+        "parent": "AL DIA News Media",
+        "ultimate_owner": "Hernan Guaracao (founder)",
+        "notes": "Founded 1992 by Colombian immigrants"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@aldianews",
+        "facebook": "aldianews",
+        "instagram": "@aldianews"
+      },
+      "publication_frequency": "weekly print, daily online",
+      "paywall_status": "free",
+      "government_sources": ["Philadelphia City Government"],
+      "notes": "Spanish and English language; 100,000 print readership; launched AL DIA Magazine 2023"
+    },
+    {
+      "id": "south_philly_review",
+      "name": "South Philly Review",
+      "url": "https://southphillyreview.com",
+      "coverage_area": ["Philadelphia County (South Philadelphia)"],
+      "type": "newspaper",
+      "format": "weekly",
+      "ownership": {
+        "parent": "Newspaper Media Group",
+        "ultimate_owner": "Richard Donnelly",
+        "notes": "Founded 1948; sold to Broad Street Media 2015, then to Donnelly 2016"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@SoPhillyReview",
+        "facebook": "SouthPhillyReview"
+      },
+      "publication_frequency": "weekly (Thursday)",
+      "paywall_status": "free",
+      "government_sources": ["Philadelphia City Council"],
+      "notes": "Reaches 62,000 homes door-to-door"
+    },
+    {
+      "id": "philadelphia_weekly",
+      "name": "Philadelphia Weekly",
+      "url": "https://philadelphiaweekly.com",
+      "coverage_area": ["Philadelphia County"],
+      "type": "online_only",
+      "format": "digital",
+      "ownership": {
+        "parent": "Paradise Media",
+        "ultimate_owner": "Paradise Media (Puerto Rico)",
+        "notes": "Founded 1971 as The Welcomat; multiple ownership changes"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@PhillyWeekly",
+        "facebook": "PhiladelphiaWeekly"
+      },
+      "publication_frequency": "continuous",
+      "paywall_status": "free",
+      "government_sources": ["Philadelphia City Government"],
+      "notes": "Alternative weekly; previously attempted conservative pivot in 2020"
+    },
+    {
+      "id": "spotlight_pa",
+      "name": "Spotlight PA",
+      "url": "https://www.spotlightpa.org",
+      "coverage_area": ["Pennsylvania statewide"],
+      "type": "online_only",
+      "format": "digital",
+      "ownership": {
+        "parent": "Spotlight PA Inc.",
+        "ultimate_owner": "Nonprofit 501(c)(3)",
+        "notes": "Founded 2019 by Lenfest Institute; fully independent since Aug 2023"
+      },
+      "rss_feeds": [
+        {"category": "news", "url": "https://www.spotlightpa.org/feed.xml"}
+      ],
+      "social_media": {
+        "twitter": "@SpotlightPA",
+        "facebook": "SpotlightPA"
+      },
+      "publication_frequency": "continuous",
+      "paywall_status": "free",
+      "government_sources": ["PA State Legislature", "PA Governor's Office", "State agencies"],
+      "notes": "Investigative journalism; content shared with 100+ PA newsrooms; Gerald Loeb Award winner"
+    }
+  ],
+  "tv_stations": [
+    {
+      "id": "wpvi_6abc",
+      "name": "WPVI-TV 6ABC Action News",
+      "url": "https://6abc.com",
+      "coverage_area": ["Philadelphia DMA"],
+      "type": "tv_station",
+      "format": "broadcast",
+      "network": "ABC",
+      "ownership": {
+        "parent": "ABC Owned Television Stations",
+        "ultimate_owner": "The Walt Disney Company",
+        "notes": "ABC owned-and-operated station"
+      },
+      "rss_feeds": [
+        {"category": "news", "url": "https://6abc.com/feed/"}
+      ],
+      "social_media": {
+        "twitter": "@6abc",
+        "facebook": "6abc"
+      },
+      "government_sources": ["Philadelphia City Government", "PA State Government"],
+      "notes": "Philadelphia's ABC affiliate"
+    },
+    {
+      "id": "kyw_cbs3",
+      "name": "KYW-TV CBS3 Philadelphia",
+      "url": "https://www.cbsnews.com/philadelphia/",
+      "coverage_area": ["Philadelphia DMA"],
+      "type": "tv_station",
+      "format": "broadcast",
+      "network": "CBS",
+      "ownership": {
+        "parent": "CBS News and Stations",
+        "ultimate_owner": "Paramount Global",
+        "notes": "Pennsylvania's oldest TV station"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@CBSPhiladelphia",
+        "facebook": "CBSPhiladelphia"
+      },
+      "government_sources": ["Philadelphia City Government", "Regional government"],
+      "notes": "CBS owned-and-operated station"
+    },
+    {
+      "id": "wcau_nbc10",
+      "name": "WCAU NBC10 Philadelphia",
+      "url": "https://www.nbcphiladelphia.com",
+      "coverage_area": ["Philadelphia DMA"],
+      "type": "tv_station",
+      "format": "broadcast",
+      "network": "NBC",
+      "ownership": {
+        "parent": "NBC Owned Television Stations",
+        "ultimate_owner": "NBCUniversal (Comcast)",
+        "notes": "NBC owned-and-operated station"
+      },
+      "rss_feeds": [
+        {"category": "news", "url": "https://www.nbcphiladelphia.com/feed/"}
+      ],
+      "social_media": {
+        "twitter": "@NBCPhiladelphia",
+        "facebook": "NBCPhiladelphia"
+      },
+      "government_sources": ["Philadelphia City Government", "Regional government"],
+      "notes": "Sister station to Telemundo 62"
+    },
+    {
+      "id": "wtxf_fox29",
+      "name": "WTXF-TV Fox 29 Philadelphia",
+      "url": "https://www.fox29.com",
+      "coverage_area": ["Philadelphia DMA"],
+      "type": "tv_station",
+      "format": "broadcast",
+      "network": "FOX",
+      "ownership": {
+        "parent": "Fox Television Stations",
+        "ultimate_owner": "Fox Corporation",
+        "notes": "Fox owned-and-operated since 1995"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@FOX29philly",
+        "facebook": "Fox29Philadelphia"
+      },
+      "government_sources": ["Philadelphia City Government"],
+      "notes": "Part of Fox Television Stations group (28 stations)"
+    },
+    {
+      "id": "wfmz_69",
+      "name": "WFMZ-TV 69 News",
+      "url": "https://www.wfmz.com",
+      "coverage_area": ["Lehigh Valley", "Berks County", "Philadelphia (cable)"],
+      "type": "tv_station",
+      "format": "broadcast",
+      "network": "Independent",
+      "ownership": {
+        "parent": "Maranatha Broadcasting Company",
+        "ultimate_owner": "Maranatha Broadcasting (locally owned)",
+        "notes": "Founded 1976 by Dick Dean"
+      },
+      "rss_feeds": [
+        {"category": "news", "url": "https://www.wfmz.com/search/?f=rss"}
+      ],
+      "social_media": {
+        "twitter": "@69abornerTHews",
+        "facebook": "wfmztv69news"
+      },
+      "government_sources": ["Lehigh Valley municipalities", "Berks County"],
+      "notes": "Independent station with secondary studio in Reading for Berks coverage"
+    },
+    {
+      "id": "wwsi_telemundo62",
+      "name": "WWSI Telemundo 62",
+      "url": "https://www.telemundo62.com",
+      "coverage_area": ["Philadelphia DMA"],
+      "type": "tv_station",
+      "format": "broadcast",
+      "network": "Telemundo",
+      "ownership": {
+        "parent": "Telemundo Station Group",
+        "ultimate_owner": "NBCUniversal (Comcast)",
+        "notes": "Acquired by NBCUniversal 2013"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@Telemundo62",
+        "facebook": "Telemundo62"
+      },
+      "government_sources": ["Philadelphia City Government"],
+      "notes": "Spanish-language news; shares studios with NBC10"
+    },
+    {
+      "id": "wuvp_univision65",
+      "name": "WUVP-DT Univision 65",
+      "url": "https://www.univision.com/local/filadelfia-wuvp",
+      "coverage_area": ["Philadelphia DMA"],
+      "type": "tv_station",
+      "format": "broadcast",
+      "network": "Univision",
+      "ownership": {
+        "parent": "TelevisaUnivision",
+        "ultimate_owner": "TelevisaUnivision",
+        "notes": "Spanish-language station"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@Univision65",
+        "facebook": "Univision65Philadelphia"
+      },
+      "government_sources": ["Philadelphia City Government"],
+      "notes": "Leading Spanish-language destination in Philadelphia"
+    }
+  ],
+  "radio_stations": [
+    {
+      "id": "kyw_newsradio",
+      "name": "KYW Newsradio 1060",
+      "url": "https://www.audacy.com/kywnewsradio",
+      "coverage_area": ["Philadelphia DMA", "South Jersey", "Delaware"],
+      "type": "radio",
+      "format": "all_news",
+      "ownership": {
+        "parent": "Audacy Inc.",
+        "ultimate_owner": "Audacy Inc.",
+        "notes": "Flagship station of Audacy; 50,000 watt clear channel"
+      },
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@KYWNewsradio",
+        "facebook": "KYWNewsradio"
+      },
+      "government_sources": ["Philadelphia City Government", "Regional transit"],
+      "notes": "Also simulcasts on 103.9 FM since Nov 2020; 24-hour news, traffic, weather"
+    },
+    {
+      "id": "whyy_fm",
+      "name": "WHYY-FM 90.9",
+      "url": "https://whyy.org",
+      "coverage_area": ["Philadelphia DMA", "Delaware", "South Jersey"],
+      "type": "radio",
+      "format": "public_radio",
+      "ownership": {
+        "parent": "WHYY Inc.",
+        "ultimate_owner": "Nonprofit public media",
+        "notes": "NPR member station"
+      },
+      "rss_feeds": [
+        {"category": "news", "url": "https://whyy.org/feed/"}
+      ],
+      "social_media": {
+        "twitter": "@WHYYNews",
+        "facebook": "whyynews"
+      },
+      "government_sources": ["PA State Government", "Philadelphia City Government"],
+      "notes": "NPR and BBC programming"
+    }
+  ],
+  "government_sources": [
+    {
+      "id": "philadelphia_city",
+      "name": "City of Philadelphia",
+      "url": "https://www.phila.gov",
+      "type": "municipal",
+      "coverage_area": ["Philadelphia County"],
+      "key_pages": {
+        "council": "https://phlcouncil.com",
+        "council_legislation": "https://phila.legistar.com",
+        "mayor": "https://www.phila.gov/departments/office-of-the-mayor/"
+      },
+      "notes": "Consolidated city-county government"
+    },
+    {
+      "id": "philadelphia_school_district",
+      "name": "School District of Philadelphia",
+      "url": "https://www.philasd.org",
+      "type": "school_district",
+      "coverage_area": ["Philadelphia County"],
+      "key_pages": {
+        "board": "https://www.philasd.org/schoolboard/"
+      },
+      "notes": "9-member appointed board; re-established 2018"
+    },
+    {
+      "id": "bucks_county_gov",
+      "name": "Bucks County Government",
+      "url": "https://www.buckscounty.gov",
+      "type": "county",
+      "coverage_area": ["Bucks County"],
+      "key_pages": {
+        "commissioners": "https://www.buckscounty.gov/27/Government"
+      },
+      "notes": "3-member Board of Commissioners; county seat in Doylestown"
+    },
+    {
+      "id": "montgomery_county_gov",
+      "name": "Montgomery County Government",
+      "url": "https://www.montgomerycountypa.gov",
+      "type": "county",
+      "coverage_area": ["Montgomery County"],
+      "key_pages": {
+        "commissioners": "https://www.montgomerycountypa.gov/130/Commissioners"
+      },
+      "notes": "Engage Montco civic engagement platform available"
+    },
+    {
+      "id": "delaware_county_gov",
+      "name": "Delaware County Government",
+      "url": "https://delcopa.gov",
+      "type": "county",
+      "coverage_area": ["Delaware County"],
+      "key_pages": {
+        "council": "https://www.delcopa.gov/council"
+      },
+      "notes": "Home Rule Charter; county seat in Media"
+    },
+    {
+      "id": "chester_county_gov",
+      "name": "Chester County Government",
+      "url": "https://www.chesco.org",
+      "type": "county",
+      "coverage_area": ["Chester County"],
+      "key_pages": {
+        "commissioners": "https://www.chesco.org/3205/Government"
+      },
+      "notes": "3rd Class County; 3-member Board of Commissioners"
+    },
+    {
+      "id": "berks_county_gov",
+      "name": "Berks County Government",
+      "url": "https://www.berkspa.gov",
+      "type": "county",
+      "coverage_area": ["Berks County"],
+      "key_pages": {
+        "commissioners": "https://www.berkspa.gov/about-us"
+      },
+      "notes": "County seat in Reading"
+    },
+    {
+      "id": "lancaster_county_gov",
+      "name": "Lancaster County Government",
+      "url": "https://co.lancaster.pa.us",
+      "type": "county",
+      "coverage_area": ["Lancaster County"],
+      "key_pages": {
+        "commissioners": "https://co.lancaster.pa.us/150/Commissioners"
+      },
+      "notes": "Government Center at 150 N Queen St, Lancaster"
+    },
+    {
+      "id": "york_county_gov",
+      "name": "York County Government",
+      "url": "https://www.yorkcountypa.gov",
+      "type": "county",
+      "coverage_area": ["York County"],
+      "key_pages": {
+        "commissioners": "https://www.yorkcountypa.gov/county-government/board-of-commissioners.html"
+      },
+      "notes": "Property tax refund program for firefighters/EMS"
+    },
+    {
+      "id": "carbon_county_gov",
+      "name": "Carbon County Government",
+      "url": "https://www.carboncountypa.gov",
+      "type": "county",
+      "coverage_area": ["Carbon County"],
+      "key_pages": {
+        "commissioners": "https://www.carboncountypa.gov/community/"
+      },
+      "notes": "County seat in Jim Thorpe; population 64,749"
+    },
+    {
+      "id": "schuylkill_county_gov",
+      "name": "Schuylkill County Government",
+      "url": "https://www.co.schuylkill.pa.us",
+      "type": "county",
+      "coverage_area": ["Schuylkill County"],
+      "key_pages": {
+        "commissioners": "https://schuylkillcountypa.gov/government/commissioners/"
+      },
+      "notes": "County seat in Pottsville; population 143,049"
+    }
+  ],
+  "civic_data_sources": [
+    {
+      "id": "open_data_philly",
+      "name": "OpenDataPhilly",
+      "url": "https://opendataphilly.org",
+      "type": "data_portal",
+      "coverage_area": ["Philadelphia region"],
+      "description": "Official open data repository for City of Philadelphia plus regional data",
+      "data_types": ["311 requests", "property assessments", "language access services", "GIS data"]
+    },
+    {
+      "id": "pa_open_data",
+      "name": "OpenDataPA",
+      "url": "https://data.pa.gov",
+      "type": "data_portal",
+      "coverage_area": ["Pennsylvania statewide"],
+      "description": "Pennsylvania state government open data portal",
+      "data_types": ["job creation", "school performance", "bridge repairs", "state agency data"]
+    },
+    {
+      "id": "penndot_open_data",
+      "name": "PennDOT Open Data",
+      "url": "https://data-pennshare.opendata.arcgis.com",
+      "type": "data_portal",
+      "coverage_area": ["Pennsylvania statewide"],
+      "description": "Transportation-related data from PennDOT",
+      "data_types": ["road conditions", "traffic", "construction projects"]
+    },
+    {
+      "id": "dvrpc",
+      "name": "Delaware Valley Regional Planning Commission",
+      "url": "https://www.dvrpc.org",
+      "type": "planning_agency",
+      "coverage_area": ["Bucks", "Chester", "Delaware", "Montgomery", "Philadelphia", "Burlington NJ", "Camden NJ", "Gloucester NJ", "Mercer NJ"],
+      "description": "Metropolitan Planning Organization for 9-county region",
+      "data_types": ["transportation planning", "regional data", "economic development"]
+    }
+  ],
+  "news_aggregators": [
+    {
+      "id": "patch_network",
+      "name": "Patch",
+      "url": "https://patch.com",
+      "coverage_area": ["Multiple communities in SE PA"],
+      "type": "aggregator",
+      "local_sites": [
+        "patch.com/pennsylvania/doylestown",
+        "patch.com/pennsylvania/levittown",
+        "patch.com/pennsylvania/westchester",
+        "patch.com/pennsylvania/phoenixville",
+        "patch.com/pennsylvania/norristown",
+        "patch.com/pennsylvania/chester-pa"
+      ],
+      "ownership": {
+        "parent": "Patch Media",
+        "ultimate_owner": "Hale Global"
+      },
+      "notes": "Network of hyperlocal community sites"
+    },
+    {
+      "id": "tapinto",
+      "name": "TAPinto",
+      "url": "https://www.tapinto.net",
+      "coverage_area": ["Doylestown", "other PA communities"],
+      "type": "aggregator",
+      "local_sites": [
+        "tapinto.net/towns/doylestown"
+      ],
+      "ownership": {
+        "parent": "TAPinto Inc.",
+        "ultimate_owner": "Independently owned franchises"
+      },
+      "notes": "Network of 95+ local news platforms; launched Doylestown site 2022"
+    },
+    {
+      "id": "acj_network",
+      "name": "American Community Journals",
+      "url": "https://acj.today",
+      "coverage_area": ["Chester", "Montgomery", "Delaware", "Bucks", "Philadelphia counties"],
+      "type": "aggregator",
+      "local_sites": [
+        "vista.today",
+        "montco.today",
+        "delco.today",
+        "bucksco.today",
+        "philadelphia.today"
+      ],
+      "ownership": {
+        "parent": "American Community Journals",
+        "ultimate_owner": "Ken Knickerbocker"
+      },
+      "notes": "Founded 2014; focuses on positive local news"
+    }
+  ],
+  "ownership_groups": {
+    "gannett": {
+      "name": "Gannett Co. Inc.",
+      "type": "public_company",
+      "properties_in_region": ["Bucks County Courier Times", "The Intelligencer", "York Daily Record", "York Dispatch"],
+      "notes": "Largest US newspaper publisher; formed from GateHouse-Gannett merger 2019"
+    },
+    "alden_global_capital": {
+      "name": "Alden Global Capital",
+      "type": "hedge_fund",
+      "subsidiaries": ["MediaNews Group", "Tribune Publishing"],
+      "properties_in_region": ["Times Herald", "Delaware County Daily Times", "Pottstown Mercury", "Reading Eagle", "Republican Herald", "Morning Call", "Main Line Media News"],
+      "notes": "Known for aggressive cost-cutting at acquired papers"
+    },
+    "advance_publications": {
+      "name": "Advance Publications",
+      "type": "private_company",
+      "subsidiaries": ["Advance Local", "American City Business Journals"],
+      "properties_in_region": ["Express-Times/LehighValleyLive", "Philadelphia Business Journal"],
+      "notes": "Owned by Newhouse family"
+    },
+    "lenfest_institute": {
+      "name": "Lenfest Institute for Journalism",
+      "type": "nonprofit",
+      "properties_in_region": ["Philadelphia Inquirer"],
+      "notes": "Nonprofit owner supporting local journalism"
+    },
+    "american_community_journals": {
+      "name": "American Community Journals",
+      "type": "private_company",
+      "properties_in_region": ["VISTA Today", "MONTCO Today", "DELCO Today", "BUCKSCO Today", "PHILADELPHIA Today"],
+      "notes": "Founded by Ken Knickerbocker; positive news focus"
+    }
+  }
+}

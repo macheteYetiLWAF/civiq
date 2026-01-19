@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>CIVIQ - Source Profile</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body style="background: #1A1A1A;">
+  <div class="wireframe-label">3b - Source Profile</div>
+
+  <div class="device-frame">
+    <div class="screen">
+      <!-- Status Bar -->
+      <div class="status-bar">
+        <span class="time">9:41</span>
+        <span class="icons">... .. ..</span>
+      </div>
+
+      <!-- Header - Locked Design -->
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: linear-gradient(180deg, #1E1E2E 0%, #0F172A 100%); border-bottom: 1px solid rgba(139, 92, 246, 0.2);">
+        <!-- Left: Back + Logo + Divider + Title -->
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <a href="javascript:history.back()" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; text-decoration: none; margin-right: 4px;">
+            <i class="fas fa-chevron-left" style="font-size: 16px; color: rgba(255,255,255,0.6);"></i>
+          </a>
+          <div class="logo-gradient" style="font-size: 18px; font-weight: 800; letter-spacing: -0.5px;">CIVIQ</div>
+          <div style="width: 1px; height: 20px; background: rgba(255,255,255,0.2);"></div>
+          <div>
+            <div style="font-size: 15px; font-weight: 600; color: white;">Source</div>
+            <div style="font-size: 10px; color: rgba(255,255,255,0.5);">Profile</div>
+          </div>
+        </div>
+        <!-- Right: Search + Avatar -->
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <a href="9e-search.html" style="width: 36px; height: 36px; background: rgba(255,255,255,0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none;">
+            <i class="fas fa-search" style="font-size: 14px; color: rgba(255,255,255,0.6);"></i>
+          </a>
+          <div style="width: 36px; height: 36px; background: linear-gradient(135deg, #1D4ED8, #3B82F6); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: white; border: 2px solid rgba(96, 165, 250, 0.5);">JK</div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="content" style="padding-top: 0;">
+        <!-- Source header -->
+        <div style="text-align: center; padding: 24px 0; background: var(--bg-secondary); margin: 0 -20px 16px; padding-left: 20px; padding-right: 20px;">
+          <div style="width: 80px; height: 80px; background: #1a1a1a; border: 2px solid var(--border); border-radius: 16px; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 700; color: white;">NYT</div>
+          <div style="font-size: 22px; font-weight: 700;">The New York Times</div>
+          <div style="font-size: 14px; color: var(--text-secondary); margin-top: 4px;">National newspaper · Est. 1851</div>
+
+          <!-- Bias badge -->
+          <div style="display: flex; justify-content: center; gap: 8px; margin-top: 12px;">
+            <span class="bias-label lean-left" style="padding: 4px 12px;">Lean Left</span>
+            <span style="background: #22C55E20; color: #22C55E; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600;">High Factuality</span>
+          </div>
+
+          <!-- Opinion % bar -->
+          <div style="margin-top: 16px; padding: 0 20px;">
+            <div style="display: flex; justify-content: space-between; font-size: 10px; color: var(--text-tertiary); margin-bottom: 4px;">
+              <span>Factual</span>
+              <span>32% Opinion</span>
+              <span>Opinion</span>
+            </div>
+            <div style="height: 8px; background: var(--bg-tertiary); border-radius: 4px; overflow: hidden;">
+              <div style="width: 68%; height: 100%; background: linear-gradient(90deg, #22C55E, #F59E0B);"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ownership History -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Ownership</div>
+          </div>
+          <div style="margin-top: 12px;">
+            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border);">
+              <div>
+                <div style="font-size: 14px; font-weight: 600;">The New York Times Company</div>
+                <div style="font-size: 11px; color: var(--text-tertiary);">Public (NYSE: NYT)</div>
+              </div>
+              <div style="text-align: right;">
+                <div style="font-size: 12px; color: var(--text-secondary);">Since 1896</div>
+                <div style="font-size: 10px; color: var(--text-tertiary);">128 years</div>
+              </div>
+            </div>
+
+            <div style="padding: 10px 0;">
+              <div style="font-size: 11px; color: var(--text-tertiary); margin-bottom: 8px;">Major Shareholders</div>
+              <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                <span style="background: var(--bg-tertiary); padding: 4px 8px; border-radius: 4px; font-size: 11px;">Sulzberger Family (Class B)</span>
+                <span style="background: var(--bg-tertiary); padding: 4px 8px; border-radius: 4px; font-size: 11px;">Vanguard 8.2%</span>
+                <span style="background: var(--bg-tertiary); padding: 4px 8px; border-radius: 4px; font-size: 11px;">BlackRock 6.1%</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="font-size: 11px; color: var(--text-tertiary); padding-top: 8px; border-top: 1px solid var(--border);">
+            <span style="color: #22C55E;">✓</span> Stable ownership · No major transitions in 20+ years
+          </div>
+        </div>
+
+        <!-- Top Advertisers -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Top Advertisers (2024)</div>
+            <span style="font-size: 10px; color: var(--text-tertiary);">Est. Revenue</span>
+          </div>
+          <div style="margin-top: 12px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border);">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <div style="width: 32px; height: 32px; background: var(--bg-tertiary); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 10px;">LVMH</div>
+                <span style="font-size: 13px;">LVMH Group</span>
+              </div>
+              <span style="font-size: 12px; color: var(--text-secondary);">$18M</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border);">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <div style="width: 32px; height: 32px; background: var(--bg-tertiary); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 10px;">AMEX</div>
+                <span style="font-size: 13px;">American Express</span>
+              </div>
+              <span style="font-size: 12px; color: var(--text-secondary);">$14M</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border);">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <div style="width: 32px; height: 32px; background: var(--bg-tertiary); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 10px;">GOOG</div>
+                <span style="font-size: 13px;">Google</span>
+              </div>
+              <span style="font-size: 12px; color: var(--text-secondary);">$12M</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0;">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <div style="width: 32px; height: 32px; background: var(--bg-tertiary); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 10px;">JPM</div>
+                <span style="font-size: 13px;">JPMorgan Chase</span>
+              </div>
+              <span style="font-size: 12px; color: var(--text-secondary);">$9M</span>
+            </div>
+          </div>
+          <div style="font-size: 10px; color: var(--text-tertiary); margin-top: 8px; text-align: center;">
+            Data sourced from SEC filings & MediaRadar
+          </div>
+        </div>
+
+        <!-- Content Analysis -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Content Analysis</div>
+            <span style="font-size: 10px; color: var(--text-tertiary);">Last 30 days</span>
+          </div>
+          <div style="margin-top: 12px;">
+            <div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--border);">
+              <span style="font-size: 13px;">Articles Analyzed</span>
+              <span style="font-size: 13px; font-weight: 600;">1,247</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--border);">
+              <span style="font-size: 13px;">Avg. Factuality Score</span>
+              <span style="font-size: 13px; font-weight: 600; color: #22C55E;">4.2/5</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--border);">
+              <span style="font-size: 13px;">Opinion Pieces</span>
+              <span style="font-size: 13px; font-weight: 600;">32%</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 8px 0;">
+              <span style="font-size: 13px;">Corrections Issued</span>
+              <span style="font-size: 13px; font-weight: 600;">12</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article Types -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Article Types</div>
+          </div>
+          <div style="margin-top: 12px;">
+            <div style="font-size: 11px; color: var(--text-tertiary); margin-bottom: 4px;">News Reporting · 45%</div>
+            <div style="height: 8px; background: var(--bg-tertiary); border-radius: 4px; overflow: hidden; margin-bottom: 10px;">
+              <div style="width: 45%; height: 100%; background: #3B82F6;"></div>
+            </div>
+
+            <div style="font-size: 11px; color: var(--text-tertiary); margin-bottom: 4px;">Opinion/Editorial · 32%</div>
+            <div style="height: 8px; background: var(--bg-tertiary); border-radius: 4px; overflow: hidden; margin-bottom: 10px;">
+              <div style="width: 32%; height: 100%; background: #F59E0B;"></div>
+            </div>
+
+            <div style="font-size: 11px; color: var(--text-tertiary); margin-bottom: 4px;">Analysis · 15%</div>
+            <div style="height: 8px; background: var(--bg-tertiary); border-radius: 4px; overflow: hidden; margin-bottom: 10px;">
+              <div style="width: 15%; height: 100%; background: #8B5CF6;"></div>
+            </div>
+
+            <div style="font-size: 11px; color: var(--text-tertiary); margin-bottom: 4px;">Investigative · 8%</div>
+            <div style="height: 8px; background: var(--bg-tertiary); border-radius: 4px; overflow: hidden;">
+              <div style="width: 8%; height: 100%; background: #22C55E;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Coverage -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Recent Coverage</div>
+          </div>
+
+          <a href="3c-article.html" style="display: block; text-decoration: none; color: inherit; border-bottom: 1px solid var(--border); padding: 12px 0;">
+            <div style="font-size: 13px; font-weight: 500; color: var(--text-primary);">"Senate Passes Infrastructure Bill"</div>
+            <div style="font-size: 11px; color: var(--text-tertiary); margin: 4px 0;">2h ago · News Reporting</div>
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <span class="bias-label lean-left" style="font-size: 9px; padding: 2px 6px;">Lean Left</span>
+              <span style="font-size: 10px; color: #22C55E;">High Factuality</span>
+            </div>
+          </a>
+
+          <a href="3c-article.html" style="display: block; text-decoration: none; color: inherit; border-bottom: 1px solid var(--border); padding: 12px 0;">
+            <div style="font-size: 13px; font-weight: 500; color: var(--text-primary);">"Opinion: Why the Climate Bill Matters"</div>
+            <div style="font-size: 11px; color: var(--text-tertiary); margin: 4px 0;">5h ago · Opinion</div>
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <span class="bias-label left" style="font-size: 9px; padding: 2px 6px;">Left</span>
+              <span style="font-size: 10px; color: #F59E0B;">Opinion Piece</span>
+            </div>
+          </a>
+
+          <a href="3c-article.html" style="display: block; text-decoration: none; color: inherit; padding: 12px 0;">
+            <div style="font-size: 13px; font-weight: 500; color: var(--text-primary);">"Economic Report Shows Mixed Signals"</div>
+            <div style="font-size: 11px; color: var(--text-tertiary); margin: 4px 0;">1d ago · Analysis</div>
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <span class="bias-label center" style="font-size: 9px; padding: 2px 6px;">Center</span>
+              <span style="font-size: 10px; color: #22C55E;">High Factuality</span>
+            </div>
+          </a>
+
+          <a href="#" style="display: block; text-align: center; font-size: 13px; color: var(--accent); padding: 12px 0; text-decoration: none; border-top: 1px solid var(--border);">View All Articles</a>
+        </div>
+
+        <div style="height: 80px;"></div>
+      </div>
+
+      <!-- Voter Card FAB -->
+      <a href="9b-voter-card.html" class="voter-card-fab">ID</a>
+
+      <!-- Bottom Nav -->
+      <nav class="bottom-nav">
+        <a href="1a-home-voices.html" class="nav-item">
+          <span class="nav-icon"><i class="fa-solid fa-layer-group"></i></span>
+          Stack
+        </a>
+        <a href="2a-leaders.html" class="nav-item">
+          <span class="nav-icon"><i class="fa-solid fa-landmark"></i></span>
+          Leaders
+        </a>
+        <a href="3a-media.html" class="nav-item active">
+          <span class="nav-icon"><i class="fa-solid fa-file-lines"></i></span>
+          Media
+        </a>
+        <a href="4a-learn.html" class="nav-item">
+          <span class="nav-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+          Learn
+        </a>
+      </nav>
+    </div>
+  </div>
+<script src="app.js"></script>
+</body>
+</html>

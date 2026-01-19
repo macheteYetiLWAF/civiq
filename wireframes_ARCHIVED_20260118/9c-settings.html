@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>CIVIQ - Settings</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body style="background: #1A1A1A;">
+  <div class="wireframe-label">9c - Settings</div>
+
+  <div class="device-frame">
+    <div class="screen">
+      <!-- Status Bar -->
+      <div class="status-bar">
+        <span class="time">9:41</span>
+        <span class="icons">... .. ..</span>
+      </div>
+
+      <!-- Header - Locked Design -->
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: linear-gradient(180deg, #1E1E2E 0%, #0F172A 100%); border-bottom: 1px solid rgba(139, 92, 246, 0.2);">
+        <!-- Left: Back + Logo + Divider + Title -->
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <a href="javascript:history.back()" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; text-decoration: none; margin-right: 4px;">
+            <i class="fas fa-chevron-left" style="font-size: 16px; color: rgba(255,255,255,0.6);"></i>
+          </a>
+          <div class="logo-gradient" style="font-size: 18px; font-weight: 800; letter-spacing: -0.5px;">CIVIQ</div>
+          <div style="width: 1px; height: 20px; background: rgba(255,255,255,0.2);"></div>
+          <div>
+            <div style="font-size: 15px; font-weight: 600; color: white;">Settings</div>
+            <div style="font-size: 10px; color: rgba(255,255,255,0.5);">Preferences</div>
+          </div>
+        </div>
+        <!-- Right: Search + Avatar -->
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <a href="9e-search.html" style="width: 36px; height: 36px; background: rgba(255,255,255,0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none;">
+            <i class="fas fa-search" style="font-size: 14px; color: rgba(255,255,255,0.6);"></i>
+          </a>
+          <div style="width: 36px; height: 36px; background: linear-gradient(135deg, #1D4ED8, #3B82F6); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: white; border: 2px solid rgba(96, 165, 250, 0.5);">JK</div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+        <!-- Account Section -->
+        <div style="font-size: 12px; font-weight: 600; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Account</div>
+        <div class="card" style="padding: 0;">
+          <a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--border); text-decoration: none; color: var(--text-primary);">
+            <div>
+              <div style="font-size: 14px;">Email</div>
+              <div style="font-size: 12px; color: var(--text-tertiary);">yeti@example.com</div>
+            </div>
+            <span style="color: var(--text-tertiary);">&gt;</span>
+          </a>
+          <a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--border); text-decoration: none; color: var(--text-primary);">
+            <span style="font-size: 14px;">Change Password</span>
+            <span style="color: var(--text-tertiary);">&gt;</span>
+          </a>
+          <a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; text-decoration: none; color: var(--text-primary);">
+            <div>
+              <div style="font-size: 14px;">Verification Status</div>
+              <div style="font-size: 12px; color: var(--success);">Verified via PA Voter Lookup</div>
+            </div>
+            <span style="color: var(--text-tertiary);">&gt;</span>
+          </a>
+        </div>
+
+        <!-- Content Preferences -->
+        <div style="font-size: 12px; font-weight: 600; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.5px; margin: 24px 0 12px;">Content Preferences</div>
+        <div class="card" style="padding: 0;">
+          <a href="0e-engagement.html" style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--border); text-decoration: none; color: var(--text-primary);">
+            <div>
+              <div style="font-size: 14px;">Engagement Level</div>
+              <div style="font-size: 12px; color: var(--text-tertiary);">Engaged Citizen</div>
+            </div>
+            <span style="color: var(--text-tertiary);">&gt;</span>
+          </a>
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--border);">
+            <div>
+              <div style="font-size: 14px;">Dark Mode</div>
+            </div>
+            <div style="width: 44px; height: 24px; background: var(--accent); border-radius: 12px; position: relative;">
+              <div style="width: 20px; height: 20px; background: white; border-radius: 50%; position: absolute; right: 2px; top: 2px;"></div>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--border);">
+            <div>
+              <div style="font-size: 14px;">Bias Rebalancing Nudges</div>
+              <div style="font-size: 12px; color: var(--text-tertiary);">Suggest diverse perspectives</div>
+            </div>
+            <div style="width: 44px; height: 24px; background: var(--accent); border-radius: 12px; position: relative;">
+              <div style="width: 20px; height: 20px; background: white; border-radius: 50%; position: absolute; right: 2px; top: 2px;"></div>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px;">
+            <div>
+              <div style="font-size: 14px;">Show Factuality Scores</div>
+            </div>
+            <div style="width: 44px; height: 24px; background: var(--accent); border-radius: 12px; position: relative;">
+              <div style="width: 20px; height: 20px; background: white; border-radius: 50%; position: absolute; right: 2px; top: 2px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Notifications -->
+        <div style="font-size: 12px; font-weight: 600; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.5px; margin: 24px 0 12px;">Notifications</div>
+        <div class="card" style="padding: 0;">
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--border);">
+            <div>
+              <div style="font-size: 14px;">Push Notifications</div>
+            </div>
+            <div style="width: 44px; height: 24px; background: var(--accent); border-radius: 12px; position: relative;">
+              <div style="width: 20px; height: 20px; background: white; border-radius: 50%; position: absolute; right: 2px; top: 2px;"></div>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--border);">
+            <div>
+              <div style="font-size: 14px;">Breaking News</div>
+            </div>
+            <div style="width: 44px; height: 24px; background: var(--accent); border-radius: 12px; position: relative;">
+              <div style="width: 20px; height: 20px; background: white; border-radius: 50%; position: absolute; right: 2px; top: 2px;"></div>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--border);">
+            <div>
+              <div style="font-size: 14px;">Election Reminders</div>
+            </div>
+            <div style="width: 44px; height: 24px; background: var(--accent); border-radius: 12px; position: relative;">
+              <div style="width: 20px; height: 20px; background: white; border-radius: 50%; position: absolute; right: 2px; top: 2px;"></div>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--border);">
+            <div>
+              <div style="font-size: 14px;">Daily Digest</div>
+              <div style="font-size: 12px; color: var(--text-tertiary);">8:00 AM</div>
+            </div>
+            <div style="width: 44px; height: 24px; background: var(--border); border-radius: 12px; position: relative;">
+              <div style="width: 20px; height: 20px; background: white; border-radius: 50%; position: absolute; left: 2px; top: 2px;"></div>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px;">
+            <div>
+              <div style="font-size: 14px;">Bill Updates</div>
+              <div style="font-size: 12px; color: var(--text-tertiary);">Bills you're tracking</div>
+            </div>
+            <div style="width: 44px; height: 24px; background: var(--accent); border-radius: 12px; position: relative;">
+              <div style="width: 20px; height: 20px; background: white; border-radius: 50%; position: absolute; right: 2px; top: 2px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Privacy -->
+        <div style="font-size: 12px; font-weight: 600; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.5px; margin: 24px 0 12px;">Privacy & Data</div>
+        <div class="card" style="padding: 0;">
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--border);">
+            <div>
+              <div style="font-size: 14px;">Share Reading Analytics</div>
+              <div style="font-size: 12px; color: var(--text-tertiary);">Help improve bias detection</div>
+            </div>
+            <div style="width: 44px; height: 24px; background: var(--accent); border-radius: 12px; position: relative;">
+              <div style="width: 20px; height: 20px; background: white; border-radius: 50%; position: absolute; right: 2px; top: 2px;"></div>
+            </div>
+          </div>
+          <a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--border); text-decoration: none; color: var(--text-primary);">
+            <span style="font-size: 14px;">Download My Data</span>
+            <span style="color: var(--text-tertiary);">&gt;</span>
+          </a>
+          <a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; text-decoration: none; color: var(--danger);">
+            <span style="font-size: 14px;">Delete Account</span>
+            <span style="color: var(--text-tertiary);">&gt;</span>
+          </a>
+        </div>
+
+        <!-- About -->
+        <div style="font-size: 12px; font-weight: 600; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.5px; margin: 24px 0 12px;">About</div>
+        <div class="card" style="padding: 0;">
+          <a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--border); text-decoration: none; color: var(--text-primary);">
+            <span style="font-size: 14px;">Terms of Service</span>
+            <span style="color: var(--text-tertiary);">&gt;</span>
+          </a>
+          <a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--border); text-decoration: none; color: var(--text-primary);">
+            <span style="font-size: 14px;">Privacy Policy</span>
+            <span style="color: var(--text-tertiary);">&gt;</span>
+          </a>
+          <a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; text-decoration: none; color: var(--text-primary);">
+            <div>
+              <div style="font-size: 14px;">Version</div>
+              <div style="font-size: 12px; color: var(--text-tertiary);">0.8.0 (NEPA Pilot)</div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Logout -->
+        <a href="0a-login.html" class="btn btn-full" style="margin-top: 24px; background: linear-gradient(90deg, #2563EB 0%, #8B5CF6 50%, #DC2626 100%); color: white; border: none;">
+          Log Out
+        </a>
+
+        <div style="height: 20px;"></div>
+      </div>
+
+      <!-- Bottom Nav -->
+      <nav class="bottom-nav">
+        <a href="1a-home-voices.html" class="nav-item">
+          <span class="nav-icon"><i class="fa-solid fa-layer-group"></i></span>
+          Stack
+        </a>
+        <a href="2a-leaders.html" class="nav-item">
+          <span class="nav-icon"><i class="fa-solid fa-landmark"></i></span>
+          Leaders
+        </a>
+        <a href="3a-media.html" class="nav-item">
+          <span class="nav-icon"><i class="fa-solid fa-file-lines"></i></span>
+          Media
+        </a>
+        <a href="4a-learn.html" class="nav-item">
+          <span class="nav-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+          Learn
+        </a>
+      </nav>
+    </div>
+  </div>
+<script src="app.js"></script>
+</body>
+</html>

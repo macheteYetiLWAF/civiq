@@ -1,0 +1,63 @@
+.bias-bar {
+  width: 100%;
+}
+
+.bias-bar-track {
+  position: relative;
+  height: 8px;
+  border-radius: var(--radius-full);
+  overflow: visible;
+}
+
+.bias-bar-gradient {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: linear-gradient(
+    90deg,
+    #2563EB 0%,
+    #3B82F6 20%,
+    #A855F7 50%,
+    #EF4444 80%,
+    #DC2626 100%
+  );
+}
+
+.bias-bar-marker {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.bias-bar-marker-dot {
+  width: 16px;
+  height: 16px;
+  background: white;
+  border: 3px solid var(--bg-primary);
+  border-radius: var(--radius-full);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.bias-bar-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+
+.bias-bar-label {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.bias-bar-label-left {
+  color: var(--bias-left);
+}
+
+.bias-bar-label-center {
+  color: var(--bias-center);
+}
+
+.bias-bar-label-right {
+  color: var(--bias-right);
+}

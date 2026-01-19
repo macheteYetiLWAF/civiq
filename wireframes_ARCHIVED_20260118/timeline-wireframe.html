@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CIVIQ Timeline Wireframe</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* Hide scrollbars but keep functionality */
+    ::-webkit-scrollbar { display: none; }
+    * { -ms-overflow-style: none; scrollbar-width: none; }
+
+    body {
+      background: #0A0F1C;
+      color: #E2E8F0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .wireframe-container {
+      max-width: 390px;
+      margin: 0 auto;
+      background: #0F172A;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 2px solid #1E293B;
+    }
+
+    /* Header - Enhanced Design */
+    .header {
+      background: linear-gradient(180deg, #1E293B 0%, #0F172A 100%);
+      padding: 16px;
+      border-bottom: 1px solid #334155;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-logo {
+      /* Removed inline gradient - using .logo-gradient class instead */
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .header-divider {
+      width: 1px;
+      height: 20px;
+      background: #334155;
+    }
+
+    .header-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #F8FAFC;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-icon-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: rgba(139, 92, 246, 0.1);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #8B5CF6;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .header-avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #3B82F6, #1D4ED8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 700;
+      color: white;
+    }
+
+    /* Scope Toggle */
+    .scope-toggle {
+      display: flex;
+      gap: 8px;
+      padding: 12px 16px;
+      background: #1E293B;
+    }
+
+    .scope-btn {
+      flex: 1;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .scope-btn.active {
+      background: linear-gradient(135deg, #8B5CF6, #A855F7);
+      color: white;
+    }
+
+    .scope-btn:not(.active) {
+      background: #0F172A;
+      color: #94A3B8;
+      border: 1px solid #334155;
+    }
+
+    /* Era Navigation */
+    .era-nav {
+      display: flex;
+      gap: 6px;
+      padding: 12px 16px;
+      overflow-x: auto;
+      background: #0F172A;
+    }
+
+    .era-chip {
+      flex-shrink: 0;
+      padding: 6px 12px;
+      border-radius: 16px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .era-chip.active {
+      background: #8B5CF6;
+      color: white;
+    }
+
+    .era-chip:not(.active) {
+      background: #1E293B;
+      color: #94A3B8;
+    }
+
+    /* Timeline Content */
+    .timeline-content {
+      padding: 16px;
+      max-height: 600px;
+      overflow-y: auto;
+    }
+
+    /* Century Marker */
+    .century-marker {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .century-year {
+      font-size: 24px;
+      font-weight: 800;
+      color: #8B5CF6;
+      min-width: 80px;
+    }
+
+    .century-label {
+      font-size: 11px;
+      color: #64748B;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .century-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, #8B5CF6, transparent);
+    }
+
+    /* Timeline Track */
+    .timeline-track {
+      position: relative;
+      padding-left: 24px;
+      margin-left: 8px;
+      border-left: 2px solid #334155;
+    }
+
+    /* Event Card */
+    .event-card {
+      position: relative;
+      background: #1E293B;
+      border-radius: 12px;
+      padding: 12px;
+      margin-bottom: 12px;
+      border-left: 3px solid var(--event-color, #8B5CF6);
+    }
+
+    .event-card::before {
+      content: '';
+      position: absolute;
+      left: -30px;
+      top: 16px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--event-color, #8B5CF6);
+      border: 2px solid #0F172A;
+    }
+
+    .event-year {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--event-color, #8B5CF6);
+      margin-bottom: 4px;
+    }
+
+    .event-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #F8FAFC;
+      margin-bottom: 4px;
+    }
+
+    .event-desc {
+      font-size: 12px;
+      color: #94A3B8;
+      line-height: 1.4;
+    }
+
+    .event-tags {
+      display: flex;
+      gap: 6px;
+      margin-top: 8px;
+      flex-wrap: wrap;
+    }
+
+    .event-tag {
+      font-size: 9px;
+      padding: 3px 8px;
+      border-radius: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    /* Event Type Colors */
+    .event-card[data-type="legislation"] { --event-color: #3B82F6; }
+    .event-card[data-type="court"] { --event-color: #8B5CF6; }
+    .event-card[data-type="political"] { --event-color: #EF4444; }
+    .event-card[data-type="economic"] { --event-color: #22C55E; }
+    .event-card[data-type="disaster"] { --event-color: #F59E0B; }
+    .event-card[data-type="amendment"] { --event-color: #EC4899; }
+    .event-card[data-type="invention"] { --event-color: #06B6D4; }
+    .event-card[data-type="settlement"] { --event-color: #A78BFA; }
+
+    .tag-legislation { background: rgba(59, 130, 246, 0.2); color: #3B82F6; }
+    .tag-court { background: rgba(139, 92, 246, 0.2); color: #8B5CF6; }
+    .tag-political { background: rgba(239, 68, 68, 0.2); color: #EF4444; }
+    .tag-economic { background: rgba(34, 197, 94, 0.2); color: #22C55E; }
+    .tag-disaster { background: rgba(245, 158, 11, 0.2); color: #F59E0B; }
+    .tag-amendment { background: rgba(236, 72, 153, 0.2); color: #EC4899; }
+    .tag-invention { background: rgba(6, 182, 212, 0.2); color: #06B6D4; }
+    .tag-settlement { background: rgba(167, 139, 250, 0.2); color: #A78BFA; }
+
+    /* Filter Pills */
+    .filter-section {
+      padding: 12px 16px;
+      background: #0F172A;
+      border-bottom: 1px solid #1E293B;
+    }
+
+    .filter-label {
+      font-size: 10px;
+      color: #64748B;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .filter-pills {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .filter-pill {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+
+    .filter-pill.active {
+      border-color: currentColor;
+    }
+
+    .filter-pill:not(.active) {
+      opacity: 0.5;
+    }
+
+    .filter-pill i {
+      font-size: 8px;
+    }
+
+    /* Legend */
+    .legend {
+      padding: 12px 16px;
+      background: #1E293B;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 9px;
+      color: #94A3B8;
+    }
+
+    .legend-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    /* Wireframe Notes */
+    .wireframe-notes {
+      margin-top: 20px;
+      padding: 20px;
+      background: #1E293B;
+      border-radius: 12px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .notes-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #8B5CF6;
+      margin-bottom: 16px;
+    }
+
+    .notes-section {
+      margin-bottom: 16px;
+    }
+
+    .notes-section h3 {
+      font-size: 14px;
+      color: #F8FAFC;
+      margin-bottom: 8px;
+    }
+
+    .notes-section ul {
+      padding-left: 20px;
+      font-size: 13px;
+      color: #94A3B8;
+      line-height: 1.8;
+    }
+
+    .notes-section li {
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wireframe-container">
+    <!-- Header - Enhanced with CIVIQ branding -->
+    <div class="header">
+      <div class="header-left">
+        <span class="header-logo logo-gradient">CIVIQ</span>
+        <div class="header-divider"></div>
+        <span class="header-title">Timeline</span>
+      </div>
+      <div class="header-right">
+        <div class="header-icon-btn">
+          <i class="fas fa-search"></i>
+        </div>
+        <div class="header-avatar">JK</div>
+      </div>
+    </div>
+
+    <!-- Scope Toggle: National vs State -->
+    <div class="scope-toggle">
+      <button class="scope-btn active">
+        <i class="fas fa-flag-usa"></i>
+        National
+      </button>
+      <button class="scope-btn">
+        <i class="fas fa-landmark"></i>
+        Pennsylvania
+      </button>
+    </div>
+
+    <!-- Era Quick Navigation -->
+    <div class="era-nav">
+      <div class="era-chip">Pre-Colonial</div>
+      <div class="era-chip">Colonial</div>
+      <div class="era-chip">Revolution</div>
+      <div class="era-chip active">Founding</div>
+      <div class="era-chip">Expansion</div>
+      <div class="era-chip">Civil War</div>
+      <div class="era-chip">Gilded Age</div>
+      <div class="era-chip">Progressive</div>
+      <div class="era-chip">World Wars</div>
+      <div class="era-chip">Modern</div>
+    </div>
+
+    <!-- Filter by Event Type -->
+    <div class="filter-section">
+      <div class="filter-label">Filter by Type</div>
+      <div class="filter-pills">
+        <div class="filter-pill tag-legislation active"><i class="fas fa-gavel"></i> Laws</div>
+        <div class="filter-pill tag-court active"><i class="fas fa-balance-scale"></i> Courts</div>
+        <div class="filter-pill tag-amendment active"><i class="fas fa-scroll"></i> Amendments</div>
+        <div class="filter-pill tag-political active"><i class="fas fa-landmark"></i> Political</div>
+        <div class="filter-pill tag-economic active"><i class="fas fa-coins"></i> Economic</div>
+        <div class="filter-pill tag-invention active"><i class="fas fa-lightbulb"></i> Inventions</div>
+        <div class="filter-pill tag-disaster"><i class="fas fa-bolt"></i> Disasters</div>
+        <div class="filter-pill tag-settlement active"><i class="fas fa-users"></i> Settlement</div>
+      </div>
+    </div>
+
+    <!-- Timeline Content -->
+    <div class="timeline-content">
+
+      <!-- 1780s -->
+      <div class="century-marker">
+        <div class="century-year">1780s</div>
+        <div class="century-line"></div>
+      </div>
+
+      <div class="timeline-track">
+        <div class="event-card" data-type="legislation">
+          <div class="event-year">1787</div>
+          <div class="event-title">Constitutional Convention</div>
+          <div class="event-desc">55 delegates meet in Philadelphia to draft the U.S. Constitution, establishing the framework of American government.</div>
+          <div class="event-tags">
+            <span class="event-tag tag-legislation">Legislation</span>
+            <span class="event-tag tag-political">Political</span>
+          </div>
+        </div>
+
+        <div class="event-card" data-type="amendment">
+          <div class="event-year">1789</div>
+          <div class="event-title">Bill of Rights Proposed</div>
+          <div class="event-desc">James Madison introduces 12 amendments; 10 are ratified by 1791, becoming the Bill of Rights.</div>
+          <div class="event-tags">
+            <span class="event-tag tag-amendment">Amendment</span>
+          </div>
+        </div>
+
+        <div class="event-card" data-type="economic">
+          <div class="event-year">1789</div>
+          <div class="event-title">First Tariff Act</div>
+          <div class="event-desc">Congress passes the first tariff, establishing federal revenue and protecting American industry.</div>
+          <div class="event-tags">
+            <span class="event-tag tag-economic">Economic</span>
+            <span class="event-tag tag-legislation">Legislation</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 1790s -->
+      <div class="century-marker">
+        <div class="century-year">1790s</div>
+        <div class="century-line"></div>
+      </div>
+
+      <div class="timeline-track">
+        <div class="event-card" data-type="court">
+          <div class="event-year">1793</div>
+          <div class="event-title">Chisholm v. Georgia</div>
+          <div class="event-desc">Supreme Court rules citizens can sue states, leading to the 11th Amendment.</div>
+          <div class="event-tags">
+            <span class="event-tag tag-court">SCOTUS</span>
+          </div>
+        </div>
+
+        <div class="event-card" data-type="invention">
+          <div class="event-year">1793</div>
+          <div class="event-title">Cotton Gin Invented</div>
+          <div class="event-desc">Eli Whitney's invention revolutionizes cotton production, reshaping the Southern economy.</div>
+          <div class="event-tags">
+            <span class="event-tag tag-invention">Invention</span>
+            <span class="event-tag tag-economic">Economic</span>
+          </div>
+        </div>
+
+        <div class="event-card" data-type="political">
+          <div class="event-year">1794</div>
+          <div class="event-title">Whiskey Rebellion</div>
+          <div class="event-desc">Pennsylvania farmers revolt against federal whiskey tax; Washington leads militia to suppress it.</div>
+          <div class="event-tags">
+            <span class="event-tag tag-political">Uprising</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pre-Colonial Example -->
+      <div class="century-marker">
+        <div class="century-year">1400s</div>
+        <div class="century-label">Pre-Colonial Era</div>
+        <div class="century-line"></div>
+      </div>
+
+      <div class="timeline-track">
+        <div class="event-card" data-type="settlement">
+          <div class="event-year">1492</div>
+          <div class="event-title">Columbus Reaches Americas</div>
+          <div class="event-desc">Christopher Columbus lands in the Bahamas, beginning European exploration and colonization of the Americas.</div>
+          <div class="event-tags">
+            <span class="event-tag tag-settlement">Exploration</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Legend -->
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background: #3B82F6"></div> Laws</div>
+      <div class="legend-item"><div class="legend-dot" style="background: #8B5CF6"></div> Courts</div>
+      <div class="legend-item"><div class="legend-dot" style="background: #EC4899"></div> Amendments</div>
+      <div class="legend-item"><div class="legend-dot" style="background: #EF4444"></div> Political</div>
+      <div class="legend-item"><div class="legend-dot" style="background: #22C55E"></div> Economic</div>
+      <div class="legend-item"><div class="legend-dot" style="background: #06B6D4"></div> Inventions</div>
+      <div class="legend-item"><div class="legend-dot" style="background: #F59E0B"></div> Disasters</div>
+      <div class="legend-item"><div class="legend-dot" style="background: #A78BFA"></div> Settlement</div>
+    </div>
+  </div>
+
+  <!-- Wireframe Notes -->
+  <div class="wireframe-notes">
+    <div class="notes-title">Timeline Feature - Design Notes</div>
+
+    <div class="notes-section">
+      <h3>Scope Toggle</h3>
+      <ul>
+        <li><strong>National</strong> - Full U.S. history from pre-colonial (1400s) to present</li>
+        <li><strong>State (Pennsylvania)</strong> - PA-specific events: William Penn, state constitution, industrial history, coal mining, steel, etc.</li>
+      </ul>
+    </div>
+
+    <div class="notes-section">
+      <h3>Era Quick Navigation</h3>
+      <ul>
+        <li>Pre-Colonial (1400-1607): Indigenous peoples, European exploration</li>
+        <li>Colonial (1607-1765): Jamestown, Plymouth, 13 colonies form</li>
+        <li>Revolution (1765-1783): Stamp Act through Treaty of Paris</li>
+        <li>Founding (1783-1800): Constitution, Bill of Rights, early republic</li>
+        <li>Expansion (1800-1860): Louisiana Purchase, westward movement, industrialization</li>
+        <li>Civil War (1860-1877): Secession, war, Reconstruction</li>
+        <li>Gilded Age (1877-1900): Industrialization, labor movements, immigration</li>
+        <li>Progressive (1900-1920): Reform, WWI, women's suffrage</li>
+        <li>World Wars (1920-1945): Depression, WWII</li>
+        <li>Modern (1945-Present): Cold War, Civil Rights, digital age</li>
+      </ul>
+    </div>
+
+    <div class="notes-section">
+      <h3>Event Categories</h3>
+      <ul>
+        <li><strong>Legislation</strong> - Major bills, acts of Congress</li>
+        <li><strong>Courts</strong> - Supreme Court rulings, landmark cases</li>
+        <li><strong>Amendments</strong> - Constitutional amendments (all 27)</li>
+        <li><strong>Political</strong> - Elections, assassinations, uprisings, scandals</li>
+        <li><strong>Economic</strong> - Industries, recessions, trade policies</li>
+        <li><strong>Inventions</strong> - Technology, innovations that shaped economy</li>
+        <li><strong>Disasters</strong> - Natural disasters, major accidents</li>
+        <li><strong>Settlement</strong> - Exploration, colonization, notable settlers/leaders</li>
+      </ul>
+    </div>
+
+    <div class="notes-section">
+      <h3>Pennsylvania State Timeline Examples</h3>
+      <ul>
+        <li>1681 - William Penn receives charter from Charles II</li>
+        <li>1682 - Penn founds Philadelphia</li>
+        <li>1701 - Charter of Privileges (PA's first constitution)</li>
+        <li>1776 - PA Constitution (most democratic of its time)</li>
+        <li>1787 - Constitutional Convention in Philadelphia</li>
+        <li>1859 - First commercial oil well (Titusville)</li>
+        <li>1889 - Johnstown Flood (2,209 deaths)</li>
+        <li>1892 - Homestead Strike</li>
+        <li>1979 - Three Mile Island nuclear accident</li>
+      </ul>
+    </div>
+
+    <div class="notes-section">
+      <h3>Data Sources Needed</h3>
+      <ul>
+        <li>Congress.gov - Legislation history</li>
+        <li>Supreme Court archives - Case rulings</li>
+        <li>National Archives - Constitutional amendments</li>
+        <li>Library of Congress - Historical records</li>
+        <li>PA Historical & Museum Commission - State history</li>
+        <li>Wikipedia API - Event summaries (with verification)</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

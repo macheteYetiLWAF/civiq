@@ -1,0 +1,12 @@
+[19-Jan-2026 14:57:32 UTC] PHP Warning:  require_once(/home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/congress/../../config.php): Failed to open stream: No such file or directory in /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/congress/member.php on line 17
+[19-Jan-2026 14:57:32 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/congress/../../config.php' (include_path='.:/opt/remi/php83/root/usr/share/pear:/opt/remi/php83/root/usr/share/php:/usr/share/pear:/usr/share/php') in /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/congress/member.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/congress/member.php on line 17
+[19-Jan-2026 14:57:37 UTC] PHP Warning:  require_once(/home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/congress/../../config.php): Failed to open stream: No such file or directory in /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/congress/member.php on line 17
+[19-Jan-2026 14:57:37 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/congress/../../config.php' (include_path='.:/opt/remi/php83/root/usr/share/pear:/opt/remi/php83/root/usr/share/php:/usr/share/pear:/usr/share/php') in /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/congress/member.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/congress/member.php on line 17
+[19-Jan-2026 14:57:52 UTC] PHP Warning:  require_once(/home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/congress/../../config.php): failed to open stream: No such file or directory in /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/congress/member.php on line 17
+[19-Jan-2026 14:57:52 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/congress/../../config.php' (include_path='.:/opt/remi/php73/root/usr/share/pear:/opt/remi/php73/root/usr/share/php:/usr/share/pear:/usr/share/php') in /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/congress/member.php on line 17

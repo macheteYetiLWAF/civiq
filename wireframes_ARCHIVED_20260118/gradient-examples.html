@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CIVIQ - Palette Options (Applied to UI)</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background: #0a0a0a;
+      min-height: 100vh;
+      padding: 40px 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #e5e5e5;
+    }
+    h1 { font-size: 24px; margin-bottom: 8px; color: white; }
+    .subtitle { color: #666; margin-bottom: 40px; font-size: 14px; }
+    .section { margin-bottom: 48px; }
+    .section-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+    .option-card {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .option-header {
+      padding: 16px;
+      border-bottom: 1px solid #333;
+    }
+    .option-title { font-size: 14px; font-weight: 600; color: white; }
+    .option-desc { font-size: 12px; color: #666; margin-top: 4px; }
+    .option-preview {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      background: #0f0f0f;
+    }
+    .preview-label {
+      font-size: 10px;
+      color: #555;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      align-self: flex-start;
+    }
+
+    /* Current (baseline) - Blue LEFT, Red RIGHT */
+    .logo-current {
+      font-size: 32px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #2563EB, #DC2626);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .btn-current {
+      width: 100%;
+      padding: 14px 24px;
+      background: linear-gradient(135deg, #2563EB, #DC2626);
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .toggle-current {
+      display: flex;
+      background: #2a2a2a;
+      border-radius: 8px;
+      padding: 4px;
+      width: 100%;
+    }
+    .toggle-current .active {
+      background: linear-gradient(135deg, #2563EB, #DC2626);
+      color: white;
+    }
+    .toggle-current span {
+      flex: 1;
+      padding: 8px 16px;
+      text-align: center;
+      font-size: 13px;
+      border-radius: 6px;
+      color: #888;
+    }
+    .bias-bar-current {
+      height: 6px;
+      width: 100%;
+      border-radius: 3px;
+      background: linear-gradient(90deg, #2563EB, #888, #DC2626);
+    }
+
+    /* Option A: Muted/Desaturated - Blue LEFT, Red RIGHT */
+    .logo-muted {
+      font-size: 32px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #1E3A5F, #7B2D26);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .btn-muted {
+      width: 100%;
+      padding: 14px 24px;
+      background: linear-gradient(135deg, #1E3A5F, #7B2D26);
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .toggle-muted {
+      display: flex;
+      background: #2a2a2a;
+      border-radius: 8px;
+      padding: 4px;
+      width: 100%;
+    }
+    .toggle-muted .active {
+      background: linear-gradient(135deg, #1E3A5F, #7B2D26);
+      color: white;
+    }
+    .toggle-muted span {
+      flex: 1;
+      padding: 8px 16px;
+      text-align: center;
+      font-size: 13px;
+      border-radius: 6px;
+      color: #888;
+    }
+    .bias-bar-muted {
+      height: 6px;
+      width: 100%;
+      border-radius: 3px;
+      background: linear-gradient(90deg, #1E3A5F, #4A5568, #7B2D26);
+    }
+
+    /* Option B: Gold Accent */
+    .logo-gold {
+      font-size: 32px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #F59E0B, #D97706);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .btn-gold {
+      width: 100%;
+      padding: 14px 24px;
+      background: linear-gradient(135deg, #F59E0B, #D97706);
+      border: none;
+      border-radius: 8px;
+      color: #1a1a1a;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .toggle-gold {
+      display: flex;
+      background: #2a2a2a;
+      border-radius: 8px;
+      padding: 4px;
+      width: 100%;
+    }
+    .toggle-gold .active {
+      background: linear-gradient(135deg, #F59E0B, #D97706);
+      color: #1a1a1a;
+    }
+    .toggle-gold span {
+      flex: 1;
+      padding: 8px 16px;
+      text-align: center;
+      font-size: 13px;
+      border-radius: 6px;
+      color: #888;
+    }
+    .bias-bar-gold {
+      height: 6px;
+      width: 100%;
+      border-radius: 3px;
+      background: linear-gradient(90deg, #1E3A5F, #F59E0B, #7B2D26);
+    }
+
+    /* Option C: Gold + Muted Political */
+    .logo-gold-political {
+      font-size: 32px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #F59E0B, #B45309);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .btn-gold-political {
+      width: 100%;
+      padding: 14px 24px;
+      background: linear-gradient(135deg, #F59E0B, #B45309);
+      border: none;
+      border-radius: 8px;
+      color: #1a1a1a;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .bias-bar-gold-political {
+      height: 6px;
+      width: 100%;
+      border-radius: 3px;
+      background: linear-gradient(90deg, #1E3A5F, #F59E0B, #7B2D26);
+    }
+
+    .card-sample {
+      background: #1f1f1f;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 16px;
+      width: 100%;
+    }
+    .card-sample-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .card-sample-meta {
+      font-size: 11px;
+      color: #666;
+      margin-bottom: 12px;
+    }
+
+    .notes {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 32px;
+    }
+    .notes h3 { font-size: 14px; margin-bottom: 12px; }
+    .notes ul { padding-left: 20px; font-size: 13px; color: #888; line-height: 1.8; }
+    .notes li strong { color: white; }
+  </style>
+</head>
+<body>
+  <h1>CIVIQ Palette Options</h1>
+  <p class="subtitle">Applied to actual UI elements from wireframes</p>
+
+  <div class="section">
+    <div class="section-title">Current (Baseline)</div>
+    <div class="options-grid">
+      <div class="option-card">
+        <div class="option-header">
+          <div class="option-title">Red/Blue Linear Gradient</div>
+          <div class="option-desc">Current implementation - saturated political colors</div>
+        </div>
+        <div class="option-preview">
+          <div class="preview-label">Logo Text</div>
+          <div class="logo-current">CIVIQ</div>
+
+          <div class="preview-label">Primary Button</div>
+          <button class="btn-current">Sign In</button>
+
+          <div class="preview-label">Tab Toggle</div>
+          <div class="toggle-current">
+            <span class="active">Voices</span>
+            <span>Elections</span>
+            <span>Bills</span>
+          </div>
+
+          <div class="preview-label">Bias Spectrum Bar</div>
+          <div class="bias-bar-current"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Option A: Muted / Desaturated</div>
+    <div class="options-grid">
+      <div class="option-card">
+        <div class="option-header">
+          <div class="option-title">Navy / Maroon Gradient</div>
+          <div class="option-desc">Same political metaphor, less aggressive, more sophisticated</div>
+        </div>
+        <div class="option-preview">
+          <div class="preview-label">Logo Text</div>
+          <div class="logo-muted">CIVIQ</div>
+
+          <div class="preview-label">Primary Button</div>
+          <button class="btn-muted">Sign In</button>
+
+          <div class="preview-label">Tab Toggle</div>
+          <div class="toggle-muted">
+            <span class="active">Voices</span>
+            <span>Elections</span>
+            <span>Bills</span>
+          </div>
+
+          <div class="preview-label">Bias Spectrum Bar</div>
+          <div class="bias-bar-muted"></div>
+
+          <div class="preview-label">Article Card</div>
+          <div class="card-sample">
+            <div class="card-sample-title">Senate Passes Infrastructure Bill</div>
+            <div class="card-sample-meta">12 sources reporting</div>
+            <div class="bias-bar-muted" style="margin-top: 8px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Option B: Gold Accent (Neutral)</div>
+    <div class="options-grid">
+      <div class="option-card">
+        <div class="option-header">
+          <div class="option-title">Gold / Amber Primary</div>
+          <div class="option-desc">Abandons political colors entirely - premium, neutral feel</div>
+        </div>
+        <div class="option-preview">
+          <div class="preview-label">Logo Text</div>
+          <div class="logo-gold">CIVIQ</div>
+
+          <div class="preview-label">Primary Button</div>
+          <button class="btn-gold">Sign In</button>
+
+          <div class="preview-label">Tab Toggle</div>
+          <div class="toggle-gold">
+            <span class="active">Voices</span>
+            <span>Elections</span>
+            <span>Bills</span>
+          </div>
+
+          <div class="preview-label">Bias Spectrum Bar (keeps political)</div>
+          <div class="bias-bar-gold"></div>
+
+          <div class="preview-label">Article Card</div>
+          <div class="card-sample">
+            <div class="card-sample-title">Senate Passes Infrastructure Bill</div>
+            <div class="card-sample-meta">12 sources reporting</div>
+            <div class="bias-bar-gold" style="margin-top: 8px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Option C: Hybrid (Gold UI + Muted Political)</div>
+    <div class="options-grid">
+      <div class="option-card">
+        <div class="option-header">
+          <div class="option-title">Gold for Brand, Muted for Bias</div>
+          <div class="option-desc">Gold accent for UI elements, muted navy/maroon for bias indicators</div>
+        </div>
+        <div class="option-preview">
+          <div class="preview-label">Logo Text</div>
+          <div class="logo-gold-political">CIVIQ</div>
+
+          <div class="preview-label">Primary Button</div>
+          <button class="btn-gold-political">Sign In</button>
+
+          <div class="preview-label">Bias Spectrum Bar (muted political)</div>
+          <div class="bias-bar-gold-political"></div>
+
+          <div class="preview-label">Article Card</div>
+          <div class="card-sample">
+            <div class="card-sample-title" style="color: #F59E0B;">Senate Passes Infrastructure Bill</div>
+            <div class="card-sample-meta">12 sources reporting</div>
+            <div class="bias-bar-gold-political" style="margin-top: 8px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notes">
+    <h3>Decision Points</h3>
+    <ul>
+      <li><strong>Muted/Desaturated:</strong> Keeps political metaphor but feels less partisan, more sophisticated. Still reads as "balanced" red/blue.</li>
+      <li><strong>Gold Accent:</strong> Completely neutral brand identity. Gold = premium, trustworthy. Political colors only appear in bias indicators.</li>
+      <li><strong>Hybrid:</strong> Best of both - gold brand identity feels premium and neutral, muted political colors only where bias is actually being shown.</li>
+    </ul>
+  </div>
+
+</body>
+</html>

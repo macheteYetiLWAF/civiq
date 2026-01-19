@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>CIVIQ - Bias Rebalancing</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body style="background: #1A1A1A;">
+  <div class="wireframe-label">9f - Rebalance</div>
+
+  <div class="device-frame">
+    <div class="screen">
+      <!-- Status Bar -->
+      <div class="status-bar">
+        <span class="time">9:41</span>
+        <span class="icons">... .. ..</span>
+      </div>
+
+      <!-- Header - Locked Design -->
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: linear-gradient(180deg, #1E1E2E 0%, #0F172A 100%); border-bottom: 1px solid rgba(139, 92, 246, 0.2);">
+        <!-- Left: Back + Logo + Divider + Title -->
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <a href="javascript:history.back()" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; text-decoration: none; margin-right: 4px;">
+            <i class="fas fa-chevron-left" style="font-size: 16px; color: rgba(255,255,255,0.6);"></i>
+          </a>
+          <div class="logo-gradient" style="font-size: 18px; font-weight: 800; letter-spacing: -0.5px;">CIVIQ</div>
+          <div style="width: 1px; height: 20px; background: rgba(255,255,255,0.2);"></div>
+          <div>
+            <div style="font-size: 15px; font-weight: 600; color: white;">Rebalance</div>
+            <div style="font-size: 10px; color: rgba(255,255,255,0.5);">Reading balance</div>
+          </div>
+        </div>
+        <!-- Right: Search + Avatar -->
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <a href="9e-search.html" style="width: 36px; height: 36px; background: rgba(255,255,255,0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none;">
+            <i class="fas fa-search" style="font-size: 14px; color: rgba(255,255,255,0.6);"></i>
+          </a>
+          <div style="width: 36px; height: 36px; background: linear-gradient(135deg, #1D4ED8, #3B82F6); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: white; border: 2px solid rgba(96, 165, 250, 0.5);">JK</div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+        <!-- Current Balance -->
+        <div class="card" style="background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));">
+          <div style="text-align: center; margin-bottom: 16px;">
+            <div style="font-size: 14px; color: var(--text-tertiary); margin-bottom: 4px;">Your Reading Balance</div>
+            <div style="font-size: 12px; color: var(--text-secondary);">Last 30 days · 47 articles</div>
+          </div>
+
+          <!-- Large bias bar -->
+          <div style="height: 40px; border-radius: 20px; overflow: hidden; display: flex; margin-bottom: 12px;">
+            <div style="width: 18%; background: var(--bias-left); display: flex; align-items: center; justify-content: center; color: white; font-size: 13px; font-weight: 600;">18%</div>
+            <div style="width: 45%; background: var(--bias-center); display: flex; align-items: center; justify-content: center; color: white; font-size: 13px; font-weight: 600;">45%</div>
+            <div style="width: 37%; background: var(--bias-right); display: flex; align-items: center; justify-content: center; color: white; font-size: 13px; font-weight: 600;">37%</div>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; font-size: 12px; color: var(--text-secondary);">
+            <span>Left</span>
+            <span>Center</span>
+            <span>Right</span>
+          </div>
+        </div>
+
+        <!-- Analysis -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Your Reading Patterns</div>
+          </div>
+
+          <div style="margin-top: 12px;">
+            <!-- Imbalance indicator -->
+            <div style="background: #FEF3C7; border-left: 3px solid #F59E0B; padding: 12px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin-bottom: 16px;">
+              <div style="font-size: 13px; color: #92400E; font-weight: 600;">Slight Right Lean Detected</div>
+              <div style="font-size: 12px; color: #B45309; margin-top: 4px;">You're reading 2x more right-leaning sources than left. This can create blind spots.</div>
+            </div>
+
+            <!-- Breakdown by topic -->
+            <div style="font-size: 12px; font-weight: 600; margin-bottom: 10px;">By Topic</div>
+
+            <div style="margin-bottom: 12px;">
+              <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px;">
+                <span>Economy</span>
+                <span style="color: var(--text-tertiary);">12 articles</span>
+              </div>
+              <div style="height: 8px; border-radius: 4px; overflow: hidden; display: flex;">
+                <div style="width: 15%; background: var(--bias-left);"></div>
+                <div style="width: 35%; background: var(--bias-center);"></div>
+                <div style="width: 50%; background: var(--bias-right);"></div>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 12px;">
+              <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px;">
+                <span>Healthcare</span>
+                <span style="color: var(--text-tertiary);">8 articles</span>
+              </div>
+              <div style="height: 8px; border-radius: 4px; overflow: hidden; display: flex;">
+                <div style="width: 25%; background: var(--bias-left);"></div>
+                <div style="width: 50%; background: var(--bias-center);"></div>
+                <div style="width: 25%; background: var(--bias-right);"></div>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 12px;">
+              <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px;">
+                <span>Immigration</span>
+                <span style="color: var(--text-tertiary);">6 articles</span>
+              </div>
+              <div style="height: 8px; border-radius: 4px; overflow: hidden; display: flex;">
+                <div style="width: 10%; background: var(--bias-left);"></div>
+                <div style="width: 30%; background: var(--bias-center);"></div>
+                <div style="width: 60%; background: var(--bias-right);"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Suggested Reads -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Suggested for Balance</div>
+            <span style="font-size: 11px; color: var(--text-tertiary);">Left-leaning perspectives</span>
+          </div>
+
+          <a href="3c-article.html" style="display: block; text-decoration: none; color: inherit; border-bottom: 1px solid var(--border); padding: 12px 0;">
+            <div style="font-size: 13px; font-weight: 500; color: var(--text-primary);">"The Economic Case for Immigration Reform"</div>
+            <div style="display: flex; gap: 8px; align-items: center; margin-top: 6px;">
+              <span class="bias-label lean-left" style="font-size: 9px; padding: 2px 6px;">Lean Left</span>
+              <span style="font-size: 11px; color: var(--text-tertiary);">The Atlantic</span>
+            </div>
+            <div style="font-size: 11px; color: var(--accent); margin-top: 6px;">+10 XP for balanced reading</div>
+          </a>
+
+          <a href="3c-article.html" style="display: block; text-decoration: none; color: inherit; border-bottom: 1px solid var(--border); padding: 12px 0;">
+            <div style="font-size: 13px; font-weight: 500; color: var(--text-primary);">"Why Unions Are Making a Comeback"</div>
+            <div style="display: flex; gap: 8px; align-items: center; margin-top: 6px;">
+              <span class="bias-label left" style="font-size: 9px; padding: 2px 6px;">Left</span>
+              <span style="font-size: 11px; color: var(--text-tertiary);">Mother Jones</span>
+            </div>
+            <div style="font-size: 11px; color: var(--accent); margin-top: 6px;">+10 XP for balanced reading</div>
+          </a>
+
+          <a href="3c-article.html" style="display: block; text-decoration: none; color: inherit; padding: 12px 0;">
+            <div style="font-size: 13px; font-weight: 500; color: var(--text-primary);">"Climate Policy: What Actually Works"</div>
+            <div style="display: flex; gap: 8px; align-items: center; margin-top: 6px;">
+              <span class="bias-label lean-left" style="font-size: 9px; padding: 2px 6px;">Lean Left</span>
+              <span style="font-size: 11px; color: var(--text-tertiary);">Vox</span>
+            </div>
+            <div style="font-size: 11px; color: var(--accent); margin-top: 6px;">+10 XP for balanced reading</div>
+          </a>
+        </div>
+
+        <!-- Challenge Card -->
+        <div class="card" style="background: linear-gradient(135deg, var(--accent), #7C3AED); color: white;">
+          <div style="font-size: 16px; font-weight: 700; margin-bottom: 4px;">7-Day Balance Challenge</div>
+          <div style="font-size: 13px; opacity: 0.9; margin-bottom: 12px;">Read 3 articles from each perspective this week</div>
+
+          <div style="display: flex; gap: 8px; margin-bottom: 12px;">
+            <div style="flex: 1; background: rgba(255,255,255,0.2); padding: 8px; border-radius: var(--radius-sm); text-align: center;">
+              <div style="font-size: 18px; font-weight: 700;">1/3</div>
+              <div style="font-size: 10px; opacity: 0.8;">Left</div>
+            </div>
+            <div style="flex: 1; background: rgba(255,255,255,0.2); padding: 8px; border-radius: var(--radius-sm); text-align: center;">
+              <div style="font-size: 18px; font-weight: 700;">2/3</div>
+              <div style="font-size: 10px; opacity: 0.8;">Center</div>
+            </div>
+            <div style="flex: 1; background: rgba(255,255,255,0.2); padding: 8px; border-radius: var(--radius-sm); text-align: center;">
+              <div style="font-size: 18px; font-weight: 700;">3/3</div>
+              <div style="font-size: 10px; opacity: 0.8;">Right ✓</div>
+            </div>
+          </div>
+
+          <div style="font-size: 12px; opacity: 0.9;">Reward: "Balanced Reader" badge + 200 XP</div>
+        </div>
+
+        <!-- Settings -->
+        <div class="card" style="padding: 0;">
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--border);">
+            <div>
+              <div style="font-size: 14px; font-weight: 500;">Rebalancing Nudges</div>
+              <div style="font-size: 11px; color: var(--text-tertiary);">Suggest diverse perspectives</div>
+            </div>
+            <div style="width: 44px; height: 24px; background: var(--accent); border-radius: 12px; position: relative;">
+              <div style="width: 20px; height: 20px; background: white; border-radius: 50%; position: absolute; right: 2px; top: 2px;"></div>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px;">
+            <div>
+              <div style="font-size: 14px; font-weight: 500;">Weekly Balance Report</div>
+              <div style="font-size: 11px; color: var(--text-tertiary);">Email summary on Sundays</div>
+            </div>
+            <div style="width: 44px; height: 24px; background: var(--accent); border-radius: 12px; position: relative;">
+              <div style="width: 20px; height: 20px; background: white; border-radius: 50%; position: absolute; right: 2px; top: 2px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="height: 20px;"></div>
+      </div>
+
+      <!-- Voter Card FAB -->
+      <a href="9b-voter-card.html" class="voter-card-fab">ID</a>
+
+      <!-- Bottom Nav -->
+      <nav class="bottom-nav">
+        <a href="1a-home-voices.html" class="nav-item">
+          <span class="nav-icon"><i class="fa-solid fa-layer-group"></i></span>
+          Stack
+        </a>
+        <a href="2a-leaders.html" class="nav-item">
+          <span class="nav-icon"><i class="fa-solid fa-landmark"></i></span>
+          Leaders
+        </a>
+        <a href="3a-media.html" class="nav-item">
+          <span class="nav-icon"><i class="fa-solid fa-file-lines"></i></span>
+          Media
+        </a>
+        <a href="4a-learn.html" class="nav-item">
+          <span class="nav-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+          Learn
+        </a>
+      </nav>
+    </div>
+  </div>
+<script src="app.js"></script>
+</body>
+</html>

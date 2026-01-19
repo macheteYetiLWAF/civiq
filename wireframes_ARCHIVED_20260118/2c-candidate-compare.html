@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>CIVIQ - Compare Candidates</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    .compare-container {
+      display: flex;
+      flex-direction: column;
+      height: calc(100% - 56px - 60px); /* Subtract status bar and bottom nav */
+      overflow: hidden;
+    }
+
+    .race-header {
+      padding: 12px 20px;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+
+    .candidate-header-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: var(--bg-tertiary);
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+
+    .candidate-header-scroll {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      scroll-behavior: smooth;
+    }
+
+    .candidate-header-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    .candidate-header-item {
+      min-width: 160px;
+      flex: 0 0 160px;
+      text-align: center;
+      padding: 16px 8px;
+      scroll-snap-align: start;
+    }
+
+    .candidate-avatar {
+      width: 52px;
+      height: 52px;
+      background: var(--border);
+      border-radius: 50%;
+      margin: 0 auto 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .candidate-name {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .pagination-dots {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      padding: 8px 0 12px;
+      background: var(--bg-tertiary);
+    }
+
+    .pagination-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--border);
+      transition: background 0.2s, width 0.2s;
+    }
+
+    .pagination-dot.active {
+      background: var(--accent);
+      width: 16px;
+      border-radius: 4px;
+    }
+
+    .scroll-hint {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      font-size: 10px;
+      color: var(--text-tertiary);
+      padding-bottom: 8px;
+    }
+
+    .compare-content {
+      flex: 1;
+      overflow-y: auto;
+      padding-bottom: 20px;
+    }
+
+    .issue-section {
+      margin: 12px;
+      background: var(--bg-secondary);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .issue-header {
+      padding: 12px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      background: var(--bg-tertiary);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .issue-content-scroll {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .issue-content-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    .policy-box {
+      min-width: 160px;
+      flex: 0 0 160px;
+      padding: 12px;
+      border-right: 1px solid var(--border);
+      scroll-snap-align: start;
+    }
+
+    .policy-box:last-child {
+      border-right: none;
+    }
+
+    .policy-label {
+      font-size: 10px;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .policy-text {
+      font-size: 12px;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+
+    .policy-highlight {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .policy-detail {
+      font-size: 11px;
+      color: var(--text-tertiary);
+      margin-top: 4px;
+    }
+
+    /* Larger policy boxes for richer content */
+    .policy-box-tall {
+      min-height: 90px;
+    }
+
+    .funding-amount {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .funding-breakdown {
+      font-size: 10px;
+      color: var(--text-tertiary);
+      line-height: 1.5;
+    }
+
+    .endorsement-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+
+    .endorsement-icon {
+      width: 20px;
+      height: 20px;
+      background: var(--bg-tertiary);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+    }
+
+    .endorsement-name {
+      font-size: 11px;
+      color: var(--text-secondary);
+    }
+
+    .coverage-card {
+      margin: 12px;
+      background: var(--bg-secondary);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+
+    .coverage-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .coverage-item {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .coverage-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .coverage-headline {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    .coverage-meta {
+      font-size: 11px;
+      color: var(--text-tertiary);
+      margin-top: 2px;
+    }
+  </style>
+</head>
+<body style="background: #1A1A1A;">
+  <div class="wireframe-label">2c - Candidate Compare</div>
+
+  <div class="device-frame">
+    <div class="screen">
+      <!-- Status Bar -->
+      <div class="status-bar">
+        <span class="time">9:41</span>
+        <span class="icons">... .. ..</span>
+      </div>
+
+      <!-- Header - Locked Design -->
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: linear-gradient(180deg, #1E1E2E 0%, #0F172A 100%); border-bottom: 1px solid rgba(139, 92, 246, 0.2);">
+        <!-- Left: Back + Logo + Divider + Title -->
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <a href="javascript:history.back()" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; text-decoration: none; margin-right: 4px;">
+            <i class="fas fa-chevron-left" style="font-size: 16px; color: rgba(255,255,255,0.6);"></i>
+          </a>
+          <div class="logo-gradient" style="font-size: 18px; font-weight: 800; letter-spacing: -0.5px;">CIVIQ</div>
+          <div style="width: 1px; height: 20px; background: rgba(255,255,255,0.2);"></div>
+          <div>
+            <div style="font-size: 15px; font-weight: 600; color: white;">Compare</div>
+            <div style="font-size: 10px; color: rgba(255,255,255,0.5);">Side by side</div>
+          </div>
+        </div>
+        <!-- Right: Search + Avatar -->
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <a href="9e-search.html" style="width: 36px; height: 36px; background: rgba(255,255,255,0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none;">
+            <i class="fas fa-search" style="font-size: 14px; color: rgba(255,255,255,0.6);"></i>
+          </a>
+          <div style="width: 36px; height: 36px; background: linear-gradient(135deg, #1D4ED8, #3B82F6); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: white; border: 2px solid rgba(96, 165, 250, 0.5);">JK</div>
+        </div>
+      </div>
+
+      <!-- Race Header (not sticky) -->
+      <div class="race-header">
+        <div style="font-size: 14px; font-weight: 600;">WB City Council - District A</div>
+        <div style="font-size: 12px; color: var(--text-tertiary);">Primary - May 20, 2025 - 3 candidates</div>
+      </div>
+
+      <!-- Candidate Header (STICKY) -->
+      <div class="candidate-header-wrapper">
+        <div class="candidate-header-scroll" id="candidateHeader">
+          <!-- John Murphy -->
+          <div class="candidate-header-item">
+            <div class="candidate-avatar">JM</div>
+            <div class="candidate-name">John Murphy</div>
+            <span class="rep-party dem">D</span>
+          </div>
+          <!-- Maria Rodriguez -->
+          <div class="candidate-header-item">
+            <div class="candidate-avatar">MR</div>
+            <div class="candidate-name">Maria Rodriguez</div>
+            <span class="rep-party dem">D</span>
+          </div>
+          <!-- Thomas Kelly -->
+          <div class="candidate-header-item">
+            <div class="candidate-avatar">TK</div>
+            <div class="candidate-name">Thomas Kelly</div>
+            <span class="rep-party dem">D</span>
+          </div>
+        </div>
+
+        <!-- Pagination dots -->
+        <div class="pagination-dots">
+          <div class="pagination-dot active" data-index="0"></div>
+          <div class="pagination-dot" data-index="1"></div>
+        </div>
+        <div class="scroll-hint">
+          <span>Swipe to see all candidates</span>
+          <span style="font-size: 12px;">-></span>
+        </div>
+      </div>
+
+      <!-- Scrollable Content Area -->
+      <div class="compare-content" id="compareContent">
+
+        <!-- Economy & Jobs -->
+        <div class="issue-section">
+          <div class="issue-header">Economy & Jobs</div>
+          <div class="issue-content-scroll" data-sync="true">
+            <!-- Murphy -->
+            <div class="policy-box policy-box-tall">
+              <div class="policy-label">Position</div>
+              <div class="policy-highlight">Tax Incentives</div>
+              <div class="policy-text">Downtown revitalization through business tax breaks and development zones</div>
+              <div class="policy-detail">Voted for 2022 TIF district</div>
+            </div>
+            <!-- Rodriguez -->
+            <div class="policy-box policy-box-tall">
+              <div class="policy-label">Position</div>
+              <div class="policy-highlight">Worker First</div>
+              <div class="policy-text">Living wage mandate, worker co-op support, union partnerships</div>
+              <div class="policy-detail">Endorsed by SEIU Local 668</div>
+            </div>
+            <!-- Kelly -->
+            <div class="policy-box policy-box-tall">
+              <div class="policy-label">Position</div>
+              <div class="policy-highlight">Pro-Business</div>
+              <div class="policy-text">Small business grants, reduce regulations, streamline permits</div>
+              <div class="policy-detail">Chamber of Commerce member</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Housing -->
+        <div class="issue-section">
+          <div class="issue-header">Housing</div>
+          <div class="issue-content-scroll" data-sync="true">
+            <!-- Murphy -->
+            <div class="policy-box policy-box-tall">
+              <div class="policy-label">Position</div>
+              <div class="policy-highlight">Rehab Focus</div>
+              <div class="policy-text">Rehabilitate vacant properties, first-time homeowner assistance programs</div>
+              <div class="policy-detail">500 units rehabbed 2018-22</div>
+            </div>
+            <!-- Rodriguez -->
+            <div class="policy-box policy-box-tall">
+              <div class="policy-label">Position</div>
+              <div class="policy-highlight">Rent Control</div>
+              <div class="policy-text">Strong tenant protections, affordable housing fund, anti-displacement measures</div>
+              <div class="policy-detail">Led tenant rights coalition</div>
+            </div>
+            <!-- Kelly -->
+            <div class="policy-box policy-box-tall">
+              <div class="policy-label">Position</div>
+              <div class="policy-highlight">Market Solutions</div>
+              <div class="policy-text">Blight enforcement, property tax reform, incentivize development</div>
+              <div class="policy-detail">Opposes rent control</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Infrastructure -->
+        <div class="issue-section">
+          <div class="issue-header">Infrastructure</div>
+          <div class="issue-content-scroll" data-sync="true">
+            <!-- Murphy -->
+            <div class="policy-box policy-box-tall">
+              <div class="policy-label">Position</div>
+              <div class="policy-highlight">Roads & Water</div>
+              <div class="policy-text">Prioritize road repairs, upgrade aging water system infrastructure</div>
+              <div class="policy-detail">Secured $2M state grant</div>
+            </div>
+            <!-- Rodriguez -->
+            <div class="policy-box policy-box-tall">
+              <div class="policy-label">Position</div>
+              <div class="policy-highlight">Green Transit</div>
+              <div class="policy-text">Bike lanes, public transit expansion, green infrastructure projects</div>
+              <div class="policy-detail">Climate action plan author</div>
+            </div>
+            <!-- Kelly -->
+            <div class="policy-box policy-box-tall">
+              <div class="policy-label">Position</div>
+              <div class="policy-highlight">Efficiency</div>
+              <div class="policy-text">Public-private partnerships, efficient spending, competitive bidding</div>
+              <div class="policy-detail">Cut costs 15% as board chair</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Public Safety (NEW) -->
+        <div class="issue-section">
+          <div class="issue-header">Public Safety</div>
+          <div class="issue-content-scroll" data-sync="true">
+            <!-- Murphy -->
+            <div class="policy-box policy-box-tall">
+              <div class="policy-label">Position</div>
+              <div class="policy-highlight">Community Policing</div>
+              <div class="policy-text">Expand beat officers, strengthen police-community relations</div>
+              <div class="policy-detail">Police union endorsed</div>
+            </div>
+            <!-- Rodriguez -->
+            <div class="policy-box policy-box-tall">
+              <div class="policy-label">Position</div>
+              <div class="policy-highlight">Reform & Invest</div>
+              <div class="policy-text">Mental health responders, civilian oversight board, youth programs</div>
+              <div class="policy-detail">Led reform task force</div>
+            </div>
+            <!-- Kelly -->
+            <div class="policy-box policy-box-tall">
+              <div class="policy-label">Position</div>
+              <div class="policy-highlight">Full Funding</div>
+              <div class="policy-text">Restore police budget, new equipment, recruit more officers</div>
+              <div class="policy-detail">FOP-endorsed</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="issue-section">
+          <div class="issue-header">Experience</div>
+          <div class="issue-content-scroll" data-sync="true">
+            <!-- Murphy -->
+            <div class="policy-box policy-box-tall">
+              <div class="policy-highlight">8 Years</div>
+              <div class="policy-text" style="margin-top: 4px;">City Council (2014-2022)</div>
+              <div class="policy-detail">School Board (2010-14)</div>
+              <div class="policy-detail">Finance Committee Chair</div>
+              <div class="policy-detail">Lifelong WB resident</div>
+            </div>
+            <!-- Rodriguez -->
+            <div class="policy-box policy-box-tall">
+              <div class="policy-highlight">5 Years</div>
+              <div class="policy-text" style="margin-top: 4px;">Nonprofit Executive Director</div>
+              <div class="policy-detail">Community organizer</div>
+              <div class="policy-detail">Housing advocacy</div>
+              <div class="policy-detail">First-gen American</div>
+            </div>
+            <!-- Kelly -->
+            <div class="policy-box policy-box-tall">
+              <div class="policy-highlight">15 Years</div>
+              <div class="policy-text" style="margin-top: 4px;">Small Business Owner</div>
+              <div class="policy-detail">Chamber VP 2018-22</div>
+              <div class="policy-detail">Rotary Club President</div>
+              <div class="policy-detail">Kelly's Auto since 2009</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Endorsements -->
+        <div class="issue-section">
+          <div class="issue-header">Key Endorsements</div>
+          <div class="issue-content-scroll" data-sync="true">
+            <!-- Murphy -->
+            <div class="policy-box policy-box-tall">
+              <div class="endorsement-item">
+                <div class="endorsement-icon">M</div>
+                <div class="endorsement-name">Mayor Williams</div>
+              </div>
+              <div class="endorsement-item">
+                <div class="endorsement-icon">P</div>
+                <div class="endorsement-name">Police Benevolent Assn</div>
+              </div>
+              <div class="endorsement-item">
+                <div class="endorsement-icon">T</div>
+                <div class="endorsement-name">Times Leader</div>
+              </div>
+              <div class="policy-detail" style="margin-top: 8px;">+4 more endorsements</div>
+            </div>
+            <!-- Rodriguez -->
+            <div class="policy-box policy-box-tall">
+              <div class="endorsement-item">
+                <div class="endorsement-icon">T</div>
+                <div class="endorsement-name">Teachers Union</div>
+              </div>
+              <div class="endorsement-item">
+                <div class="endorsement-icon">S</div>
+                <div class="endorsement-name">SEIU Local 668</div>
+              </div>
+              <div class="endorsement-item">
+                <div class="endorsement-icon">P</div>
+                <div class="endorsement-name">Progressive Dems of PA</div>
+              </div>
+              <div class="policy-detail" style="margin-top: 8px;">+6 more endorsements</div>
+            </div>
+            <!-- Kelly -->
+            <div class="policy-box policy-box-tall">
+              <div class="endorsement-item">
+                <div class="endorsement-icon">C</div>
+                <div class="endorsement-name">Chamber of Commerce</div>
+              </div>
+              <div class="endorsement-item">
+                <div class="endorsement-icon">R</div>
+                <div class="endorsement-name">Realtors Association</div>
+              </div>
+              <div class="endorsement-item">
+                <div class="endorsement-icon">B</div>
+                <div class="endorsement-name">Building Trades Council</div>
+              </div>
+              <div class="policy-detail" style="margin-top: 8px;">+2 more endorsements</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Campaign Funding -->
+        <div class="issue-section">
+          <div class="issue-header">Campaign Funding</div>
+          <div class="issue-content-scroll" data-sync="true">
+            <!-- Murphy -->
+            <div class="policy-box policy-box-tall" style="text-align: center;">
+              <div class="funding-amount">$45K</div>
+              <div class="policy-text">Total Raised</div>
+              <div class="funding-breakdown">
+                65% Individual donors<br>
+                25% PACs<br>
+                10% Self-funded
+              </div>
+            </div>
+            <!-- Rodriguez -->
+            <div class="policy-box policy-box-tall" style="text-align: center;">
+              <div class="funding-amount">$28K</div>
+              <div class="policy-text">Total Raised</div>
+              <div class="funding-breakdown">
+                85% Small donors (&lt;$50)<br>
+                12% Unions<br>
+                3% Other
+              </div>
+            </div>
+            <!-- Kelly -->
+            <div class="policy-box policy-box-tall" style="text-align: center;">
+              <div class="funding-amount">$62K</div>
+              <div class="policy-text">Total Raised</div>
+              <div class="funding-breakdown">
+                40% Self-funded<br>
+                35% Business donors<br>
+                25% Individual
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coverage -->
+        <div class="coverage-card">
+          <div class="coverage-title">Coverage</div>
+          <a href="3c-article.html" class="coverage-item">
+            <div class="coverage-headline">"City Council Candidates Square Off in Forum"</div>
+            <div class="coverage-meta">Citizens' Voice - 1d ago</div>
+          </a>
+          <a href="3c-article.html" class="coverage-item">
+            <div class="coverage-headline">"What's at Stake in the District A Race"</div>
+            <div class="coverage-meta">Times Leader - 3d ago</div>
+          </a>
+          <a href="3c-article.html" class="coverage-item">
+            <div class="coverage-headline">"Housing Crisis Takes Center Stage"</div>
+            <div class="coverage-meta">WBRE - 5d ago</div>
+          </a>
+        </div>
+
+        <div style="height: 20px;"></div>
+      </div>
+
+      <!-- Voter Card FAB -->
+      <a href="9b-voter-card.html" class="voter-card-fab">ID</a>
+
+      <!-- Bottom Nav -->
+      <nav class="bottom-nav">
+        <a href="1a-home-voices.html" class="nav-item">
+          <span class="nav-icon"><i class="fa-solid fa-layer-group"></i></span>
+          Stack
+        </a>
+        <a href="2a-leaders.html" class="nav-item">
+          <span class="nav-icon"><i class="fa-solid fa-landmark"></i></span>
+          Leaders
+        </a>
+        <a href="3a-media.html" class="nav-item">
+          <span class="nav-icon"><i class="fa-solid fa-file-lines"></i></span>
+          Media
+        </a>
+        <a href="4a-learn.html" class="nav-item">
+          <span class="nav-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+          Learn
+        </a>
+      </nav>
+    </div>
+  </div>
+
+<script src="app.js"></script>
+<script>
+  // Sync horizontal scroll between header and all issue sections
+  document.addEventListener('DOMContentLoaded', function() {
+    const header = document.getElementById('candidateHeader');
+    const syncScrolls = document.querySelectorAll('[data-sync="true"]');
+    const dots = document.querySelectorAll('.pagination-dot');
+
+    let isScrolling = false;
+
+    // Update pagination dots based on scroll position
+    function updateDots(scrollLeft) {
+      const scrollWidth = header.scrollWidth - header.clientWidth;
+      const scrollPercent = scrollLeft / scrollWidth;
+
+      dots.forEach((dot, index) => {
+        if (index === 0 && scrollPercent < 0.5) {
+          dot.classList.add('active');
+        } else if (index === 1 && scrollPercent >= 0.5) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    }
+
+    // Sync all scrollable areas
+    function syncScroll(sourceScroll, scrollLeft) {
+      if (isScrolling) return;
+      isScrolling = true;
+
+      // Sync header
+      if (sourceScroll !== header) {
+        header.scrollLeft = scrollLeft;
+      }
+
+      // Sync all issue sections
+      syncScrolls.forEach(scroll => {
+        if (scroll !== sourceScroll) {
+          scroll.scrollLeft = scrollLeft;
+        }
+      });
+
+      updateDots(scrollLeft);
+
+      setTimeout(() => {
+        isScrolling = false;
+      }, 10);
+    }
+
+    // Add scroll listeners
+    header.addEventListener('scroll', function() {
+      syncScroll(header, header.scrollLeft);
+    });
+
+    syncScrolls.forEach(scroll => {
+      scroll.addEventListener('scroll', function() {
+        syncScroll(scroll, scroll.scrollLeft);
+      });
+    });
+
+    // Click on dots to scroll
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', function() {
+        const scrollTarget = index === 0 ? 0 : header.scrollWidth - header.clientWidth;
+        header.scrollTo({ left: scrollTarget, behavior: 'smooth' });
+      });
+    });
+  });
+</script>
+</body>
+</html>

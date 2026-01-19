@@ -1,0 +1,1217 @@
+[13-Jan-2026 04:22:53 UTC] PHP Notice:  Undefined index: REQUEST_METHOD in /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/config.php on line 14
+[13-Jan-2026 04:22:53 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'topic' in 'INSERT INTO' in /home/lom1ubvhoxxi/public_html/sud/claude/civiq/log_commentary_research.php:181
+Stack trace:
+#0 /home/lom1ubvhoxxi/public_html/sud/claude/civiq/log_commentary_research.php(181): PDO->prepare('\n    INSERT INT...')
+#1 {main}
+  thrown in /home/lom1ubvhoxxi/public_html/sud/claude/civiq/log_commentary_research.php on line 181
+[13-Jan-2026 04:23:02 UTC] PHP Notice:  Undefined index: REQUEST_METHOD in /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/config.php on line 14
+[13-Jan-2026 04:23:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'topic' in 'INSERT INTO' in /home/lom1ubvhoxxi/public_html/sud/claude/civiq/log_commentary_research.php:181
+Stack trace:
+#0 /home/lom1ubvhoxxi/public_html/sud/claude/civiq/log_commentary_research.php(181): PDO->prepare('\n    INSERT INT...')
+#1 {main}
+  thrown in /home/lom1ubvhoxxi/public_html/sud/claude/civiq/log_commentary_research.php on line 181
+[13-Jan-2026 04:23:06 UTC] PHP Notice:  Undefined index: REQUEST_METHOD in /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/config.php on line 14
+[13-Jan-2026 04:23:12 UTC] PHP Notice:  Undefined index: REQUEST_METHOD in /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/config.php on line 14
+[13-Jan-2026 04:23:21 UTC] PHP Notice:  Undefined index: REQUEST_METHOD in /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/config.php on line 14
+[13-Jan-2026 04:23:21 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'topic' in 'INSERT INTO' in Command line code:5
+Stack trace:
+#0 Command line code(5): PDO->prepare('\n    INSERT INT...')
+#1 {main}
+  thrown in Command line code on line 5
+[13-Jan-2026 04:55:22 UTC] Documentarian: Session 42301064-4f72-4bf0-b25c-337db594fa56 persisted to claude_code_sessions (compacted)
+[13-Jan-2026 04:55:22 UTC] Documentarian: Session 42301064-4f72-4bf0-b25c-337db594fa56 - 0 corrections, 0 vocab logged to database
+[13-Jan-2026 05:20:06 UTC] PHP Notice:  Undefined index: REQUEST_METHOD in /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/config.php on line 14
+[13-Jan-2026 05:20:06 UTC] PHP Notice:  Undefined index: REQUEST_METHOD in /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/bills/feed.php on line 15
+[13-Jan-2026 05:28:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'start_year' in 'SELECT' in /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/timeline/events.php:248
+Stack trace:
+#0 /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/timeline/events.php(248): PDO->prepare('\n        SELECT...')
+#1 /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/timeline/events.php(23): listEvents(Object(PDO))
+#2 {main}
+  thrown in /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/timeline/events.php on line 248
+[13-Jan-2026 05:28:07 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'start_year' in 'SELECT' in /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/timeline/events.php:248
+Stack trace:
+#0 /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/timeline/events.php(248): PDO->prepare('\n        SELECT...')
+#1 /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/timeline/events.php(23): listEvents(Object(PDO))
+#2 {main}
+  thrown in /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/timeline/events.php on line 248
+[13-Jan-2026 05:32:21 UTC] Documentarian: Session 42301064-4f72-4bf0-b25c-337db594fa56 persisted to claude_code_sessions (ended)
+[13-Jan-2026 05:32:21 UTC] Documentarian: Session 42301064-4f72-4bf0-b25c-337db594fa56 - 2 corrections, 1 vocab logged to database
+[18-Jan-2026 23:20:57 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[18-Jan-2026 23:29:31 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[18-Jan-2026 23:32:14 UTC] Documentarian: Session 98e222a2-68e4-439d-9e4f-1c412e29ad27 persisted to claude_code_sessions (compacted)
+[18-Jan-2026 23:32:14 UTC] Documentarian: Session 98e222a2-68e4-439d-9e4f-1c412e29ad27 - 1 corrections, 0 vocab logged to database
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] Documentarian: Session 98e222a2-68e4-439d-9e4f-1c412e29ad27 persisted to claude_code_sessions (compacted)
+[18-Jan-2026 23:32:14 UTC] Documentarian: Session 98e222a2-68e4-439d-9e4f-1c412e29ad27 - 1 corrections, 0 vocab logged to database
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:14 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:15 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:15 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:15 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:15 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:15 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:15 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:15 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:15 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:15 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:15 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:15 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:32:15 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:36:10 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[18-Jan-2026 23:38:32 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[18-Jan-2026 23:40:26 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[18-Jan-2026 23:43:10 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] Documentarian: Failed to persist session state: SQLSTATE[23000]: Integrity constraint violation: 4025 CONSTRAINT `claude_code_sessions.key_learnings_this_session` failed for `lom1ubvhoxxi_sud_claude`.`claude_code_sessions`
+[18-Jan-2026 23:53:30 UTC] Documentarian: Session 98e222a2-68e4-439d-9e4f-1c412e29ad27 - 2 corrections, 0 vocab logged to database
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[18-Jan-2026 23:53:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:01:00 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 00:04:23 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 00:05:39 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 00:06:31 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 00:07:11 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 00:09:42 UTC] Documentarian: Failed to persist session state: SQLSTATE[23000]: Integrity constraint violation: 4025 CONSTRAINT `claude_code_sessions.key_learnings_this_session` failed for `lom1ubvhoxxi_sud_claude`.`claude_code_sessions`
+[19-Jan-2026 00:09:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[45000]: <<Unknown error>>: 1644 REJECTED: Learning title cannot start with raw user quotes. Extract the rule. in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/ResearchRetain.php:173
+Stack trace:
+#0 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/ResearchRetain.php(173): PDOStatement->execute(Array)
+#1 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/process_session.php(352): ResearchRetain->logLearning('civiq', 'correction', 'NO search butto...', 'NO search butto...', 'user', NULL, '98e222a2-68e4-4...', 'lwaf')
+#2 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/process_session.php(135): writeSessionLog(Array, '98e222a2-68e4-4...', '/home/lom1ubvho...', 'PreCompact')
+#3 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/process_session.php(499): main()
+#4 {main}
+  thrown in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/ResearchRetain.php on line 173
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:09:42 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:17:56 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 00:23:08 UTC] Documentarian: Failed to persist session state: SQLSTATE[23000]: Integrity constraint violation: 4025 CONSTRAINT `claude_code_sessions.key_learnings_this_session` failed for `lom1ubvhoxxi_sud_claude`.`claude_code_sessions`
+[19-Jan-2026 00:23:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[45000]: <<Unknown error>>: 1644 REJECTED: Learning title cannot start with raw user quotes. Extract the rule. in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/ResearchRetain.php:173
+Stack trace:
+#0 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/ResearchRetain.php(173): PDOStatement->execute(Array)
+#1 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/process_session.php(352): ResearchRetain->logLearning('civiq', 'correction', 'NO search butto...', 'NO search butto...', 'user', NULL, '98e222a2-68e4-4...', 'lwaf')
+#2 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/process_session.php(135): writeSessionLog(Array, '98e222a2-68e4-4...', '/home/lom1ubvho...', 'SessionEnd')
+#3 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/process_session.php(499): main()
+#4 {main}
+  thrown in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/ResearchRetain.php on line 173
+[19-Jan-2026 00:39:28 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 00:46:06 UTC] Documentarian: Session 92f2e5dd-f8b0-460d-850f-e3122fcbf121 persisted to claude_code_sessions (compacted)
+[19-Jan-2026 00:46:06 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[45000]: <<Unknown error>>: 1644 REJECTED: Learning title cannot start with raw user quotes. Extract the rule. in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/ResearchRetain.php:173
+Stack trace:
+#0 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/ResearchRetain.php(173): PDOStatement->execute(Array)
+#1 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/process_session.php(352): ResearchRetain->logLearning('civiq', 'correction', 'I don't recall ...', 'I don't recall ...', 'user', NULL, '92f2e5dd-f8b0-4...', 'lwaf')
+#2 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/process_session.php(135): writeSessionLog(Array, '92f2e5dd-f8b0-4...', '/home/lom1ubvho...', 'PreCompact')
+#3 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/process_session.php(499): main()
+#4 {main}
+  thrown in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/ResearchRetain.php on line 173
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:06 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:07 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:07 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:07 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:07 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:07 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:07 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:07 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:07 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:07 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:07 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:07 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:07 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:07 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:07 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:07 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:07 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:07 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:07 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:07 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:07 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:46:07 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 00:54:41 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 00:56:30 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 00:58:41 UTC] Documentarian: Session 92f2e5dd-f8b0-460d-850f-e3122fcbf121 persisted to claude_code_sessions (ended)
+[19-Jan-2026 00:58:41 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[45000]: <<Unknown error>>: 1644 REJECTED: Learning title cannot start with raw user quotes. Extract the rule. in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/ResearchRetain.php:173
+Stack trace:
+#0 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/ResearchRetain.php(173): PDOStatement->execute(Array)
+#1 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/process_session.php(352): ResearchRetain->logLearning('civiq', 'correction', 'I don't recall ...', 'I don't recall ...', 'user', NULL, '92f2e5dd-f8b0-4...', 'lwaf')
+#2 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/process_session.php(135): writeSessionLog(Array, '92f2e5dd-f8b0-4...', '/home/lom1ubvho...', 'SessionEnd')
+#3 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/process_session.php(499): main()
+#4 {main}
+  thrown in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/ResearchRetain.php on line 173
+[19-Jan-2026 01:24:41 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 01:26:11 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 01:29:22 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 01:35:44 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 01:42:52 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 01:45:53 UTC] Documentarian: Session fc5fe3a8-b825-42b1-a459-30ea586b01e1 persisted to claude_code_sessions (compacted)
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[45000]: <<Unknown error>>: 1644 REJECTED: Learning content cannot be identical to title. in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/ResearchRetain.php:173
+Stack trace:
+#0 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/ResearchRetain.php(173): PDOStatement->execute(Array)
+#1 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/process_session.php(375): ResearchRetain->logLearning('civiq', 'correction', 'You should be a...', 'You should be a...', 'user', NULL, 'fc5fe3a8-b825-4...', 'lwaf')
+#2 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/process_session.php(158): writeSessionLog(Array, 'fc5fe3a8-b825-4...', '/home/lom1ubvho...', 'PreCompact')
+#3 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/process_session.php(522): main()
+#4 {main}
+  thrown in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/ResearchRetain.php on line 173
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:45:53 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 01:53:04 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 01:56:55 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 01:58:54 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 02:00:07 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 02:04:47 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 02:08:34 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 02:09:19 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 02:12:42 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 02:14:52 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 02:16:05 UTC] Documentarian: Session fc5fe3a8-b825-42b1-a459-30ea586b01e1 persisted to claude_code_sessions (compacted)
+[19-Jan-2026 02:16:05 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[45000]: <<Unknown error>>: 1644 REJECTED: Learning content cannot be identical to title. in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/ResearchRetain.php:173
+Stack trace:
+#0 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/ResearchRetain.php(173): PDOStatement->execute(Array)
+#1 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/process_session.php(375): ResearchRetain->logLearning('civiq', 'correction', 'You should be a...', 'You should be a...', 'user', NULL, 'fc5fe3a8-b825-4...', 'lwaf')
+#2 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/process_session.php(158): writeSessionLog(Array, 'fc5fe3a8-b825-4...', '/home/lom1ubvho...', 'PreCompact')
+#3 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/process_session.php(522): main()
+#4 {main}
+  thrown in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/ResearchRetain.php on line 173
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:16:05 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:21:11 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 02:23:46 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 02:30:46 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 02:30:46 UTC] Documentarian: Session fc5fe3a8-b825-42b1-a459-30ea586b01e1 persisted to claude_code_sessions (compacted)
+[19-Jan-2026 02:30:46 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[45000]: <<Unknown error>>: 1644 REJECTED: Learning content cannot be identical to title. in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/ResearchRetain.php:173
+Stack trace:
+#0 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/ResearchRetain.php(173): PDOStatement->execute(Array)
+#1 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/process_session.php(375): ResearchRetain->logLearning('civiq', 'correction', 'You should be a...', 'You should be a...', 'user', NULL, 'fc5fe3a8-b825-4...', 'lwaf')
+#2 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/process_session.php(158): writeSessionLog(Array, 'fc5fe3a8-b825-4...', '/home/lom1ubvho...', 'PreCompact')
+#3 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/process_session.php(522): main()
+#4 {main}
+  thrown in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/ResearchRetain.php on line 173
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:30:46 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 02:32:44 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 02:34:48 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 02:35:13 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 02:38:41 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 02:41:42 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 02:45:11 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 02:48:42 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 02:52:11 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 03:47:35 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 03:51:34 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 03:55:00 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 04:05:08 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 04:05:45 UTC] Documentarian: Session fc5fe3a8-b825-42b1-a459-30ea586b01e1 persisted to claude_code_sessions (compacted)
+[19-Jan-2026 04:05:45 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[45000]: <<Unknown error>>: 1644 REJECTED: Learning title cannot start with raw user quotes. Extract the rule. in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/ResearchRetain.php:173
+Stack trace:
+#0 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/ResearchRetain.php(173): PDOStatement->execute(Array)
+#1 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/process_session.php(375): ResearchRetain->logLearning('civiq', 'correction', 'User said the c...', 'User said the c...', 'user', NULL, 'fc5fe3a8-b825-4...', 'lwaf')
+#2 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/process_session.php(158): writeSessionLog(Array, 'fc5fe3a8-b825-4...', '/home/lom1ubvho...', 'PreCompact')
+#3 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/process_session.php(522): main()
+#4 {main}
+  thrown in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/ResearchRetain.php on line 173
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:05:45 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:15:27 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 04:16:48 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 04:18:48 UTC] PHP Notice:  Undefined index: REQUEST_METHOD in /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/config.php on line 14
+[19-Jan-2026 04:20:35 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 04:22:02 UTC] Documentarian: Session fc5fe3a8-b825-42b1-a459-30ea586b01e1 persisted to claude_code_sessions (compacted)
+[19-Jan-2026 04:22:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[45000]: <<Unknown error>>: 1644 REJECTED: Learning content cannot be identical to title. in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/ResearchRetain.php:173
+Stack trace:
+#0 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/ResearchRetain.php(173): PDOStatement->execute(Array)
+#1 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/process_session.php(375): ResearchRetain->logLearning('civiq', 'correction', 'CSS is correct ...', 'CSS is correct ...', 'user', NULL, 'fc5fe3a8-b825-4...', 'lwaf')
+#2 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/process_session.php(158): writeSessionLog(Array, 'fc5fe3a8-b825-4...', '/home/lom1ubvho...', 'PreCompact')
+#3 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/process_session.php(522): main()
+#4 {main}
+  thrown in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/ResearchRetain.php on line 173
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:02 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:22:03 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:23:55 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 04:26:16 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 04:31:11 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 04:33:30 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 04:39:03 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 04:39:34 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 04:42:17 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] Documentarian: Session fc5fe3a8-b825-42b1-a459-30ea586b01e1 persisted to claude_code_sessions (compacted)
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[45000]: <<Unknown error>>: 1644 REJECTED: Learning content cannot be identical to title. in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/ResearchRetain.php:173
+Stack trace:
+#0 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/ResearchRetain.php(173): PDOStatement->execute(Array)
+#1 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/process_session.php(375): ResearchRetain->logLearning('civiq', 'correction', 'CSS is correct ...', 'CSS is correct ...', 'user', NULL, 'fc5fe3a8-b825-4...', 'lwaf')
+#2 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/process_session.php(158): writeSessionLog(Array, 'fc5fe3a8-b825-4...', '/home/lom1ubvho...', 'PreCompact')
+#3 /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/process_session.php(522): main()
+#4 {main}
+  thrown in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/ResearchRetain.php on line 173
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:44:30 UTC] PHP Warning:  preg_match(): Unknown modifier ')' in /home/lom1ubvhoxxi/public_html/sud/claude/documentarian/snapshot_state.php on line 121
+[19-Jan-2026 04:56:36 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4
+[19-Jan-2026 04:57:52 UTC] inject_every_prompt R-I-D assessment error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?
+            GROUP BY project
+            HAVING cnt >= 3' at line 4

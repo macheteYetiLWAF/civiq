@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIVIQ - Icon Options</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #1A1A1A;
+            color: #FFFFFF;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            padding: 24px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 24px;
+            background: linear-gradient(90deg, #2563EB 40%, #DC2626 60%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #3B82F6;
+            margin: 20px 0 12px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .options-row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 12px;
+            background: #222;
+            border-radius: 10px;
+            border: 2px solid transparent;
+            min-width: 72px;
+        }
+        .option:hover { border-color: #444; }
+        .option.pick { border-color: #22C55E; background: #1a2e1f; }
+        .option.maybe { border-color: #F59E0B; background: #2e2a1a; }
+        .option i { font-size: 26px; color: #FFFFFF; }
+        .option svg { width: 26px; height: 26px; }
+        .option span { font-size: 9px; color: #888; text-align: center; line-height: 1.2; }
+        .option .source { font-size: 7px; color: #555; margin-top: 2px; }
+        .divider { height: 1px; background: #333; margin: 24px 0; }
+        .note { font-size: 11px; color: #666; margin-bottom: 8px; }
+        .legend { display: flex; gap: 16px; margin-bottom: 20px; font-size: 11px; }
+        .legend-item { display: flex; align-items: center; gap: 6px; }
+        .legend-box { width: 14px; height: 14px; border-radius: 4px; border: 2px solid; }
+        .legend-box.pick { border-color: #22C55E; background: #1a2e1f; }
+        .legend-box.maybe { border-color: #F59E0B; background: #2e2a1a; }
+
+        /* Nav Preview */
+        .preview-section { margin-top: 24px; }
+        .preview-label { font-size: 11px; color: #666; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+        .nav-bar {
+            width: 375px;
+            height: 64px;
+            background: #111;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 0 0 16px 16px;
+            border-top: 1px solid #2A2A2A;
+        }
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+        .nav-item i, .nav-item svg { font-size: 20px; color: #6B7280; width: 20px; height: 20px; }
+        .nav-item span { font-size: 9px; color: #6B7280; }
+        .nav-item.active i, .nav-item.active svg { color: #3B82F6; stroke: #3B82F6; }
+        .nav-item.active span { color: #3B82F6; }
+    </style>
+</head>
+<body>
+    <h1>CIVIQ Icon Options</h1>
+
+    <div class="legend">
+        <div class="legend-item"><div class="legend-box pick"></div> Current Pick</div>
+        <div class="legend-item"><div class="legend-box maybe"></div> Considering</div>
+    </div>
+    <div class="note">FA = Font Awesome 6 | Custom = SVG I generated</div>
+
+    <!-- HOME OPTIONS -->
+    <div class="nav-label">HOME ✓</div>
+    <div class="options-row">
+        <div class="option pick">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>Stack</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-stream"></i>
+            <span>Stream</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-house"></i>
+            <span>House</span>
+            <span class="source">FA</span>
+        </div>
+    </div>
+
+    <!-- LEADERS OPTIONS -->
+    <div class="nav-label">LEADERS ✓</div>
+    <div class="options-row">
+        <div class="option pick">
+            <i class="fa-solid fa-landmark"></i>
+            <span>Capitol</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-gavel"></i>
+            <span>Gavel</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-users"></i>
+            <span>People</span>
+            <span class="source">FA</span>
+        </div>
+    </div>
+
+    <!-- MEDIA OPTIONS -->
+    <div class="nav-label">MEDIA</div>
+    <div class="note" style="color: #F59E0B;">Expanded options - looking for the right vibe...</div>
+
+    <div class="note" style="margin: 12px 0 8px; color: #3B82F6;">Voice / Sound</div>
+    <div class="options-row">
+        <div class="option">
+            <i class="fa-solid fa-bullhorn"></i>
+            <span>Bullhorn</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-microphone"></i>
+            <span>Microphone</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-microphone-lines"></i>
+            <span>Mic Lines</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-volume-high"></i>
+            <span>Volume</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-headphones"></i>
+            <span>Headphones</span>
+            <span class="source">FA</span>
+        </div>
+    </div>
+
+    <div class="note" style="margin: 12px 0 8px; color: #3B82F6;">Transmission / Signal</div>
+    <div class="options-row">
+        <div class="option">
+            <i class="fa-solid fa-tower-broadcast"></i>
+            <span>Broadcast</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-satellite-dish"></i>
+            <span>Satellite</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-wifi"></i>
+            <span>Wifi</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-signal"></i>
+            <span>Signal</span>
+            <span class="source">FA</span>
+        </div>
+    </div>
+
+    <div class="note" style="margin: 12px 0 8px; color: #3B82F6;">Content / Feed</div>
+    <div class="options-row">
+        <div class="option">
+            <i class="fa-solid fa-newspaper"></i>
+            <span>Newspaper</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-scroll"></i>
+            <span>Scroll</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-file-lines"></i>
+            <span>Article</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-rectangle-list"></i>
+            <span>List</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-bars-staggered"></i>
+            <span>Staggered</span>
+            <span class="source">FA</span>
+        </div>
+    </div>
+
+    <div class="note" style="margin: 12px 0 8px; color: #3B82F6;">Discussion / Social</div>
+    <div class="options-row">
+        <div class="option">
+            <i class="fa-solid fa-comments"></i>
+            <span>Comments</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-comment-dots"></i>
+            <span>Chat</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-quote-left"></i>
+            <span>Quote</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-share-nodes"></i>
+            <span>Share</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-circle-nodes"></i>
+            <span>Network</span>
+            <span class="source">FA</span>
+        </div>
+    </div>
+
+    <div class="note" style="margin: 12px 0 8px; color: #3B82F6;">Screen / Display</div>
+    <div class="options-row">
+        <div class="option">
+            <i class="fa-solid fa-tv"></i>
+            <span>TV</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-display"></i>
+            <span>Display</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <span>Mobile</span>
+            <span class="source">FA</span>
+        </div>
+    </div>
+
+    <div class="note" style="margin: 12px 0 8px; color: #3B82F6;">World / Global</div>
+    <div class="options-row">
+        <div class="option">
+            <i class="fa-solid fa-globe"></i>
+            <span>Globe</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-earth-americas"></i>
+            <span>Earth</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-language"></i>
+            <span>Language</span>
+            <span class="source">FA</span>
+        </div>
+    </div>
+
+    <div class="note" style="margin: 12px 0 8px; color: #3B82F6;">Journalism / Writing</div>
+    <div class="options-row">
+        <div class="option">
+            <i class="fa-solid fa-pen-nib"></i>
+            <span>Pen Nib</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-feather"></i>
+            <span>Feather</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-feather-pointed"></i>
+            <span>Quill</span>
+            <span class="source">FA</span>
+        </div>
+    </div>
+
+    <div class="note" style="margin: 12px 0 8px; color: #3B82F6;">Attention / Alerts</div>
+    <div class="options-row">
+        <div class="option">
+            <i class="fa-solid fa-bell"></i>
+            <span>Bell</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-bolt"></i>
+            <span>Bolt</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-fire"></i>
+            <span>Fire</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-eye"></i>
+            <span>Eye</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-binoculars"></i>
+            <span>Binoculars</span>
+            <span class="source">FA</span>
+        </div>
+    </div>
+
+    <!-- LEARN OPTIONS -->
+    <div class="nav-label">LEARN ✓</div>
+    <div class="options-row">
+        <div class="option pick">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>Grad Cap</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-lightbulb"></i>
+            <span>Lightbulb</span>
+            <span class="source">FA</span>
+        </div>
+        <div class="option">
+            <i class="fa-solid fa-book-open"></i>
+            <span>Book</span>
+            <span class="source">FA</span>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- NAV BAR PREVIEWS - Top Candidates -->
+    <div class="preview-section">
+        <div class="preview-label">Bullhorn</div>
+        <div class="nav-bar">
+            <div class="nav-item active"><i class="fa-solid fa-layer-group"></i><span>Home</span></div>
+            <div class="nav-item"><i class="fa-solid fa-landmark"></i><span>Leaders</span></div>
+            <div class="nav-item"><i class="fa-solid fa-bullhorn"></i><span>Media</span></div>
+            <div class="nav-item"><i class="fa-solid fa-graduation-cap"></i><span>Learn</span></div>
+        </div>
+    </div>
+
+    <div class="preview-section" style="margin-top: 12px;">
+        <div class="preview-label">Microphone</div>
+        <div class="nav-bar">
+            <div class="nav-item active"><i class="fa-solid fa-layer-group"></i><span>Home</span></div>
+            <div class="nav-item"><i class="fa-solid fa-landmark"></i><span>Leaders</span></div>
+            <div class="nav-item"><i class="fa-solid fa-microphone-lines"></i><span>Media</span></div>
+            <div class="nav-item"><i class="fa-solid fa-graduation-cap"></i><span>Learn</span></div>
+        </div>
+    </div>
+
+    <div class="preview-section" style="margin-top: 12px;">
+        <div class="preview-label">Globe</div>
+        <div class="nav-bar">
+            <div class="nav-item active"><i class="fa-solid fa-layer-group"></i><span>Home</span></div>
+            <div class="nav-item"><i class="fa-solid fa-landmark"></i><span>Leaders</span></div>
+            <div class="nav-item"><i class="fa-solid fa-globe"></i><span>Media</span></div>
+            <div class="nav-item"><i class="fa-solid fa-graduation-cap"></i><span>Learn</span></div>
+        </div>
+    </div>
+
+    <div class="preview-section" style="margin-top: 12px;">
+        <div class="preview-label">Comments</div>
+        <div class="nav-bar">
+            <div class="nav-item active"><i class="fa-solid fa-layer-group"></i><span>Home</span></div>
+            <div class="nav-item"><i class="fa-solid fa-landmark"></i><span>Leaders</span></div>
+            <div class="nav-item"><i class="fa-solid fa-comments"></i><span>Media</span></div>
+            <div class="nav-item"><i class="fa-solid fa-graduation-cap"></i><span>Learn</span></div>
+        </div>
+    </div>
+
+    <div class="preview-section" style="margin-top: 12px;">
+        <div class="preview-label">Eye</div>
+        <div class="nav-bar">
+            <div class="nav-item active"><i class="fa-solid fa-layer-group"></i><span>Home</span></div>
+            <div class="nav-item"><i class="fa-solid fa-landmark"></i><span>Leaders</span></div>
+            <div class="nav-item"><i class="fa-solid fa-eye"></i><span>Media</span></div>
+            <div class="nav-item"><i class="fa-solid fa-graduation-cap"></i><span>Learn</span></div>
+        </div>
+    </div>
+
+    <div class="preview-section" style="margin-top: 12px;">
+        <div class="preview-label">Scroll</div>
+        <div class="nav-bar">
+            <div class="nav-item active"><i class="fa-solid fa-layer-group"></i><span>Home</span></div>
+            <div class="nav-item"><i class="fa-solid fa-landmark"></i><span>Leaders</span></div>
+            <div class="nav-item"><i class="fa-solid fa-scroll"></i><span>Media</span></div>
+            <div class="nav-item"><i class="fa-solid fa-graduation-cap"></i><span>Learn</span></div>
+        </div>
+    </div>
+
+    <div class="note" style="margin-top: 24px;">
+        <strong>Confirmed:</strong> Stack (Home), Capitol (Leaders), Grad Cap (Learn)<br>
+        <strong>Media ideas:</strong> Bullhorn = announcements/voices. Globe = world news. Comments = discussion. Eye = watching/monitoring. Scroll = content feed.
+    </div>
+
+</body>
+</html>

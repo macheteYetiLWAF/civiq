@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>CIVIQ - Media Stories</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .story-card {
+      background: var(--bg-secondary);
+      border-radius: var(--radius-md);
+      margin-bottom: 12px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .story-card-header {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+      font-size: 11px;
+    }
+    .story-source-logo {
+      width: 20px;
+      height: 20px;
+      background: var(--bg-tertiary);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      font-weight: 700;
+    }
+    .story-content {
+      padding: 12px;
+    }
+    .story-title {
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+    .story-meta {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .story-bias {
+      display: inline-block;
+      font-size: 9px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .story-time {
+      font-size: 10px;
+      color: var(--text-tertiary);
+    }
+    .story-coverage {
+      font-size: 10px;
+      color: var(--text-secondary);
+    }
+    .filter-chips {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 0 20px 12px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .filter-chip {
+      white-space: nowrap;
+      padding: 6px 12px;
+      background: var(--bg-tertiary);
+      border-radius: var(--radius-full);
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      border: 1px solid transparent;
+    }
+    .filter-chip.active {
+      background: var(--accent-light);
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+    .coverage-indicator {
+      display: flex;
+      gap: 2px;
+    }
+    .coverage-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--border);
+    }
+    .coverage-dot.left { background: #3B82F6; }
+    .coverage-dot.center { background: #8B5CF6; }
+    .coverage-dot.right { background: #DC2626; }
+    /* Reading stats panel - matches 3a-media.html */
+    .reading-stats {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      background: var(--bg-secondary);
+      border-radius: var(--radius-md);
+      margin: 0 20px 12px;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .reading-stats:hover { background: var(--bg-tertiary); }
+    .reading-stats:active { transform: scale(0.99); }
+    .reading-stat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+    }
+    .reading-stat-value { font-size: 18px; font-weight: 700; color: var(--text-primary); }
+    .reading-stat-label { font-size: 10px; color: var(--text-tertiary); text-align: center; }
+    .bias-rebalance-btn {
+      background: linear-gradient(135deg, #8B5CF6, #7C3AED);
+      color: white;
+      border: none;
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      font-size: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      text-decoration: none;
+    }
+    .reading-stats.collapsed { padding: 10px 16px; justify-content: center; }
+    .reading-stats.collapsed .reading-stat,
+    .reading-stats.collapsed .bias-rebalance-btn { display: none; }
+    .reading-stats.collapsed .collapsed-hint { display: flex !important; }
+  </style>
+</head>
+<body style="background: #1A1A1A;">
+  <div class="wireframe-label">3a - Media (Stories)</div>
+
+  <div class="device-frame">
+    <div class="screen">
+      <!-- Status Bar -->
+      <div class="status-bar">
+        <span class="time">9:41</span>
+        <span class="icons">... .. ..</span>
+      </div>
+
+      <!-- Header - Locked Design -->
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: linear-gradient(180deg, #1E1E2E 0%, #0F172A 100%); border-bottom: 1px solid rgba(139, 92, 246, 0.2);">
+        <!-- Left: Logo + Divider + Title -->
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <div class="logo-gradient" style="font-size: 18px; font-weight: 800; letter-spacing: -0.5px;">CIVIQ</div>
+          <div style="width: 1px; height: 20px; background: rgba(255,255,255,0.2);"></div>
+          <div>
+            <div style="font-size: 15px; font-weight: 600; color: white;">Media</div>
+            <div style="font-size: 10px; color: rgba(255,255,255,0.5);">Sources & Stories</div>
+          </div>
+        </div>
+        <!-- Right: Search + Avatar -->
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <a href="9e-search.html" style="width: 36px; height: 36px; background: rgba(255,255,255,0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none;">
+            <i class="fas fa-search" style="font-size: 14px; color: rgba(255,255,255,0.6);"></i>
+          </a>
+          <div style="width: 36px; height: 36px; background: linear-gradient(135deg, #1D4ED8, #3B82F6); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: white; border: 2px solid rgba(96, 165, 250, 0.5);">JK</div>
+        </div>
+      </div>
+
+      <!-- Reading Stats (above toggle - doesn't change with filters) -->
+      <div class="reading-stats" onclick="this.classList.toggle('collapsed'); event.stopPropagation();">
+        <div class="reading-stat">
+          <div class="reading-stat-value">7</div>
+          <div class="reading-stat-label">articles read today</div>
+        </div>
+        <div class="reading-stat">
+          <div class="reading-stat-value">12</div>
+          <div class="reading-stat-label">day reading streak</div>
+        </div>
+        <a href="9f-rebalance.html" class="bias-rebalance-btn" onclick="event.stopPropagation();">
+          <i class="fa-solid fa-scale-balanced" style="font-size: 18px;"></i>
+          <span>Rebalance</span>
+        </a>
+        <div class="collapsed-hint" style="display: none; align-items: center; gap: 8px; color: var(--text-tertiary); font-size: 11px;">
+          <i class="fas fa-chart-line" style="font-size: 12px;"></i>
+          <span>Tap to show reading stats</span>
+          <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: auto;"></i>
+        </div>
+      </div>
+
+      <!-- Toggle: Sources vs Stories -->
+      <div style="padding: 0 20px 12px;">
+        <div class="toggle-container">
+          <a href="3a-media.html" class="toggle-option">Sources</a>
+          <div class="toggle-option active">Stories</div>
+        </div>
+      </div>
+
+      <!-- Filter Chips -->
+      <div class="filter-chips">
+        <span class="filter-chip active">All</span>
+        <span class="filter-chip" style="display: flex; align-items: center; gap: 6px;"><span style="width: 8px; height: 16px; background: #F59E0B; border-radius: 8px 0 0 8px;"></span>Local</span>
+        <span class="filter-chip" style="display: flex; align-items: center; gap: 6px;"><span style="width: 8px; height: 16px; background: #10B981; border-radius: 8px 0 0 8px;"></span>State</span>
+        <span class="filter-chip" style="display: flex; align-items: center; gap: 6px;"><span style="width: 8px; height: 16px; background: #64748B; border-radius: 8px 0 0 8px;"></span>Federal</span>
+        <span class="filter-chip">Breaking</span>
+        <span class="filter-chip">Opinion</span>
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+        <!-- Breaking Story -->
+        <div class="story-card" style="border-left: 3px solid #EF4444;">
+          <div class="story-card-header">
+            <span style="background: #EF4444; color: white; padding: 2px 6px; border-radius: 4px; font-size: 9px; font-weight: 700;">BREAKING</span>
+            <span class="story-time">12 min ago</span>
+            <div style="flex: 1;"></div>
+            <div class="coverage-indicator" title="Coverage from left, center, and right sources">
+              <div class="coverage-dot left"></div>
+              <div class="coverage-dot center"></div>
+              <div class="coverage-dot right"></div>
+            </div>
+            <span class="story-coverage">12 sources</span>
+          </div>
+          <a href="3c-article.html" class="story-content" style="display: block; text-decoration: none; color: inherit;">
+            <div class="story-title">Senate Advances Infrastructure Bill with Bipartisan Support</div>
+            <div class="story-meta">
+              <span class="story-bias" style="background: #64748B20; color: #64748B;">Federal</span>
+              <span class="story-bias" style="background: #8B5CF620; color: #8B5CF6;">Mixed Coverage</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Local Story 1 -->
+        <div class="story-card" style="border-left: 3px solid #F59E0B;">
+          <div class="story-card-header">
+            <div class="story-source-logo">TL</div>
+            <span style="font-weight: 600;">Times Leader</span>
+            <span class="story-time">2 hours ago</span>
+            <div style="flex: 1;"></div>
+            <span style="color: #F59E0B; font-size: 10px;">Local</span>
+          </div>
+          <a href="3c-article.html" class="story-content" style="display: block; text-decoration: none; color: inherit;">
+            <div class="story-title">Wilkes-Barre City Council Approves Downtown Revitalization Plan</div>
+            <div class="story-meta">
+              <span class="story-bias" style="background: #8B5CF620; color: #8B5CF6;">Center</span>
+              <span class="story-coverage">Only source</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Local Story 2 -->
+        <div class="story-card" style="border-left: 3px solid #F59E0B;">
+          <div class="story-card-header">
+            <div class="story-source-logo">CV</div>
+            <span style="font-weight: 600;">Citizens' Voice</span>
+            <span class="story-time">3 hours ago</span>
+            <div style="flex: 1;"></div>
+            <span style="color: #F59E0B; font-size: 10px;">Local</span>
+          </div>
+          <a href="3c-article.html" class="story-content" style="display: block; text-decoration: none; color: inherit;">
+            <div class="story-title">Luzerne County Election Board Certifies Primary Results</div>
+            <div class="story-meta">
+              <span class="story-bias" style="background: #8B5CF620; color: #8B5CF6;">Center</span>
+              <div class="coverage-indicator">
+                <div class="coverage-dot center"></div>
+                <div class="coverage-dot" style="background: var(--border);"></div>
+                <div class="coverage-dot" style="background: var(--border);"></div>
+              </div>
+              <span class="story-coverage">2 sources</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- State Story -->
+        <div class="story-card" style="border-left: 3px solid #10B981;">
+          <div class="story-card-header">
+            <div class="story-source-logo">PA</div>
+            <span style="font-weight: 600;">PA Spotlight</span>
+            <span class="story-time">4 hours ago</span>
+            <div style="flex: 1;"></div>
+            <span style="color: #10B981; font-size: 10px;">State</span>
+          </div>
+          <a href="3c-article.html" class="story-content" style="display: block; text-decoration: none; color: inherit;">
+            <div class="story-title">Governor Shapiro Signs Education Funding Bill Into Law</div>
+            <div class="story-meta">
+              <span class="story-bias" style="background: #2563EB20; color: #2563EB;">Lean Left</span>
+              <div class="coverage-indicator">
+                <div class="coverage-dot left"></div>
+                <div class="coverage-dot center"></div>
+                <div class="coverage-dot" style="background: var(--border);"></div>
+              </div>
+              <span class="story-coverage">5 sources</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Multi-Source Story -->
+        <div class="story-card">
+          <div class="story-card-header">
+            <span style="font-size: 10px; color: var(--text-tertiary);">Multi-source story</span>
+            <span class="story-time">5 hours ago</span>
+            <div style="flex: 1;"></div>
+            <div class="coverage-indicator">
+              <div class="coverage-dot left"></div>
+              <div class="coverage-dot left"></div>
+              <div class="coverage-dot center"></div>
+              <div class="coverage-dot right"></div>
+              <div class="coverage-dot right"></div>
+            </div>
+            <span class="story-coverage">8 sources</span>
+          </div>
+          <a href="3c-article.html" class="story-content" style="display: block; text-decoration: none; color: inherit;">
+            <div class="story-title">Supreme Court Rules on EPA Authority Over Carbon Emissions</div>
+            <div class="story-meta">
+              <span class="story-bias" style="background: #64748B20; color: #64748B;">Federal</span>
+              <span class="story-bias" style="background: #EF444420; color: #EF4444;">Polarized</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Opinion Piece -->
+        <div class="story-card" style="border-left: 3px solid #8B5CF6;">
+          <div class="story-card-header">
+            <span style="background: #8B5CF620; color: #8B5CF6; padding: 2px 6px; border-radius: 4px; font-size: 9px; font-weight: 600;">OPINION</span>
+            <div class="story-source-logo">NYT</div>
+            <span style="font-weight: 600;">NY Times</span>
+            <span class="story-time">6 hours ago</span>
+          </div>
+          <a href="3c-article.html" class="story-content" style="display: block; text-decoration: none; color: inherit;">
+            <div class="story-title">Why Local Journalism Matters More Than Ever</div>
+            <div class="story-meta">
+              <span class="story-bias" style="background: #2563EB20; color: #2563EB;">Lean Left</span>
+              <span class="story-coverage">Editorial Board</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Your Reps in the News -->
+        <div style="margin-top: 20px; margin-bottom: 12px;">
+          <div style="font-size: 12px; font-weight: 600; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.5px;">Your Representatives in the News</div>
+        </div>
+
+        <div class="story-card">
+          <div class="story-card-header">
+            <div style="width: 24px; height: 24px; background: linear-gradient(135deg, #1D4ED8, #3B82F6); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 700; color: white;">MC</div>
+            <span style="font-weight: 600;">Rep. Cartwright</span>
+            <span class="story-time">Yesterday</span>
+          </div>
+          <a href="3c-article.html" class="story-content" style="display: block; text-decoration: none; color: inherit;">
+            <div class="story-title">Cartwright Secures $2.5M for NEPA Infrastructure Projects</div>
+            <div class="story-meta">
+              <span class="story-bias" style="background: #64748B20; color: #64748B;">Federal</span>
+              <div class="coverage-indicator">
+                <div class="coverage-dot left"></div>
+                <div class="coverage-dot center"></div>
+                <div class="coverage-dot" style="background: var(--border);"></div>
+              </div>
+              <span class="story-coverage">4 sources</span>
+            </div>
+          </a>
+        </div>
+
+        <div style="height: 80px;"></div>
+      </div>
+
+      <!-- Voter Card FAB -->
+      <a href="9b-voter-card.html" class="voter-card-fab">ID</a>
+
+      <!-- Bottom Nav -->
+      <nav class="bottom-nav">
+        <a href="1a-home-voices.html" class="nav-item">
+          <span class="nav-icon"><i class="fa-solid fa-layer-group"></i></span>
+          Stack
+        </a>
+        <a href="2a-leaders.html" class="nav-item">
+          <span class="nav-icon"><i class="fa-solid fa-landmark"></i></span>
+          Leaders
+        </a>
+        <a href="3a-media.html" class="nav-item active">
+          <span class="nav-icon" style="color: #8B5CF6;"><i class="fa-solid fa-file-lines"></i></span>
+          Media
+        </a>
+        <a href="4a-learn.html" class="nav-item">
+          <span class="nav-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+          Learn
+        </a>
+      </nav>
+    </div>
+  </div>
+<script src="app.js"></script>
+</body>
+</html>

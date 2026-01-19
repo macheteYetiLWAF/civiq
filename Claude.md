@@ -1,18 +1,175 @@
 # CIVIQ Project
 
-Political news aggregation platform with hyper-local coverage and AI-powered bias evaluation.
-
 **URL:** https://fitaf570.com/sud/claude/civiq/
 **Wireframes:** https://fitaf570.com/sud/claude/civiq/wireframes/
 
 ---
 
-## Core Differentiators
+## Mission & Conceptual Framework
+
+### Mission Statement
+CIVIQ is a civic engagement platform that delivers hyper-local political news with AI-powered bias transparency, enabling verified voters to make informed decisions about their representatives from school board to federal office.
+
+### Core Problem
+No platform covers local politics (school boards, city councils, sheriffs) with bias transparency. National news dominates while local democracy operates in the dark. Existing bias tools are either partisan or focus only on national outlets.
+
+### Core Differentiators
+1. **Hyper-local coverage** - School boards, sheriffs, city councils, state legislators. The gap no one else fills.
+2. **Algorithmic bias scoring** - Claude-powered sentence-level analysis, not human opinion
+3. **Ownership transparency** - "buy'r aesthetic" reveals who funds/owns every source
+4. **Multi-dimensional bias** - Not just left/right: Economic, Social, Establishment, Nationalist axes
+5. **Verified-voter-only interaction** - Anti-bot by design
+
+### Key Design Principles
+
+| Principle | Implementation |
+|-----------|---------------|
+| **Impartiality** | Blue-to-Red linear gradient (Blue LEFT, Red RIGHT - always) |
+
+### Gradient Design Rule (CRITICAL - Jan 4, 2026)
+
+**Blue must ALWAYS appear on the LEFT, Red on the RIGHT.**
+
+This applies everywhere gradients show impartiality:
+- Logo text
+- Primary buttons
+- Tab toggles
+- Bias spectrum bars
+- Any red-blue gradient in the app
+
+**Correct patterns:**
+```css
+linear-gradient(135deg, #2563EB, #DC2626)  /* Blue first */
+linear-gradient(90deg, #2563EB, #888, #DC2626)  /* Bias bar: Blue-Center-Red */
+```
+
+**Rationale:** Blue-left mirrors reading direction and avoids political connotation of "left" meaning liberal. Consistent across all screens - no random flipping.
+
+### Icon Design Rules (Jan 4, 2026)
+
+- **No gradients on icons** - Solid white/single color only
+- At 24px nav size, gradients get muddy and lose definition
+- Gradient reserved for logo, buttons, and larger UI elements with surface area
+- Icons should be standalone recognizable (no text dependency)
+- Style: 2px stroke, clean lines, professional
+
+### Leaders Page Sort Order (Jan 4, 2026)
+
+**Default sort: "Local ↑"** - Users see their mayor first.
+
+Order of sections:
+1. **Local** (Mayor, City Council, County Council, School Board)
+2. **State** (Governor, Lt Gov, State Senate, State House)
+3. **Federal** (US House, US Senate)
+
+This reinforces the hyper-local philosophy: your mayor affects your daily life more than the President.
+
+### State Facts Ticker (Jan 4, 2026)
+
+**Feature:** Scrolling ticker of state facts appears throughout the app.
+
+**Scope:**
+- 10,000 facts per state (200 per state × 50 states)
+- Appears on: Voices tab, Elections tab, Bills tab, bill detail, election detail
+- Randomized or contextual display
+
+**Purpose:**
+- Passive learning while browsing
+- Incentivizes visiting Learn section
+- Earns XP/badges for learning facts
+- Ties into "become a Voice" progression
+
+### Learn Section Terminology (Jan 4, 2026)
+
+- **"Foundations"** (not "Learning Paths") - these are foundational knowledge for informed citizens
+- **Progress bar colors:**
+  - 0-25%: Red
+  - 26-50%: Orange
+  - 51-75%: Yellow
+  - 76-99%: Blue
+  - 100%: Green
+
+| **Anonymity** | Voter registration verification, then discard PII, store token only |
+| **Anti-bot** | Only verified registered voters can rate, comment, interact |
+| **Transparency** | Every source shows ownership, funding, advertiser data |
+| **Mobile-first** | React Native, 375px viewport primary, dark mode default |
+
+### User Roles Clarified
+
+| Role | Function | Key Actions |
+|------|----------|-------------|
+| **Citizens/Constituents** | Regular users | Read, thumbs up/down, earn XP, follow Voices |
+| **Voices** | Community influencers | Write editorial responses (like blog posts), build followers, earn credibility |
+| **Bias Scoring** | Algorithm (Claude) | Sentence-level fact/opinion parsing, NOT human raters |
+
+**Voice Role Clarified (Jan 4, 2026):**
+- Voices write **editorial responses** - think blog posts responding to articles, bills, or elections
+- Voices do **NOT** rate bias - that is purely algorithmic (Claude-powered)
+- Voices build followers and credibility through engagement with their editorial content
+- Example: A Voice reads an article about a school board decision and writes a 500-word response with their perspective
+
+### Content Strategy
+
+| Dimension | Approach |
+|-----------|----------|
+| **Local Focus** | Start with Eastern PA (NEPA pilot), expand regionally |
+| **Sources** | RSS ingestion, respectful metered scraping, headline extraction |
+| **Data Gap** | Build our own local source catalog (no APIs exist) |
+| **Partnerships** | Future: credibility exposure deals, not traffic-driving |
+| **Ownership** | Track shareholders, advertisers, funding for every source |
+
+### Technical Decisions Made
+
+| Decision | Choice | Rationale |
+|----------|--------|-----------|
+| Mobile Framework | React Native + Expo | Cross-platform, single codebase |
+| AI Analysis | Claude | Sentence-level bias detection, fact/opinion parsing |
+| Database | MySQL (MVP), PostgreSQL target | Per project CLAUDE.md, Supabase for scale |
+| Blockchain | **Opt-in premium layer** (post-MVP) | Not required for participation; available for users wanting immutable verification |
+| Subagent Delegation | Claudish | Free LLMs for bulk tasks, Claude for judgment |
+| Vector DB | pgvector (MVP) -> Pinecone (scale) | Cost-effective scaling path |
+
+### Blockchain Strategy (Refined Jan 4, 2026)
+
+**Vision:** "Synthesized town square" - a permanent, immutable record of public opinion without manipulation.
+
+**Implementation:**
+- **NOT required for MVP participation** - users can fully engage without blockchain
+- **Opt-in "premium trust layer"** for users who want verifiable civic participation records
+- **Post-MVP feature** for those who see value in decentralized verification
+- **Use case:** Immutable proof of civic engagement, tamper-proof opinion records
+
+### Claudish Subagent Architecture (Jan 4, 2026)
+
+**Principle:** Claude (Opus) orchestrates and delegates bulk work to free LLMs via Claudish.
+
+| Task Type | Handler | Rationale |
+|-----------|---------|-----------|
+| Source research | Free LLMs | High volume, low judgment |
+| RSS discovery | Free LLMs | Pattern matching, data gathering |
+| Data normalization | Free LLMs | Structured transformation |
+| Bias analysis | Claude | Requires nuanced judgment |
+| User-facing content | Claude | Quality and tone critical |
+| Judgment calls | Claude | Editorial decisions |
+
+**Constraints:**
+- OpenRouter free tier only (no billing)
+- Claude retained for all high-stakes decisions
+- Free models handle volume, Claude handles value
+
+### Launch Targets
+- **May 20, 2025** - PA Primary (interim milestone)
+- **November 3, 2026** - Shapiro gubernatorial election (MVP launch)
+
+---
+
+## Core Differentiators (Detail)
 
 1. **Hyper-local coverage** - School boards, sheriffs, city councils, state legislators. The gap no one else fills.
-2. **Voices** - Community-nominated human evaluators for bias ratings. "Your bias rating, powered by real Voices — not algorithms."
+2. **Voices** - Community influencers who write editorial responses and build engaged followings. NOT bias raters.
 3. **Multi-dimensional bias** - Not just left/right. Economic, Social, Establishment, Nationalist axes.
-4. **Impartiality at all costs** - 50/50 red-to-blue gradient flip on each page load. Baked into DNA.
+4. **Algorithmic bias scoring** - Claude-powered, sentence-level fact/opinion parsing. No human subjectivity.
+5. **Impartiality at all costs** - 50/50 red-to-blue gradient flip on each page load. Baked into DNA.
 
 ---
 
@@ -46,15 +203,22 @@ Political news aggregation platform with hyper-local coverage and AI-powered bia
 
 ## Design Decisions Made
 
+- **Sticky table headers** - All tables have position:sticky headers (platform-wide rule)
 - **Dark mode first** - Users opt out on profile if they want light
-- **No home address collection** - Need smarter approach for district lookup
-- **Political gradient** - Red-to-blue with minimal purple transition, 50/50 random flip per page load
-- **Toggle-based navigation** - Elections vs News as primary dimension
+- **No home address collection** - Pin-drop on map for district selection
+- **Political gradient** - Radial gradients (not left-right linear), 50/50 random flip per page load
+- **Home screen tabs** - Consistent Voices/Elections/Bills tabs on all home screens
 - **Accordion drill-down** - Stories expand to bias ratings and related elections
-- **Bottom nav** - Home, Leaders, Voices, Learn
+- **Bottom nav** - Home, Leaders, Media, Learn
 - **Voter Card FAB** - Floating button accessible from all screens
 - **Gamification** - XP, levels, streaks, badges (Duolingo-inspired)
 - **buy'r aesthetic** - Funding transparency, reveal ownership/donors
+
+### UI Consistency (Jan 4, 2026)
+- All home screens have consistent **Voices/Elections/Bills** tab structure
+- Gradient exploration: Moving to **radial gradients** (center-out) instead of left-right linear
+- Radial gradients avoid implicit political direction (left vs right)
+- Sticky table headers applied platform-wide
 
 ---
 
@@ -80,14 +244,25 @@ Used for wireframe seeding and initial testing.
 
 ---
 
-## Identity Verification Options
+## Identity Verification Flow (Finalized Jan 4, 2026)
 
-Five methods for the verification screen:
-1. PA Voter Registration lookup (name + DOB + last 4 SSN)
-2. Photo ID upload (driver's license, state ID)
-3. SSN + DOB verification
-4. Voter Registration Card photo
-5. Knowledge-based questions
+**Verification Method:** Voter registration number ONLY
+- No photo ID required
+- No SSN required
+- No address collection
+
+**District Selection:** Pin-drop on map
+- User drops pin on their location
+- System determines district anonymously
+- No address stored
+
+**Access Levels:**
+| Status | Capabilities |
+|--------|-------------|
+| Unverified | Read-only access (browse content, no interaction) |
+| Verified | Full participation (rate, comment, follow, earn XP) |
+
+**Privacy Principle:** Verify once, discard PII, store token only.
 
 ---
 
@@ -99,12 +274,12 @@ Five methods for the verification screen:
 | Cabinet | Admin | Trusted administrators |
 | Delegates | TBD | Role refinement needed |
 | Clerks | Moderator | Content mod, community, support |
-| Voices | Evaluator | Community-nominated bias raters. Levels 1-5. |
+| Voices | Influencer | Community influencers who write editorial responses. Levels 1-5. |
 | Citizens/Constituents | Standard | Regular users. "Join as a Constituent, rise to become a Voice." |
 
 ### Voice Level System
 
-Voices earn XP through article evaluations. Levels unlock credibility and visibility.
+Voices earn XP through editorial responses, follower engagement, and community contributions. Levels unlock credibility and visibility.
 
 | Level | XP Required | Characteristics |
 |-------|-------------|-----------------|
@@ -114,17 +289,17 @@ Voices earn XP through article evaluations. Levels unlock credibility and visibi
 | 4 | 5,000 | Expert. Strong following, high accuracy. Purple badge. |
 | 5 | 10,000 | Master. Top-tier credibility, centrist tendency. Purple badge. |
 
-**Sorting:** Voices list sorted by followers + rating count (engagement-weighted)
-**Accuracy:** Percentage of ratings that match eventual consensus
-**Rating Tendency:** Shows where Voice typically rates on left/center/right spectrum (transparency)
+**Sorting:** Voices list sorted by followers + engagement (response count, likes received)
+**Credibility:** Based on follower count, response engagement, and topic expertise
+**Editorial Stance:** Shows where Voice's editorial responses typically align (transparency)
 
 ### Sample Voice (Placeholder)
 
 **Jessica Williams** - Level 5, Philadelphia PA
 - Former journalist, policy analyst
-- 2.4K followers, 312 ratings, 94% accuracy
+- 2.4K followers, 312 editorial responses
 - Expertise: Healthcare Policy (87), Economic Analysis (124), State Politics (68), Media Criticism (33)
-- Rating tendency: Centrist evaluator
+- Editorial stance: Centrist perspective
 
 ---
 
@@ -453,3 +628,146 @@ Article-level analysis:
 ### Related Files
 - `/uploads/meeting6.txt` - Full meeting transcript
 - `/uploads/PXL_*.jpg` - Josh's whiteboard sketches
+
+---
+
+## Source Catalog Database (Jan 4, 2026)
+
+### Database Schema
+
+Tables in `lom1ubvhoxxi_sud_claude` with `civiq_` prefix:
+
+**Core Source Tables:**
+- `civiq_news_sources` - Publications, broadcasts, websites (63+ sources)
+- `civiq_rss_feeds` - RSS endpoints per source (15+ feeds)
+- `civiq_source_coverage` - Geographic coverage (legacy, JSON cities)
+- `civiq_government_sources` - Official govt data sources (19 sources)
+
+**Normalized Geography (NEW):**
+- `civiq_counties` - PA counties with FIPS codes and region
+- `civiq_municipalities` - Cities/boroughs/townships with FK to counties
+- `civiq_source_municipalities` - Many-to-many junction (source → municipality)
+
+**Article Ingestion:**
+- `civiq_articles` - Stored articles with metadata, bias scores, full text
+- `civiq_ingestion_log` - Track fetch jobs, quotas, errors
+
+**Quota Tracking Columns (added to civiq_news_sources):**
+- `monthly_quota` - Articles allowed per month (10 for metered, 999 for free)
+- `quota_used` - Current month usage
+- `quota_reset_day` - Day of month quota resets
+- `scrape_priority` - high/medium/low/skip
+- `acquisition_method` - rss/scrape/api/headlines_only
+
+### Regions Catalogued
+
+**Eastern PA (NEPA):** Luzerne, Lackawanna, Monroe, Lehigh, Northampton
+**Southeastern PA:** Philadelphia, Bucks, Montgomery, Delaware, Chester, Berks, Lancaster, York, Carbon, Schuylkill
+
+### Ownership Landscape
+
+| Owner | Type | Properties |
+|-------|------|------------|
+| Alden Global Capital | Hedge fund | Citizens' Voice, Times-Tribune, Standard-Speaker, Morning Call, Reading Eagle, Times Herald, Delco Daily Times, Daily Local News, Pottstown Mercury |
+| Gannett | Public company | Bucks County Courier Times, Intelligencer, York Daily Record, York Dispatch |
+| Advance Publications | Private | Express-Times/LehighValleyLive, Philadelphia Business Journal |
+| Lenfest Institute | Nonprofit | Philadelphia Inquirer |
+| Avant Publications | Private/Local | Times Leader, Sunday Dispatch, Abington Journal |
+| American Community Journals | Private | VISTA Today, MONTCO Today, DELCO Today, BUCKSCO Today |
+
+### Content Acquisition Strategy
+
+**Tier 1: Free/Open (Immediate)**
+- Public media (WHYY, WVIA) - mission-aligned
+- Nonprofits (Spotlight PA, Billy Penn) - free redistribution
+- Government sources - public domain
+- RSS-enabled free sites
+
+**Tier 2: Metered Paywalls (Respectful Scraping)**
+- Rotate user-agent, stay under monthly limits
+- Prioritize headlines + lede (often free)
+- Link out for full articles
+
+**Tier 3: Recognition Partnerships (Medium-term)**
+- NOT about driving traffic off-platform (that would harm our model)
+- Value props for sources:
+  - **Credibility exposure**: High-quality sources get visible trust scores
+  - **Civically-engaged audience**: Reach users who care about news quality
+  - **Brand attribution**: Prominent source credit in quality-focused context
+  - **Reputation metrics**: Factuality scores that reward good journalism
+- In exchange: Full article access via API/direct feed
+- Note: Content is consumed IN-app, never "link out" as primary strategy
+
+**Tier 4: Bulk Deals (Scale)**
+- Negotiate with ownership groups (Alden, Gannett, Advance)
+
+### Research Files Generated
+
+```
+/civiq/
+├── eastern_pa_news_sources.sql   # Eastern PA schema + seed data
+├── eastern_pa_news_sources.json  # Eastern PA structured JSON
+├── sources-dashboard.html        # Visualization dashboard
+├── api/sources.php               # API for dashboard
+└── wireframes/
+    ├── sepa_news_sources.json    # SE PA structured JSON
+    └── sepa_news_sources_schema.sql  # SE PA schema (different structure)
+```
+
+### RSS Feeds Confirmed (15)
+
+| Source | Feed URL | Category |
+|--------|----------|----------|
+| Morning Call | mcall.com/latest-headlines/feed/ | breaking |
+| Morning Call | mcall.com/local-news/feed/ | local |
+| Times-Tribune | thetimes-tribune.com/feed/ | news |
+| WBRE/WYOU | pahomepage.com/feed/ | news |
+| Philadelphia Inquirer | inquirer.com/arcio/rss/ | news |
+| PhillyVoice | phillyvoice.com/feed/ | all |
+| Billy Penn | billypenn.com/feed/ | all |
+| WHYY | whyy.org/feed/ | news |
+| LevittownNow | levittownnow.com/feed/ | all |
+| LNP/LancasterOnline | lancasteronline.com/search/?f=rss | news |
+| Express-Times | lehighvalleylive.com/arc/outboundfeeds/rss/ | news |
+| Spotlight PA | spotlightpa.org/feed.xml | news |
+| WPVI 6ABC | 6abc.com/feed/ | news |
+| NBC10 | nbcphiladelphia.com/feed/ | news |
+| WFMZ-TV | wfmz.com/search/?f=rss | news |
+
+### Cron Architecture (Planned)
+
+```
+RSS Daemon (every 15 min)
+└─ Fetch all active RSS feeds
+└─ Dedupe by URL hash
+└─ Queue for processing
+
+Scrape Scheduler (daily, per-source limits)
+└─ Track: source_id, quota_used, quota_reset
+└─ Prioritize: local > regional > national
+└─ Prioritize: news > opinion > features
+
+Rate Limit Manager
+└─ metered_sources: 10/month per source
+└─ free_sources: unlimited
+└─ hard_paywall: headlines only
+```
+
+---
+
+## Wireframe File Naming (Jan 4, 2026)
+
+Reorganized to hierarchical naming:
+
+| Prefix | Section | Files |
+|--------|---------|-------|
+| 0x | Auth | 0a-login, 0b-register, 0c-verify, 0d-setup, 0e-engagement |
+| 1x | Home | 1a-home-voices, 1b-home-dashboard (ALT), 1c-home-news (ALT), 1d-home-elections, 1e-home-bills, 1f-bill-detail, 1g-election-detail |
+| 2x | Leaders | 2a-leaders, 2b-leader-profile, 2c-candidate-compare |
+| 3x | Media | 3a-media, 3b-source-profile, 3c-article, 3d-source-compare |
+| 4x | Learn | 4a-learn, 4b-quiz, 4c-ghost-advisor (V2) |
+| 9x | Utilities | 9a-profile, 9b-voter-card, 9c-settings, 9d-notifications, 9e-search, 9f-rebalance |
+
+### Styling Fixes Applied
+- Input field text color: `color: var(--text-primary)`
+- Placeholder color: `color: var(--text-tertiary)` with `opacity: 1`

@@ -1,0 +1,897 @@
+{
+  "metadata": {
+    "generated": "2026-01-04",
+    "project": "CIVIQ Eastern Pennsylvania",
+    "target_area": "Luzerne, Lackawanna, Monroe, Northampton, Lehigh Counties",
+    "primary_pilot": "Luzerne County (Wilkes-Barre area)"
+  },
+  "news_sources": [
+    {
+      "id": 1,
+      "name": "Times Leader",
+      "url": "https://www.timesleader.com/",
+      "type": "newspaper_daily",
+      "ownership": {
+        "owner": "Avant Publications",
+        "parent_company": "Avant Publications (Champion Media/MIDTC)",
+        "ownership_type": "private",
+        "acquired": "2019-08"
+      },
+      "coverage": {
+        "primary_counties": ["Luzerne"],
+        "cities": ["Wilkes-Barre", "Pittston", "Nanticoke", "Hazleton", "Kingston", "Plains Township"]
+      },
+      "publication_frequency": "Daily",
+      "paywall_status": "metered",
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@TimesLeader",
+        "facebook": "https://www.facebook.com/timesleader",
+        "instagram": null
+      },
+      "founded": 1879,
+      "notes": "Primary Wilkes-Barre daily. Largest audience in Luzerne County. Morning broadsheet. Part of Times Leader Media Group which includes Sunday Dispatch, Weekender, Abington Journal."
+    },
+    {
+      "id": 2,
+      "name": "The Citizens' Voice",
+      "url": "https://www.citizensvoice.com/",
+      "type": "newspaper_daily",
+      "ownership": {
+        "owner": "MediaNews Group",
+        "parent_company": "Alden Global Capital",
+        "ownership_type": "hedge_fund",
+        "acquired": "2023-08"
+      },
+      "coverage": {
+        "primary_counties": ["Luzerne"],
+        "cities": ["Wilkes-Barre", "Kingston", "Pittston", "Nanticoke", "Hazleton"]
+      },
+      "publication_frequency": "Daily",
+      "paywall_status": "metered",
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@CitizensVoice",
+        "facebook": "https://www.facebook.com/citizensvoice",
+        "instagram": null
+      },
+      "founded": 1978,
+      "notes": "Founded as strike paper by Newspaper Guild. Known as 'the union paper.' Wilkes-Barre is smallest market in America with competing daily newspapers."
+    },
+    {
+      "id": 3,
+      "name": "Sunday Dispatch",
+      "url": "https://www.psdispatch.com/",
+      "type": "newspaper_weekly",
+      "ownership": {
+        "owner": "Avant Publications",
+        "parent_company": "Avant Publications",
+        "ownership_type": "private"
+      },
+      "coverage": {
+        "primary_counties": ["Luzerne"],
+        "cities": ["Pittston", "Dupont", "Avoca", "West Pittston"]
+      },
+      "publication_frequency": "Weekly (Sunday)",
+      "paywall_status": "free",
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": null,
+        "facebook": null,
+        "instagram": null
+      },
+      "founded": 1947,
+      "notes": "Serves Greater Pittston area including Pittston Area and Wyoming Area School Districts. Part of Times Leader Media Group."
+    },
+    {
+      "id": 4,
+      "name": "The Abington Journal",
+      "url": "https://www.theabingtonjournal.com/",
+      "type": "newspaper_weekly",
+      "ownership": {
+        "owner": "Cypress Media",
+        "parent_company": null,
+        "ownership_type": "private"
+      },
+      "coverage": {
+        "primary_counties": ["Lackawanna"],
+        "cities": ["Clarks Summit", "Dalton", "South Abington Township"]
+      },
+      "publication_frequency": "Weekly (Thursday)",
+      "paywall_status": "free",
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@AbingtonJournal",
+        "facebook": null,
+        "instagram": null
+      },
+      "founded": 1947,
+      "notes": "Serves Greater Abington area, based in Clarks Summit."
+    },
+    {
+      "id": 5,
+      "name": "The Weekender",
+      "url": "https://www.timesleader.com/weekender/",
+      "type": "newspaper_weekly",
+      "ownership": {
+        "owner": "Avant Publications",
+        "parent_company": "Avant Publications",
+        "ownership_type": "private"
+      },
+      "coverage": {
+        "primary_counties": ["Luzerne", "Lackawanna"],
+        "cities": ["Wilkes-Barre", "Scranton"]
+      },
+      "publication_frequency": "Weekly",
+      "paywall_status": "free",
+      "rss_feeds": [],
+      "social_media": {},
+      "founded": null,
+      "notes": "Arts and entertainment publication. Part of Times Leader Media Group."
+    },
+    {
+      "id": 6,
+      "name": "The Times-Tribune",
+      "url": "https://www.thetimes-tribune.com/",
+      "type": "newspaper_daily",
+      "ownership": {
+        "owner": "MediaNews Group",
+        "parent_company": "Alden Global Capital",
+        "ownership_type": "hedge_fund",
+        "acquired": "2023-08"
+      },
+      "coverage": {
+        "primary_counties": ["Lackawanna"],
+        "secondary_counties": ["Luzerne"],
+        "cities": ["Scranton", "Carbondale", "Dunmore", "Old Forge", "Wilkes-Barre", "Pittston"]
+      },
+      "publication_frequency": "Daily",
+      "paywall_status": "metered",
+      "rss_feeds": [
+        {
+          "url": "https://www.thetimes-tribune.com/feed/",
+          "category": "main"
+        }
+      ],
+      "social_media": {
+        "twitter": "@TTScrantonNews",
+        "facebook": "https://www.facebook.com/taborathetimestribune",
+        "instagram": null
+      },
+      "founded": 1870,
+      "notes": "Primary Scranton daily. Formed in 2005 from merger of Scranton Tribune and Scranton Times. Lynett family ownership ended 2023."
+    },
+    {
+      "id": 7,
+      "name": "Go Lackawanna",
+      "url": "https://www.golackawanna.com/",
+      "type": "online_only",
+      "ownership": {
+        "owner": "Independent",
+        "parent_company": null,
+        "ownership_type": "independent"
+      },
+      "coverage": {
+        "primary_counties": ["Lackawanna"],
+        "cities": ["Scranton", "Carbondale", "Dunmore"]
+      },
+      "publication_frequency": "Continuous",
+      "paywall_status": "free",
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": null,
+        "facebook": "https://www.facebook.com/GoLackawanna",
+        "instagram": null
+      },
+      "founded": null,
+      "notes": "Free Scranton and Lackawanna County news, obituaries, events calendar, sports."
+    },
+    {
+      "id": 8,
+      "name": "Pocono Record",
+      "url": "https://www.poconorecord.com/",
+      "type": "newspaper_daily",
+      "ownership": {
+        "owner": "Gannett/USA Today Network",
+        "parent_company": "Gannett",
+        "ownership_type": "public_company"
+      },
+      "coverage": {
+        "primary_counties": ["Monroe"],
+        "secondary_counties": ["Pike", "Lackawanna", "Wayne", "Carbon"],
+        "cities": ["Stroudsburg", "East Stroudsburg", "Mount Pocono", "Tobyhanna", "Milford"]
+      },
+      "publication_frequency": "Daily",
+      "paywall_status": "metered",
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@PoconoRecord",
+        "facebook": "https://www.facebook.com/poconorecord",
+        "instagram": null
+      },
+      "founded": 1894,
+      "notes": "Newspaper of record for Monroe County. Founded as Stroudsburg Daily Times. Part of USA Today Network. Also publishes Eastern Poconos Community News (free weekly)."
+    },
+    {
+      "id": 9,
+      "name": "The Pocono Times",
+      "url": "https://www.thepoconotimes.com/",
+      "type": "newspaper_weekly",
+      "ownership": {
+        "owner": "Independent",
+        "parent_company": null,
+        "ownership_type": "independent"
+      },
+      "coverage": {
+        "primary_counties": ["Monroe"],
+        "cities": ["Stroudsburg", "East Stroudsburg", "Bushkill", "Effort"]
+      },
+      "publication_frequency": "Weekly (Wednesday)",
+      "paywall_status": "free",
+      "rss_feeds": [],
+      "social_media": {},
+      "founded": 1983,
+      "notes": "20,000 circulation. 10,000 mailed, 10,000 distributed to stores."
+    },
+    {
+      "id": 10,
+      "name": "The West End Reporter",
+      "url": "https://www.thewestendreporter.com/",
+      "type": "newspaper_weekly",
+      "ownership": {
+        "owner": "Independent",
+        "parent_company": null,
+        "ownership_type": "independent"
+      },
+      "coverage": {
+        "primary_counties": ["Monroe"],
+        "cities": ["Brodheadsville", "Gilbert", "Kunkletown"]
+      },
+      "publication_frequency": "Weekly",
+      "paywall_status": "free",
+      "rss_feeds": [],
+      "social_media": {},
+      "founded": null,
+      "notes": "Serves West End of Monroe County."
+    },
+    {
+      "id": 11,
+      "name": "Stroudsburg Herald",
+      "url": "https://stroudsburgherald.com/",
+      "type": "online_only",
+      "ownership": {
+        "owner": "Independent",
+        "parent_company": null,
+        "ownership_type": "independent"
+      },
+      "coverage": {
+        "primary_counties": ["Monroe"],
+        "cities": ["Stroudsburg", "East Stroudsburg"]
+      },
+      "publication_frequency": "Continuous",
+      "paywall_status": "free",
+      "rss_feeds": [],
+      "social_media": {},
+      "founded": null,
+      "notes": "Local online news. Tagline: 'For Locals, By Locals.'"
+    },
+    {
+      "id": 12,
+      "name": "The Morning Call",
+      "url": "https://www.mcall.com/",
+      "type": "newspaper_daily",
+      "ownership": {
+        "owner": "Tribune Publishing",
+        "parent_company": "Alden Global Capital",
+        "ownership_type": "hedge_fund",
+        "acquired": "2021-05"
+      },
+      "coverage": {
+        "primary_counties": ["Lehigh", "Northampton"],
+        "secondary_counties": ["Monroe"],
+        "cities": ["Allentown", "Bethlehem", "Easton", "Emmaus", "Whitehall", "Quakertown"]
+      },
+      "publication_frequency": "Daily",
+      "paywall_status": "metered",
+      "rss_feeds": [
+        {
+          "url": "https://www.mcall.com/latest-headlines/feed/",
+          "category": "breaking"
+        },
+        {
+          "url": "https://www.mcall.com/local-news/feed/",
+          "category": "local"
+        }
+      ],
+      "social_media": {
+        "twitter": "@mcall",
+        "facebook": "https://www.facebook.com/themorningcall",
+        "instagram": "@themorningcall",
+        "followers": {
+          "facebook": "~115K",
+          "twitter": "~90K",
+          "instagram": "~8K"
+        }
+      },
+      "founded": 1883,
+      "notes": "Primary Allentown daily. Second-longest continuously published in Lehigh Valley. Closed downtown HQ 2020."
+    },
+    {
+      "id": 13,
+      "name": "Lehigh Valley Press",
+      "url": "https://www.lvpnews.com/",
+      "type": "newspaper_weekly",
+      "ownership": {
+        "owner": "Times News Inc.",
+        "parent_company": "Pencor Services Inc.",
+        "ownership_type": "family_owned"
+      },
+      "coverage": {
+        "primary_counties": ["Lehigh", "Northampton"],
+        "cities": ["Allentown", "Bethlehem", "Emmaus", "Catasauqua", "Whitehall", "Northampton Borough"]
+      },
+      "publication_frequency": "Weekly",
+      "paywall_status": "metered",
+      "rss_feeds": [],
+      "social_media": {},
+      "founded": 1987,
+      "notes": "Group of 8 weekly newspapers covering school districts in Allentown/Bethlehem areas. Family-owned by Palmerton-based Pencor."
+    },
+    {
+      "id": 14,
+      "name": "LehighValleyNews.com",
+      "url": "https://www.lehighvalleynews.com/",
+      "type": "online_only",
+      "ownership": {
+        "owner": "Nonprofit/Independent",
+        "parent_company": null,
+        "ownership_type": "nonprofit"
+      },
+      "coverage": {
+        "primary_counties": ["Lehigh", "Northampton"],
+        "cities": ["Allentown", "Bethlehem", "Easton"]
+      },
+      "publication_frequency": "Continuous",
+      "paywall_status": "free",
+      "rss_feeds": [],
+      "social_media": {},
+      "founded": null,
+      "notes": "Free local news source, independent and nonprofit."
+    },
+    {
+      "id": 15,
+      "name": "Lehigh Daily",
+      "url": "https://lehighdaily.com/",
+      "type": "online_only",
+      "ownership": {
+        "owner": "Independent",
+        "parent_company": null,
+        "ownership_type": "independent"
+      },
+      "coverage": {
+        "primary_counties": ["Lehigh", "Northampton"],
+        "cities": ["Allentown", "Bethlehem", "Easton"]
+      },
+      "publication_frequency": "Continuous",
+      "paywall_status": "free",
+      "rss_feeds": [],
+      "social_media": {},
+      "founded": null,
+      "notes": "Covers Lehigh Valley. Offers email newsletter."
+    },
+    {
+      "id": 16,
+      "name": "The Express-Times / LehighValleyLive",
+      "url": "https://www.lehighvalleylive.com/",
+      "type": "online_only",
+      "ownership": {
+        "owner": "Advance Local",
+        "parent_company": "Advance Publications",
+        "ownership_type": "private"
+      },
+      "coverage": {
+        "primary_counties": ["Northampton", "Lehigh"],
+        "secondary_counties": ["Warren (NJ)", "Hunterdon (NJ)"],
+        "cities": ["Easton", "Bethlehem", "Nazareth", "Bangor", "Allentown"]
+      },
+      "publication_frequency": "Continuous",
+      "paywall_status": "metered",
+      "rss_feeds": [],
+      "social_media": {
+        "twitter": "@ExpressTimes",
+        "facebook": "https://www.facebook.com/expresstimes",
+        "instagram": null
+      },
+      "founded": 1855,
+      "notes": "Founded as Easton Daily Express. PRINT EDITION DISCONTINUED February 2025 after 170 years. Now online-only."
+    },
+    {
+      "id": 17,
+      "name": "Standard-Speaker",
+      "url": "https://www.standardspeaker.com/",
+      "type": "newspaper_daily",
+      "ownership": {
+        "owner": "MediaNews Group",
+        "parent_company": "Alden Global Capital",
+        "ownership_type": "hedge_fund",
+        "acquired": "2023-09"
+      },
+      "coverage": {
+        "primary_counties": ["Luzerne"],
+        "cities": ["Hazleton", "Freeland", "McAdoo", "Weatherly"]
+      },
+      "publication_frequency": "Daily",
+      "paywall_status": "metered",
+      "rss_feeds": [],
+      "social_media": {},
+      "founded": 1866,
+      "notes": "Hazleton area daily. Traces history to Hazleton Sentinel (1866). Covers southern Luzerne County."
+    }
+  ],
+  "tv_stations": [
+    {
+      "id": 18,
+      "name": "WNEP-TV",
+      "call_sign": "WNEP",
+      "channel": 16,
+      "network": "ABC",
+      "url": "https://www.wnep.com/",
+      "ownership": {
+        "owner": "TEGNA Inc.",
+        "parent_company": "TEGNA Inc."
+      },
+      "coverage": {
+        "dma": "Scranton/Wilkes-Barre",
+        "primary_counties": ["Luzerne", "Lackawanna"],
+        "secondary_counties": ["Monroe", "Wyoming", "Columbia", "Susquehanna"]
+      },
+      "studios_location": "Moosic, PA",
+      "social_media": {
+        "twitter": "@WNABOREP",
+        "facebook": "https://www.facebook.com/wnaborep",
+        "instagram": "@wnborep"
+      },
+      "notes": "Dominant station in market. Divested from Nexstar to TEGNA in 2019 due to duopoly rules."
+    },
+    {
+      "id": 19,
+      "name": "WBRE-TV",
+      "call_sign": "WBRE",
+      "channel": 28,
+      "network": "NBC",
+      "url": "https://www.pahomepage.com/",
+      "ownership": {
+        "owner": "Nexstar Media Group",
+        "parent_company": "Nexstar Media Group"
+      },
+      "coverage": {
+        "dma": "Scranton/Wilkes-Barre",
+        "primary_counties": ["Luzerne", "Lackawanna"]
+      },
+      "studios_location": "Wilkes-Barre, PA (South Franklin Street)",
+      "rss_feeds": [
+        {
+          "url": "https://www.pahomepage.com/rss-feeds/",
+          "category": "main"
+        }
+      ],
+      "social_media": {
+        "twitter": "@WBREtv",
+        "facebook": "https://www.facebook.com/WBREnews",
+        "instagram": null
+      },
+      "notes": "Brands as '28/22 News' with WYOU. Shared newsroom and operations."
+    },
+    {
+      "id": 20,
+      "name": "WYOU-TV",
+      "call_sign": "WYOU",
+      "channel": 22,
+      "network": "CBS",
+      "url": "https://www.pahomepage.com/",
+      "ownership": {
+        "owner": "Mission Broadcasting",
+        "operator": "Nexstar Media Group",
+        "agreement": "Shared Services Agreement (SSA)"
+      },
+      "coverage": {
+        "dma": "Scranton/Wilkes-Barre",
+        "primary_counties": ["Luzerne", "Lackawanna"]
+      },
+      "studios_location": "Wilkes-Barre, PA (shared with WBRE)",
+      "social_media": {
+        "twitter": "@WYOUtv",
+        "facebook": null,
+        "instagram": null
+      },
+      "notes": "First shared services agreement in broadcasting history (1998). Nominally owned by Mission but operated by Nexstar."
+    },
+    {
+      "id": 21,
+      "name": "WOLF-TV",
+      "call_sign": "WOLF",
+      "channel": 56,
+      "network": "FOX",
+      "url": "https://fox56.com/",
+      "ownership": {
+        "owner": "New Age Media",
+        "operator": "Sinclair Broadcast Group",
+        "agreement": "Master Service Agreement"
+      },
+      "coverage": {
+        "dma": "Scranton/Wilkes-Barre",
+        "primary_counties": ["Luzerne", "Lackawanna"]
+      },
+      "studios_location": "Plains Township, PA (PA 315)",
+      "social_media": {
+        "twitter": "@fox56wolftv",
+        "facebook": "https://www.facebook.com/fox56wolftv",
+        "instagram": "@fox56wolftv"
+      },
+      "notes": "Operated by Sinclair. Co-owned with WQMY (MyNetworkTV)."
+    },
+    {
+      "id": 22,
+      "name": "WFMZ-TV",
+      "call_sign": "WFMZ",
+      "channel": 69,
+      "network": "Independent",
+      "url": "https://www.wfmz.com/",
+      "ownership": {
+        "owner": "Maranatha Broadcasting Company",
+        "parent_company": null,
+        "ownership_type": "locally_owned"
+      },
+      "coverage": {
+        "dma": "Philadelphia (Lehigh Valley)",
+        "primary_counties": ["Lehigh", "Northampton", "Berks"],
+        "secondary_counties": ["Monroe"]
+      },
+      "studios_location": "Allentown, PA (East Rock Road)",
+      "social_media": {
+        "twitter": "@69aborews",
+        "facebook": "https://www.facebook.com/wfmz69news",
+        "instagram": null
+      },
+      "notes": "Independent station, locally owned since founding 1976. Family-oriented programming. Significant reach into Philadelphia market."
+    }
+  ],
+  "public_media": [
+    {
+      "id": 23,
+      "name": "WVIA-TV/FM",
+      "url": "https://www.wvia.org/",
+      "type": "PBS/NPR",
+      "tv_channel": 44,
+      "radio_frequency": "89.9 FM",
+      "ownership": {
+        "owner": "Northeast Pennsylvania Educational Television Association",
+        "type": "nonprofit"
+      },
+      "coverage": {
+        "counties": "22+ counties in NEPA",
+        "primary_counties": ["Luzerne", "Lackawanna", "Monroe", "Columbia", "Lycoming"]
+      },
+      "studios_location": "Jenkins Township, PA",
+      "social_media": {
+        "twitter": "@WVIAPublicMedia",
+        "facebook": "https://www.facebook.com/wviapublicmedia"
+      },
+      "founded": 1966,
+      "notes": "PBS/NPR dual licensee. Mission: educate, inspire, entertain, foster citizenship. Secondary studio in Williamsport."
+    },
+    {
+      "id": 24,
+      "name": "WLVT-TV (PBS 39)",
+      "url": "https://www.wlvt.org/",
+      "type": "PBS",
+      "tv_channel": 39,
+      "ownership": {
+        "owner": "Lehigh Valley Public Telecommunications Corporation",
+        "type": "nonprofit"
+      },
+      "coverage": {
+        "primary_counties": ["Lehigh", "Northampton"]
+      },
+      "studios_location": "Allentown, PA",
+      "notes": "PBS member station serving Lehigh Valley."
+    }
+  ],
+  "radio_stations": [
+    {
+      "id": 25,
+      "name": "WILK Newsradio",
+      "url": "https://www.audacy.com/wilknews",
+      "frequencies": ["980 AM", "103.1 FM", "910 AM (simulcast)"],
+      "format": "News/Talk",
+      "ownership": {
+        "owner": "Audacy Inc.",
+        "parent_company": "Audacy Inc."
+      },
+      "coverage": {
+        "primary_counties": ["Luzerne", "Lackawanna"]
+      },
+      "studios_location": "Pittston, PA (Route 315)",
+      "social_media": {
+        "twitter": "@WILKNewsradio"
+      },
+      "founded": 1947,
+      "notes": "Local weekday hosts. ABC News Radio. Penn State sports, WBS Penguins hockey. Mostly local programming weekdays."
+    },
+    {
+      "id": 26,
+      "name": "WARM 590 AM",
+      "frequencies": ["590 AM"],
+      "format": "Sports",
+      "ownership": {
+        "owner": "Seven Mountains Media",
+        "parent_company": "Southern Belle LLC"
+      },
+      "coverage": {
+        "primary_counties": ["Lackawanna", "Luzerne"]
+      },
+      "founded": 1940,
+      "notes": "Historic Top 40 powerhouse in 1960s-70s as 'The Mighty 590.' Currently sports format."
+    }
+  ],
+  "nonprofit_investigative": [
+    {
+      "id": 27,
+      "name": "Spotlight PA",
+      "url": "https://www.spotlightpa.org/",
+      "type": "nonprofit_investigative",
+      "ownership": {
+        "type": "501c3 nonprofit"
+      },
+      "coverage": {
+        "scope": "statewide",
+        "regional_bureau": "State College (launched 2022)"
+      },
+      "social_media": {
+        "twitter": "@SpotlightPA",
+        "facebook": "https://www.facebook.com/SpotlightPA",
+        "instagram": "@spotlightpa"
+      },
+      "founded": 2019,
+      "notes": "Statewide investigative nonprofit. Distributes to 100+ partner newsrooms for free republication. PA Post daily newsletter. Saved taxpayers $20M+, prompted 58 policy changes.",
+      "newsletters": [
+        {
+          "name": "PA Post",
+          "frequency": "daily",
+          "description": "Understand what's happening across PA in less than 5 minutes"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "NEPA Media Group",
+      "url": "https://nepamedia.net/",
+      "type": "nonprofit_media",
+      "ownership": {
+        "type": "independent nonprofit"
+      },
+      "coverage": {
+        "scope": "Northeast Pennsylvania"
+      },
+      "notes": "Privately owned independent media organization focused on local journalism, civic engagement, and public dialogue in NEPA."
+    }
+  ],
+  "government_sources": {
+    "county_governments": [
+      {
+        "name": "Luzerne County Government",
+        "url": "https://www.luzernecounty.org/",
+        "county": "Luzerne",
+        "resources": {
+          "agenda_center": "https://www.luzernecounty.org/AgendaCenter/Luzerne-County-Council-2",
+          "open_government": "https://www.luzernecounty.org/856/Open-Government",
+          "council_meetings": "https://www.luzernecounty.org/1279/Council-Meetings-Online",
+          "meeting_archives": "https://www.luzernecounty.org/1546/Luzerne-County-Council-Meeting-Archives"
+        },
+        "features": {
+          "has_agenda_portal": true,
+          "has_meeting_videos": true,
+          "has_open_records": true,
+          "has_zoom_meetings": true
+        },
+        "notes": "Agendas from 2012-present. Virtual meeting option via Zoom."
+      },
+      {
+        "name": "Lackawanna County Government",
+        "url": "https://www.lackawannacounty.org/",
+        "county": "Lackawanna",
+        "meeting_schedule": "1st and 3rd Wednesday at 10am",
+        "meeting_location": "5th Floor, 123 Wyoming Ave, Scranton",
+        "features": {
+          "has_agenda_portal": true,
+          "has_open_records": true
+        },
+        "notes": "Three commissioners. Home Rule Charter since 1976."
+      },
+      {
+        "name": "Monroe County Government",
+        "url": "https://www.monroecountypa.gov/",
+        "county": "Monroe",
+        "meeting_schedule": "1st and 3rd Wednesday at 9:30 AM",
+        "workshop_schedule": "Mondays at 10:00 AM",
+        "meeting_location": "Admin Center, One Quaker Plaza, Stroudsburg",
+        "features": {
+          "has_agenda_portal": true,
+          "has_meeting_videos": true,
+          "has_teams_meetings": true
+        }
+      },
+      {
+        "name": "Northampton County Government",
+        "url": "https://www.northamptoncounty.org/",
+        "alternate_url": "https://norcopa.gov/",
+        "county": "Northampton",
+        "meeting_schedule": "1st and 3rd Thursday",
+        "features": {
+          "has_agenda_portal": true,
+          "has_meeting_videos": true
+        },
+        "notes": "Home Rule Charter since 1978. 9-member council. County Executive form of government. Government Center at 669 Washington St, Easton."
+      },
+      {
+        "name": "Lehigh County Government",
+        "url": "https://www.lehighcounty.org/",
+        "county": "Lehigh",
+        "features": {
+          "has_agenda_portal": true,
+          "has_open_records": true
+        },
+        "notes": "Home Rule Charter. 9 commissioners (4 at-large, 5 district). County Executive form."
+      }
+    ],
+    "city_governments": [
+      {
+        "name": "City of Wilkes-Barre",
+        "url": "https://www.wilkes-barre.city/",
+        "county": "Luzerne",
+        "resources": {
+          "council": "https://www.wilkes-barre.city/citycouncil",
+          "agendas": "https://www.wilkes-barre.city/node/24/agenda",
+          "schedule": "https://www.wilkes-barre.city/city-council/pages/city-council-meeting-schedule"
+        },
+        "meeting_schedule": "Work and Regular Sessions at 6:00 PM, City Hall 4th Floor",
+        "notes": "County seat. Agenda archives by year."
+      },
+      {
+        "name": "City of Scranton",
+        "url": "https://scrantonpa.gov/",
+        "county": "Lackawanna",
+        "resources": {
+          "council_meetings": "https://scrantonpa.gov/citycouncil/city-council-meetings/",
+          "granicus_archives": "https://scrantonpa.granicus.com/ViewPublisher.php?view_id=2"
+        },
+        "meeting_schedule": "Tuesdays 6:30 PM, caucus 5:45 PM",
+        "features": {
+          "has_livestream": true,
+          "platform": "ECTV YouTube"
+        },
+        "notes": "Granicus meeting archives. 24-hour advance agenda posting required."
+      },
+      {
+        "name": "City of Allentown",
+        "url": "https://www.allentownpa.gov/",
+        "county": "Lehigh",
+        "notes": "County seat. Largest city in Lehigh Valley."
+      }
+    ],
+    "school_boards": [
+      {
+        "name": "Wilkes-Barre Area School District",
+        "url": "https://www.wbasd.k12.pa.us/BoardofEducation.aspx",
+        "county": "Luzerne",
+        "meeting_schedule": "Committee 5:00 PM, Regular 6:30 PM at WBA High School",
+        "features": {
+          "has_livestream": true,
+          "board_members": 9,
+          "term_length": "4 years"
+        }
+      },
+      {
+        "name": "Scranton School District",
+        "url": "https://www.scrsd.org/",
+        "county": "Lackawanna",
+        "resources": {
+          "agendas": "https://www.scrsd.org/board-of-directors/meeting-agendas"
+        },
+        "features": {
+          "board_members": 9,
+          "term_length": "4 years",
+          "schools": 15
+        }
+      }
+    ],
+    "state_sources": [
+      {
+        "name": "Pennsylvania Open Data Portal",
+        "url": "https://data.pa.gov/",
+        "type": "open_data_portal",
+        "notes": "OpenDataPA launched 2016. Central repository for state agency data."
+      },
+      {
+        "name": "Pennsylvania General Assembly",
+        "url": "https://www.palegis.us/",
+        "alternate_url": "https://www.legis.state.pa.us/",
+        "type": "legislature",
+        "resources": {
+          "bills": "https://www.palegis.us/legislation/bills",
+          "data_downloads": "https://www.legis.state.pa.us/Data/"
+        },
+        "notes": "Bill history back to 1969. Voting records. PaLegis Notifications for email updates."
+      },
+      {
+        "name": "PA Legislative Data Processing Center",
+        "url": "https://www.paldpc.us/",
+        "type": "legislature_data",
+        "notes": "Service agency of General Assembly. Created 1968."
+      },
+      {
+        "name": "PA Unified Judicial System",
+        "url": "https://www.pacourts.us/",
+        "type": "courts",
+        "resources": {
+          "case_search": "https://ujsportal.pacourts.us/CaseSearch",
+          "public_records": "https://www.pacourts.us/public-records"
+        },
+        "notes": "Free case search. Docket sheets. PAeDocket mobile app."
+      },
+      {
+        "name": "PA Treasury Transparency Portal",
+        "url": "https://www.patreasury.gov/transparency/",
+        "type": "financial",
+        "notes": "Real-time general fund balance. 3 years expenditure comparison."
+      }
+    ]
+  },
+  "ownership_summary": {
+    "alden_global_capital": {
+      "parent": "Alden Global Capital (hedge fund)",
+      "properties_in_region": [
+        "The Citizens' Voice",
+        "The Times-Tribune",
+        "Standard-Speaker",
+        "The Morning Call"
+      ],
+      "acquired_via": ["MediaNews Group", "Tribune Publishing"],
+      "notes": "Largest newspaper owner in US by circulation. Known for cost-cutting."
+    },
+    "avant_publications": {
+      "parent": "Avant Publications (Champion Media/MIDTC)",
+      "properties_in_region": [
+        "Times Leader",
+        "Sunday Dispatch",
+        "The Weekender",
+        "The Abington Journal"
+      ],
+      "ownership_type": "private",
+      "notes": "Privately held. Acquired Times Leader Media Group 2019. First local ownership in 4 decades."
+    },
+    "nexstar_media": {
+      "parent": "Nexstar Media Group",
+      "properties_in_region": [
+        "WBRE-TV",
+        "WYOU-TV (operated)"
+      ],
+      "notes": "Largest TV station owner in US. Potential TEGNA acquisition would add WNEP."
+    },
+    "tegna": {
+      "parent": "TEGNA Inc.",
+      "properties_in_region": ["WNEP-TV"],
+      "notes": "Acquired WNEP from Nexstar divestiture 2019."
+    },
+    "gannett": {
+      "parent": "Gannett/USA Today Network",
+      "properties_in_region": ["Pocono Record"],
+      "notes": "Largest newspaper publisher in US."
+    },
+    "sinclair": {
+      "parent": "Sinclair Broadcast Group",
+      "properties_in_region": ["WOLF-TV (operated)"],
+      "notes": "Operates via master service agreement with New Age Media."
+    }
+  }
+}

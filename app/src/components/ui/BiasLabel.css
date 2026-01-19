@@ -1,0 +1,52 @@
+.bias-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Left - Blue */
+.bias-label-left {
+  background: rgba(37, 99, 235, 0.2);
+  color: #3B82F6;
+  border: 1px solid rgba(37, 99, 235, 0.3);
+}
+
+/* Lean Left - Light Blue */
+.bias-label-lean-left {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60A5FA;
+  border: 1px solid rgba(59, 130, 246, 0.25);
+}
+
+/* Center - Purple */
+.bias-label-center {
+  background: rgba(168, 85, 247, 0.2);
+  color: var(--bias-center);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+/* Lean Right - Light Red */
+.bias-label-lean-right {
+  background: rgba(239, 68, 68, 0.15);
+  color: #F87171;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+/* Right - Red */
+.bias-label-right {
+  background: rgba(220, 38, 38, 0.2);
+  color: #EF4444;
+  border: 1px solid rgba(220, 38, 38, 0.3);
+}
+
+/* Official - Slate/Gray */
+.bias-label-official {
+  background: rgba(100, 116, 139, 0.2);
+  color: #94A3B8;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+}

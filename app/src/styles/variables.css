@@ -1,0 +1,73 @@
+:root {
+  --bg-primary: #0A0A0A;
+  --bg-secondary: #141414;
+  --bg-tertiary: #1F1F1F;
+  --text-primary: #FAFAFA;
+  --text-secondary: #A1A1A1;
+  --text-tertiary: #6B6B6B;
+  --border: #2A2A2A;
+  --accent: #A855F7;
+  --accent-purple: #8B5CF6;
+  --accent-light: #1E1B2E;
+  --success: #22C55E;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+
+  /* =============================================================================
+     CIVIQ LOGO GRADIENT - LOCKED SPECIFICATION
+     Layout: Blue (0-33%) → Purple (33-66%) → Red (66-100%)
+     Do NOT modify without approval. See wireframes/styles.css for full spec.
+     ============================================================================= */
+  --gradient-blue: #2563EB;
+  --gradient-purple: #8B5CF6;
+  --gradient-red: #DC2626;
+  --gradient-start: #2563EB;
+  --gradient-end: #DC2626;
+
+  --bias-left: #3B82F6;
+  --bias-center: #A855F7;
+  --bias-right: #EF4444;
+  --level-local: #F59E0B;
+  --level-state: #8B5CF6;
+  --level-federal: #64748B;
+  --xp-gold: #F59E0B;
+  --streak-orange: #F97316;
+  --badge-purple: #8B5CF6;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 8px rgba(0,0,0,0.4);
+  --shadow-lg: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* =============================================================================
+   CIVIQ LOGO GRADIENT CLASS - LOCKED (Blue LEFT, Purple CENTER, Red RIGHT)
+   Use this class for ALL CIVIQ logo text across the app.
+   ============================================================================= */
+.logo-gradient {
+  background: linear-gradient(90deg,
+    #2563EB 0%,
+    #2563EB 25%,
+    #8B5CF6 40%,
+    #8B5CF6 60%,
+    #DC2626 75%,
+    #DC2626 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.light-mode {
+  --bg-primary: #FAFAFA;
+  --bg-secondary: #FFFFFF;
+  --bg-tertiary: #F5F5F5;
+  --text-primary: #1A1A1A;
+  --text-secondary: #666666;
+  --text-tertiary: #999999;
+  --border: #E5E5E5;
+  --accent: #7C3AED;
+  --accent-light: #F3E8FF;
+}

@@ -1,0 +1,12 @@
+[13-Jan-2026 07:13:30 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'start_year' in 'SELECT' in /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/timeline/events.php:248
+Stack trace:
+#0 /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/timeline/events.php(248): PDO->prepare()
+#1 /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/timeline/events.php(23): listEvents()
+#2 {main}
+  thrown in /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/timeline/events.php on line 248
+[13-Jan-2026 07:13:36 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'start_year' in 'SELECT' in /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/timeline/events.php:248
+Stack trace:
+#0 /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/timeline/events.php(248): PDO->prepare()
+#1 /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/timeline/events.php(23): listEvents()
+#2 {main}
+  thrown in /home/lom1ubvhoxxi/public_html/sud/claude/civiq/api/timeline/events.php on line 248
