@@ -5,7 +5,7 @@ workflows:
     instance_type: mac_mini_m2
     working_directory: app
     environment:
-      xcode: 15.4
+      xcode: latest
       node: 20
       cocoapods: default
     scripts:
