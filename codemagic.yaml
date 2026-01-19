@@ -5,7 +5,7 @@ workflows:
     instance_type: mac_mini_m2
     working_directory: app
     environment:
-      xcode: latest
+      xcode: 15.4
       node: 20
       cocoapods: default
     scripts:
@@ -17,19 +17,21 @@ workflows:
           npm run build
       - name: Sync Capacitor iOS
         script: |
-          npx cap sync ios
+          npx cap sync ios --deployment
       - name: Install CocoaPods
         script: |
-          cd ios/App && pod install
-      - name: Build iOS (Debug)
+          cd ios/App && pod install --repo-update
+      - name: Build iOS (Debug for Simulator)
         script: |
           cd ios/App
           xcodebuild -workspace App.xcworkspace \
             -scheme App \
             -configuration Debug \
             -sdk iphonesimulator \
+            -destination 'platform=iOS Simulator,name=iPhone 15' \
             -derivedDataPath build \
-            CODE_SIGNING_ALLOWED=NO
+            CODE_SIGNING_ALLOWED=NO \
+            build
     artifacts:
       - app/ios/App/build/**/*.app
     publishing:
