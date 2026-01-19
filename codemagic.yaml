@@ -5,7 +5,7 @@ workflows:
     instance_type: mac_mini_m2
     working_directory: app
     environment:
-      xcode: latest
+      xcode: 16.1
       node: 20
       cocoapods: default
     scripts:
@@ -15,12 +15,12 @@ workflows:
       - name: Build web assets
         script: |
           npm run build
-      - name: Sync Capacitor iOS
-        script: |
-          npx cap sync ios --deployment
-      - name: Install CocoaPods
+      - name: Install CocoaPods dependencies
         script: |
           cd ios/App && pod install --repo-update
+      - name: Sync Capacitor iOS
+        script: |
+          npx cap sync ios
       - name: Build iOS (Debug for Simulator)
         script: |
           cd ios/App
